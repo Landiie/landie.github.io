@@ -1301,8 +1301,8 @@
             goToLink();
             console.log(e)
         });
-
-        goToLink();
+        setTimeout(goToLink, 5);
+        
         function goToLink() {
             const target = window.location.hash;
             switch (target) {
@@ -1318,6 +1318,7 @@
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 case '#documentation':
+                    console.log("workie")
                     document.querySelector("#documentation-tab").click();
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
