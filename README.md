@@ -1,2 +1,2 @@
-# landie.github.io
-landie's website!
+# landies-site
+landie's website! WIP atm, but you can snoop!
