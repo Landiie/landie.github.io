@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF0S4LZ1NH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VF0S4LZ1NH');
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home ~ Landie</title>
@@ -18,6 +27,7 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 
 <body>
   <!--offcanvas-->
@@ -56,23 +66,24 @@
 
   <div class="site overflow-auto">
     <!--sidebar canvas button, not in use atm-->
-      <div class="sidebar-button">
-        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample" id="sidebar" class="button d-flex justify-content-center align-items-center"
-          style="z-index: 10; border-radius: 10rem; width: 4rem; height: 4rem; background-color: rgba(255, 255, 255, 0.265); transform: translate(10px, 10px);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-list"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
-        </button>
-      </div>
+    <div class="sidebar-button">
+      <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample" id="sidebar" class="button d-flex justify-content-center align-items-center"
+        style="z-index: 10; border-radius: 10rem; width: 4rem; height: 4rem; background-color: rgba(255, 255, 255, 0.265); transform: translate(10px, 10px);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+    </div>
     <!--Site content-->
     <div class="site-content my-md-5 mx-md-5 my-sm-0 mx-sm-0">
       <div class="row text-center justify-content-center text-white">
         <div class="row d-flex mb-1 justify-content-center align-items-center">
           <div class="col-md-9 main-header" style="border-radius: 5vh;">
-            <h1 style="text-shadow: 0px 0px 10px #0000007d;" class="main-header-title">Hi! I'm <span style="text-shadow: 4px 4px #29d732;">Landie!</span></h1>
+            <h1 style="text-shadow: 0px 0px 10px #0000007d;" class="main-header-title">Hi! I'm <span
+                style="text-shadow: 4px 4px #29d732;">Landie!</span></h1>
             <h1 style="text-shadow: 0px 0px 10px #0000007d;">A jack of all trades, master of <i>some!</i></h1>
           </div>
           <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -119,7 +130,8 @@
             </button>
           </a>
           <a class="link-clear" href="https://github.com/landiie" target="_blank" rel="noopener noreferrer">
-            <button class="main-link quick-link m-2" style="background: linear-gradient(to top, rgb(0, 0, 0), rgb(70, 70, 70));">
+            <button class="main-link quick-link m-2"
+              style="background: linear-gradient(to top, rgb(0, 0, 0), rgb(70, 70, 70));">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-github"
                 viewBox="0 0 16 16">
                 <path
@@ -144,21 +156,24 @@
           <div class="mt-2">
             <div class="row">
               <!--Commission icons, only the SAMMI one for now, hide paintbrush-->
-              <div class="col-md-6 col-sm-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                <a data-tilt data-tilt-scale="1.2" href="#" class="link-clear panel-link bg-dark p-4 row justify-content-center align-items-center">
-                  <div style="transform: translateZ(20px)" class="col">
+              <div
+                class="col-md-6 col-sm-6 d-flex flex-column justify-content-center align-items-center position-relative">
+                <a data-tilt data-tilt-scale="1.2" href="#"
+                  class="link-clear panel-link bg-dark p-4 row justify-content-center align-items-center">
+                  <div style="transform: translateZ(20px)" class="col d-flex justify-content-center">
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
                       class="bi bi-brush my-3" viewBox="0 0 16 16">
                       <path
                         d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z" />
                     </svg> -->
-                    <img src="sammi_ico.png" alt="">
+                    <img src="sammi_ico.png" width="80" height="80" alt="">
                   </div>
                   <h2 style="transform: translateZ(20px)" class="d-flex justify-content-center">Commissions</h2>
                 </a>
               </div>
               <div class="col-md-6 col-sm-6 justify-content-center align-items-center d-flex">
-                <a data-tilt data-tilt-scale="1.2" href="./shop/sammi-extensions.html" class="link-clear button panel-link bg-dark p-4 row">
+                <a data-tilt data-tilt-scale="1.2" href="./shop.html"
+                  class="link-clear button panel-link bg-dark p-4 row">
                   <div style="transform: translateZ(20px)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white" class="bi bi-shop my-3"
                       viewBox="0 0 16 16">
@@ -175,40 +190,43 @@
       </div>
     </div>
   </div>
-    <!--cards-->
-    <div class="content-blur-bg">
-      <div class="card-bounds">
-        <div class="popup-slide border">
-          <section class="popup-slide-header">
-            <button style="position: absolute; left: 20px;" >
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-x-square card-close" viewBox="0 0 16 16">
-                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </button>
-            <h1>Who am I?</h1>
-          </section>
-          <section class="popup-slide-body container-fluid border">
-            <p>Work in Progress! Enjoy this nice modal in the meantime c:</p>
-          </section>
-        </div>
+  <!--cards-->
+  <div class="content-blur-bg">
+    <div class="card-bounds">
+      <div class="popup-slide border">
+        <section class="popup-slide-header">
+          <button style="position: absolute; left: 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+              class="bi bi-x-square card-close" viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <h1>Who am I?</h1>
+        </section>
+        <section class="popup-slide-body container-fluid border">
+          <p>Work in Progress! Enjoy this nice modal in the meantime c:</p>
+        </section>
       </div>
     </div>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-    <script>
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
-    </script>
+  </script>
 </body>
 
 </html>

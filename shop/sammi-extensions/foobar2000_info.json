@@ -1,0 +1,9 @@
+{
+  "name": "foobar2000",
+  "summary": "Allows foobar2000 to interface with SAMMI",
+  "version": "1.0.3",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "Updated for SAMMI, New Update Link",
+  "versionSummaryBody": "new .sef format, and, wow! update is linked to my own personal site!",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/foobar2000-control"
+}
