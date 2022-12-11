@@ -8,6 +8,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -566,6 +570,11 @@ h5 {
   background-color: #000000be;
   width: 100%;
   height: 55%;
+}
+
+.item-what {
+  background-image: url(./shop/what.png);
+  background-size: contain;
 }
 
 .item-foobar2000control {

@@ -1,0 +1,11 @@
+{
+  "name": "File Downloader",
+  "summary": "Download Files through SAMMI!",
+  "version": "1.0.1",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "Updated for SAMMI, New Update Link",
+  "versionSummaryBody": "new .sef format, and, wow! update is linked to my own personal site!",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/file-downloader",
+  "price": "FREE",
+  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/filedownloader.png"
+}

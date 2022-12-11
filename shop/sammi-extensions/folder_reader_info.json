@@ -1,0 +1,11 @@
+{
+  "name": "Folder Reader",
+  "summary": "Read Files and Folders from a directory with filters using SAMMI",
+  "version": "1.0.1",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "Updated for SAMMI, New Update Link",
+  "versionSummaryBody": "new .sef format, and, wow! update is linked to my own personal site!",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/folder-reader",
+  "price": "FREE",
+  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/folderreader.png"
+}
