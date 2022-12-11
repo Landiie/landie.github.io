@@ -13,7 +13,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SAMMI Extensions ~ foobar2000 ~ Landie</title>
+    <title class="site-title">{PRODUCTNAME} ~ Landie</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -110,12 +110,12 @@
                         <div class="row mb-4">
                             <div class="col-lg-8">
                                 <div class="productpage-section-contents-header">
-                                    <img style="width: 8rem" src="../foobar2000_control.png" alt="">
+                                    <img class="product-image" style="width: 8rem" src="" alt="">
                                     <div class="shop-section-contents-header-side row">
-                                        <h1>foobar2000</h1>
-                                        <p class="" style="font-size: 1.5rem;">Allows SAMMI to interface with foobar2000
+                                        <h1 class="product-name">???</h1>
+                                        <p class="product-summary" style="font-size: 1.5rem;">bruh idk
                                         </p>
-                                        <p class="">Current Version: 1.0.3</p>
+                                        <p class="product-version">Current Version: yo mama</p>
                                     </div>
                                 </div>
                             </div>
@@ -129,8 +129,8 @@
                                     d-flex flex-column 
                                     justify-content-evenly 
                                     align-items-center">
-                                    <h5 class="">Price:</h5>
-                                    <h4 style="font-size: 3rem;" class="">FREE</h4>
+                                    <h5>Price:</h5>
+                                    <h4 style="font-size: 3rem;" class="product-price">FREE</h4>
                                     <button style="width: 5rem; height: 2rem;"
                                         class="button btn btn-primary download-button">Download</button>
                                 </div>
@@ -1537,11 +1537,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="https://static.itch.io/api.js"></script>
     <script>
-        Itch.attachBuyButton(document.querySelector(".download-button"), {
-            // replace the following with the correct information about your game
-            user: "landie",
-            game: "sammi-foobar2000"
-        });
+        //easily change info in the .json!
+        fillData();
+        async function fillData() {
+            const resp = await fetch('./foobar2000_info.json');
+            const data = await resp.json();
+            console.log(data);
+
+
+            const itchProduct = data.name.toLowerCase().replace(' ', '-');
+            console.log(itchProduct);
+            Itch.attachBuyButton(document.querySelector(".download-button"), {
+                // replace the following with the correct information about your game
+                user: "landie",
+                game: `sammi-${itchProduct}`
+            });
+
+            document.querySelector('.site-title').textContent = `${data.name} ~ Landie`;
+            document.querySelector('.product-version').textContent = `Current Version: ${data.version}`;
+            document.querySelector('.product-name').textContent = data.name;
+            document.querySelector('.product-summary').textContent = data.summary;
+            document.querySelector('.product-price').textContent = data.price;
+            document.querySelector('.product-image').src = data.image;
+        }
 
         function removeHash() {
             history.pushState("", document.title, window.location.pathname
