@@ -15,10 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@landie__">
-    <meta name="twitter:creator" content="@SarahMaslinNir">
-    <meta class="site-twittercard-title" name="twitter:title" content="this shouldnt be visible">
-    <meta class="site-twittercard-description" name="twitter:description" content="">
-    <meta class="site-twittercard-image" name="twitter:image" content="">
+    <meta name="twitter:creator" content="@landie__">
+    <meta class="site-twittercard-title" name="twitter:title" content="File Downloader ~ SAMMI Extension ~ Landie's shop!">
+    <meta class="site-twittercard-description" name="twitter:description" content="Download Files through SAMMI!">
+    <meta class="site-twittercard-image" name="twitter:image" content="https://landie.land/shop/filedownloader.png">
     <title class="site-title">{PRODUCTNAME} ~ Landie</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -353,9 +353,6 @@
             });
 
             document.querySelector('.site-title').textContent = `${data.name} ~ Landie`;
-            document.querySelector('.site-twittercard-title').content = `${data.name} ~ SAMMI Extension ~ Landie's shop!`;
-            document.querySelector('.site-twittercard-description').content = data.summary;
-            document.querySelector('.site-twittercard-image').content = data.image;
             document.querySelector('.product-version').textContent = `Current Version: ${data.version}`;
             document.querySelector('.product-name').textContent = data.name;
             document.querySelector('.product-summary').textContent = data.summary;
