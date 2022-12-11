@@ -79,7 +79,7 @@
                 <img style="width: 4rem;" class="me-3" src="../../logo.png" alt="">
                 <h1>Landie's Shop</h1>
                 <nav class="shop-header-nav ms-5 mt-2 justify-content-center align-items-center text-center">
-                    <a href="../index.html">Home</a>
+                    <a href="../../index.html">Home</a>
                 </nav>
             </div>
             <div class="row site-shop-main">
@@ -104,14 +104,17 @@
                                     <img style="width: 8rem" src="../foobar2000_control.png" alt="">
                                     <div class="shop-section-contents-header-side row">
                                         <h1>foobar2000</h1>
-                                        <p class="" style="font-size: 1.5rem;">Allows SAMMI to interface with foobar2000</p>
-                                        <p class="">Current Version: 1.0.2</p>
+                                        <p class="" style="font-size: 1.5rem;">Allows SAMMI to interface with foobar2000
+                                        </p>
+                                        <p class="">Current Version: 1.0.3</p>
                                     </div>
                                 </div>
                             </div>
-                            <div style="background-color: rgba(240, 255, 245, 0.491); border-radius: 1rem;" class="col-lg-4 d-flex justify-content-end align-items-center">
+                            <div style="background-color: rgba(240, 255, 245, 0.491); border-radius: 1rem;"
+                                class="col-lg-4 d-flex justify-content-end align-items-center">
                                 <div style="max-width: 15rem; padding: 1rem;">
-                                    Payment is done through <em><a href="https://itch.io">itch.io</a></em> ! It is highly recommended to make an account to save your purchases!
+                                    Payment is done through <em><a href="https://itch.io">itch.io</a></em> ! It is
+                                    highly recommended to make an account to save your purchases!
                                 </div>
                                 <div class="border text-center 
                                     d-flex flex-column 
@@ -120,7 +123,7 @@
                                     <h5 class="">Price:</h5>
                                     <h4 style="font-size: 3rem;" class="">FREE</h4>
                                     <button style="width: 5rem; height: 2rem;"
-                                        class="button btn btn-primary">Download</button>
+                                        class="button btn btn-primary download-button">Download</button>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +270,7 @@
                                                 create
                                                 account to</a>.</li>
                                             <li>Download the <a
-                                                    href="https://www.foobar2000.org/components/view/foo_beefweb">beefweb
+                                                    href="https://www./foobar2000.org/components/view/foo_beefweb">beefweb
                                                     remote control for foobar2000</a> plugin, and open foobar2000.</li>
                                             <li>in the top bar, go to <code>File &gt; Preferences</code> and click the
                                                 &quot;Install...&quot; button to install the .fb2k file you downloaded.
@@ -359,8 +362,7 @@
                                             it displays the current song, playback, and album art!</p>
                                         <p><img src="./foobar2000-docs-1.png" alt="bridge preview"></p>
                                         <h1 id="general-extension-command-usage">General Extension Command Usage</h1>
-                                        <p><img src="https://i.imgur.com/vM0Ppih.png"
-                                                alt="local variable persist visual">
+                                        <p><img src="./foobar2000-docs-3.png" alt="local variable persist visual">
                                         </p>
                                         <p>When you use these commands, any command that stores data in a variable must
                                             be a
@@ -382,7 +384,7 @@
                                                 of your button to ensure that it is properly waiting for new data to
                                                 exist</strong>.
                                         </p>
-                                        <p><img src="https://i.imgur.com/Znrx9Io.png" alt="purple command proper usage">
+                                        <p><img src="./foobar2000-docs-4.png" alt="purple command proper usage">
                                         </p>
                                         <ol>
                                             <li><code>Delete Variable</code>: ensures that the
@@ -416,14 +418,11 @@
                                         <h3 id="-updating-procedure">⚠ Updating Procedure</h3>
                                         <p>To update this extension, please follow the steps below!</p>
                                         <ol>
-                                            <li>Unzip the downloaded .zip into your
-                                                <code>(LB Install path)/bridge/extensions/foobar2000</code> folder
+                                            <li>Download the newly updated .sef file
                                             </li>
-                                            <li>Delete the provided &quot;foobar2000&quot; deck in SAMMI if you
-                                                haven&#39;t already. Every update installs a new deck.</li>
-                                            <li>Install the extension as normal. Select &quot;No&quot; when the prompt
-                                                about
-                                                installing pops up. You&#39;re updating!</li>
+                                            <li>Every update installs a new example deck. If you don't need it, make
+                                                sure to delete it!</li>
+                                            <li>Install the extension as normal. Everything should work out!</li>
                                             <li>If you want to make sure your installation still works, Check your
                                                 bridge and click &quot;Check Connection Status&quot; while
                                                 foobar2000
@@ -703,28 +702,30 @@
                                             </tbody>
                                         </table>
                                         <p>Response:</p>
-                                        <pre><code class="lang-JSONC">{
-      <span class="hljs-string">"ababaa"</span>: { //Object Variable Name
-        <span class="hljs-string">"items"</span>: [
-          {
-            <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Vansire"</span>, <span class="hljs-string">"A Long Drive Back"</span>] //%artist%,%title%
-          },
-          {
-            <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Röyksopp"</span>, <span class="hljs-string">"Remind Me (someone else's radio remix)"</span>]
-          },
-          {
-            <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Clario"</span>, <span class="hljs-string">"4Ever"</span>]
-          },
-          {
-            <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Joji"</span>, <span class="hljs-string">"Gimme Love"</span>]
+                                        <div class="markdown-body">
+                                            <pre><code class="lang-JSONC">{
+          <span class="hljs-string">"ababaa"</span>: { //Object Variable Name
+            <span class="hljs-string">"items"</span>: [
+              {
+                <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Vansire"</span>, <span class="hljs-string">"A Long Drive Back"</span>] //%artist%,%title%
+              },
+              {
+                <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Röyksopp"</span>, <span class="hljs-string">"Remind Me (someone else's radio remix)"</span>]
+              },
+              {
+                <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Clario"</span>, <span class="hljs-string">"4Ever"</span>]
+              },
+              {
+                <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Joji"</span>, <span class="hljs-string">"Gimme Love"</span>]
+              }
+            ],
+            <span class="hljs-string">"offset"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">4</span>
           }
-        ],
-        <span class="hljs-string">"offset"</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">4</span>
-      }
-    }
-    </code></pre>
-                                        <p><img src="https://i.imgur.com/pygDjW6.gif" alt="Example LB"></p>
+        }
+        </code></pre>
+                                        </div>
+                                        <p><img src="./foobar2000-docs-5.gif" alt="Example LB"></p>
                                         <h1 id="add-playlist">Add Playlist</h1>
                                         <p>Adds a new playlist.</p>
                                         <table class="table table-primary">
@@ -851,8 +852,8 @@
                                         </table>
                                         <h3 id="example-">Example 📝</h3>
                                         <p>Before: </p>
-                                        <p><img src="https://i.imgur.com/2z3jFVI.png"
-                                                alt="before ex pic move playlist command"></p>
+                                        <p><img src="./foobar2000-docs-6.png" alt="before ex pic move playlist command">
+                                        </p>
                                         <p>Input Parameters:</p>
                                         <table class="table table-secondary">
                                             <thead>
@@ -873,7 +874,7 @@
                                             </tbody>
                                         </table>
                                         <p>After:</p>
-                                        <p><img src="https://i.imgur.com/q0CnGUh.png" alt="after ex pic move playlist">
+                                        <p><img src="./foobar2000-docs-7.png" alt="after ex pic move playlist">
                                         </p>
                                         <h1 id="rename-playlist">Rename Playlist</h1>
                                         <p>Renames a specified playlist.</p>
@@ -955,7 +956,7 @@
                                         <h3 id="example-">Example 📝</h3>
                                         <p><strong>Goal</strong>: Move these four songs from the &quot;Chill Songs&quot;
                                             playlist into the &quot;Upbeat Songs&quot; playlist.</p>
-                                        <p><img src="https://i.imgur.com/ZRIc1Ze.png" alt="playlist to move songs from">
+                                        <p><img src="./foobar2000-docs-8.png" alt="playlist to move songs from">
                                         </p>
                                         <p>Input Parameters:</p>
                                         <table class="table table-secondary">
@@ -985,10 +986,10 @@
                                             </tbody>
                                         </table>
                                         <p>Using <code>Stringify Array</code> to create the stringified array</p>
-                                        <p><img src="https://i.imgur.com/TzcKtvX.png" alt="example lb move to playlist">
+                                        <p><img src="./foobar2000-docs-9.png" alt="example lb move to playlist">
                                         </p>
                                         <p>Result:</p>
-                                        <p><img src="https://i.imgur.com/Q1K9wrr.png" alt="result move to playlist"></p>
+                                        <p><img src="./foobar2000-docs-10.png" alt="result move to playlist"></p>
                                         <h1 id="copy-songs-to-playlist">Copy songs to Playlist</h1>
                                         <p>Copies songs from one playlist, to another using a specified stringified
                                             array.</p>
@@ -1042,8 +1043,7 @@
                                         <h3 id="example-">Example 📝</h3>
                                         <p><strong>Goal</strong>: Copy these six songs from the &quot;Chill Songs&quot;
                                             playlist into the &quot;Upbeat Songs&quot; playlist.</p>
-                                        <p><img src="https://i.imgur.com/LNMcIMg.png"
-                                                alt="before copy songs to playlist"></p>
+                                        <p><img src="./foobar2000-docs-11.png" alt="before copy songs to playlist"></p>
                                         <p>Input Parameters:</p>
                                         <table class="table table-secondary">
                                             <thead>
@@ -1072,10 +1072,10 @@
                                             </tbody>
                                         </table>
                                         <p>Using <code>Stringify Array</code> to create the stringified array</p>
-                                        <p><img src="https://i.imgur.com/AO6hleK.png"
-                                                alt="example lb copy songs to playlist"></p>
+                                        <p><img src="./foobar2000-docs-12.png" alt="example lb copy songs to playlist">
+                                        </p>
                                         <p>Result:</p>
-                                        <p><img src="https://i.imgur.com/K2th0W6.png" alt="result copy to playlist"></p>
+                                        <p><img src="./foobar2000-docs-13.png" alt="result copy to playlist"></p>
                                         <h1 id="remove-songs">Remove Songs</h1>
                                         <p>Remove songs from specified playlist.</p>
                                         <table class="table table-primary">
@@ -1130,7 +1130,7 @@
                                             </tbody>
                                         </table>
                                         <p>Using <code>Stringify Array</code> to create the stringified array</p>
-                                        <p><img src="https://i.imgur.com/YSpHo0a.png" alt="example lb remove songs"></p>
+                                        <p><img src="./foobar2000-docs-14.png" alt="example lb remove songs"></p>
                                         <h1 id="copy-songs">Copy Songs</h1>
                                         <p>Copy songs from specified playlist into itself.</p>
                                         <table class="table table-primary">
@@ -1198,7 +1198,242 @@
                                             </tbody>
                                         </table>
                                         <p>Using <code>Stringify Array</code> to create the stringified array</p>
-                                        <p><img src="https://i.imgur.com/GtA3Dlq.png" alt="example lb copy songs"></p>
+                                        <p><img src="./foobar2000-docs-6.png" alt="example lb copy songs"></p>
+                                        <h1 id="set-playback-state">Set Playback State</h1>
+                                        <p>Sets the playback state of the player.</p>
+                                        <h3 id="parameters">Parameters</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Playstate</td>
+                                                    <td><em>Dropdown</em></td>
+                                                    <td>✔</td>
+                                                    <td>The playstate you wish to
+                                                        set.<br><br><strong>Playstates:</strong><br>Play, Next,
+                                                        Previous, Stop, Pause, and Random</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h1 id="set-playback-mode">Set Playback Mode</h1>
+                                        <p>Sets the playback mode of the player.</p>
+                                        <h3 id="parameters">Parameters</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Playback Mode</td>
+                                                    <td><em>Dropdown</em></td>
+                                                    <td>✔</td>
+                                                    <td>The playback mode you wish to set.<br><br><strong>Playback
+                                                            Modes:</strong><br>Default, Repeat (Playlist), Repeat
+                                                        (Track), Random, Shuffle (Tracks), Shuffle (Albums), and Shuffle
+                                                        (Folders)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h1 id="set-song">Set Song</h1>
+                                        <p>Sets the song for the player.</p>
+                                        <h3 id="parameters">Parameters</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>playlistID/index</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The Playlist ID or index of the playlist you wish to play a song
+                                                        from.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Song Index</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The index of the song you wish to play</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h1 id="get-current-song-info">Get Current Song Info</h1>
+                                        <p>Gets the current set/playing song info from the player.</p>
+                                        <h3 id="parameters">Parameters</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Save Object Variable</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The Object Variable you wish to save to.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Columns</td>
+                                                    <td><em>string (special syntax)</em></td>
+                                                    <td>✔</td>
+                                                    <td>A comma delimited list of column data to return (e.g.
+                                                        &quot;%artist%,%title%&quot;)<br /><br />you may also not use
+                                                        colons, however, everything returns in one line which is not
+                                                        ideal.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3 id="response">Response</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Value</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>.duration</code></td>
+                                                    <td><em>int</em></td>
+                                                    <td>Number indicating the duration of the current song</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.index</code></td>
+                                                    <td><em>int</em></td>
+                                                    <td>Song&#39;s position in the playlist</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.playlistIndex</code></td>
+                                                    <td><em>int</em></td>
+                                                    <td>Playlist&#39;s position in playlist list that the current song
+                                                        resides in</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.position</code></td>
+                                                    <td><em>int</em></td>
+                                                    <td>Current song&#39;s position relative to <code>.duration</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.playlistId</code></td>
+                                                    <td><em>String</em></td>
+                                                    <td>Playlist ID of the current song&#39;s location</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.columns[]</code></td>
+                                                    <td><em>Array</em></td>
+                                                    <td>Array of column data requested</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>.columns[0-?]</code></td>
+                                                    <td><em>String</em></td>
+                                                    <td>column data is in order of provided pattern. Depending on how
+                                                        many comma delimited entries, this array can have multiple
+                                                        entries. <br /><br /> e.g. %album%,%title%,%length% =&gt;
+                                                        columns[0],columns[1],columns[2]</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3 id="example-response-">Example Response📝</h3>
+                                        <div class="markdown-body">
+                                            <pre><code class="lang-JSONC">{
+      <span class="hljs-string">"currentSongInfo"</span>: { //Save Object Variable
+        <span class="hljs-string">"position"</span>: <span class="hljs-number">6.806788</span>, //position relative to duration below
+        <span class="hljs-string">"duration"</span>: <span class="hljs-number">245.121458</span>,
+        <span class="hljs-string">"columns"</span>: [<span class="hljs-string">"Remind Me (someone else's radio remix)"</span>, <span class="hljs-string">"Remind Me"</span>, <span class="hljs-string">"4:05"</span>], //<span class="hljs-meta">%title</span>%,<span class="hljs-meta">%album</span>%,<span class="hljs-meta">%length</span>%
+        <span class="hljs-string">"playlistIndex"</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-string">"playlistId"</span>: <span class="hljs-string">"p5"</span>,
+        <span class="hljs-string">"index"</span>: <span class="hljs-number">15</span>
+      }
+    }
+    </code></pre>
+                                        </div>
+                                        <p><img src="./foobar2000-docs-16.gif"
+                                                alt="Example LB get current song info"></p>
+                                        <h1 id="get-song-artwork">Get Song Artwork</h1>
+                                        <p>Gets the specified song&#39;s artwork as a direct link.</p>
+                                        <h3 id="parameters">Parameters</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Save Variable</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The Variable you wish to save to</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Playlist ID</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The Playlist ID (not index) of the playlist the song resides in
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Song Index</td>
+                                                    <td><em>int</em></td>
+                                                    <td>✔</td>
+                                                    <td>The song&#39;s index in the playlist</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3 id="response">Response</h3>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Value</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>.</code></td>
+                                                    <td><em>String</em></td>
+                                                    <td>The direct link to the song&#39;s artwork. Can be displayed
+                                                        using a OBS Web Source</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3 id="example-response-">Example Response📝</h3>
+                                        <div class="markdown-body">
+                                            <pre><code class="lang-JSONC">{
+      <span class="hljs-string">"songArtwork"</span>: <span class="hljs-string">"http://127.0.0.1:8880/api/artwork/p5/4"</span> // <span class="hljs-keyword">Save</span> <span class="hljs-keyword">Variable</span> containing returned direct link
+    }
+    </code></pre>
+                                        </div>
+                                        <p><img src="./foobar2000-docs-17.png" alt="example lb obs Song Artwork">
+                                        </p>
+
 
 
                                     </div>
@@ -1292,7 +1527,14 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="https://static.itch.io/api.js"></script>
     <script>
+        Itch.attachBuyButton(document.querySelector(".download-button"), {
+            // replace the following with the correct information about your game
+            user: "landie",
+            game: "sammi-foobar2000"
+        });
+
         function removeHash() {
             history.pushState("", document.title, window.location.pathname
                 + window.location.search);
@@ -1302,7 +1544,7 @@
             console.log(e)
         });
         setTimeout(goToLink, 5);
-        
+
         function goToLink() {
             const target = window.location.hash;
             switch (target) {
