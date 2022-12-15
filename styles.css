@@ -599,6 +599,11 @@ h5 {
   background-size: contain;
 }
 
+.item-easyemotes {
+  background-image: url(./shop/easyemotes.png);
+  background-size: contain;
+}
+
 .shop-item:nth-last-child(1) {
   margin-bottom: 20rem;
 }
