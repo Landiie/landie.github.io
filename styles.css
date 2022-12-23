@@ -527,39 +527,79 @@ h5 {
 }
 
 .label-list {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
   list-style: none;
   padding: 0;
   margin: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
-
-.label-free {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+.label-list-filter {
   border-radius: 1rem;
   text-align: center;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1em;
   font-weight: bold;
-  height: auto;
+}
+
+.label-list-filter > button {
+  border-radius: 1rem;
+  min-height: 2.5rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.label-list-filter > .active {
+  border: 3px solid rgb(255, 255, 255);
+}
+.label-list-filter > button:hover {
+  transform: scale(1.2);
+}
+
+.label-list > li{
+  position: relative;
+  margin-right: 0.1em;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  min-height: 1em;
+  max-height: 1.5em;
+}
+
+.label-free {
   min-width: 3em;
   max-width: 3em;
   background-color: blue;
 }
 
 .label-price {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  height: auto;
   min-width: 2.5em;
   max-width: 2.5em;
   background-color: rgb(43, 178, 232);
+}
+
+.label-tool {
+  min-width: 3.5em;
+  max-width: 3.5em;
+  background-color: rgb(5, 120, 49);
+}
+
+.label-gaming {
+  min-width: 4.7em;
+  max-width: 4.7em;
+  background-color: rgb(8, 186, 76);
+}
+
+.label-audio {
+  min-width: 3.5em;
+  max-width: 3.5em;
+  background-color: rgb(154, 89, 234);
 }
 
 .shop-item-overlay {
