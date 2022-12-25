@@ -16,8 +16,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@landie__">
     <meta name="twitter:creator" content="@landie__">
-    <meta class="site-twittercard-title" name="twitter:title" content="Folder Reader ~ SAMMI Extension ~ Landie's shop!">
-    <meta class="site-twittercard-description" name="twitter:description" content="Read Files and Folders from a directory with filters using SAMMI">
+    <meta class="site-twittercard-title" name="twitter:title"
+        content="Folder Reader ~ SAMMI Extension ~ Landie's shop!">
+    <meta class="site-twittercard-description" name="twitter:description"
+        content="Read Files and Folders from a directory with filters using SAMMI">
     <meta class="site-twittercard-image" name="twitter:image" content="https://landie.land/shop/folderreader.png">
     <title class="site-title">{PRODUCTNAME} ~ Landie</title>
 
@@ -158,6 +160,11 @@
                                 <button onclick='window.location.hash = "documentation"' class="nav-link"
                                     id="documentation-tab" data-bs-target="#documentation" type="button" role="tab"
                                     aria-controls="documentation" aria-selected="false">Documentation</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button onclick='window.location.hash = "patchnotes"' class="nav-link"
+                                    id="patchnotes-tab" data-bs-target="#patchnotes" type="button" role="tab"
+                                    aria-controls="patchnotes" aria-selected="false">Patch notes</button>
                             </li>
                         </ul>
                         <!--Product Body-->
@@ -335,9 +342,40 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Commands</strong></h3>
                                                 <ul>
-                                                    <li><a
-                                                            href="#file-reader-read">Folder
+                                                    <li><a href="#file-reader-read">Folder
                                                             Reader: Read</a></li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <h1 id="version-200">2.0.0</h1>
+                                        <div class="alert alert-warning d-flex flex-row justify-content-center align-items-center text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="32" height="32" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                                                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                              </svg>
+                                              Update requires SAMMI's local API to be turned on before usage!
+                                        </div>
+                                        <ul>
+                                            <li>Incredibly reduced fetch time using SAMMI's Local API and cURL</li>
+                                            <li>Added version number as variable</li>
+                                            <li>Sends Array instead of Stringified Array</li>
+                                            <li>Added checks to ensure Local API is enabled before usage</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-12">
+                                        <div
+                                            class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
+                                            <div class="productpage-section-contents-sidebar-body">
+                                                <h3 id="-commands-"><strong>Versions</strong></h3>
+                                                <ul>
+                                                    <li><a href="#version-200">2.0.0</a></li>
                                                 </ul>
 
                                             </div>
@@ -443,6 +481,10 @@
                 case '#documentation':
                     console.log("workie")
                     document.querySelector("#documentation-tab").click();
+                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
+                    break;
+                case '#patchnotes':
+                    document.querySelector("#patchnotes-tab").click();
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 default:
