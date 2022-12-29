@@ -16,7 +16,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@landie__">
     <meta name="twitter:creator" content="@landie__">
-    <meta class="site-twittercard-title" name="twitter:title" content="File Downloader ~ SAMMI Extension ~ Landie's shop!">
+    <meta class="site-twittercard-title" name="twitter:title"
+        content="File Downloader ~ SAMMI Extension ~ Landie's shop!">
     <meta class="site-twittercard-description" name="twitter:description" content="Download Files through SAMMI!">
     <meta class="site-twittercard-image" name="twitter:image" content="https://landie.land/shop/filedownloader.png">
     <title class="site-title">{PRODUCTNAME} ~ Landie</title>
@@ -174,6 +175,11 @@
                                     id="documentation-tab" data-bs-target="#documentation" type="button" role="tab"
                                     aria-controls="documentation" aria-selected="false">Documentation</button>
                             </li>
+                            <li class="nav-item" role="presentation">
+                                <button onclick='window.location.hash = "patchnotes"' class="nav-link"
+                                    id="patchnotes-tab" data-bs-target="#patchnotes" type="button" role="tab"
+                                    aria-controls="patchnotes" aria-selected="false">Patch notes</button>
+                            </li>
                         </ul>
                         <!--Product Body-->
                         <!-- Tab panes -->
@@ -309,6 +315,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <h1 id="version-204">2.0.4</h1>
+                                        <ul>
+                                            <li>Bug Fix: Fixed issue where the API port would never be fetched if default, rendering the save status variable useless</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-12">
+                                        <div
+                                            class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
+                                            <div class="productpage-section-contents-sidebar-body">
+                                                <h3 id="-commands-"><strong>Versions</strong></h3>
+                                                <ul>
+                                                    <li><a href="#version-204">2.0.4</a></li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!--a padding div to fix scrolling on smaller sizes-->
                             <div style="padding-bottom: 15rem;"></div>
                         </div>
@@ -407,6 +436,10 @@
                 case '#documentation':
                     console.log("workie")
                     document.querySelector("#documentation-tab").click();
+                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
+                    break;
+                case '#patchnotes':
+                    document.querySelector("#patchnotes-tab").click();
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 default:
