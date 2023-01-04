@@ -1,0 +1,16 @@
+---
+layout: 'base.njk'
+title: 'DEFAULT'
+---
+<div class="site-shop">
+  <div class="container-fluid site-shop-inner-content">
+    {% include 'shop-header.njk' %}
+    <div class="row site-shop-main">
+    {% include 'shop-sidebar.njk' %}
+      <div class="col-xl-10 col-lg-12">
+        {{ content | safe }}
+    </div>
+  </div>
+</div>
+<script src="./shop.js"></script>
+<script src="./shop-live-indicator.js"></script>

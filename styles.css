@@ -25,7 +25,7 @@ picture {
 
 
 
-.table-primary > thead > tr > th {
+.table-primary > tbody > tr > th {
   background-color: rgb(148, 199, 249);
   border: solid 1px black;
 }

@@ -7,6 +7,6 @@ fetch("https://decapi.me/twitch/uptime/landie/?offline_msg=notstreaming")
       document.querySelector(".shop-header-nav").classList.remove('col-xl-9');
       document.querySelector(".shop-header-nav").classList.add('col-xl-6')
     } else {
-      console.log("wah");
+      // console.log("wah");
     }
   });

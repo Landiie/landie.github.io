@@ -17,7 +17,8 @@
     <meta name="twitter:site" content="@landie__">
     <meta name="twitter:creator" content="@landie__">
     <meta class="site-twittercard-title" name="twitter:title" content="foobar2000 ~ SAMMI Extension ~ Landie's shop!">
-    <meta class="site-twittercard-description" name="twitter:description" content="Allows foobar2000 to interface with SAMMI!">
+    <meta class="site-twittercard-description" name="twitter:description"
+        content="Allows foobar2000 to interface with SAMMI!">
     <meta class="site-twittercard-image" name="twitter:image" content="https://landie.land/shop/foobar2000.png">
     <title class="site-title">{PRODUCTNAME} ~ Landie</title>
 
@@ -542,37 +543,37 @@
 
                                         <h3 id="example-">Example 📝</h3>
                                         <div class="markdown-body">
-                                            <pre><code class="lang-JSON">{
-          <span class="hljs-attr">"playlists"</span>: [
-            {
-              <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p22"</span>,
-              <span class="hljs-attr">"index"</span>: <span class="hljs-number">0</span>,
-              <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">1871</span>,
-              <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Stream Playlist"</span>,
-              <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
-            },
-            {
-              <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p18"</span>,
-              <span class="hljs-attr">"index"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-              <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Personal Playlist"</span>,
-              <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
-            },
-            {
-              <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p4"</span>,
-              <span class="hljs-attr">"index"</span>: <span class="hljs-number">2</span>,
-              <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-              <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">0</span>,
-              <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Personal Playlist's Personal Playlist"</span>,
-              <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
-            }
-          ]
-        }
-        </code></pre>
 
                                         </div>
+                                        <pre><code class="markdown-body lang-JSON">{
+      <span class="hljs-attr">"playlists"</span>: [
+        {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p22"</span>,
+          <span class="hljs-attr">"index"</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">1871</span>,
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Stream Playlist"</span>,
+          <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
+        },
+        {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p18"</span>,
+          <span class="hljs-attr">"index"</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Personal Playlist"</span>,
+          <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
+        },
+        {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"p4"</span>,
+          <span class="hljs-attr">"index"</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">"itemCount"</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Personal Playlist's Personal Playlist"</span>,
+          <span class="hljs-attr">"totalTime"</span>: <span class="hljs-number">0.0</span>
+        }
+      ]
+    }
+    </code></pre>
                                         <p><img src="./foobar2000-docs-2.gif" alt="Example LB"></p>
                                         <h1 id="get-playlist-songs">Get Playlist Songs</h1>
                                         <p>Returns an object with an array of objects containing an array of each
@@ -1470,34 +1471,36 @@
                                         <div
                                             class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
                                             <div class="productpage-section-contents-sidebar-body">
-                                                <h5 id="-playlist-commands-"><strong>Playlist Commands</strong></h5>
-                                                <ul>
-                                                    <li>
-                                                        <a class="sidebar-link" href="#get-playlists">Get
-                                                            Playlists</a>
-                                                    </li>
-                                                    <li><a class="sidebar-link" href="#get-playlist-songs">Get
-                                                            Playlist Songs</a></li>
-                                                    <li><a class="sidebar-link" href="#add-playlist">Add
-                                                            Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#remove-playlist">Remove
-                                                            Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#clear-playlist">Clear
-                                                            Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#move-playlist">Move
-                                                            Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#rename-playlist">Rename
-                                                            Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#move-songs-to-playlist">Move
-                                                            songs to Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#copy-songs-to-playlist">Copy
-                                                            songs to Playlist</a></li>
-                                                    <li><a class="sidebar-link" href="#remove-songs">Remove
-                                                            Songs</a></li>
-                                                    <li><a class="sidebar-link" href="#copy-songs">Copy
-                                                            Songs</a></li>
-                                                </ul>
-                                                <h5 id="-player-commands-"><strong>Player Commands</strong></h5>
+                                                <h5 id="playlist-commands"><strong>Playlist Commands</strong></h5>
+                                                <div>
+                                                    <ul>
+                                                        <li>
+                                                            <a class="sidebar-link" href="#get-playlists">Get
+                                                                Playlists</a>
+                                                        </li>
+                                                        <li><a class="sidebar-link" href="#get-playlist-songs">Get
+                                                                Playlist Songs</a></li>
+                                                        <li><a class="sidebar-link" href="#add-playlist">Add
+                                                                Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#remove-playlist">Remove
+                                                                Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#clear-playlist">Clear
+                                                                Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#move-playlist">Move
+                                                                Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#rename-playlist">Rename
+                                                                Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#move-songs-to-playlist">Move
+                                                                songs to Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#copy-songs-to-playlist">Copy
+                                                                songs to Playlist</a></li>
+                                                        <li><a class="sidebar-link" href="#remove-songs">Remove
+                                                                Songs</a></li>
+                                                        <li><a class="sidebar-link" href="#copy-songs">Copy
+                                                                Songs</a></li>
+                                                    </ul>
+                                                </div>
+                                                <h5 id="player-commands"><strong>Player Commands</strong></h5>
                                                 <ul>
                                                     <li><a class="sidebar-link" href="#set-playback-state">Set
                                                             Playback State</a></li>
@@ -1550,6 +1553,9 @@
         </div>
     </div>
     <script src="../shop-live-indicator.js"></script>
+    <script src="../../drawdown.js"></script>
+    <script src="../../papaparse.min.js"></script>
+    <script src="../../landiemarkdownparse.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
@@ -1558,17 +1564,37 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+        integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        //console.log(fetch("https://docs.google.com/spreadsheets/d/1wNeKt7Z1H60iQmCTmPoDQ93Y0lV3/gviz/tq"))
+        landieMdToHtml('./md/foobar2000-control-docs.md').then(value => {
+            console.log("new stuff", value)
+            document.querySelector('#documentation .productpage-section-contents-body').innerHTML = value;
+            console.log("finished html...", document.querySelector('#documentation .productpage-section-contents-body').innerHTML)
+
+            let ids = document.querySelectorAll('#documentation .productpage-section-contents-body h2')
+            console.log(ids)
+            let fixedIds = [];
+            ids.forEach(element => {
+                element.id = element.textContent.toLowerCase().replaceAll(' ', '-')
+            })
+            console.log("ids", fixedIds)
+        });
+
+
+
         //easily change info in the .json!
         fillData();
         async function fillData() {
             const resp = await fetch('./foobar2000_info.json');
             const data = await resp.json();
-            console.log(data);
+            // console.log(data);
 
 
             const itchProduct = data.name.toLowerCase().replace(' ', '-');
-            console.log(itchProduct);
+            // console.log(itchProduct);
             Itch.attachBuyButton(document.querySelector(".download-button"), {
                 // replace the following with the correct information about your game
                 user: "landie",
@@ -1589,7 +1615,7 @@
         }
         window.addEventListener('hashchange', (e) => {
             goToLink();
-            console.log(e)
+            // console.log(e)
         });
         setTimeout(goToLink, 5);
 
@@ -1608,7 +1634,7 @@
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 case '#documentation':
-                    console.log("workie")
+                    // console.log("workie")
                     document.querySelector("#documentation-tab").click();
                     document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
@@ -1619,7 +1645,7 @@
         }
 
         var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
-        console.log(triggerTabList)
+        // console.log(triggerTabList)
         triggerTabList.forEach(function (triggerEl) {
             var tabTrigger = new bootstrap.Tab(triggerEl)
 

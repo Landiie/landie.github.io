@@ -1,0 +1,11 @@
+{
+  "name": "File Downloader",
+  "summary": "Download Files through SAMMI!",
+  "version": "2.0.4",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "bug fix: API port reading",
+  "versionSummaryBody": "Fixes a bug where the API port is never fetched, causing absurdly long status report times",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/file-downloader",
+  "price": "FREE",
+  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/filedownloader.png"
+}
