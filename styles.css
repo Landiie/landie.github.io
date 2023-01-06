@@ -85,6 +85,13 @@ body {
     rgb(157, 237, 157)
   );
 }
+.body-blue {
+  background: linear-gradient(
+    to top right,
+    rgb(3, 8, 101),
+    rgb(157, 237, 230)
+  );
+}
 
 .circleBase {
   border-radius: 50%;
@@ -315,6 +322,9 @@ button {
   background-color: rgba(67, 117, 70, 0.552);
   overflow-y: hidden;
   overflow-x: hidden;
+}
+.site-shop-sidebar-blue {
+  background-color: rgba(67, 79, 117, 0.552);
 }
 
 .sidebar-item {
