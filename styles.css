@@ -822,6 +822,11 @@ p {
   color: white;
 }
 
+.productpage-section-contents-body > ol > li > p {
+  text-shadow: none !important;
+  color: rgb(0, 0, 0);
+}
+
 .main-header-title {
   font-size: 4rem;
 }

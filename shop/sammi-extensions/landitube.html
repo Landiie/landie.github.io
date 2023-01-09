@@ -192,243 +192,247 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div class="tab-pane active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-                                <div class="col-xl-12 col-lg-12">
-                                    <p><img src="https://i.imgur.com/IsovjaP.gif" alt="introducing landitube"></p>
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 productpage-section-contents-body">
+                                        <p><strong>Please keep in mind this is a beta release, and is not expected to
+                                                work correctly under certain circumstances. You can really help out by
+                                                reporting these bugs via <br><a href="https://discord.gg/ZTbMw7TVKa">Discord
+                                                    Server</a><br>Direct
+                                                Discord DM: Landie#0038<br>Email at landieinquiries@gmail.com</strong>
+                                        </p>
+                                        <h1 id="help-i-m-new-to-sammi-and-i-want-to-use-this-what-do-i-do-">Help!
+                                            I&#39;m new to SAMMI, and I want to use this! What do I do?</h1>
+                                        <p>Please check out this <a href="">quick video</a> I made to help newcomers get
+                                            SAMMI set up with everything they need to use this extension!</p>
+                                        <h1 id="what-is-this-">What is this?</h1>
+    
+                                        <p>&quot;LandiTube&quot; Is an advanced, easy to use PNGTuber engine built from
+                                            the ground up using SAMMI over the course of a half year of constant
+                                            development. PNGTuber software seems sparse, while other Vtubing related
+                                            softwares seem to be targetting the 3D audience.
+                                            <br>
+                                            <br>
+                                            I&#39;m here to change that.
+                                        </p>
+                                        <h1 id="what-does-this-offer-that-other-engines-don-t-">What does this offer
+                                            that other engines don&#39;t?</h1>
+                                        <p>Plenty!!</p>
+                                        <ul>
+                                            <li>Infinite Models ♾️</li>
+                                            <li>Infinite Random Talking Poses ♾️</li>
+                                            <li>Infinite Random Idle Poses ♾️</li>
+                                            <li>(WIP ⚠ ) Infinite Random Yelling Poses ♾️</li>
+                                            <li>Squishiness 200% 💚</li>
+                                            <li>Special filters set so <em>only</em> your voice comes through! No more
+                                                keyboard-activated tubers... 🎤</li>
+                                            <li>Hotkeys, or no hotkeys! You can set up a command to change an emotion
+                                                directly! 🔧</li>
+                                            <li>Built using OBS Image Sources, so your PNGs will look crisp and have no
+                                                artifacts! 📸</li>
+                                            <li>Not a separate window. No silly green screenies 🔪</li>
+                                            <li>Easy to use, dynamic folder structure designed to be responsive, and
+                                                intuitive 💡</li>
+                                            <li>Drag n&#39; Drop files, hit refresh, and everything just works! 💡</li>
+                                            <li>Use any OBS Image Source supported Image Format you want! .PNG, .GIF,
+                                                .APNG, and more.</li>
+                                            <li>Use ANY OBS Source as a component in your PNGTuber <strong>(More on this
+                                                    further down)</strong>. 🤯 &lt;-- thats u</li>
+                                            <li>Dynamic web interface for development and config purposes, indepth yet
+                                                easy to understand and navigate. 💡</li>
+                                            <li>Blinking for every type of pose (that&#39;s expected :3) 🙄</li>
+                                            <li>(WIP ⚠) Set custom blinking intervals per emotion</li>
+                                            <li>(WIP ⚠) Custom transitions between emotions</li>
+                                            <li>Actively being updated to add new features out of passion and respect
+                                                for those who love this engine just as much as I do 🔧💚</li>
+                                            <li>Its Free. No commitments, nothin!! This was commissioned a long time ago
+                                                by the wonderful and generous <a
+                                                    href="https://twitter.com/jessyabeb">Jessyabeb</a>! Without her, I
+                                                would&#39;ve never had the motivation or courage to set out and code
+                                                something this massive to share with the world. 💚</li>
+                                        </ul>
+                                        <p>And now for the <strong>Big 2 Features.</strong> First up...</p>
+                                        <h2 id="full-sammi-integration-and-public-api">Full SAMMI Integration and Public
+                                            API</h2>
+                                            
+                                            <p>If you're not happy with what is provided with this engine out of the box, you don't have to wait!</p>
+    
+                                        <p>A vast amount of engine data is available to you in the form of &quot;Pull
+                                            Data&quot; from &quot;Extension Triggers&quot;, such as:</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pull Value</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>blink</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current blinking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current set expression of the active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_path</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>the current image path compiled together using
+                                                        <code>global.main_directory</code>, <code>current_model</code>,
+                                                        <code>current_state</code>, and
+                                                        <code>current_emotion_state_extension</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_idle</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s idle poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_talking</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s talking poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_state_extension</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current state&#39;s file extension to be used in conjunction
+                                                        with <code>current_state</code> to create a full file</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_model</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_state</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active state of the model. This the result of
+                                                        various impacting factors such as yelling, blinking, talking,
+                                                        and randomly drawn poses</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>talking</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current talking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>yelling</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current yelling state</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>All of data is sent to you in the form of these extension triggers:</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Extension Trigger</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>LandiTube talking true</code></td>
+                                                    <td>triggers a button when the character starts talking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube talking false</code></td>
+                                                    <td>triggers a button when the character is finished talking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube blinking true</code></td>
+                                                    <td>triggers a button when the character blinks</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube blinking false</code></td>
+                                                    <td>triggers a button when the character is done blinking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube yelling true</code></td>
+                                                    <td>triggers a button when the character yells</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube yelling false</code></td>
+                                                    <td>triggers a button when the character is done yelling</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube model changed</code></td>
+                                                    <td>triggers a button when the model is changed from the current
+                                                        active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube model</code> (modelname)</td>
+                                                    <td>triggers a button when the model is changed and matches a
+                                                        specific model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube emotion changed</code></td>
+                                                    <td>triggers a button when the emotion is changed from the current
+                                                        active emotion</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube emotion</code> (emotionname)</td>
+                                                    <td>triggers a button when the emotion is changed and matches a
+                                                        specific emotion</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p><strong><em><strong>Woah woah woah Landie slow down!! I don&#39;t know how to
+                                                        use this!</strong></em></strong></p>
+                                        <p>That&#39;s alright! No SAMMI knowledge is required to get up and running with
+                                            this engine. however, if you want to capitalize on this amount of freedom
+                                            and take your PNGTuber to the next level; SAMMI is an incredible, easy, and
+                                            fun software to use to build your dream stream projects (no coding knowledge
+                                            needed at all! thats how i started!). You can get started by reading the
+                                            documentation <a href="https://sammi.solutions/docs">Here!</a> if you want
+                                            to learn more about whats coming up next...</p>
+                                        <p>What are you supposed to do with this info? Well, thats where the second
+                                            <em>huge</em> feature comes in...
+                                        </p>
+                                        <h2 id="full-obs-source-layering-system">Full OBS Source Layering System</h2>
+                                        <p>Have you ever wanted your PNGTuber to actually interact with your OBS Setup a
+                                            bit more? Thanks to the foundation of this engine that is SAMMI, you can do
+                                            just that, and so much more.</p>
+                                        <p>This data can be used to create your own rendering engine, ontop of the
+                                            default one shipped with this extension (to be changed in 1.0.0)!</p>
+                                        <p>&quot;Landie thats a big word..&quot;, All it means is that you get to decide
+                                            how certain OBS Sources behave, and interact with the PNGTuber Engine!</p>
+                                        <h3 id="examples-">Examples:</h3>
+                                        <p>Here are some examples i quickly whipped up:</p>
+                                        <ul>
+                                            <li>Rotate an animated image source of my character&#39;s tails everytime my
+                                                talking state changes!</li>
+                                        </ul>
+                                        <p><img src="https://i.imgur.com/m7teWZL.gif" alt="Landie but awesome"></p>
+                                        <ul>
+                                            <li>Have this live-updating image source of chat&#39;s emote, move a
+                                                specific way based on what pose I have!</li>
+                                        </ul>
+                                        <p><img src="https://i.imgur.com/jdNp3ZY.gif" alt=""></p>
+                                        <ul>
+                                            <li>Move this text source slightly when I talk!</li>
+                                        </ul>
+                                        <p><img src="https://i.imgur.com/VHfH82R.gif" alt=""></p>
+                                        <p>Those are just some examples of what is possible with LandiTube!</p>
+                                        <p>Oh yeah, and two new SAMMI commands:</p>
+                                        <ul>
+                                            <li>LandiTube: Change Model</li>
+                                            <li>LandiTube: Change Emotion</li>
+                                        </ul>
+                                        <p>but i&#39;m sure you suspected as much :3c</p>
+                                        <p>What are you waiting for? Check out the <a href="#setup">Setup</a> page for
+                                            prerequisites, and download!</p>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-12 d-flex justify-content-center">
+                                        <p><img src="https://i.imgur.com/IsovjaP.gif" alt="introducing landitube"></p>
+                                    </div>
                                 </div>
-                                <div class="col-xl-12 col-lg-12 productpage-section-contents-body">
-                                    <p><strong>Please keep in mind this is a beta release, and is not expected to
-                                            work correctly under certain circumstances. You can really help out by
-                                            reporting these bugs via <br><a href="https://discord.gg/ZTbMw7TVKa">Discord
-                                                Server</a><br>Direct
-                                            Discord DM: Landie#0038<br>Email at landieinquiries@gmail.com</strong>
-                                    </p>
-                                    <h1 id="help-i-m-new-to-sammi-and-i-want-to-use-this-what-do-i-do-">Help!
-                                        I&#39;m new to SAMMI, and I want to use this! What do I do?</h1>
-                                    <p>Please check out this <a href="">quick video</a> I made to help newcomers get
-                                        SAMMI set up with everything they need to use this extension!</p>
-                                    <h1 id="what-is-this-">What is this?</h1>
-
-                                    <p>&quot;LandiTube&quot; Is an advanced, easy to use PNGTuber engine built from
-                                        the ground up using SAMMI over the course of a half year of constant
-                                        development. PNGTuber software seems sparse, while other Vtubing related
-                                        softwares seem to be targetting the 3D audience.
-                                        <br>
-                                        <br>
-                                        I&#39;m here to change that.
-                                    </p>
-                                    <h1 id="what-does-this-offer-that-other-engines-don-t-">What does this offer
-                                        that other engines don&#39;t?</h1>
-                                    <p>Plenty!!</p>
-                                    <ul>
-                                        <li>Infinite Models ♾️</li>
-                                        <li>Infinite Random Talking Poses ♾️</li>
-                                        <li>Infinite Random Idle Poses ♾️</li>
-                                        <li>(WIP ⚠ ) Infinite Random Yelling Poses ♾️</li>
-                                        <li>Squishiness 200% 💚</li>
-                                        <li>Special filters set so <em>only</em> your voice comes through! No more
-                                            keyboard-activated tubers... 🎤</li>
-                                        <li>Hotkeys, or no hotkeys! You can set up a command to change an emotion
-                                            directly! 🔧</li>
-                                        <li>Built using OBS Image Sources, so your PNGs will look crisp and have no
-                                            artifacts! 📸</li>
-                                        <li>Not a separate window. No silly green screenies 🔪</li>
-                                        <li>Easy to use, dynamic folder structure designed to be responsive, and
-                                            intuitive 💡</li>
-                                        <li>Drag n&#39; Drop files, hit refresh, and everything just works! 💡</li>
-                                        <li>Use any OBS Image Source supported Image Format you want! .PNG, .GIF,
-                                            .APNG, and more.</li>
-                                        <li>Use ANY OBS Source as a component in your PNGTuber <strong>(More on this
-                                                further down)</strong>. 🤯 &lt;-- thats u</li>
-                                        <li>Dynamic web interface for development and config purposes, indepth yet
-                                            easy to understand and navigate. 💡</li>
-                                        <li>Blinking for every type of pose (that&#39;s expected :3) 🙄</li>
-                                        <li>(WIP ⚠) Set custom blinking intervals per emotion</li>
-                                        <li>(WIP ⚠) Custom transitions between emotions</li>
-                                        <li>Actively being updated to add new features out of passion and respect
-                                            for those who love this engine just as much as I do 🔧💚</li>
-                                        <li>Its Free. No commitments, nothin!! This was commissioned a long time ago
-                                            by the wonderful and generous <a
-                                                href="https://twitter.com/jessyabeb">Jessyabeb</a>! Without her, I
-                                            would&#39;ve never had the motivation or courage to set out and code
-                                            something this massive to share with the world. 💚</li>
-                                    </ul>
-                                    <p>And now for the <strong>Big 2 Features.</strong> First up...</p>
-                                    <h2 id="full-sammi-integration-and-public-api">Full SAMMI Integration and Public
-                                        API</h2>
-                                    <p>A vast amount of engine data is available to you in the form of &quot;Pull
-                                        Data&quot; from &quot;Extension Triggers&quot;, such as:</p>
-                                    <table class="table table-primary">
-                                        <thead>
-                                            <tr>
-                                                <th>Pull Value</th>
-                                                <th>Type</th>
-                                                <th>Description</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><code>blink</code></td>
-                                                <td><em>boolean</em></td>
-                                                <td>Current blinking state</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_emotion</code></td>
-                                                <td><em>string</em></td>
-                                                <td>The current set expression of the active model</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_emotion_path</code></td>
-                                                <td><em>string</em></td>
-                                                <td>the current image path compiled together using
-                                                    <code>global.main_directory</code>, <code>current_model</code>,
-                                                    <code>current_state</code>, and
-                                                    <code>current_emotion_state_extension</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_emotion_poses_idle</code></td>
-                                                <td>Array</td>
-                                                <td>An Array of the current model&#39;s idle poses (not including
-                                                    blinks)</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_emotion_poses_talking</code></td>
-                                                <td>Array</td>
-                                                <td>An Array of the current model&#39;s talking poses (not including
-                                                    blinks)</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_emotion_state_extension</code></td>
-                                                <td><em>string</em></td>
-                                                <td>The current state&#39;s file extension to be used in conjunction
-                                                    with <code>current_state</code> to create a full file</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_model</code></td>
-                                                <td><em>string</em></td>
-                                                <td>The current active model</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>current_state</code></td>
-                                                <td><em>string</em></td>
-                                                <td>The current active state of the model. This the result of
-                                                    various impacting factors such as yelling, blinking, talking,
-                                                    and randomly drawn poses</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>talking</code></td>
-                                                <td><em>boolean</em></td>
-                                                <td>Current talking state</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>yelling</code></td>
-                                                <td><em>boolean</em></td>
-                                                <td>Current yelling state</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>All of data is sent to you in the form of these extension triggers:</p>
-                                    <table class="table table-primary">
-                                        <thead>
-                                            <tr>
-                                                <th>Extension Trigger</th>
-                                                <th>Description</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><code>LandiTube talking true</code></td>
-                                                <td>triggers a button when the character starts talking</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube talking false</code></td>
-                                                <td>triggers a button when the character is finished talking</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube blinking true</code></td>
-                                                <td>triggers a button when the character blinks</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube blinking false</code></td>
-                                                <td>triggers a button when the character is done blinking</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube yelling true</code></td>
-                                                <td>triggers a button when the character yells</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube yelling false</code></td>
-                                                <td>triggers a button when the character is done yelling</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube model changed</code></td>
-                                                <td>triggers a button when the model is changed from the current
-                                                    active model</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube model</code> (modelname)</td>
-                                                <td>triggers a button when the model is changed and matches a
-                                                    specific model</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube emotion changed</code></td>
-                                                <td>triggers a button when the emotion is changed from the current
-                                                    active emotion</td>
-                                            </tr>
-                                            <tr>
-                                                <td><code>LandiTube emotion</code> (emotionname)</td>
-                                                <td>triggers a button when the emotion is changed and matches a
-                                                    specific emotion</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p><strong><em><strong>Woah woah woah Landie slow down!! I don&#39;t know how to
-                                                    use this!</strong></em></strong></p>
-                                    <p>That&#39;s alright! No SAMMI knowledge is required to get up and running with
-                                        this engine. however, if you want to capitalize on this amount of freedom
-                                        and take your PNGTuber to the next level; SAMMI is an incredible, easy, and
-                                        fun software to use to build your dream stream projects (no coding knowledge
-                                        needed at all! thats how i started!). You can get started by reading the
-                                        documentation <a href="https://sammi.solutions/docs">Here!</a> if you want
-                                        to learn more about whats coming up next...</p>
-                                    <p>What are you supposed to do with this info? Well, thats where the second
-                                        <em>huge</em> feature comes in...
-                                    </p>
-                                    <h2 id="full-obs-source-layering-system">Full OBS Source Layering System</h2>
-                                    <p>Have you ever wanted your PNGTuber to actually interact with your OBS Setup a
-                                        bit more? Thanks to the foundation of this engine that is SAMMI, you can do
-                                        just that, and so much more.</p>
-                                    <p>This data can be used to create your own rendering engine, ontop of the
-                                        default one shipped with this extension (to be changed in 1.0.0)!</p>
-                                    <p>&quot;Landie thats a big word..&quot;, All it means is that you get to decide
-                                        how certain OBS Sources behave, and interact with the PNGTuber Engine!</p>
-                                    <h3 id="examples-">Examples:</h3>
-                                    <p>Here are some examples i quickly whipped up:</p>
-                                    <ul>
-                                        <li>Rotate an animated image source of my character&#39;s tails everytime my
-                                            talking state changes!</li>
-                                    </ul>
-                                    <p><img src="https://i.imgur.com/m7teWZL.gif" alt="Landie but awesome"></p>
-                                    <ul>
-                                        <li>Have this live-updating image source of chat&#39;s emote, move a
-                                            specific way based on what pose I have!</li>
-                                    </ul>
-                                    <p><img src="https://i.imgur.com/jdNp3ZY.gif" alt=""></p>
-                                    <ul>
-                                        <li>Move this text source slightly when I talk!</li>
-                                    </ul>
-                                    <p><img src="https://i.imgur.com/VHfH82R.gif" alt=""></p>
-                                    <p>Those are just some examples of what is possible with LandiTube!</p>
-                                    <p>Oh yeah, and two new SAMMI commands:</p>
-                                    <ul>
-                                        <li>LandiTube: Change Model</li>
-                                        <li>LandiTube: Change Emotion</li>
-                                    </ul>
-                                    <p>but i&#39;m sure you suspected as much :3c</p>
-                                    <p>What are you waiting for? Check out the <a href="#setup">Setup</a> page for
-                                        prerequisites, and download!</p>
-                                </div>
-
                             </div>
                             <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="setup-tab">
                                 <div class="row">
@@ -903,11 +907,28 @@
                                         <div
                                             class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
                                             <div class="productpage-section-contents-sidebar-body">
-                                                <h3 id="-commands-"><strong>Commands</strong></h3>
+                                                <a href="#bridge-and-you-"><h3 ><strong>Bridge and You!</strong></h3></a>
+                                                <a href="#path-structure"><h3><strong>Path Structure</strong></h3></a>
                                                 <ul>
-                                                    <li><a href="#download-files">Download Files</a></li>
+                                                    <li><a href="#models">Models</a></li>
+                                                    <li><a href="#emotions">Emotions</a></li>
+                                                    <li><a href="#poses">Poses</a></li>
+                                                    <ul>
+                                                        <li><a href="#idling">Idling</a></li>
+                                                        <li><a href="#talking">Talking</a></li>
+                                                        <li><a href="#blinking">Blinking</a></li>
+                                                        <li><a href="#yelling">Yelling ⚠</a></li>
+                                                    </ul>
                                                 </ul>
-
+                                                <a href="#commands"><h3><strong>Commands</strong></h3></a>
+                                                <ul>
+                                                    <li><a href="#landitube-change-model">LandiTube: Change Model</a></li>
+                                                    <li><a href="#landitube-change-emotion">LandiTube: Change Emotion</a></li>
+                                                </ul>
+                                                <a href="#custom-events-using-api"><h3><strong>Custom Events using API</strong></h3></a>
+                                                <ul>
+                                                    <li><a href="#extension-triggers">Extension Triggers</a></li>
+                                                </ul>
                                             </div>
 
                                         </div>
@@ -920,10 +941,9 @@
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
-                                        <h1 id="version-204">2.0.4</h1>
+                                        <h1 id="version-096">0.9.6</h1>
                                         <ul>
-                                            <li>Bug Fix: Fixed issue where the API port would never be fetched if
-                                                default, rendering the save status variable useless</li>
+                                            <li>Initial Beta Release 🎉</li>
                                         </ul>
                                     </div>
                                     <div class="col-xl-3 col-lg-12">
@@ -932,7 +952,7 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Versions</strong></h3>
                                                 <ul>
-                                                    <li><a href="#version-204">2.0.4</a></li>
+                                                    <li><a href="#version-096">0.9.6</a></li>
                                                 </ul>
 
                                             </div>
