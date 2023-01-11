@@ -96,8 +96,11 @@
             <!--Shop Header-->
             <div class="shop-header row d-flex align-items-center justify-content-center pt-2">
                 <div class="col-xl-3 col-lg-12 d-flex align-items-center justify-content-center">
-                    <a href="../../index.html"><img style="width: 4rem;" class="shop-header-image me-3" src="../../logo.png" alt=""></a>
-                    <a href="../../shop.html" class="text-decoration-none"><h1 class="shop-header-title">Landie's Shop</h1></a>
+                    <a href="../../index.html"><img style="width: 4rem;" class="shop-header-image me-3"
+                            src="../../logo.png" alt=""></a>
+                    <a href="../../shop.html" class="text-decoration-none">
+                        <h1 class="shop-header-title">Landie's Shop</h1>
+                    </a>
                 </div>
                 <nav
                     class="col-xl-9 col-lg-12 shop-header-nav mt-2 justify-content-center align-items-center text-center">
@@ -183,6 +186,11 @@
                                     aria-selected="false">Tutorials</button>
                             </li>
                             <li class="nav-item" role="presentation">
+                                <button onclick='window.location.hash = "troubleshooting"' class="nav-link"
+                                    id="troubleshooting-tab" data-bs-target="#troubleshooting" type="button" role="tab"
+                                    aria-controls="troubleshooting" aria-selected="false">Troubleshooting</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
                                 <button onclick='window.location.hash = "patchnotes"' class="nav-link"
                                     id="patchnotes-tab" data-bs-target="#patchnotes" type="button" role="tab"
                                     aria-controls="patchnotes" aria-selected="false">Patch notes</button>
@@ -196,16 +204,18 @@
                                     <div class="col-xl-8 col-lg-12 productpage-section-contents-body">
                                         <p><strong>Please keep in mind this is a beta release, and is not expected to
                                                 work correctly under certain circumstances. You can really help out by
-                                                reporting these bugs via <br><a href="https://discord.gg/ZTbMw7TVKa">Discord
-                                                    Server</a><br>Direct
+                                                reporting these bugs via <br><a
+                                                    href="https://discord.gg/ZTbMw7TVKa">Discord Server</a><br>Direct
                                                 Discord DM: Landie#0038<br>Email at landieinquiries@gmail.com</strong>
                                         </p>
                                         <h1 id="help-i-m-new-to-sammi-and-i-want-to-use-this-what-do-i-do-">Help!
                                             I&#39;m new to SAMMI, and I want to use this! What do I do?</h1>
-                                        <p>Please check out this <a href="">quick video</a> I made to help newcomers get
-                                            SAMMI set up with everything they need to use this extension!</p>
+                                        <p>Please check out this <a
+                                                href="https://www.youtube.com/watch?v=Jkz264Ax6qc">quick video</a> I
+                                            made to help newcomers get SAMMI set up with the bare minimum they need to
+                                            use this extension!</p>
                                         <h1 id="what-is-this-">What is this?</h1>
-    
+                                        <p><img src="https://i.imgur.com/IsovjaP.gif" alt="introducing landitube"></p>
                                         <p>&quot;LandiTube&quot; Is an advanced, easy to use PNGTuber engine built from
                                             the ground up using SAMMI over the course of a half year of constant
                                             development. PNGTuber software seems sparse, while other Vtubing related
@@ -253,9 +263,6 @@
                                         <p>And now for the <strong>Big 2 Features.</strong> First up...</p>
                                         <h2 id="full-sammi-integration-and-public-api">Full SAMMI Integration and Public
                                             API</h2>
-                                            
-                                            <p>If you're not happy with what is provided with this engine out of the box, you don't have to wait!</p>
-    
                                         <p>A vast amount of engine data is available to you in the form of &quot;Pull
                                             Data&quot; from &quot;Extension Triggers&quot;, such as:</p>
                                         <table class="table table-primary">
@@ -396,6 +403,15 @@
                                             <em>huge</em> feature comes in...
                                         </p>
                                         <h2 id="full-obs-source-layering-system">Full OBS Source Layering System</h2>
+                                        <p>Are you a TV Head PNGTuber and want your tv head to display twitch alert
+                                            info?<br>
+                                            Are you a furry PNGTuber and want your tails to move a random direction
+                                            everytime you talk?</p>
+                                        <p>Or...</p>
+                                        <p>Maybe you want to add sunglasses to your character, but don&#39;t want to
+                                            have to export every image again, or have it only work on one emotion?<br>
+                                            Maybe you want your model to have a gamepad display that accurately displays
+                                            your controller&#39;s inputs?</p>
                                         <p>Have you ever wanted your PNGTuber to actually interact with your OBS Setup a
                                             bit more? Thanks to the foundation of this engine that is SAMMI, you can do
                                             just that, and so much more.</p>
@@ -419,7 +435,13 @@
                                             <li>Move this text source slightly when I talk!</li>
                                         </ul>
                                         <p><img src="https://i.imgur.com/VHfH82R.gif" alt=""></p>
-                                        <p>Those are just some examples of what is possible with LandiTube!</p>
+                                        <ul>
+                                            <li>Gamepad overlay that matches my real inputs!</li>
+                                        </ul>
+                                        <p><img src="https://i.imgur.com/TGdMj0A.gif" alt=""></p>
+                                        <p>Those are just some examples of what is possible with LandiTube! All of this
+                                            is possible, and so, so, so much more! The possibilities (and I truly mean
+                                            it, not some overhyped thing) are endless!</p>
                                         <p>Oh yeah, and two new SAMMI commands:</p>
                                         <ul>
                                             <li>LandiTube: Change Model</li>
@@ -428,6 +450,7 @@
                                         <p>but i&#39;m sure you suspected as much :3c</p>
                                         <p>What are you waiting for? Check out the <a href="#setup">Setup</a> page for
                                             prerequisites, and download!</p>
+
                                     </div>
                                     <div class="col-xl-4 col-lg-12 d-flex justify-content-center">
                                         <p><img src="https://i.imgur.com/IsovjaP.gif" alt="introducing landitube"></p>
@@ -436,8 +459,14 @@
                             </div>
                             <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="setup-tab">
                                 <div class="row">
-                                    <div class="productpage-section-contents-body">
+                                    <div class="col-lg-12 productpage-section-contents-body">
+                                        <!--Setup start-->
                                         <h1 id="getting-started">Getting Started</h1>
+                                        <h2 id="install-video">Install Video</h2>
+                                        <p>Here is a video demonstrating the entire installation process, including
+                                            prerequisites, and SAMMI install. Apologies for the rushed and awful
+                                            sounding
+                                            performance</p>
                                         <h2 id="-prerequisites-get-these-first-">⏬ Prerequisites (Get these first!)</h2>
                                         <p>These are <strong>Required</strong> for this extension to work, Prior to
                                             installation. There are no checks for the OBS Plugins being installed, so
@@ -449,7 +478,8 @@
                                             <li><a href="https://landie.land/shop/sammi-extensions/folder-reader">Folder
                                                     Reader 2.0.1</a></li>
                                             <li>SAMMI Local API Server Enabled (SAMMI Settings &gt; Open Local API
-                                                Server)<h3 id="obs">OBS</h3>
+                                                Server)
+                                                <h3 id="obs">OBS</h3>
                                             </li>
                                             <li><a href="https://obsproject.com/forum/resources/move-transition.913">Move
                                                     Transition v2.8.1</a> by Exeldro</li>
@@ -469,20 +499,30 @@
                                                     href="#overview">overview</a> if unsure)</li>
                                             <li>Install the .sef file via the left hand side menu of the &quot;SAMMI
                                                 Core&quot; via clicking the bridge button, then clicking &quot;Install
-                                                an Extension&quot;.</li>
+                                                an
+                                                Extension&quot;.</li>
                                             <li>After Installing the .sef file, you should either get some yellow
-                                                messages telling you to install some scenes in OBS, or a popup box
-                                                telling you to do so. go to your SAMMI Directory and load the required
-                                                scenes <code>Landies_Extensions\LandiTube\LandiTube Scenes.json</code>
-                                                using Exeldro&#39;s Source Copy Plugin into your scene collection. To
-                                                use Source Copy, in your OBS window go to <u>Tools &gt; Source Copy &gt;
-                                                    Load Scene</u> and navigate to the .json!</li>
+                                                messages
+                                                telling you to install some scenes in OBS, or a popup box telling you to
+                                                do
+                                                so. go to your SAMMI Directory and load the required scenes
+                                                <code>Landies_Extensions\LandiTube\LandiTube Scenes.json</code> using
+                                                Exeldro&#39;s Source Copy Plugin into your scene collection. To use
+                                                Source
+                                                Copy, in your OBS window go to <u>Tools &gt; Source Copy &gt; Load
+                                                    Scene</u>
+                                                and navigate to the .json!
+                                            </li>
                                             <li>Afterwards, you should be all set for installation! To set up your first
                                                 model, please go to the <a href="#tutorials">Tutorials</a> tab!</li>
                                         </ol>
                                         <h2 id="updating">Updating</h2>
                                         <p>Install the .sef as you would normally, and allow the deck to be replaced.
-                                            Easy as pie! (wait. why is pie easy?)</p>
+                                            Easy
+                                            as pie! (wait. why is pie easy?)</p>
+
+                                        <!--setup end-->
+
                                     </div>
                                 </div>
                             </div>
@@ -490,284 +530,481 @@
                                 aria-labelledby="documentation-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <!--docs start-->
                                         <h1 id="bridge-and-you-">Bridge and You!</h1>
-<p><img src="./landitube-docs-1.png" alt="landitube in the bridge with highlighted"></p>
-<p>This is what your bridge will look like! lets run by section.</p>
-<ol>
-<li>&quot;LandiTube&quot; bridge tab. This is how you access the web interface for &quot;LandiTube&quot; after installing.</li>
-<li>Defining information about the extension, such as Title, Authors, and their socials. You can see if i&#39;m live or not by the little red circle next to the twitch icon!</li>
-<li>Update banner, should only appear if there is a new update. Clicking the &quot;More Info&quot; button should reveal a modal with a little bit more information about what you&#39;ll be installing. Some have important warnings, so be sure to read!</li>
-<li>&quot;Refresh Models&quot; is a <em>very important</em> button to get familiar with. This refreshes the models, and their associated emotions. You should be clicking this everytime a model, emotion, or pose is added or removed. Changing an already existing pose should not require a refresh, but it&#39;s a good habit to have regardless!</li>
-<li>&quot;Open Models Folder&quot; is a quick and easy way to get to the folder where the models are stored. A file explorer window will pop up c:</li>
-<li>This is the models list, all valid models will show up here. You are required to have at least one model loaded, <strong>and</strong> selected (depicted by the red box). Models have entirely different sets of emotions!</li>
-<li>&quot;Open Emotions Folder&quot; provides a quick way to get to the current model&#39;s emotions folder. A file explorer window will pop up c:</li>
-<li>This is the emotions list, which changes depending on which model is loaded. The emotions list will only load if there is a selected, active model. You are required to have at least one emotion loaded, <strong>and</strong> selected (depicted by the red box) for any output.</li>
-<li>&quot;Voice Threshold&quot; is the slider for detecting the sensitivity of your talking. This is a very sensitive slider, and I do not recommend going above 5!</li>
-<li>This allows you to set an input device to listen to for the engine to read. Great for if you&#39;re looking to use LandiTube as a TTS mascot, as you can set this to be a virtual audio cable! Make sure to pick the input that is right for you.</li>
-<li>Support footer, which has my donation info, and a direct link to my shop where I have even more extensions (that can interface with this one to create some incredible pngtuber combos!). I would really appreciate it if I could at least get a dollar every now and then 💚</li>
-</ol>
-<h1 id="path-structure">Path Structure</h1>
-<p>Throughout this section, &quot;LandiTube Path&quot; refers to <br><code>(YOUR SAMMI INSTALLATION PATH HERE)\Landies_Extensions\LandiTube</code> </p>
-<p>&quot;LandiTube&quot; is built with ease in mind, as a result, all you have to do is make files and folders to create your models and emotions. There are some important notes to keep in mind while creating your directories.</p>
-<p>To get a model up and running, You need to have <em>3 key components down</em>. <a href="#models">Models</a>, <a href="#emotions">Emotions</a>, and <a href="#poses">Poses</a>!</p>
-<h2 id="models">Models</h2>
-<p>To create models, you create a folder in the &quot;models&quot; folder in the LandiTube path. All folders inside that folder will create an Icon in your bridge showing that a model is detected, and exists after a model refresh. </p>
-<p>After adding a models folder, click the &quot;Refresh Models&quot; button in the bridge to check and see if an icon is generated in the bridge for you! Once you see your model, click on it! <strong>This will make the model active, which is required for output.</strong></p>
-<p>Here is a visual example of my models folder, where I have two models loaded, and one click on marking it <em>active</em>.</p>
-<p><img src="./landitube-docs-2.png" alt="Visual of file explorer in the models directory, with two folders labeled &quot;Landie&quot; and &quot;Apple&quot;"></p>
-<p><img src="./landitube-docs-3.png" alt="Showcasing the result inside the models list located in the bridge"></p>
-<h2 id="emotions">Emotions</h2>
-<p>To create emotions for your model, you first need to specify an &quot;emotions&quot; folder in your unique model&#39;s folder. This is what it should look like:</p>
-<p><img src="./landitube-docs-4.png" alt="File explorer, showing an emotions folder nested inside a unique model&#39;s folder"></p>
-<p>In total, your file path should look something like <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!</p>
-<p>Inside your new &quot;emotions&quot; folder, All folders created will create an Icon in your bridge showing that an emotion is detected, and exists after a model refresh.
-<br>
-<br>
-After adding an emotion folder, click the &quot;Refresh Models&quot; button in the bridge to check and see if an icon is generated in the bridge for you under your active model! Once you see your emotion, click on it! <strong>This will make the emotion active, which is required for output.</strong></p>
-<p>Here are some emotions i made in my &quot;emotions&quot; folder inside the &quot;Landie&quot; model folder.</p>
-<p><img src="./landitube-docs-5.png" alt="File explorer, showing multiple uniquely named folders inside the &quot;emotions&quot; folder"></p>
-<p><img src="./landitube-docs-6.png" alt="showcasing the rendered result inside the bridge"></p>
-<h2 id="poses">Poses</h2>
-<p>Now that your model is set up with proper emotions, lets get to the good stuff!</p>
-<p>In traditional PNGTubing engines, you had 4 poses per emotion: <u>idle</u>, <u>idle with blink</u>, <u>talking</u> and <u>talking with blink</u> (sometimes you dont even have the blink).</p>
-<p>in &quot;LandiTube&quot;, you&#39;re allowed to have <em>as many idle, and talking poses as your heart desires</em>. Blinking will be discussed further down.</p>
-<p>What does that mean? Well, everytime you would go into any of the states mentioned above, it would pick randomly between all of the provided idle, and talking images. <em>You can have multiple talking poses for a single expression to really show natural movement, combined with multiple idle poses!</em></p>
-<p>All poses are places inside one of your unique model&#39;s unique emotion folders!</p>
-<p><strong>NOTE: You are not required to include multiple poses of each state, or add blink frames for them. the option is just available to you!</strong></p>
-<p>lets go over how to set up each state LandiTube provides out of the box!</p>
-<h3 id="idling">Idling</h3>
-<p>To create an idle pose for your tuber&#39;s emotion, drag in an image file with the keyword &quot;idle&quot; in it&#39;s filename!</p>
-<p>For every image containing the keyword &quot;idle&quot; in it&#39;s file name inside your emotion folder, those images will be turned into a list of random poses for &quot;LandiTube&quot; to swap to whenever idling is supposed to occur.</p>
-<p>Example: Lets make <em>three</em> idle poses for an emotion!</p>
-<ol>
-<li><p>Have three idle image files ready! animated or not, its okay!
-make sure each idle image file contains the word &quot;idle&quot; in there at least once! my files are named <code>&quot;idle.png&quot;</code>, <code>&quot;idle2.png&quot;</code>, and <code>&quot;idle3.png&quot;</code> respectively.
-<img src="./landitube-docs-7.png" alt="showing idle poses in folder"></p>
-</li>
-<li><p>Hit &quot;Refresh Models&quot; in your bridge! This should recalculate all the poses you have.</p>
-</li>
-<li><p>Now, whenever you finish talking, It will pick any out of the idle poses provided!
-<img src="./landitube-docs-8.gif" alt="showing tuber now with three idle poses"></p>
-</li>
-</ol>
-<p>Hmm. That doesn&#39;t look great. Lets look into adding some <u>talking poses</u>!</p>
-<h3 id="talking">Talking</h3>
-<p>Talking is the easiest to do!</p>
-<p>To create a talking pose for your emotion, drag in an image file named whatever you want! be sure not to include
-the keywords &quot;idle&quot;.</p>
-<p>For every randomly named image inside your emotion folder, those images will be turned into a list of random poses for
-&quot;LandiTube&quot; to swap to whenever talking is detected.</p>
-<p>Example: Lets make two talking poses for my PNGTuber to pick from!</p>
-<ol>
-<li><p>Have two talking image files ready! animated or not, its okay!
-Ive named my talking poses <code>&quot;one paw talkin.png&quot;</code>, and <code>&quot;two paws talkin.png&quot;</code>.
-<img src="./landitube-docs-9.png" alt="showing talking poses in folder"></p>
-</li>
-<li><p>Hit &quot;Refresh Models&quot; in your bridge! This should recalculate all the poses you have.</p>
-</li>
-<li><p>Now, whenever you talk, It will pick either one, or the other!
-<img src="./landitube-docs-10.gif" alt="showing tuber now with two talking poses"></p>
-</li>
-</ol>
-<p>Looks much better! but there is quite a dead stare.. lets add <u>blinking</u>!</p>
-<h3 id="blinking">Blinking</h3>
-<p>Talking, and idle poses do not need to have blinking poses, but they are nice! One nice feature is that blinking is not &quot;all or nothing&quot;, you can set blink frames for whatever poses you want! Maybe one idle pose is meant to be a dead stare while the other idle poses have blinks? Maybe a character is angry and they don&#39;t blink while talking?</p>
-<p>To attach blinking frames to your poses, all you have to do is drag in your blinking image with the exact file name of the pose you want to give blinking to, but with &quot;_blink&quot; appended just before the file extension (.png, .gif)</p>
-<p>So &quot;idle.png&quot; becomes &quot;idle_blink.png&quot;, &quot;one paw talkin.png&quot; becomes &quot;one paw talkin_blink.png&quot;, etc.</p>
-<p>Example: Lets add blinking frames to all of our inserted idle, and talking poses!</p>
-<ol>
-<li><p>Have your blinking image files ready! animated or not, its okay!
-every image is the same as the other images inside the emotion&#39;s folder, but with &quot;_blink&quot; added. Image below!
-<img src="./landitube-docs-11.png" alt="showing talking poses in folder"></p>
-</li>
-<li><p>Refresh is not needed for blinks! at least i think so. if you see an issue, just hit &quot;Refresh Models&quot;! </p>
-</li>
-<li><p>Now, every pose has blinks!
-<img src="./landitube-docs-12.gif" alt="showing tuber now with blinking frames for every pose previously added"></p>
-</li>
-</ol>
-<h3 id="-wip-yelling">(WIP) Yelling</h3>
-<p>haha me go scree</p>
-<h1 id="displaying-in-obs">Displaying In OBS</h1>
-<p>&quot;Okay I put in my files, clicked my model to set it as active, and my emotions with one active, where is my fella??&quot;</p>
-<p>To display your model is really easy!</p>
-<ol>
-<li>Navigate to your desired OBS Scene, and click the plus ➕ sign, or right click the &quot;Sources&quot; pane to click add, and select &quot;Scene&quot;. This will allow you to &quot;nest&quot; another scene as a source!</li>
-<li>Select the scene that says &quot;[LandiTube]&quot;. You may see other scenes such as &quot;[LandiTube] Customize&quot;, and &quot;[LandiTube] Model Movement&quot;. These are explained further down in the <a href="#custom-events-using-api">Custom Events</a> section. Don&#39;t click these!</li>
-<li>Voila! Hold ALT while dragging the sides to crop, resize however you like, the fella has arrived!!<video autoplay="true" controls width="720"><source src="./videotest.mp4" type="video/mp4"></video>
+                                        <p><img src="./landitube-docs-1.png"
+                                                alt="landitube in the bridge with highlighted"></p>
+                                        <p>This is what your bridge will look like! lets run by section.</p>
+                                        <ol>
+                                            <li>&quot;LandiTube&quot; bridge tab. This is how you access the web
+                                                interface for &quot;LandiTube&quot; after installing.</li>
+                                            <li>Defining information about the extension, such as Title, Authors, and
+                                                their socials. You can see if i&#39;m live or not by the little red
+                                                circle next to the twitch icon!</li>
+                                            <li>Update banner, should only appear if there is a new update. Clicking the
+                                                &quot;More Info&quot; button should reveal a modal with a little bit
+                                                more information about what you&#39;ll be installing. Some have
+                                                important warnings, so be sure to read!</li>
+                                            <li>&quot;Refresh Models&quot; is a <em>very important</em> button to get
+                                                familiar with. This refreshes the models, and their associated emotions.
+                                                You should be clicking this everytime a model, emotion, or pose is added
+                                                or removed. Changing an already existing pose should not require a
+                                                refresh, but it&#39;s a good habit to have regardless!</li>
+                                            <li>&quot;Open Models Folder&quot; is a quick and easy way to get to the
+                                                folder where the models are stored. A file explorer window will pop up
+                                                c:</li>
+                                            <li>This is the models list, all valid models will show up here. You are
+                                                required to have at least one model loaded, <strong>and</strong>
+                                                selected (depicted by the red box). Models have entirely different sets
+                                                of emotions!</li>
+                                            <li>&quot;Open Emotions Folder&quot; provides a quick way to get to the
+                                                current model&#39;s emotions folder. A file explorer window will pop up
+                                                c:</li>
+                                            <li>This is the emotions list, which changes depending on which model is
+                                                loaded. The emotions list will only load if there is a selected, active
+                                                model. You are required to have at least one emotion loaded,
+                                                <strong>and</strong> selected (depicted by the red box) for any output.
+                                            </li>
+                                            <li>&quot;Voice Threshold&quot; is the slider for detecting the sensitivity
+                                                of your talking. This is a very sensitive slider, and I do not recommend
+                                                going above 5!</li>
+                                            <li>This allows you to set an input device to listen to for the engine to
+                                                read. Great for if you&#39;re looking to use LandiTube as a TTS mascot,
+                                                as you can set this to be a virtual audio cable! Make sure to pick the
+                                                input that is right for you.</li>
+                                            <li>Support footer, which has my donation info, and a direct link to my shop
+                                                where I have even more extensions (that can interface with this one to
+                                                create some incredible pngtuber combos!). I would really appreciate it
+                                                if I could at least get a dollar every now and then 💚</li>
+                                        </ol>
+                                        <h1 id="path-structure">Path Structure</h1>
+                                        <p>Throughout this section, &quot;LandiTube Path&quot; refers to
+                                            <br><code>(YOUR SAMMI INSTALLATION PATH HERE)\Landies_Extensions\LandiTube</code>
+                                        </p>
+                                        <p>&quot;LandiTube&quot; is built with ease in mind, as a result, all you have
+                                            to do is make files and folders to create your models and emotions. There
+                                            are some important notes to keep in mind while creating your directories.
+                                        </p>
+                                        <p>To get a model up and running, You need to have <em>3 key components
+                                                down</em>. <a href="#models">Models</a>, <a
+                                                href="#emotions">Emotions</a>, and <a href="#poses">Poses</a>!</p>
+                                        <p>Make sure you&#39;ve gone into your bridge, and changed the appropriate
+                                            settings! you&#39;ll need to set your mic, maybe tweak the input threshold,
+                                            etc. <a href="#bridge-and-you-">Bridge and You</a> has an explanation of the
+                                            settings section for you!</p>
+                                        <h2 id="models">Models</h2>
+                                        <p>To create models, you create a folder in the &quot;models&quot; folder in the
+                                            LandiTube path. All folders inside that folder will create an Icon in your
+                                            bridge showing that a model is detected, and exists after a model refresh.
+                                        </p>
+                                        <p>After adding a models folder, click the &quot;Refresh Models&quot; button in
+                                            the bridge to check and see if an icon is generated in the bridge for you!
+                                            Once you see your model, click on it! <strong>This will make the model
+                                                active, which is required for output.</strong></p>
+                                        <p>Here is a visual example of my models folder, where I have two models loaded,
+                                            and one click on marking it <em>active</em>.</p>
+                                        <p><img src="./landitube-docs-2.png"
+                                                alt="Visual of file explorer in the models directory, with two folders labeled &quot;Landie&quot; and &quot;Apple&quot;">
+                                        </p>
+                                        <p><img src="./landitube-docs-3.png"
+                                                alt="Showcasing the result inside the models list located in the bridge">
+                                        </p>
+                                        <h2 id="emotions">Emotions</h2>
+                                        <p>To create emotions for your model, you first need to specify an
+                                            &quot;emotions&quot; folder in your unique model&#39;s folder. This is what
+                                            it should look like:</p>
+                                        <p><img src="./landitube-docs-4.png"
+                                                alt="File explorer, showing an emotions folder nested inside a unique model&#39;s folder">
+                                        </p>
+                                        <p>In total, your file path should look something like
+                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!
+                                        </p>
+                                        <p>Inside your new &quot;emotions&quot; folder, All folders created will create
+                                            an Icon in your bridge showing that an emotion is detected, and exists after
+                                            a model refresh.
+                                            <br>
+                                            <br>
+                                            After adding an emotion folder, click the &quot;Refresh Models&quot; button
+                                            in the bridge to check and see if an icon is generated in the bridge for you
+                                            under your active model! Once you see your emotion, click on it!
+                                            <strong>This will make the emotion active, which is required for
+                                                output.</strong>
+                                        </p>
+                                        <p>Here are some emotions i made in my &quot;emotions&quot; folder inside the
+                                            &quot;Landie&quot; model folder.</p>
+                                        <p><img src="./landitube-docs-5.png"
+                                                alt="File explorer, showing multiple uniquely named folders inside the &quot;emotions&quot; folder">
+                                        </p>
+                                        <p><img src="./landitube-docs-6.png"
+                                                alt="showcasing the rendered result inside the bridge"></p>
+                                        <h2 id="poses">Poses</h2>
+                                        <p>Now that your model is set up with proper emotions, lets get to the good
+                                            stuff!</p>
+                                        <p>In traditional PNGTubing engines, you had 4 poses per emotion: <u>idle</u>,
+                                            <u>idle with blink</u>, <u>talking</u> and <u>talking with blink</u>
+                                            (sometimes you dont even have the blink).
+                                        </p>
+                                        <p>in &quot;LandiTube&quot;, you&#39;re allowed to have <em>as many idle, and
+                                                talking poses as your heart desires</em>. Blinking will be discussed
+                                            further down.</p>
+                                        <p>What does that mean? Well, everytime you would go into any of the states
+                                            mentioned above, it would pick randomly between all of the provided idle,
+                                            and talking images. <em>You can have multiple talking poses for a single
+                                                expression to really show natural movement, combined with multiple idle
+                                                poses!</em></p>
+                                        <p>All poses are places inside one of your unique model&#39;s unique emotion
+                                            folders!</p>
+                                        <p><strong>NOTE: You are not required to include multiple poses of each state,
+                                                or add blink frames for them. the option is just available to
+                                                you!</strong></p>
+                                        <p>lets go over how to set up each state LandiTube provides out of the box!</p>
+                                        <h3 id="idling">Idling</h3>
+                                        <p>To create an idle pose for your tuber&#39;s emotion, drag in an image file
+                                            with the keyword &quot;idle&quot; in it&#39;s filename!</p>
+                                        <p>For every image containing the keyword &quot;idle&quot; in it&#39;s file name
+                                            inside your emotion folder, those images will be turned into a list of
+                                            random poses for &quot;LandiTube&quot; to swap to whenever idling is
+                                            supposed to occur.</p>
+                                        <p>Example: Lets make <em>three</em> idle poses for an emotion!</p>
+                                        <ol>
+                                            <li>
+                                                <p>Have three idle image files ready! animated or not, its okay!
+                                                    make sure each idle image file contains the word &quot;idle&quot; in
+                                                    there at least once! my files are named
+                                                    <code>&quot;idle.png&quot;</code>,
+                                                    <code>&quot;idle2.png&quot;</code>, and
+                                                    <code>&quot;idle3.png&quot;</code> respectively.
+                                                    <img src="./landitube-docs-7.png"
+                                                        alt="showing idle poses in folder">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Hit &quot;Refresh Models&quot; in your bridge! This should
+                                                    recalculate all the poses you have.</p>
+                                            </li>
+                                            <li>
+                                                <p>Now, whenever you finish talking, It will pick any out of the idle
+                                                    poses provided!
+                                                    <img src="./landitube-docs-8.gif"
+                                                        alt="showing tuber now with three idle poses">
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <p>Hmm. That doesn&#39;t look great. Lets look into adding some <u>talking
+                                                poses</u>!</p>
+                                        <h3 id="talking">Talking</h3>
+                                        <p>Talking is the easiest to do!</p>
+                                        <p>To create a talking pose for your emotion, drag in an image file named
+                                            whatever you want! be sure not to include
+                                            the keywords &quot;idle&quot;.</p>
+                                        <p>For every randomly named image inside your emotion folder, those images will
+                                            be turned into a list of random poses for
+                                            &quot;LandiTube&quot; to swap to whenever talking is detected.</p>
+                                        <p>Example: Lets make two talking poses for my PNGTuber to pick from!</p>
+                                        <ol>
+                                            <li>
+                                                <p>Have two talking image files ready! animated or not, its okay!
+                                                    Ive named my talking poses
+                                                    <code>&quot;one paw talkin.png&quot;</code>, and
+                                                    <code>&quot;two paws talkin.png&quot;</code>.
+                                                    <img src="./landitube-docs-9.png"
+                                                        alt="showing talking poses in folder">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Hit &quot;Refresh Models&quot; in your bridge! This should
+                                                    recalculate all the poses you have.</p>
+                                            </li>
+                                            <li>
+                                                <p>Now, whenever you talk, It will pick either one, or the other!
+                                                    <img src="./landitube-docs-10.gif"
+                                                        alt="showing tuber now with two talking poses">
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <p>Looks much better! but there is quite a dead stare.. lets add
+                                            <u>blinking</u>!
+                                        </p>
+                                        <h3 id="blinking">Blinking</h3>
+                                        <p>Talking, and idle poses do not need to have blinking poses, but they are
+                                            nice! One nice feature is that blinking is not &quot;all or nothing&quot;,
+                                            you can set blink frames for whatever poses you want! Maybe one idle pose is
+                                            meant to be a dead stare while the other idle poses have blinks? Maybe a
+                                            character is angry and they don&#39;t blink while talking?</p>
+                                        <p>To attach blinking frames to your poses, all you have to do is drag in your
+                                            blinking image with the exact file name of the pose you want to give
+                                            blinking to, but with &quot;_blink&quot; appended just before the file
+                                            extension (.png, .gif)</p>
+                                        <p>So &quot;idle.png&quot; becomes &quot;idle_blink.png&quot;, &quot;one paw
+                                            talkin.png&quot; becomes &quot;one paw talkin_blink.png&quot;, etc.</p>
+                                        <p>Example: Lets add blinking frames to all of our inserted idle, and talking
+                                            poses!</p>
+                                        <ol>
+                                            <li>
+                                                <p>Have your blinking image files ready! animated or not, its okay!
+                                                    every image is the same as the other images inside the emotion&#39;s
+                                                    folder, but with &quot;_blink&quot; added. Image below!
+                                                    <img src="./landitube-docs-11.png"
+                                                        alt="showing talking poses in folder">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Refresh is not needed for blinks! at least i think so. if you see an
+                                                    issue, just hit &quot;Refresh Models&quot;! </p>
+                                            </li>
+                                            <li>
+                                                <p>Now, every pose has blinks!
+                                                    <img src="./landitube-docs-12.gif"
+                                                        alt="showing tuber now with blinking frames for every pose previously added">
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3 id="-wip-yelling">(WIP) Yelling</h3>
+                                        <p>haha me go scree</p>
+                                        <h1 id="displaying-in-obs">Displaying In OBS</h1>
+                                        <p>&quot;Okay I put in my files, clicked my model to set it as active, and my
+                                            emotions with one active, where is my fella??&quot;</p>
+                                        <p>To display your model is really easy!</p>
+                                        <ol>
+                                            <li>Navigate to your desired OBS Scene, and click the plus ➕ sign, or right
+                                                click the &quot;Sources&quot; pane to click add, and select
+                                                &quot;Scene&quot;. This will allow you to &quot;nest&quot; another scene
+                                                as a source!</li>
+                                            <li>Select the scene that says &quot;[LandiTube]&quot;. You may see other
+                                                scenes such as &quot;[LandiTube] Customize&quot;, and &quot;[LandiTube]
+                                                Model Movement&quot;. These are explained further down in the <a
+                                                    href="#custom-events-using-api">Custom Events</a> section. Don&#39;t
+                                                click these!</li>
+                                            <li>Voila! Hold ALT while dragging the sides to crop, resize however you
+                                                like, the fella has arrived!!</li>
+                                        </ol>
+                                        <video controls width="720">
+                                            <source src="./landitube-docs-13.mp4" type="video/mp4">
+                                        </video>
 
-</li>
-</ol>
-<h1 id="commands">Commands</h1>
-<h2 id="landitube-change-model">LandiTube: Change Model</h2>
-<p>Changes the current model to another valid model!</p>
-<table>
-<thead>
-<tr>
-<th>Box Name</th>
-<th>Type</th>
-<th>required?</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Model Name</td>
-<td><em>string</em></td>
-<td>✔</td>
-<td>The name of the model you wish to swap to. (casing matters!)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="landitube-change-emotion">LandiTube: Change Emotion</h2>
-<p>Changes the current model to another valid model!</p>
-<table>
-<thead>
-<tr>
-<th>Box Name</th>
-<th>Type</th>
-<th>required?</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Emotion Name</td>
-<td><em>string</em></td>
-<td>✔</td>
-<td>The name of the emotion you wish to swap to. (casing matters!)</td>
-</tr>
-</tbody>
-</table>
-<h1 id="custom-events-using-api">Custom Events using API</h1>
-<p>Like the engine, but want to add your own integrations using SAMMI? You can absolutely do that with relative ease if you know SAMMI! The PNGTuber engine provides various different environments and data for you to listen to, and read!</p>
-<p>First, lets go over the Extension Triggers provided by &quot;LandiTube&quot;. </p>
-<h2 id="extension-triggers">Extension Triggers</h2>
-<p>Extension triggers are a way for a SAMMI button to be ran based on certain criteria specified by the Engine. This works exactly like if your button is set up to trigger on twitch chat. You can read more about extension triggers and SAMMI <a href="https://sammi.solutions/docs/triggers/general#extensiontrigger">here</a>. </p>
-<p>Currently, there exist these Extension Triggers:</p>
-<table>
-<thead>
-<tr>
-<th>Extension Trigger</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>LandiTube talking true</code></td>
-<td>triggers a button when the character starts talking</td>
-</tr>
-<tr>
-<td><code>LandiTube talking false</code></td>
-<td>triggers a button when the character is finished talking</td>
-</tr>
-<tr>
-<td><code>LandiTube blinking true</code></td>
-<td>triggers a button when the character blinks</td>
-</tr>
-<tr>
-<td><code>LandiTube blinking false</code></td>
-<td>triggers a button when the character is done blinking</td>
-</tr>
-<tr>
-<td><code>LandiTube yelling true</code></td>
-<td>triggers a button when the character yells</td>
-</tr>
-<tr>
-<td><code>LandiTube yelling false</code></td>
-<td>triggers a button when the character is done yelling</td>
-</tr>
-<tr>
-<td><code>LandiTube model changed</code></td>
-<td>triggers a button when the model is changed from the current active model</td>
-</tr>
-<tr>
-<td><code>LandiTube model</code> (modelname)</td>
-<td>triggers a button when the model is changed and matches a specific model</td>
-</tr>
-<tr>
-<td><code>LandiTube emotion changed</code></td>
-<td>triggers a button when the emotion is changed from the current active emotion</td>
-</tr>
-<tr>
-<td><code>LandiTube emotion</code> (emotionname)</td>
-<td>triggers a button when the emotion is changed and matches a specific emotion</td>
-</tr>
-</tbody>
-</table>
-<p> Each extension trigger returns the same hefty amount of juicy data when that extension trigger was sent for you to read and tinker with.</p>
-<p> You can pull these values using the command &quot;<code>Trigger Pull Data</code>&quot; on a button that was triggered with one of these Extension Triggers mentioned above.</p>
-<p> Here are the list of fields you can enter in the <code>Pull Value</code> box:</p>
-<table>
-<thead>
-<tr>
-<th>Pull Value</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blink</code></td>
-<td><em>boolean</em></td>
-<td>Current blinking state</td>
-</tr>
-<tr>
-<td><code>current_emotion</code></td>
-<td><em>string</em></td>
-<td>The current set expression of the active model</td>
-</tr>
-<tr>
-<td><code>current_emotion_path</code></td>
-<td><em>string</em></td>
-<td>the current image path compiled together using <code>global.main_directory</code>, <code>current_model</code>, <code>current_state</code>, and <code>current_emotion_state_extension</code></td>
-</tr>
-<tr>
-<td><code>current_emotion_poses_idle</code></td>
-<td>Array</td>
-<td>An Array of the current model&#39;s idle poses (not including blinks)</td>
-</tr>
-<tr>
-<td><code>current_emotion_poses_talking</code></td>
-<td>Array</td>
-<td>An Array of the current model&#39;s talking poses (not including blinks)</td>
-</tr>
-<tr>
-<td><code>current_emotion_state_extension</code></td>
-<td><em>string</em></td>
-<td>The current state&#39;s file extension to be used in conjunction with <code>current_state</code> to create a full file</td>
-</tr>
-<tr>
-<td><code>current_model</code></td>
-<td><em>string</em></td>
-<td>The current active model</td>
-</tr>
-<tr>
-<td><code>current_state</code></td>
-<td><em>string</em></td>
-<td>The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses</td>
-</tr>
-<tr>
-<td><code>talking</code></td>
-<td><em>boolean</em></td>
-<td>Current talking state</td>
-</tr>
-<tr>
-<td><code>yelling</code></td>
-<td><em>boolean</em></td>
-<td>Current yelling state</td>
-</tr>
-</tbody>
-</table>
-
+                                        <h1 id="commands">Commands</h1>
+                                        <h2 id="landitube-change-model">LandiTube: Change Model</h2>
+                                        <p>Changes the current model to another valid model!</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Model Name</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The name of the model you wish to swap to. (casing matters!)
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2 id="landitube-change-emotion">LandiTube: Change Emotion</h2>
+                                        <p>Changes the current model to another valid model!</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Emotion Name</td>
+                                                    <td><em>string</em></td>
+                                                    <td>✔</td>
+                                                    <td>The name of the emotion you wish to swap to. (casing matters!)
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h1 id="custom-events-using-api">Custom Events using API</h1>
+                                        <p>Like the engine, but want to add your own integrations using SAMMI? You can
+                                            absolutely do that with relative ease if you know SAMMI! The PNGTuber engine
+                                            provides various different environments and data for you to listen to, and
+                                            read!</p>
+                                        <p>First, lets go over the Extension Triggers provided by &quot;LandiTube&quot;.
+                                        </p>
+                                        <h2 id="extension-triggers">Extension Triggers</h2>
+                                        <p>Extension triggers are a way for a SAMMI button to be ran based on certain
+                                            criteria specified by the Engine. This works exactly like if your button is
+                                            set up to trigger on twitch chat. You can read more about extension triggers
+                                            and SAMMI <a
+                                                href="https://sammi.solutions/docs/triggers/general#extensiontrigger">here</a>.
+                                        </p>
+                                        <p>Currently, there exist these Extension Triggers:</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Extension Trigger</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>LandiTube talking true</code></td>
+                                                    <td>triggers a button when the character starts talking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube talking false</code></td>
+                                                    <td>triggers a button when the character is finished talking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube blinking true</code></td>
+                                                    <td>triggers a button when the character blinks</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube blinking false</code></td>
+                                                    <td>triggers a button when the character is done blinking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube yelling true</code></td>
+                                                    <td>triggers a button when the character yells</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube yelling false</code></td>
+                                                    <td>triggers a button when the character is done yelling</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube model changed</code></td>
+                                                    <td>triggers a button when the model is changed from the current
+                                                        active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube model</code> (modelname)</td>
+                                                    <td>triggers a button when the model is changed and matches a
+                                                        specific model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube emotion changed</code></td>
+                                                    <td>triggers a button when the emotion is changed from the current
+                                                        active emotion</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>LandiTube emotion</code> (emotionname)</td>
+                                                    <td>triggers a button when the emotion is changed and matches a
+                                                        specific emotion</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p> Each extension trigger returns the same hefty amount of juicy data when that
+                                            extension trigger was sent for you to read and tinker with.</p>
+                                        <p> You can pull these values using the command
+                                            &quot;<code>Trigger Pull Data</code>&quot; on a button that was triggered
+                                            with one of these Extension Triggers mentioned above.</p>
+                                        <p> Here are the list of fields you can enter in the <code>Pull Value</code>
+                                            box:</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pull Value</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>blink</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current blinking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current set expression of the active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_path</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>the current image path compiled together using
+                                                        <code>global.main_directory</code>, <code>current_model</code>,
+                                                        <code>current_state</code>, and
+                                                        <code>current_emotion_state_extension</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_idle</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s idle poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_talking</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s talking poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_state_extension</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current state&#39;s file extension to be used in conjunction
+                                                        with <code>current_state</code> to create a full file</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_model</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_state</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active state of the model. This the result of
+                                                        various impacting factors such as yelling, blinking, talking,
+                                                        and randomly drawn poses</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>talking</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current talking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>yelling</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current yelling state</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2 id="layering-with-obs-sources">Layering with OBS Sources</h2>
+                                        <p>As seen in the <a href="#overview">overview</a>, you can do a lot of awesome
+                                            stuff with this engine involving OBS sources and the API! Where are these
+                                            obs sources supposed to go?</p>
+                                        <p>Any custom layers/OBS sources, need to go in the
+                                            &quot;<code>[LandiTube] Customize</code>&quot; scene. Why not
+                                            &quot;<code>[LandiTube] Model Movement</code>&quot; or
+                                            &quot;<code>[LandiTube]</code>&quot;? The bouncing, and blink squishing
+                                            effect are reading the <code>[LandiTube] Customize</code> scene, which if
+                                            you have noticed, doesn&#39;t bounce or squish around and your model looks
+                                            static. This is optimal so your OBS Sources/Layers get morphed <em>with</em>
+                                            your model when importing <code>[LandiTube]</code> into your desired scenes.
+                                        </p>
+                                        <p><img src="https://i.imgur.com/tGAxHLX.gif"
+                                                alt="showing difference between customize, and main scene"></p>
+                                        <p>And thats everything you need to know to begin! For the actual SAMMI part, i
+                                            recommend checking out the <a href="https://sammi.solutions/docs/core">SAMMI
+                                                documentation</a> to begin your ultimate pngtubing journey!</p>
+                                        <p>Tutorials will be available on the <a href="#tutorials">tutorials</a> tab so
+                                            you can get a better idea of how to use extension triggers if you are new to
+                                            SAMMI!</p>
+                                        <!--docs end-->
 
                                     </div>
                                     <div class="col-xl-3 col-lg-12">
                                         <div
                                             class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
                                             <div class="productpage-section-contents-sidebar-body">
-                                                <a href="#bridge-and-you-"><h3 ><strong>Bridge and You!</strong></h3></a>
-                                                <a href="#path-structure"><h3><strong>Path Structure</strong></h3></a>
+                                                <a href="#bridge-and-you-">
+                                                    <h3><strong>Bridge and You!</strong></h3>
+                                                </a>
+                                                <a href="#path-structure">
+                                                    <h3><strong>Path Structure</strong></h3>
+                                                </a>
                                                 <ul>
                                                     <li><a href="#models">Models</a></li>
                                                     <li><a href="#emotions">Emotions</a></li>
@@ -779,12 +1016,18 @@ every image is the same as the other images inside the emotion&#39;s folder, but
                                                         <li><a href="#yelling">Yelling ⚠</a></li>
                                                     </ul>
                                                 </ul>
-                                                <a href="#commands"><h3><strong>Commands</strong></h3></a>
+                                                <a href="#commands">
+                                                    <h3><strong>Commands</strong></h3>
+                                                </a>
                                                 <ul>
-                                                    <li><a href="#landitube-change-model">LandiTube: Change Model</a></li>
-                                                    <li><a href="#landitube-change-emotion">LandiTube: Change Emotion</a></li>
+                                                    <li><a href="#landitube-change-model">LandiTube: Change Model</a>
+                                                    </li>
+                                                    <li><a href="#landitube-change-emotion">LandiTube: Change
+                                                            Emotion</a></li>
                                                 </ul>
-                                                <a href="#custom-events-using-api"><h3><strong>Custom Events using API</strong></h3></a>
+                                                <a href="#custom-events-using-api">
+                                                    <h3><strong>Custom Events using API</strong></h3>
+                                                </a>
                                                 <ul>
                                                     <li><a href="#extension-triggers">Extension Triggers</a></li>
                                                 </ul>
@@ -795,12 +1038,424 @@ every image is the same as the other images inside the emotion&#39;s folder, but
                                 </div>
                             </div>
                             <div class="tab-pane" id="tutorials" role="tabpanel" aria-labelledby="tutorials-tab">
-                                <h1>Hello World!</h1>
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <!--Tutorial main body-->
+                                        <h1 id="welcome-to-knowledge-">Welcome to knowledge!</h1>
+                                        <p>This part of the site is pretty incomplete, but it will be populated with
+                                            video/text tutorials when I can get around to it! It&#39;s hard to do all of
+                                            this stuff on my own...</p>
+                                        <p>Feel free to make your <strong>own tutorials</strong>, I&#39;ll link them
+                                            here with proper credit and a link to your <u>channel/personal
+                                                site/social</u>!</p>
+                                        <h1 id="how-to-set-up-your-first-model">How to set up your first Model</h1>
+                                        <p>Check out the <a href="#documentation">documentation</a> and read from
+                                            &quot;Path Structure&quot; all the way up until &quot;Custom Events&quot;!
+                                            Its a step-by-step guide showing you how to get your pngtuber up and running
+                                            from nothin&#39; to somethin&#39;!</p>
+                                        <h1 id="adding-cool-glasses-via-layers">Adding cool glasses via Layers</h1>
+                                        <p>Dang, I want to be able to give my model some SICK glasses.</p>
+                                        <p>Lets do it!</p>
+                                        <h2 id="setupCoolGlasses">Setup</h2>
+                                        <p>Head on over to the <code>[LandiTube] Customize</code> scene, and add the
+                                            image of your cool glasses as an image source! or a media file... idk maybe
+                                            your glasses are EXTRA cool or sumthin&#39; yo.</p>
+                                        <p><img src="https://i.imgur.com/DNpX8aT.png" alt="added glasses in obs"></p>
+                                        <p>While we are at it, lets also make our button in SAMMI.</p>
+                                        <p><img src="https://i.imgur.com/ZPBG9c5.png" alt="button in SAMMI"></p>
+                                        <h1 id="adding-extension-triggers-to-button">Adding extension triggers to button
+                                        </h1>
+                                        <p>Using the <code>Extension Triggers</code> list provided in the <a
+                                                href="#documentation">docs</a>, we need to identify which ones we need
+                                            for the job.</p>
+                                        <p>Lets see. I want the glasses to move around whenever my head tilts from a
+                                            pose change! my pose changes when i talk, and when i&#39;m done talking.
+                                            Knowing this, we know we will need the following extension triggers on our
+                                            button:</p>
+                                        <ul>
+                                            <li>LandiTube talking true</li>
+                                            <li>LandiTube talking false</li>
+                                        </ul>
+                                        <p>Something awesome about SAMMI is, you can set a wildcard (<em>) in place of
+                                                where the word true/false is so you only need to specify this trigger
+                                                once because we want both of those to trigger the button anyways. Our
+                                                two extension triggers become one trigger: `LandiTube talking </em>`!
+                                            Navigate to the triggers menu of your button, and add that trigger.</p>
+                                        <p><img src="https://i.imgur.com/IHtAOdG.gif" alt="adding trigger to button">
+                                        </p>
+                                        <h2 id="pulling-the-pose-data">Pulling the pose data</h2>
+                                        <p>We need to identify which poses are moving the head in a way where we will
+                                            need to adjust the glasses&#39; <code>Position</code>, and
+                                            <code>Rotation</code>. In my case, its two of my idle poses:
+                                            <code>idle2</code> and <code>idle3</code>. The head leans to the left on
+                                            <code>idle2</code>, and on the right for <code>idle3</code>. All of my other
+                                            poses have the head in the center.
+                                        </p>
+                                        <p><img src="https://i.imgur.com/20MbSRk.png"
+                                                alt="showing poses that have tilted heads"></p>
+                                        <p>In our button, lets pull the pose data using <code>Trigger Pull Data</code>,
+                                            and filling the <code>Pull Value</code> box with
+                                            &quot;<code>current_state</code>&quot;. This tells us what pose our model is
+                                            in at the time the button was triggered which in our case is whenever our
+                                            talk state changes. I&#39;ll name the variable <code>currentState</code>!
+                                        </p>
+                                        <p><img src="https://i.imgur.com/kiuontN.gif"
+                                                alt="creating variable to store current state"></p>
+                                        <p>Now if we open our variable viewer and chit chat away, we can see this
+                                            variable populating with our current pose&#39;s name!</p>
+                                        <p><img src="https://i.imgur.com/ScRvKHu.gif"
+                                                alt="showing the updating variable"></p>
+                                        <h2 id="reading-and-doing-something-based-off-pose-data">Reading, and doing
+                                            something based off pose data</h2>
+                                        <p>I need to check this value for whenever it equals <code>idle2</code>, or
+                                            <code>idle3</code> so i can have something happen whenever those poses are
+                                            detected.
+                                        </p>
+                                        <p>Let&#39;s add a &quot;Switch Statement&quot;, and fill it&#39;s box with our
+                                            <code>currentState</code> variable. A switch statement matches certain cases
+                                            of text, so, we need to add three &quot;Case Statement&quot; blocks within
+                                            our switch statement block. One case will look for <code>idle2</code>,
+                                            another will look for <code>idle3</code>, and since every other pose keeps
+                                            the head in the middle, we&#39;ll add a &quot;default&quot; case for our
+                                            third block (&quot;default&quot; triggers when the <code>currentState</code>
+                                            variable doesn&#39;t match any of the other cases!).
+                                        </p>
+                                        <p><img src="https://i.imgur.com/Xqhtcl5.png" alt="creating switch case pair">
+                                        </p>
+                                        <p>&quot;What about the blinks? Aren&#39;t those poses as well?&quot; </p>
+                                        <p>Yes! we need to make sure those poses are accounted for as well, even though
+                                            we are only triggering this button when our talking state changes, not when
+                                            we blink. There is a slight chance that once we finish talking, we&#39;ll
+                                            finish while we are blinking, so poses like <code>idle2_blink</code> and
+                                            <code>idle3_blink</code> will be checked. We don&#39;t have matching cases
+                                            for those which in turn will make the glasses move the wrong way due to
+                                            triggering the &quot;default&quot; case!
+                                        </p>
+                                        <p>Thankfully, this is a really simple fix. on each of our case blocks looking
+                                            for our idle poses, clicking the little plus ➕ icon next to the text box
+                                            will allow us to add another matching case to one case statement block!
+                                            since <code>idle2</code> and <code>idle2_blink</code> move the head to the
+                                            left, we&#39;ll have those two on one block, while <code>idle3</code> and
+                                            <code>idle3_blink</code> are on another.
+                                        </p>
+                                        <p><img src="https://i.imgur.com/WJjwnBK.png" alt="fixed statements"></p>
+                                        <p>Okay, I think we have everything. Let&#39;s add some alert messages in these
+                                            case statement blocks, to help us determine if we set this up properly!</p>
+                                        <p><img src="https://i.imgur.com/wu7K8wB.png" alt="added alert messages"></p>
+                                        <p>Testiiiiinnggg.....</p>
+                                        <p><img src="https://i.imgur.com/b0bG3LB.gif" alt="testing..."></p>
+                                        <p>Success! the alert messages seem accurate, so lets try making the glasses
+                                            move now.</p>
+                                        <h2 id="source-motion-in-obs-using-move-transition">Source Motion in OBS using
+                                            Move Transition</h2>
+                                        <p>Unfortunately, SAMMI&#39;s built in motion commands aren&#39;t reliable, but
+                                            we have an even better alternative: Exeldro&#39;s &quot;Move
+                                            Transition&quot; plugin (that guy is a godsend, please support him). This
+                                            plugin is required for LandiTube to even work, so you&#39;ll have it
+                                            installed 🙂</p>
+                                        <p>Let&#39;s right click the <code>[LandiTube] Customize</code> scene (yes, the
+                                            scene) and add a &quot;Move Source&quot; filter on it. we want to move our
+                                            glasses, so lets select that source. We want no transitions, so set the
+                                            <code>Custom Duration</code> to <code>0ms</code>. <strong>If you can&#39;t
+                                                set it to 0, please update Move Transition to the latest version,
+                                                you&#39;ll be able to do it and it&#39;s wonderful</strong>!
+                                        </p>
+                                        <p><img src="https://i.imgur.com/PbGpHP6.gif" alt="adding a move source filter">
+                                        </p>
+                                        <p>Next, we need to position our glasses. I&#39;ll delegate this filter to
+                                            moving our glasses to the middle. In OBS, position the glasses how you want
+                                            (rotation, scale, position, all that stuff!) and in the filter&#39;s
+                                            settings, hit the <code>Get Transform</code> button. This will take the
+                                            current transformation the glasses are in, and inject it into the filter.
+                                            congrats! you have your first move state, give it a memorable name! i&#39;ll
+                                            call mine &quot;glasses-middle&quot;. </p>
+                                        <p><img src="https://i.imgur.com/3nFi78l.gif"
+                                                alt="getting the transform of the glasses and putting it into a filter">
+                                        </p>
+                                        <p>I&#39;ll repeat the process and create &quot;glasses-left&quot; and
+                                            &quot;glasses-right&quot;.</p>
+                                        <p>Toggling between the filters, looks good to me! </p>
+                                        <p><img src="https://i.imgur.com/fDZJjLn.gif"
+                                                alt="toggling between new filters"></p>
+                                        <p>let&#39;s implement these turning on, into our button.
+                                            In our cases, put <code>Filter Change Visibility</code> commands to turn the
+                                            visibility on for whichever position we&#39;d like the glasses to move to.
+                                        </p>
+                                        <p><img src="https://i.imgur.com/zsueCqz.gif" alt="adding filter visibilities">
+                                        </p>
+                                        <p>huzzah!</p>
+                                        <p><img src="https://i.imgur.com/3Ybrosi.gif" alt="it works wow!"></p>
+                                        <h2 id="a-hiccup-when-changing-emotions-">A hiccup when changing emotions...
+                                        </h2>
+                                        <p>are we done? not yet... I change my emotion, and the glasses are still
+                                            there... oh no! My other emotions could have entirely different poses that
+                                            i&#39;d have to check for, or maybe i just want them on one of my emotions.
+                                            the heck do we do?</p>
+                                        <p><img src="https://i.imgur.com/AGSVrsa.gif"
+                                                alt="oh no, changing emotions messes things up"></p>
+                                        <p>We could pull the <code>current_emotion</code> variable and check to see if
+                                            it&#39;s the right emotion using <code>Trigger Pull Data</code>, then
+                                            afterwards, all we do is add an if statement before we begin any &quot;pose
+                                            checking&quot;. If the emotion is equal to the emotion we want for these
+                                            glasses, show the glasses! otherwise, hide them!</p>
+                                        <p><img src="https://i.imgur.com/UYiFaVK.png" alt="solution"></p>
+                                        <p> however, remember! This button is setup to only run when our <strong>talking
+                                                state</strong> changes. This means that even if we change emotions,
+                                            <strong>nothing will happen until we talk again.</strong>
+                                        </p>
+                                        <p><img src="https://i.imgur.com/d9DfRRk.gif" alt="oh no it broke"></p>
+                                        <p>We need another trigger.</p>
+                                        <p>In your triggers menu, add a new <code>Extension Trigger</code> with the name
+                                            of</p>
+                                        <ul>
+                                            <li>LandiTube emotion *</li>
+                                        </ul>
+                                        <p><img src="https://i.imgur.com/HKLQiD8.gif" alt="adding emotion trigger"></p>
+                                        <p>Now, the button will trigger for any emotion change, and we can properly test
+                                            that <code>current_emotion</code> variable. </p>
+                                        <p>WHABAM, awesome shades, and I didn&#39;t need to re-export my art files or
+                                            get a whole separate emotion set <em>just</em> for some shades!</p>
+                                        <p><img src="https://i.imgur.com/nTsL2nr.gif" alt="final product"></p>
+                                        <h2 id="some-important-things-to-note-">Some important things to note:</h2>
+                                        <p>Maybe your SAMMI Installation is doing a bunch of other stuff and causing
+                                            slight lag, or maybe you&#39;re changing emotions too fast. Heres what might
+                                            happen to you (simulated lag):</p>
+                                        <p><img src="https://i.imgur.com/7g32VbG.gif"
+                                                alt="hey thats not supposed to happen"></p>
+                                        <p>Oh dang, those glasses couldn&#39;t read the emotion somehow, and thought it
+                                            was still &quot;chillin&quot;! why??</p>
+                                        <p>Maybe you have a complex button, and it takes a while to finish. SAMMI
+                                            won&#39;t execute overlapping buttons, however, you can very easily fix this
+                                            in two ways.</p>
+                                        <p>Turning off &quot;Local Variable Persist&quot; and turning on &quot;Button
+                                            Overlap&quot; in the button settings</p>
+                                        <p>OR</p>
+                                        <p>Turning on &quot;Allow queue&quot; in the button&#39;s settings, and giving
+                                            the button a unique group/queue name.</p>
+                                        <p>Each of these have their own use cases, but in our case, the easiest would be
+                                            the first option, because we aren&#39;t doing anything super complicated.
+                                            This allows the button to <em>overlap</em> execution, so if this button is
+                                            still running while triggered again maybe from a fast action, it will still
+                                            run regardless.</p>
+                                        <p>If you have a bit more of a complicated button, and would rather wait until
+                                            it is <em>fully</em> done executing because there might be some important
+                                            output for another function, add it to a queue instead with option 2! </p>
+                                        <p>More tutorials will be made to better get an understanding of when this
+                                            should be used.</p>
+                                        <!--tutorial main body end-->
+                                    </div>
+                                    <div class="col-xl-3 col-lg-12">
+                                        <!--Tutorial sidebar-->
+                                        <div
+                                            class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
+                                            <div class="productpage-section-contents-sidebar-body">
+                                                <a href="#welcome-to-knowledge-">
+                                                    <h3>Welcome to knowledge!</h3>
+                                                </a>
+                                                <a href="#how-to-set-up-your-first-model">
+                                                    <h3>How to set up your first Model</h3>
+                                                </a>
+                                                <a href="#adding-cool-glasses-via-layers">
+                                                    <h3>Adding Cool Glasses via Layers</h3>
+                                                </a>
+                                                <ul>
+                                                    <li><a href="#how-to-set-up-your-first-model">How to set up your first Model</a></li>
+                                                    <li><a href="#setupCoolGlasses">Setup</a></li>
+                                                    <li><a href="#adding-extension-triggers-to-button">Adding extension triggers to button</a></li>
+                                                    <li><a href="#pulling-the-pose-data">Pulling the pose data</a></li>
+                                                    <li><a href="#reading-and-doing-something-based-off-pose-data">Reading, and doing
+                                                        something based off pose data</a></li>
+                                                    <li><a href="#source-motion-in-obs-using-move-transition">Source Motion in OBS using
+                                                        Move Transition</a></li>
+                                                    <li><a href="#a-hiccup-when-changing-emotions-">A hiccup when changing emotions...</a></li>
+                                                    <li><a href="#some-important-things-to-note-">Some important things to note:</a></li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                        <!--tutorial sidebar end-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="troubleshooting" role="tabpanel"
+                                aria-labelledby="troubleshooting-tab">
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <!--troubleshooting main body start-->
+                                        <h1 id="welcome-to-the-helpdesk-">Welcome to the helpdesk!</h1>
+                                        <p>Sorry you had to come here, I&#39;m trying my best! Check out the sidebar to
+                                            see if there is anything related to the issue you&#39;re experiencing!</p>
+                                        <h1 id="installation">Installation</h1>
+                                        <h2 id="i-keep-getting-yellow-messages-telling-me-that-i-need-obs-scenes-what-">
+                                            I Keep getting yellow messages telling me that I need OBS scenes, what?</h2>
+                                        <p>Please refer to the <a href="#setup">setup</a> tab to install your OBS scenes
+                                            using the Source Copy OBS plugin.</p>
+                                        <h2
+                                            id="whenever-i-startup-sammi-with-landitube-installed-it-takes-forever-to-load-and-sometimes-crashes">
+                                            Whenever I startup SAMMI with LandiTube installed, it takes FOREVER to load
+                                            and sometimes crashes</h2>
+                                        <p>Make sure you have your Local API enabled in the SAMMI settings, as per
+                                            instructions from installing the &quot;Folder Reader&quot; extension.</p>
+                                        <p>Do not set a password!</p>
+                                        <h1 id="models">Models</h1>
+                                        <h2 id="i-made-a-model-folder-but-i-can-t-find-it-in-the-bridge-">I made a model
+                                            folder, but i can&#39;t find it in the bridge!</h2>
+                                        <p>Make sure your model folder is located in
+                                            <code>(YOURSAMMIINSTALL)\Landies_Extensions\LandiTuber\models</code> folder.
+                                        </p>
+                                        <p>Make sure to select it in the bridge afterwards!</p>
+                                        <h1 id="emotions">Emotions</h1>
+                                        <h2
+                                            id="i-added-my-emotions-inside-my-models-folder-but-when-i-refresh-nothing-happens-">
+                                            I added my emotions inside my models folder but when i refresh nothing
+                                            happens!</h2>
+                                        <p>You need to make an &quot;emotions&quot; folder inside your unique
+                                            model&#39;s folder <strong>first</strong>, and make your emotion folders
+                                            within there. Common mistake!</p>
+                                        <p>Make sure to select at least one emotion once you set them up.</p>
+                                        <!-- <h1 id="poses">Poses</h1> -->
+                                        <h1 id="settings">Settings</h1>
+                                        <h2 id="i-can-t-change-the-settings-i-already-have-obs-connected-">I can&#39;t
+                                            change the settings, I already have OBS Connected!</h2>
+                                        <p>Try restarting SAMMI. This is common on first installations, and I&#39;m
+                                            still tracking it down! Restarting SAMMI should fix this no problem c:</p>
+                                        <h2 id="my-voice-isn-t-being-picked-up-">My voice isn&#39;t being picked up!
+                                        </h2>
+                                        <p>There might be four things causing this:</p>
+                                        <ol>
+                                            <li>
+                                                <p>Input device not set</p>
+                                                <ol>
+                                                    <li>Head on over to the bridge, click the &quot;LandiTube&quot; tab.
+                                                    </li>
+                                                    <li>Click the &quot;Input Source&quot; dropdown button to select
+                                                        your input device!
+                                                        <br>
+                                                        If you don&#39;t see your device there, or, you select it and
+                                                        nothing changes, <a href="#here">check the below issue</a>!
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <p>Move Transition OBS Plugin not installed</p>
+                                                <ol>
+                                                    <li>Head on over to the <a
+                                                            href="https://obsproject.com/forum/resources/move-transition.913/">Move
+                                                            Transition Download Page</a></li>
+                                                    <li>Make sure you are downloading 2.8.1 or higher!</li>
+                                                    <li>Close OBS, install, and re-open OBS.</li>
+                                                    <li>Reinstall LandiTube if nothing fixes right away</li>
+                                                </ol>
+                                            </li>
+                                            <li>Voice Threshold is too high<ol>
+                                                    <li>Head on over to the bridge, click the &quot;LandiTube&quot; tab.
+                                                    </li>
+                                                    <li>adjust the &quot;Voice Threshold&quot;</li>
+                                                </ol>
+                                            </li>
+                                            <li>Weird SAMMI issue<br>Sometimes, SAMMI
+                                                breaks when reading an OBS source and is unable to get the visbility
+                                                state that is being constantly changed. Heres what to do:<ol>
+                                                    <li>Head over to SAMMI's "OBS Connection" settings and Disconnect,
+                                                        then reconnect OBS.</li>
+                                                    <li>This should fix your issue, if not, try one more time, then let
+                                                        me know you're still struggling. It works eventually, and once
+                                                        it starts working after install, i've never had a problem with
+                                                        it happening again :3c
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <p> If you don&#39;t see your device there, or, you select it and nothing
+                                            changes, check the below issue!</p>
+                                        <h2
+                                            id="i-cant-select-my-input-device-or-i-selected-my-device-and-nothing-is-happening-">
+                                            I cant select my input device, or, I selected my device and nothing is
+                                            happening!</h2>
+                                        <p>Unfortunately it looks like i suck, and the interface i made for selecting
+                                            your input source doesn&#39;t work right.</p>
+                                        <p>There is a way to fix this, but its a bit more manual! follow these steps:
+                                        </p>
+                                        <ol>
+                                            <li>Head over to OBS, and check out the
+                                                &quot;<code>[LandiTube] Model Movement</code>&quot; scene. </li>
+                                            <li>Click on the source &quot;LandiTube Voice&quot;, hit properties, and
+                                                change it to your input device. </li>
+                                            <li>Afterwards, if nothing happens when you speak, enable and disable the
+                                                LandiTube Voice source. This should work!</li>
+                                        </ol>
+
+                                        <!--troubleshooting main body end-->
+                                    </div>
+                                    <div class="col-xl-3 col-lg-12">
+                                        <div
+                                            class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
+                                            <div class="productpage-section-contents-sidebar-body">
+                                                <a href="#welcome-to-the-helpdesk-">
+                                                    <h3>Welcome!</h3>
+                                                </a>
+                                                <a href="#installation">
+                                                    <h3>Installation</h3>
+                                                </a>
+                                                <ul>
+                                                    <li><a
+                                                            href="#i-keep-getting-yellow-messages-telling-me-that-i-need-obs-scenes-what-">I
+                                                            Keep getting yellow messages telling me that I need OBS
+                                                            scenes, what?</a></li>
+                                                    <li><a
+                                                            href="#whenever-i-startup-sammi-with-landitube-installed-it-takes-forever-to-load-and-sometimes-crashes">Whenever
+                                                            I startup SAMMI with LandiTube installed, it takes FOREVER
+                                                            to load
+                                                            and sometimes crashes</a></li>
+                                                </ul>
+
+                                                <a href="#models">
+                                                    <h3>Models</h3>
+                                                </a>
+                                                <ul>
+                                                    <li><a
+                                                            href="#i-made-a-model-folder-but-i-can-t-find-it-in-the-bridge-">I
+                                                            made a model
+                                                            folder, but i can&#39;t find it in the bridge!</a></li>
+                                                </ul>
+                                                <a href="#emotions">
+                                                    <h3>Emotions</h3>
+                                                </a>
+                                                <ul>
+                                                    <li><a
+                                                            href="#i-added-my-emotions-inside-my-models-folder-but-when-i-refresh-nothing-happens-">I
+                                                            added my emotions inside my models folder but when i refresh
+                                                            nothing
+                                                            happens!</a></li>
+                                                </ul>
+                                                <a href="#settings">
+                                                    <h3>Settings</h3>
+                                                </a>
+                                                <ul>
+                                                    <li><a
+                                                            href="#i-can-t-change-the-settings-i-already-have-obs-connected-">I
+                                                            can&#39;t
+                                                            change the settings, I already have OBS Connected!</a></li>
+                                                    <li><a href="#my-voice-isn-t-being-picked-up-">My voice isn't being picked up!</a></li>
+                                                    <li><a href="#i-cant-select-my-input-device-or-i-selected-my-device-and-nothing-is-happening-">I cant select my input device, or, I selected my device and nothing is
+                                                        happening!</a></li>
+                                                    <li><a href="#"></a></li>
+                                                </ul>
+                                                <a href="#">
+                                                    <h3></h3>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
-                                        <h1 id="version-096">0.9.6</h1>
+                                        <h1 id="version-099">0.9.9</h1>
                                         <ul>
                                             <li>Initial Beta Release 🎉</li>
                                         </ul>
@@ -811,7 +1466,7 @@ every image is the same as the other images inside the emotion&#39;s folder, but
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Versions</strong></h3>
                                                 <ul>
-                                                    <li><a href="#version-096">0.9.6</a></li>
+                                                    <li><a href="#version-099">0.9.9</a></li>
                                                 </ul>
 
                                             </div>
