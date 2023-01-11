@@ -14,7 +14,8 @@ html {
 
 img,
 picture,
-video {
+video,
+iframe {
   max-width: 100%;
   display: block;
 }
