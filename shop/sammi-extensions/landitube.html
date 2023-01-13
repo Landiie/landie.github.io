@@ -626,8 +626,7 @@
                                                 alt="File explorer, showing an emotions folder nested inside a unique model&#39;s folder">
                                         </p>
                                         <p>In total, your file path should look something like
-                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!
-                                        </p>
+                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!</p>
                                         <p>Inside your new &quot;emotions&quot; folder, All folders created will create
                                             an Icon in your bridge showing that an emotion is detected, and exists after
                                             a model refresh.
@@ -651,8 +650,7 @@
                                             stuff!</p>
                                         <p>In traditional PNGTubing engines, you had 4 poses per emotion: <u>idle</u>,
                                             <u>idle with blink</u>, <u>talking</u> and <u>talking with blink</u>
-                                            (sometimes you dont even have the blink).
-                                        </p>
+                                            (sometimes you dont even have the blink).</p>
                                         <p>in &quot;LandiTube&quot;, you&#39;re allowed to have <em>as many idle, and
                                                 talking poses as your heart desires</em>. Blinking will be discussed
                                             further down.</p>
@@ -732,8 +730,7 @@
                                             </li>
                                         </ol>
                                         <p>Looks much better! but there is quite a dead stare.. lets add
-                                            <u>blinking</u>!
-                                        </p>
+                                            <u>blinking</u>!</p>
                                         <h3 id="blinking">Blinking</h3>
                                         <p>Talking, and idle poses do not need to have blinking poses, but they are
                                             nice! One nice feature is that blinking is not &quot;all or nothing&quot;,
@@ -834,6 +831,33 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <h2 id="landitube-pause-engine">LandiTube: Pause Engine</h2>
+                                        <p>Pauses all actions of the engine, leaving your character stuck in stasis.
+                                            poor lad!</p>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Box Name</th>
+                                                    <th>Type</th>
+                                                    <th>required?</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Reset Squish</td>
+                                                    <td>boolean (checkbox)</td>
+                                                    <td>✔</td>
+                                                    <td>If ticked, after executing the command, the engine will stop and
+                                                        the proportions will be reset. If not ticked, proportions remain
+                                                        how they were at the time of pausing.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2 id="landitube-resume-engine">LandiTube: Resume Engine</h2>
+                                        <p>Resumes default engine behavior c: For use after previously pausing the
+                                            engine! otherwise this command is just a fun paperweight in digital form~
+                                        </p>
                                         <h1 id="custom-events-using-api">Custom Events using API</h1>
                                         <p>Like the engine, but want to add your own integrations using SAMMI? You can
                                             absolutely do that with relative ease if you know SAMMI! The PNGTuber engine
@@ -935,8 +959,7 @@
                                                     <td>the current image path compiled together using
                                                         <code>global.main_directory</code>, <code>current_model</code>,
                                                         <code>current_state</code>, and
-                                                        <code>current_emotion_state_extension</code>
-                                                    </td>
+                                                        <code>current_emotion_state_extension</code></td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>current_emotion_poses_idle</code></td>
@@ -995,14 +1018,32 @@
                                         </p>
                                         <p><img src="https://i.imgur.com/tGAxHLX.gif"
                                                 alt="showing difference between customize, and main scene"></p>
+                                        <p>NEW as of 0.10.0: </p>
+                                        <h2 id="pose-freezing">Pose Freezing</h2>
+                                        <p>Aligning the sources can be pretty hard and frustrating, especially if your
+                                            blink frames have a lot of movement and you&#39;re trying to align something
+                                            to it. Thats why I added a pose-freezing feature to help with the alignment
+                                            of your sources!</p>
+                                        <p>Pick a pose you want to align the position of a source to, and click it in
+                                            your bridge to display, and freeze the engine in place! (sometimes you may
+                                            have to click it twice if you&#39;re talking while selecting it)</p>
+                                        <p><img src="https://i.imgur.com/Ve2Qei3.gif"
+                                                alt="showcasing pose engine freeze"></p>
+                                        <p>If you want to toggle to your blink frames, click the &quot;Toggle Blink
+                                            Frames&quot; button to transform your button into their blink counterparts!
+                                            If you do not have a blink associated to one of your poses, clicking the
+                                            blink button will result in a blank output, but you should probably expect
+                                            that if you know you don&#39;t have a blink frame for a pose!</p>
+                                        <p>Once you are done using the freeze feature, click &quot;Resume Engine&quot;
+                                            in order to restore engine functionality.</p>
                                         <p>And thats everything you need to know to begin! For the actual SAMMI part, i
                                             recommend checking out the <a href="https://sammi.solutions/docs/core">SAMMI
                                                 documentation</a> to begin your ultimate pngtubing journey!</p>
                                         <p>Tutorials will be available on the <a href="#tutorials">tutorials</a> tab so
                                             you can get a better idea of how to use extension triggers if you are new to
                                             SAMMI!</p>
-                                        <!--docs end-->
 
+                                        <!--docs end-->
                                     </div>
                                     <div class="col-xl-3 col-lg-12">
                                         <div
@@ -1474,9 +1515,32 @@
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <h1 id="version-0100">0.10.0</h1>
+                                        <ul>
+                                            <li>NEW: Poses section dividers: separated between idle, and talking poses
+                                            </li>
+                                            <li>NEW: Poses section button: "Resume Engine", resumes the rendering engine
+                                                from a frozen state for use after clicking a pose button to restore
+                                                function</li>
+                                            <li>NEW: Poses section button: "Toggle Blink Frames", allows you to freeze
+                                                blink frames in time aswell (displays nothing if a pose has no blink
+                                                counterpart</li>
+                                            <li>NEW: Poses section button: "Open Emotion's Folder", to go to where poses
+                                                are stored for the current model's emotion!</li>
+                                            <li>NEW: Poses section: click a pose to freeze in time to align your layers!
+                                            </li>
+                                            <li>NEW: Revamped emotion list layout, uses full width rows for easier
+                                                clicking</li>
+                                            <li>NEW: Added "LandiTube: Pause Engine", stop the rendering engine in it's
+                                                tracks!</li>
+                                            <li>NEW: Added "LandiTube: Resume Engine"</li>
+                                            <li>BUG FIX: Fixed crash on SAMMI deck load, your deck is alive again!</li>
+                                            <li>TYPO FIX: Changed command names from "LandiTuber" to "LandiTube"</li>
+                                        </ul>
                                         <h1 id="version-0911">0.9.11</h1>
                                         <ul>
-                                            <li>BUG FIX: ok i didn't actually fix it last update so get bamboozled its fixed now</li>
+                                            <li>BUG FIX: ok i didn't actually fix it last update so get bamboozled its
+                                                fixed now</li>
                                         </ul>
                                         <h1 id="version-0910">0.9.10</h1>
                                         <ul>
@@ -1493,6 +1557,7 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Versions</strong></h3>
                                                 <ul>
+                                                    <li><a href="#version-0100">0.10.0</a></li>
                                                     <li><a href="#version-0911">0.9.11</a></li>
                                                     <li><a href="#version-0910">0.9.10</a></li>
                                                     <li><a href="#version-099">0.9.9</a></li>

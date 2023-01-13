@@ -1,10 +1,10 @@
 {
   "name": "LandiTube",
   "summary": "Advanced PNGTuber engine powered by SAMMI!",
-  "version": "0.9.11",
+  "version": "0.10.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "beta :3c",
-  "versionSummaryBody": "awawawawaw",
+  "versionSummaryHeader": "Critical fixes, Layout changes, NEW Engine freeze, and easier layering tools!",
+  "versionSummaryBody": "Some highlights:\\n\\nBUG FIX: Fixed crash on SAMMI deck load, your deck is alive again!\\nNEW: Added \"LandiTube: Pause Engine\", stop the rendering engine in it's tracks!\\nNEW: Revamped emotion list layout, uses full width rows for easier clicking\\nNEW: Poses section: click a pose to freeze in time to align your layers!\\n\\nAnd so much more! check out the full list of patch notes on the site!",
   "downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/landitube.gif"
