@@ -626,7 +626,8 @@
                                                 alt="File explorer, showing an emotions folder nested inside a unique model&#39;s folder">
                                         </p>
                                         <p>In total, your file path should look something like
-                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!</p>
+                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!
+                                        </p>
                                         <p>Inside your new &quot;emotions&quot; folder, All folders created will create
                                             an Icon in your bridge showing that an emotion is detected, and exists after
                                             a model refresh.
@@ -650,7 +651,8 @@
                                             stuff!</p>
                                         <p>In traditional PNGTubing engines, you had 4 poses per emotion: <u>idle</u>,
                                             <u>idle with blink</u>, <u>talking</u> and <u>talking with blink</u>
-                                            (sometimes you dont even have the blink).</p>
+                                            (sometimes you dont even have the blink).
+                                        </p>
                                         <p>in &quot;LandiTube&quot;, you&#39;re allowed to have <em>as many idle, and
                                                 talking poses as your heart desires</em>. Blinking will be discussed
                                             further down.</p>
@@ -730,7 +732,8 @@
                                             </li>
                                         </ol>
                                         <p>Looks much better! but there is quite a dead stare.. lets add
-                                            <u>blinking</u>!</p>
+                                            <u>blinking</u>!
+                                        </p>
                                         <h3 id="blinking">Blinking</h3>
                                         <p>Talking, and idle poses do not need to have blinking poses, but they are
                                             nice! One nice feature is that blinking is not &quot;all or nothing&quot;,
@@ -959,7 +962,8 @@
                                                     <td>the current image path compiled together using
                                                         <code>global.main_directory</code>, <code>current_model</code>,
                                                         <code>current_state</code>, and
-                                                        <code>current_emotion_state_extension</code></td>
+                                                        <code>current_emotion_state_extension</code>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>current_emotion_poses_idle</code></td>
@@ -1370,7 +1374,7 @@
                                             model&#39;s folder <strong>first</strong>, and make your emotion folders
                                             within there. Common mistake!</p>
                                         <p>Make sure to select at least one emotion once you set them up.</p>
-                                        <!-- <h1 id="poses">Poses</h1> -->
+                                        <h1 id="poses">Poses</h1>
                                         <h1 id="settings">Settings</h1>
                                         <h2 id="i-can-t-change-the-settings-i-already-have-obs-connected-">I can&#39;t
                                             change the settings, I already have OBS Connected!</h2>
@@ -1410,21 +1414,37 @@
                                                     <li>adjust the &quot;Voice Threshold&quot;</li>
                                                 </ol>
                                             </li>
-                                            <li>Weird SAMMI issue<br>Sometimes, SAMMI
-                                                breaks when reading an OBS source and is unable to get the visbility
-                                                state that is being constantly changed. Heres what to do:<ol>
-                                                    <li>Head over to SAMMI's "OBS Connection" settings and Disconnect,
-                                                        then reconnect OBS.</li>
+                                            <li>Weird SAMMI issue<br>Sometimes, SAMMI breaks when reading an OBS source
+                                                and is unable to get the visbility state that is being constantly
+                                                changed. Heres what to do:<ol>
+                                                    <li>Head over to SAMMI&#39;s &quot;OBS Connection&quot; settings and
+                                                        Disconnect, then reconnect OBS.</li>
                                                     <li>This should fix your issue, if not, try one more time, then let
-                                                        me know you're still struggling. It works eventually, and once
-                                                        it starts working after install, i've never had a problem with
-                                                        it happening again :3c
-                                                    </li>
+                                                        me know you&#39;re still struggling. It works eventually, and
+                                                        once it starts working after install, i&#39;ve never had a
+                                                        problem with it happening again :3c</li>
                                                 </ol>
                                             </li>
+                                            <li>
+                                                <p>Delete OBS Scenes, reinstall Scenes<br>Rarely, upon installation move
+                                                    transition will fail to pick up any input (discovered thanks to
+                                                    PixelGourmet) and the solution is to reinstall the scenes a specific
+                                                    way!</p>
+                                                <ol>
+                                                    <li>Delete all scenes with the prefix &quot;[LandiTube]&quot;</li>
+                                                    <li>Disconnect SAMMI from OBS in SAMMI&#39;s &quot;OBS
+                                                        Connections&quot; menu temporarily</li>
+                                                    <li>Reinstall scenes from &quot;LandiTube Scenes.json&quot;</li>
+                                                    <li>Reconnect SAMMI to OBS from &quot;OBS Connections&quot; within
+                                                        SAMMI</li>
+                                                    <li>Change the input device of &quot;LandiTube Voice&quot; located
+                                                        in the scene &quot;[LandiTube] Model Movement&quot;</li>
+                                                    <li>Hopefully everything is good? </li>
+                                                </ol>
+                                                <p>If you don&#39;t see your device there, or, you select it and nothing
+                                                    changes, check the below issue!</p>
+                                            </li>
                                         </ol>
-                                        <p> If you don&#39;t see your device there, or, you select it and nothing
-                                            changes, check the below issue!</p>
                                         <h2
                                             id="i-cant-select-my-input-device-or-i-selected-my-device-and-nothing-is-happening-">
                                             I cant select my input device, or, I selected my device and nothing is
@@ -1441,6 +1461,7 @@
                                             <li>Afterwards, if nothing happens when you speak, enable and disable the
                                                 LandiTube Voice source. This should work!</li>
                                         </ol>
+
 
                                         <!--troubleshooting main body end-->
                                     </div>
