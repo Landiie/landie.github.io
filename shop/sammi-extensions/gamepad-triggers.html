@@ -93,14 +93,17 @@
     <div class="site-shop">
         <div class="container-fluid site-shop-inner-content">
             <!--Shop Header-->
-            <div class="shop-header row d-flex align-items-center justify-content-center">
+            <div class="shop-header row d-flex align-items-center justify-content-center pt-2">
                 <div class="col-xl-3 col-lg-12 d-flex align-items-center justify-content-center">
-                    <img style="width: 4rem;" class="me-3" src="../../logo.png" alt="">
-                    <h1 class="shop-header-title">Landie's Shop</h1>
+                    <a href="../../index.html"><img style="width: 4rem;" class="shop-header-image me-3"
+                            src="../../logo.png" alt=""></a>
+                    <a href="../../shop.html" class="text-decoration-none">
+                        <h1 class="shop-header-title">Landie's Shop</h1>
+                    </a>
                 </div>
                 <nav
                     class="col-xl-9 col-lg-12 shop-header-nav mt-2 justify-content-center align-items-center text-center">
-                    <a href="../index.html">Home</a>
+                    <a href="../../index.html">Home</a>
                 </nav>
                 <a href="https://twitch.tv/Landie" target="_blank" rel="noopener noreferrer" style="display: none"
                     class="col-xl-3 col-lg-12 live-indicator">
@@ -183,24 +186,60 @@
                             <div class="tab-pane active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-12 productpage-section-contents-body">
-                                        <h2 id="overview">Overview</h2>
-                                        <p>Allows SAMMI to be controlled by a gamepad via extension triggers! have
-                                            something trigger when you press, and release buttons! or, move your
-                                            joystick and capture positions, angle, and more!
-                                            <br>
-                                            <br>
-                                            visit github.com/Landiie/LB2-Gamepad-Triggers/wiki for installation and
-                                            usage!
-                                            <br>
-                                            <br>
-                                            worked very hard on this, made with love 💚
-                                            <br>
-                                            <br>
-                                            PLEASE DO NOT REDISTRIBUTE
-                                        </p>
+                                        <h1 id="-what-is-this-">❓ What is this?</h1>
+                                        <p>Check out the video!</p>
+                                        <p>This extension gives SAMMI controller support via the HTML5 Gamepad API!
+                                            Trigger buttons with your controller by pressing and releasing buttons,
+                                            shifting the analog stick, and using analog triggers!</p>
+                                        <p>Buttons are triggered via &quot;Extension Triggers&quot;, which are explained
+                                            in the <a href="#documentation">docs</a>! With every extension trigger
+                                            attatched to a button, you&#39;re able to pull lots of data about your
+                                            controller via <code>Trigger Pull Data</code> such as joystick position,
+                                            angle, radians, and more!</p>
+                                        <p>If your controller works on <a
+                                                href="https://gamepadviewer.com">gamepadviewer.com</a>, it should work
+                                            with this extension. Before purchasing, check there!</p>
+                                        <h1 id="-features">✨ Features</h1>
+                                        <ul>
+                                            <li>Normalized layouts across various popular controllers</li>
+                                            <li>Button Triggers <ul>
+                                                    <li>PRESS</li>
+                                                    <li>RELEASE</li>
+                                                </ul>
+                                            </li>
+                                            <li>Analog Button Triggers<ul>
+                                                    <li>PRESS</li>
+                                                    <li>CHANGE</li>
+                                                    <li>RELEASE</li>
+                                                </ul>
+                                            </li>
+                                            <li>Joystick Triggers<ul>
+                                                    <li>START</li>
+                                                    <li>CHANGE</li>
+                                                    <li>END</li>
+                                                </ul>
+                                            </li>
+                                            <li>Fully contained in Bridge, just needs to be docked in OBS!</li>
+                                            <li>Bridge contains all dynamically generated triggers in a neat table
+                                                (check docs)</li>
+                                        </ul>
+                                        <h1 id="-how-do-i-get-started-">🌟 How do I get started?</h1>
+                                        <p>Download the extension, then, head over to the setup tab, where you will be
+                                            redirected to my website&#39;s setup page for Gamepad Triggers!</p>
+                                        <h1 id="-support">💚 Support</h1>
+                                        <p>If you want me to continue making awesome SAMMI extensions for everyone,
+                                            please consider donating to my <a href="https://ko-fi.com/landie">Ko-Fi</a>!
+                                            Supporting me allows me to get more equipment to make extensions with, gives
+                                            me some food on the table, and lets me know that my extensions are
+                                            appreciated!</p>
+                                        <p>Made with Love, <a href="https://landie.land">Landie</a></p>
+
                                     </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <p>No display here... yet!</p>
+                                    <div  class="mt-5 col-xl-6 col-lg-12 d-flex justify-content-center">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bvlmrJWKJJ0"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>

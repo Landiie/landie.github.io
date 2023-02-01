@@ -20,6 +20,11 @@ iframe {
   display: block;
 }
 
+iframe {
+  border-radius: 1rem;
+  border: solid 0.5rem rgba(240, 255, 245, 0.491);
+}
+
 @font-face {
   font-family: eigerdals;
   src: url(./Eigerdals\ Heavy.OTF);
