@@ -330,6 +330,11 @@
                                                         and randomly drawn poses</td>
                                                 </tr>
                                                 <tr>
+                                                    <td><code>current_state_has_blink</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>If your state has the ability to blink or not! <span style="color: red;">Version 0.13.2^</span></td>
+                                                </tr>
+                                                <tr>
                                                     <td><code>talking</code></td>
                                                     <td><em>boolean</em></td>
                                                     <td>Current talking state</td>
@@ -943,76 +948,81 @@
                                             with one of these Extension Triggers mentioned above.</p>
                                         <p> Here are the list of fields you can enter in the <code>Pull Value</code>
                                             box:</p>
-                                        <table class="table table-primary">
-                                            <thead>
-                                                <tr>
-                                                    <th>Pull Value</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><code>blink</code></td>
-                                                    <td><em>boolean</em></td>
-                                                    <td>Current blinking state</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_emotion</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>The current set expression of the active model</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_emotion_path</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>the current image path compiled together using
-                                                        <code>global.main_directory</code>, <code>current_model</code>,
-                                                        <code>current_state</code>, and
-                                                        <code>current_emotion_state_extension</code>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_emotion_poses_idle</code></td>
-                                                    <td>Array</td>
-                                                    <td>An Array of the current model&#39;s idle poses (not including
-                                                        blinks)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_emotion_poses_talking</code></td>
-                                                    <td>Array</td>
-                                                    <td>An Array of the current model&#39;s talking poses (not including
-                                                        blinks)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_emotion_state_extension</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>The current state&#39;s file extension to be used in conjunction
-                                                        with <code>current_state</code> to create a full file</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_model</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>The current active model</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>current_state</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>The current active state of the model. This the result of
-                                                        various impacting factors such as yelling, blinking, talking,
-                                                        and randomly drawn poses</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>talking</code></td>
-                                                    <td><em>boolean</em></td>
-                                                    <td>Current talking state</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><code>yelling</code></td>
-                                                    <td><em>boolean</em></td>
-                                                    <td>Current yelling state</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                            <table class="table table-primary">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Pull Value</th>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><code>blink</code></td>
+                                                        <td><em>boolean</em></td>
+                                                        <td>Current blinking state</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_emotion</code></td>
+                                                        <td><em>string</em></td>
+                                                        <td>The current set expression of the active model</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_emotion_path</code></td>
+                                                        <td><em>string</em></td>
+                                                        <td>the current image path compiled together using
+                                                            <code>global.main_directory</code>, <code>current_model</code>,
+                                                            <code>current_state</code>, and
+                                                            <code>current_emotion_state_extension</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_emotion_poses_idle</code></td>
+                                                        <td>Array</td>
+                                                        <td>An Array of the current model&#39;s idle poses (not including
+                                                            blinks)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_emotion_poses_talking</code></td>
+                                                        <td>Array</td>
+                                                        <td>An Array of the current model&#39;s talking poses (not including
+                                                            blinks)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_emotion_state_extension</code></td>
+                                                        <td><em>string</em></td>
+                                                        <td>The current state&#39;s file extension to be used in conjunction
+                                                            with <code>current_state</code> to create a full file</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_model</code></td>
+                                                        <td><em>string</em></td>
+                                                        <td>The current active model</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_state</code></td>
+                                                        <td><em>string</em></td>
+                                                        <td>The current active state of the model. This the result of
+                                                            various impacting factors such as yelling, blinking, talking,
+                                                            and randomly drawn poses</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>current_state_has_blink</code></td>
+                                                        <td><em>boolean</em></td>
+                                                        <td>If your state has the ability to blink or not! <span style="color: red;">Version 0.13.2^</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>talking</code></td>
+                                                        <td><em>boolean</em></td>
+                                                        <td>Current talking state</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>yelling</code></td>
+                                                        <td><em>boolean</em></td>
+                                                        <td>Current yelling state</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         <h2 id="layering-with-obs-sources">Layering with OBS Sources</h2>
                                         <p>As seen in the <a href="#overview">overview</a>, you can do a lot of awesome
                                             stuff with this engine involving OBS sources and the API! Where are these
@@ -1542,6 +1552,15 @@
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+                                        <h1 id="version-0132">0.13.2</h1>
+                                        <ul>
+                                            <li>BUG FIX: Fixed the command <code>LandiTube: Pause Engine</code> not properly working after backend rewrite</li>
+                                            <li>BUG FIX: Fixed the helper "Poses" list in bridge not properly working after backend rewrite</li>
+                                            <li>BUG FIX: Fixed .gif files not properly working after backend rewrite (devnote: might need extra edits)</li>
+                                            <li>BUG FIX: Model no longer squishes if there is no blink frame for current state</li>
+                                            <li>BUG FIX: Model no longer squishes during blink while talking</li>
+                                            <li>NEW: LandiTube Data addition <code>current_state_has_blink</code>! with every extension trigger, get a boolean (true/false) if your character can blink!</li>
+                                        </ul>
                                         <h1 id="version-0131">0.13.1</h1>
                                         <ul>
                                             <li>QUALITY OF LIFE: Refresh time <i>significantly</i> reduced</li>
@@ -1615,6 +1634,7 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Versions</strong></h3>
                                                 <ul>
+                                                    <li><a href="#version-0132">0.13.2</a></li>
                                                     <li><a href="#version-0131">0.13.1</a></li>
                                                     <li><a href="#version-0110">0.11.0</a></li>
                                                     <li><a href="#version-0100">0.10.0</a></li>
