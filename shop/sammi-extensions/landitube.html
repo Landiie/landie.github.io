@@ -1381,6 +1381,7 @@
                                             <code>(YOURSAMMIINSTALL)\Landies_Extensions\LandiTuber\models</code> folder.
                                         </p>
                                         <p>Make sure to select it in the bridge afterwards!</p>
+                                        <hr>
                                         <h1 id="emotions">Emotions</h1>
                                         <h2
                                             id="i-added-my-emotions-inside-my-models-folder-but-when-i-refresh-nothing-happens-">
@@ -1390,7 +1391,24 @@
                                             model&#39;s folder <strong>first</strong>, and make your emotion folders
                                             within there. Common mistake!</p>
                                         <p>Make sure to select at least one emotion once you set them up.</p>
+                                        <hr>
                                         <h1 id="poses">Poses</h1>
+                                        <hr>
+                                        <!--display troubleshooting start-->
+                                        <h1>Display</h1>
+                                        <h2 id="troubleshoot-display-modelhuge"> One of my model's poses is huge, and not aligned properly!</h2>
+                                        <p>0.14.6^ use a dynamic source creation process to add your poses, and sometimes things happen during that process and don't get created properly!</p>
+                                        <p>Thankfully, this is an easy fix!</p>
+                                        <ol>
+                                            <li>Head over to the <code>[LandiTube] Default Renderer</code> scene</li>
+                                            <li>Locate the problematic source (to locate, look for the problematic source that has the model name at the beginning emotion name in middle, and pose name at the end for easy finding.</li>
+                                            <li>Delete the source!</li>
+                                            <li>In the bridge under the LandiTube tab, click "Refresh Models"</li>
+                                            <li>Give it a moment to regenerate the missing source, and see if it fixed your issue!</li>
+                                        </ol>
+                                        <p>If the issue persists even when deleting the source, try it again, as it's a rare bug! once its fixed, <i>you should never have to touch it again unless you remove the model!</i></p>
+                                        <!--display troubleshooting end-->
+                                        <hr>
                                         <h1 id="settings">Settings</h1>
                                         <h2 id="i-can-t-change-the-settings-i-already-have-obs-connected-">I can&#39;t
                                             change the settings, I already have OBS Connected!</h2>
