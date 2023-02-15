@@ -217,9 +217,9 @@
                                         <h1 id="help-i-m-new-to-sammi-and-i-want-to-use-this-what-do-i-do-">Help!
                                             I&#39;m new to SAMMI, and I want to use this! What do I do?</h1>
                                         <p>Please check out this <a
-                                                href="https://www.youtube.com/watch?v=Jkz264Ax6qc">quick video</a> I
+                                                href="https://www.youtube.com/watch?v=hM2H6PWr1vo">video</a> I
                                             made to help newcomers get SAMMI set up with the bare minimum they need to
-                                            use this extension!</p>
+                                            use this extension! <span style="color: red;">updated for 0.15!</span></p>
                                         <h1 id="what-is-this-">What is this?</h1>
                                         <p><img src="https://i.imgur.com/IsovjaP.gif" alt="introducing landitube"></p>
                                         <p>&quot;LandiTube&quot; Is an advanced, easy to use PNGTuber engine built from
@@ -332,7 +332,8 @@
                                                 <tr>
                                                     <td><code>current_state_has_blink</code></td>
                                                     <td><em>boolean</em></td>
-                                                    <td>If your state has the ability to blink or not! <span style="color: red;">Version 0.13.2^</span></td>
+                                                    <td>If your state has the ability to blink or not! <span
+                                                            style="color: red;">Version 0.13.2^</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>talking</code></td>
@@ -480,10 +481,8 @@
                                             the word and show just how accessible creativity can be 💚</p>
                                         <h2 id="install-video">Install Video</h2>
                                         <p>Here is a video demonstrating the entire installation process, including
-                                            prerequisites, and SAMMI install. Apologies for the rushed and awful
-                                            sounding
-                                            performance</p>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jkz264Ax6qc"
+                                            prerequisites, and SAMMI install. This is an updated video for 0.15!</p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hM2H6PWr1vo"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -499,12 +498,14 @@
                                                     Reader 2.0.1</a></li>
                                             <li>SAMMI Local API Server Enabled (SAMMI Settings &gt; Open Local API
                                                 Server)
-                                                <h3 id="obs">OBS</h3>
+
                                             </li>
+
+                                        </ul>
+                                        <h3 id="obs">OBS</h3>
+                                        <ul>
                                             <li><a href="https://obsproject.com/forum/resources/move-transition.913">Move
                                                     Transition v2.8.1</a> by Exeldro</li>
-                                            <li><a href="https://obsproject.com/forum/resources/source-copy.1261/">Source
-                                                    Copy v0.2 or above</a> by Exeldro</li>
                                         </ul>
                                         <h2 id="installation">Installation</h2>
                                         <ol>
@@ -521,17 +522,7 @@
                                                 Core&quot; via clicking the bridge button, then clicking &quot;Install
                                                 an
                                                 Extension&quot;.</li>
-                                            <li>After Installing the .sef file, you should either get some yellow
-                                                messages
-                                                telling you to install some scenes in OBS, or a popup box telling you to
-                                                do
-                                                so. go to your SAMMI Directory and load the required scenes
-                                                <code>Landies_Extensions\LandiTube\LandiTube Scenes.json</code> using
-                                                Exeldro&#39;s Source Copy Plugin into your scene collection. To use
-                                                Source
-                                                Copy, in your OBS window go to <u>Tools &gt; Source Copy &gt; Load
-                                                    Scene</u>
-                                                and navigate to the .json!
+                                            <li>Follow the installation steps provided on-screen!
                                             </li>
                                             <li>Afterwards, you should be all set for installation! To set up your first
                                                 model, please go to the <a href="#tutorials">Tutorials</a> tab!</li>
@@ -948,81 +939,82 @@
                                             with one of these Extension Triggers mentioned above.</p>
                                         <p> Here are the list of fields you can enter in the <code>Pull Value</code>
                                             box:</p>
-                                            <table class="table table-primary">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Pull Value</th>
-                                                        <th>Type</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><code>blink</code></td>
-                                                        <td><em>boolean</em></td>
-                                                        <td>Current blinking state</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_emotion</code></td>
-                                                        <td><em>string</em></td>
-                                                        <td>The current set expression of the active model</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_emotion_path</code></td>
-                                                        <td><em>string</em></td>
-                                                        <td>the current image path compiled together using
-                                                            <code>global.main_directory</code>, <code>current_model</code>,
-                                                            <code>current_state</code>, and
-                                                            <code>current_emotion_state_extension</code>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_emotion_poses_idle</code></td>
-                                                        <td>Array</td>
-                                                        <td>An Array of the current model&#39;s idle poses (not including
-                                                            blinks)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_emotion_poses_talking</code></td>
-                                                        <td>Array</td>
-                                                        <td>An Array of the current model&#39;s talking poses (not including
-                                                            blinks)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_emotion_state_extension</code></td>
-                                                        <td><em>string</em></td>
-                                                        <td>The current state&#39;s file extension to be used in conjunction
-                                                            with <code>current_state</code> to create a full file</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_model</code></td>
-                                                        <td><em>string</em></td>
-                                                        <td>The current active model</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_state</code></td>
-                                                        <td><em>string</em></td>
-                                                        <td>The current active state of the model. This the result of
-                                                            various impacting factors such as yelling, blinking, talking,
-                                                            and randomly drawn poses</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>current_state_has_blink</code></td>
-                                                        <td><em>boolean</em></td>
-                                                        <td>If your state has the ability to blink or not! <span style="color: red;">Version 0.13.2^</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>talking</code></td>
-                                                        <td><em>boolean</em></td>
-                                                        <td>Current talking state</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>yelling</code></td>
-                                                        <td><em>boolean</em></td>
-                                                        <td>Current yelling state</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        <table class="table table-primary">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pull Value</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><code>blink</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current blinking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current set expression of the active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_path</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>the current image path compiled together using
+                                                        <code>global.main_directory</code>, <code>current_model</code>,
+                                                        <code>current_state</code>, and
+                                                        <code>current_emotion_state_extension</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_idle</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s idle poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_poses_talking</code></td>
+                                                    <td>Array</td>
+                                                    <td>An Array of the current model&#39;s talking poses (not including
+                                                        blinks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_emotion_state_extension</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current state&#39;s file extension to be used in conjunction
+                                                        with <code>current_state</code> to create a full file</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_model</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active model</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_state</code></td>
+                                                    <td><em>string</em></td>
+                                                    <td>The current active state of the model. This the result of
+                                                        various impacting factors such as yelling, blinking, talking,
+                                                        and randomly drawn poses</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>current_state_has_blink</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>If your state has the ability to blink or not! <span
+                                                            style="color: red;">Version 0.13.2^</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>talking</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current talking state</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>yelling</code></td>
+                                                    <td><em>boolean</em></td>
+                                                    <td>Current yelling state</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <h2 id="layering-with-obs-sources">Layering with OBS Sources</h2>
                                         <p>As seen in the <a href="#overview">overview</a>, you can do a lot of awesome
                                             stuff with this engine involving OBS sources and the API! Where are these
@@ -1396,17 +1388,25 @@
                                         <hr>
                                         <!--display troubleshooting start-->
                                         <h1>Display</h1>
-                                        <h2 id="troubleshoot-display-modelhuge"> One of my model's poses is huge, and not aligned properly!</h2>
-                                        <p>0.14.6^ use a dynamic source creation process to add your poses, and sometimes things happen during that process and don't get created properly!</p>
+                                        <h2 id="troubleshoot-display-modelhuge"> One of my model's poses is huge, and
+                                            not aligned properly!</h2>
+                                        <p>0.14.6^ use a dynamic source creation process to add your poses, and
+                                            sometimes things happen during that process and don't get created properly!
+                                        </p>
                                         <p>Thankfully, this is an easy fix!</p>
                                         <ol>
                                             <li>Head over to the <code>[LandiTube] Default Renderer</code> scene</li>
-                                            <li>Locate the problematic source (to locate, look for the problematic source that has the model name at the beginning emotion name in middle, and pose name at the end for easy finding.</li>
+                                            <li>Locate the problematic source (to locate, look for the problematic
+                                                source that has the model name at the beginning emotion name in middle,
+                                                and pose name at the end for easy finding.</li>
                                             <li>Delete the source!</li>
                                             <li>In the bridge under the LandiTube tab, click "Refresh Models"</li>
-                                            <li>Give it a moment to regenerate the missing source, and see if it fixed your issue!</li>
+                                            <li>Give it a moment to regenerate the missing source, and see if it fixed
+                                                your issue!</li>
                                         </ol>
-                                        <p>If the issue persists even when deleting the source, try it again, as it's a rare bug! once its fixed, <i>you should never have to touch it again unless you remove the model!</i></p>
+                                        <p>If the issue persists even when deleting the source, try it again, as it's a
+                                            rare bug! once its fixed, <i>you should never have to touch it again unless
+                                                you remove the model!</i></p>
                                         <!--display troubleshooting end-->
                                         <hr>
                                         <h1 id="settings">Settings</h1>
@@ -1572,7 +1572,8 @@
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
                                         <h1 id="version-0150">0.15.0</h1>
                                         <ul>
-                                            <li>REWORK: Changed the auto lua-script installer for a new one that is far more stable</li>
+                                            <li>REWORK: Changed the auto lua-script installer for a new one that is far
+                                                more stable</li>
                                             <li>REWORK: Changed the way an input source is changed via bridge</li>
                                             <li>NEW: Added SAMMI Command "LandiTube: Change Vertical Smoothing"</li>
                                             <li>NEW: Added SAMMI Command "LandiTube: Change Vertical Squish"</li>
@@ -1584,12 +1585,20 @@
                                         </ul>
                                         <h1 id="version-0146">0.14.6</h1>
                                         <ul>
-                                            <li>REWORK: Filter settings saved differently, updates no longer overwrite custom settings</li>
-                                            <li>REWORK: OBS Source Layers have been <b>Entirely Reworked</b>, natively built into LandiTube, no need to touch SAMMI! tutorial in the coming days!</li>
-                                            <li>REWORK: Rendering has been <b>Entirely Reworked</b>, dynamically generating image sources for every pose that exists in the models folder.</li>
-                                            <li>NEW: Yelling poses! add "_yell" at the end of your pose file's names (before _blink) to set a yelling pose!</li>
-                                            <li>NEW: Yelling threshold slider in config to display yelling varient of a pose!</li>
-                                            <li>NEW: Yelling delay slider to determine how long the yell pose is displayed on stream after falling below yell threshold</li>
+                                            <li>REWORK: Filter settings saved differently, updates no longer overwrite
+                                                custom settings</li>
+                                            <li>REWORK: OBS Source Layers have been <b>Entirely Reworked</b>, natively
+                                                built into LandiTube, no need to touch SAMMI! tutorial in the coming
+                                                days!</li>
+                                            <li>REWORK: Rendering has been <b>Entirely Reworked</b>, dynamically
+                                                generating image sources for every pose that exists in the models
+                                                folder.</li>
+                                            <li>NEW: Yelling poses! add "_yell" at the end of your pose file's names
+                                                (before _blink) to set a yelling pose!</li>
+                                            <li>NEW: Yelling threshold slider in config to display yelling varient of a
+                                                pose!</li>
+                                            <li>NEW: Yelling delay slider to determine how long the yell pose is
+                                                displayed on stream after falling below yell threshold</li>
                                             <li>NEW: Automatic LandiTube Scene and Source installer</li>
                                             <li>NEW: Automatic LandiTube lua script installer</li>
                                             <li>NEW: Automatic Scene Collection backup on lua install</li>
@@ -1606,12 +1615,18 @@
                                         </ul>
                                         <h1 id="version-0132">0.13.2</h1>
                                         <ul>
-                                            <li>BUG FIX: Fixed the command <code>LandiTube: Pause Engine</code> not properly working after backend rewrite</li>
-                                            <li>BUG FIX: Fixed the helper "Poses" list in bridge not properly working after backend rewrite</li>
-                                            <li>BUG FIX: Fixed .gif files not properly working after backend rewrite (devnote: might need extra edits)</li>
-                                            <li>BUG FIX: Model no longer squishes if there is no blink frame for current state</li>
+                                            <li>BUG FIX: Fixed the command <code>LandiTube: Pause Engine</code> not
+                                                properly working after backend rewrite</li>
+                                            <li>BUG FIX: Fixed the helper "Poses" list in bridge not properly working
+                                                after backend rewrite</li>
+                                            <li>BUG FIX: Fixed .gif files not properly working after backend rewrite
+                                                (devnote: might need extra edits)</li>
+                                            <li>BUG FIX: Model no longer squishes if there is no blink frame for current
+                                                state</li>
                                             <li>BUG FIX: Model no longer squishes during blink while talking</li>
-                                            <li>NEW: LandiTube Data addition <code>current_state_has_blink</code>! with every extension trigger, get a boolean (true/false) if your character can blink!</li>
+                                            <li>NEW: LandiTube Data addition <code>current_state_has_blink</code>! with
+                                                every extension trigger, get a boolean (true/false) if your character
+                                                can blink!</li>
                                         </ul>
                                         <h1 id="version-0131">0.13.1</h1>
                                         <ul>
@@ -1619,9 +1634,13 @@
                                             <li>QUALITY OF LIFE: Model swapping is now instant!</li>
                                             <li>BUG FIX: "Input Device" being reset on reload</li>
                                             <li>BUG FIX: "Input Device" devices sometimes not showing up in bridge</li>
-                                            <li>BUG FIX: Prevent invalid emotions or models to be loaded via <code>LandiTube: Model Change</code>, and <code>LandiTube: Emotion Change</code>.</li>
-                                            <li>BUG FIX: Fixed certain devices causing a crash due to special characters</li>
-                                            <li>BUG FIX: Fixed crash for certain common special characters being in the name of Models, Emotions, and Poses</li>
+                                            <li>BUG FIX: Prevent invalid emotions or models to be loaded via
+                                                <code>LandiTube: Model Change</code>, and
+                                                <code>LandiTube: Emotion Change</code>.</li>
+                                            <li>BUG FIX: Fixed certain devices causing a crash due to special characters
+                                            </li>
+                                            <li>BUG FIX: Fixed crash for certain common special characters being in the
+                                                name of Models, Emotions, and Poses</li>
                                             <li>NEW: <b>Rewrote entire backend</b>. my head hurts.</li>
                                         </ul>
                                         <h1 id="version-0110">0.11.0</h1>
