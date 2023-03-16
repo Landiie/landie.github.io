@@ -1578,7 +1578,9 @@
                                             <li>NEW: Added .flv support</li>
                                             <li>NEW: Added .mkv support</li>
                                             <li>NEW: Added .avi support</li>
-                                            <li>NEW: Added .webm (VP8) support, allowing efficient, high quality, alpha supported (semi-transparent, transparent) video to be used as poses! basically the better .gif!</li>
+                                            <li>NEW: Added .webm (VP8) support, allowing efficient, high quality, alpha
+                                                supported (semi-transparent, transparent) video to be used as poses!
+                                                basically the better .gif!</li>
                                         </ul>
                                         <h1 id="version-0150">0.15.0</h1>
                                         <ul>
@@ -1646,7 +1648,8 @@
                                             <li>BUG FIX: "Input Device" devices sometimes not showing up in bridge</li>
                                             <li>BUG FIX: Prevent invalid emotions or models to be loaded via
                                                 <code>LandiTube: Model Change</code>, and
-                                                <code>LandiTube: Emotion Change</code>.</li>
+                                                <code>LandiTube: Emotion Change</code>.
+                                            </li>
                                             <li>BUG FIX: Fixed certain devices causing a crash due to special characters
                                             </li>
                                             <li>BUG FIX: Fixed crash for certain common special characters being in the
@@ -1822,30 +1825,27 @@
                     break;
                 case '#overview':
                     document.querySelector("#overview-tab").click();
-                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 case '#setup':
                     document.querySelector("#setup-tab").click();
-                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 case '#documentation':
                     console.log("workie")
                     document.querySelector("#documentation-tab").click();
-                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 case '#tutorials':
                     console.log("workie")
                     document.querySelector("#tutorials-tab").click();
-                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
+                    break;
+                case '#troubleshooting':
+                    document.querySelector("#troubleshooting-tab").click();
                     break;
                 case '#patchnotes':
                     document.querySelector("#patchnotes-tab").click();
-                    document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
                     break;
                 default:
-
-
             }
+            document.querySelector('.productpage-section-contents').scroll(0, 0); //fixes scrolling issue when clicking on tabs
         }
 
         var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
