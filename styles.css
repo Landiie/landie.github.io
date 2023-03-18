@@ -469,6 +469,42 @@ button {
   border-radius: 0.4rem;
 }
 
+.cp-users {
+  gap: 0.5rem;
+}
+
+.cp-user-button {
+  background-color: rgba(255, 255, 255, 0.438);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cp-user-button:hover {
+  scale: 1.05;
+}
+
+.cp-user-button > h5 {
+  margin-right: 1rem;
+  font-size: large;
+  z-index: 10;
+}
+
+/* the container used to hide the original bg */
+
+.icon {
+  width: 1920px; /* +1px for chrome bug...*/
+  height: 1080px;
+  overflow: hidden;
+}
+
+.cp-user-button-img {
+  width: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  transform: scale(1.3);
+}
+
 .cp-sidebar-header h2 {
   font-size: 1.5vw;
 }

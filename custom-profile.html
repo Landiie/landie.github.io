@@ -101,16 +101,51 @@
                 certain colors, badges, and more will show up on stream!</p>
               <input class="cp-search" style="float: right;" type="search" placeholder="Search for product...">
             </div>
-            <div class="cp-sidebar-body d-flex flex-column justify-content-center align-items-center">
-              <button style="width: 100%"class="bg-secondary">
-                test user
-              </button>
+            <div class="cp-sidebar-body">
+              <div class="cp-users d-flex flex-column justify-content-center align-items-center">
+                <button style="width: 100%" class="bg-secondary">
+                  test user
+                </button>
+                <button data-display-name='${csv.data[i][1]}' style="width: 100%"
+                  class="cp-user-button d-flex justify-content-between align-items-center">
+                  <img class="cp-user-button-img"
+                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-70x70.png"
+                    alt="">
+                  <h5 class="cp-user-button-name">Zordesu</h5>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="cp-main col-md-9 col-sm-12 bg-secondary">thats wild</div>
+        <div class="cp-main col-md-9 col-sm-12 bg-secondary">
+          <div style="border-radius: 2rem; background-color: #32a883;"
+            class="cp-userprofile-header container-fluid mt-3 d-flex align-items-center">
+            <img style="padding: 1rem; height: 7rem; border-radius: 5rem;"
+              src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-300x300.png"
+              alt="">
+            <div style="margin: 0;" class="d-flex flex-column">
+              <h2>Zordesu</h2>
+              <p style="margin: 0;">Accent Color: #32a883</p>
+            </div>
+          </div>
+          <div class="cp-userprofile-body mt-3">
+            <h2>Badges</h2>
+            <p>Total Badges: 0</p>
+            <div class="cp-userprofile-badges-list">
+
+            </div>
+            <h2>Patterns</h2>
+            <p>Total Patterns: 0</p>
+            <div class="cp-userprofile-patterns-list">
+            </div>
+            <h2>Previews</h2>
+            <h4>Sub Alert Board</h4>
+            <img src="" alt="">
+          </div>
+        </div>
       </div>
     </div>
+  </div>
   </div>
   <!--cards-->
   <div class="content-blur-bg">
@@ -134,7 +169,6 @@
       </div>
     </div>
   </div>
-  <script src="/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
     crossorigin="anonymous"></script>
@@ -142,12 +176,35 @@
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="/papaparse.min.js"></script>
   <script>
+    //fetch viewer profiles
+    // let data;
+    // fetch("https://docs.google.com/spreadsheets/d/1LhfItOXdBQJhcrCTXrnmKo3LWzx6Q6XrtKJrlUXnUH0/gviz/tq?tqx=out:csv")
+    //   .then(response => response.text())
+    //   .then((data) => {
+    //     const csv = Papa.parse(data)
+    //     let users = "";
+    //     console.log(csv)
+    //     console.log(csv.data.shift())
+    //     console.log(csv)
+
+    //     for (i = 0; i < csv.data.length; i++) {
+    //       console.log(csv.data[i][1])
+    //       users += `<button data-display-name='${csv.data[i][1]}' style="width: 100%" class="bg-secondary d-flex align-items-center">
+    //               <img class="cp-user-button-img" src="${csv.data[i][2]}" alt="">
+    //               <h5 style="margin: 0;">${csv.data[i][1]}</h5>
+    //             </button>`
+    //     }
+    //     document.querySelector('.cp-users').innerHTML = users
+    //   })
+
+
+    // bootstrap stuff
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-
   </script>
 </body>
 
