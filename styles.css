@@ -474,7 +474,7 @@ button {
 }
 
 .cp-user-button {
-  background-color: rgba(255, 255, 255, 0.438);
+  width: 100%;
   overflow: hidden;
   border-radius: 0.5rem;
   transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
