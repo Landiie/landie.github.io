@@ -101,20 +101,18 @@
                 certain colors, badges, and more will show up on stream!</p>
               <input class="cp-search" style="float: right;" type="search" placeholder="Search for product...">
             </div>
-            <div class="cp-sidebar-body">
-              <div class="cp-users d-flex flex-column justify-content-center align-items-center">
-                <button style="width: 100%" class="bg-secondary">
-                  test user
-                </button>
-                <button data-display-name='${csv.data[i][1]}'
-                  style="background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #32a883);"
-                  class="cp-user-button d-flex justify-content-between align-items-center">
-                  <img class="cp-user-button-img"
-                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-70x70.png"
-                    alt="">
-                  <h5 class="cp-user-button-name">Zordesu</h5>
-                </button>
-              </div>
+            <div class="cp-sidebar-body d-flex flex-column  align-items-center">
+              <button style="width: 100%" class="bg-secondary">
+                test user
+              </button>
+              <button data-display-name='${csv.data[i][1]}'
+                style="background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #32a883);"
+                class="cp-user-button d-flex justify-content-between align-items-center">
+                <img class="cp-user-button-img"
+                  src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-70x70.png"
+                  alt="">
+                <h5 class="cp-user-button-name">Zordesu</h5>
+              </button>
             </div>
           </div>
         </div>
@@ -137,8 +135,9 @@
             </div>
             <div class="cp-userprofile-badges-list cp-userprofile-list">
               <button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
-                data-bs-title="Hollow Knight 112%" data-cp-title="Hollow Knight 112%" data-cp-desc="For completing hollow knight up to 112% completion. congratulations!"
-                data-cp-type="badge" class="cp-userprofile-badge-item"></button>
+                data-bs-title="Hollow Knight 112%" data-cp-title="Hollow Knight 112%"
+                data-cp-desc="For completing hollow knight up to 112% completion. congratulations!" data-cp-type="badge"
+                class="cp-userprofile-badge-item"></button>
               <button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
                 data-bs-title="Pizza Tower 100%" data-cp-title="Pizza Tower 100%" data-cp-desc="" data-cp-type="badge"
                 class="cp-userprofile-badge-item"></button>
@@ -307,7 +306,8 @@
       <div class="popup-slide-collectible">
         <div class="popup-slide-content-collectible">
           <h2 class="collectible-display-title text-center">Pizza Tower 100%</h2>
-            <img data-tilt data-tilt-scale="1.2" data-tilt-max="10" class="collectible-display-image" src="https://i.imgur.com/UTcx3xk.png" alt="">
+          <img data-tilt data-tilt-scale="1.2" data-tilt-max="10" class="collectible-display-image"
+            src="https://i.imgur.com/UTcx3xk.png" alt="">
           <p class="collectible-display-desc">Awarded via watching the "Pizza Tower" series of streams to 100%
             completion. Congratulations!</p>
         </div>
@@ -324,25 +324,46 @@
   <script src="/papaparse.min.js"></script>
   <script>
     //fetch viewer profiles
-    // let data;
-    // fetch("https://docs.google.com/spreadsheets/d/1LhfItOXdBQJhcrCTXrnmKo3LWzx6Q6XrtKJrlUXnUH0/gviz/tq?tqx=out:csv")
-    //   .then(response => response.text())
-    //   .then((data) => {
-    //     const csv = Papa.parse(data)
-    //     let users = "";
-    //     console.log(csv)
-    //     console.log(csv.data.shift())
-    //     console.log(csv)
+    //collectibles sheet: https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=627454447
+    //profiles     sheet: https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=0
+    fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=0")
+      .then(response => response.text())
+      .then((data) => {
+        const csv = Papa.parse(data)
+        console.log(csv)
+        console.log(csv.data.shift())
+        console.log(csv)
 
-    //     for (i = 0; i < csv.data.length; i++) {
-    //       console.log(csv.data[i][1])
-    //       users += `<button data-display-name='${csv.data[i][1]}' style="width: 100%" class="bg-secondary d-flex align-items-center">
-    //               <img class="cp-user-button-img" src="${csv.data[i][2]}" alt="">
-    //               <h5 style="margin: 0;">${csv.data[i][1]}</h5>
-    //             </button>`
-    //     }
-    //     document.querySelector('.cp-users').innerHTML = users
-    //   })
+        //create user objects, store in array
+        let users = [];
+        for (i = 0; i < csv.data.length; i++) {
+          userObj = {
+            userid: csv.data[i][0],
+            name: csv.data[i][1],
+            displayName: csv.data[i][2],
+            accentColor: csv.data[i][3],
+            pfp: csv.data[i][4]
+          };
+          users.push(userObj)
+        }
+        console.log(users)
+
+        //html templates
+        let cpUserButtonHTML = '';
+
+        users.forEach(user => {
+          console.log(user)
+          cpUserButtonHTML += `<button data-display-name='${user.name}'
+                  style="background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${user.accentColor});"
+                  class="cp-user-button d-flex justify-content-between align-items-center">
+                  <img class="cp-user-button-img"
+                    src="${user.pfp}"
+                    alt="">
+                  <h5 class="cp-user-button-name">${user.displayName}</h5>
+                </button>`
+        });
+        document.querySelector('.cp-sidebar-body').innerHTML = cpUserButtonHTML
+      })
 
     //item clicked
     const collectableLists = document.querySelectorAll('.cp-userprofile-list')
