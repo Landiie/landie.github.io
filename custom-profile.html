@@ -415,7 +415,7 @@
 
         users.forEach(user => {
           console.log(user)
-          cpUserButtonHTML += `<button data-user-id='${user.userid}'
+          cpUserButtonHTML += `<button data-user-id='${user.userid}' data-cp-accent-color='${user.accentColor}' data-cp-name='${user.name}'
                   style="background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${user.accentColor});"
                   class="cp-user-button d-flex justify-content-between align-items-center">
                   <img class="cp-user-button-img"
@@ -605,9 +605,38 @@
       // console.log(generatedCollectibles)
 
       VanillaTilt.init(document.querySelectorAll('.cp-userprofile-badge-item'), {
-        max: 25,
+        max: 10,
         speed: 400,
-        glare: true
+        scale: 1.5
+      });
+    }
+
+    document.querySelector(".cp-search").addEventListener("input", function (e) {
+      shopSearch();
+    });
+
+    shopSearch();
+
+    function shopSearch() {
+      const userList = document.querySelectorAll('.cp-user-button')
+      const value = document.querySelector(".cp-search").value;
+      console.log(value)
+      userList.forEach(user => {
+        console.log(user)
+        let username = user.dataset.cpName;
+        let accentColor = user.dataset.cpAccentColor;
+        console.log(username)
+        if (username != undefined) {
+          if (username.toLowerCase().includes(value.toLowerCase())) {
+            console.log(`Matches ${username}`);
+            
+            user.setAttribute('style', `display: '' !important; background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${accentColor});`)
+          } else {
+            user.setAttribute('style', `display: none !important; background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${accentColor});`)
+          }
+        } else {
+          user.setAttribute('style', `display: none !important; background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${accentColor});`)
+        }
       });
     }
 
