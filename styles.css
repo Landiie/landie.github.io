@@ -97,6 +97,10 @@ body {
   background: linear-gradient(to top right, rgb(3, 8, 101), rgb(157, 237, 230));
 }
 
+.body-purple {
+  background: linear-gradient(to top right, rgb(62, 3, 101), rgb(64, 139, 245));
+}
+
 .circleBase {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.216);
