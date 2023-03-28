@@ -119,6 +119,45 @@
         <div class="cp-main col-md-9 col-sm-12 bg-secondary">
           <div style="border-radius: 2rem; background-color: #32a883;"
             class="cp-userprofile-header container-fluid mt-3 d-flex align-items-center">
+            <img class="cp-userprofile-pfp" style="padding: 1rem; height: 7rem; border-radius: 5rem;"
+              src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-300x300.png"
+              alt="">
+            <div style="margin: 0;" class="d-flex flex-column">
+              <h2 class="cp-userprofile-name">Zordesu</h2>
+              <p class="cp-userprofile-accentcolor" style="margin: 0;">Accent Color: #32a883</p>
+            </div>
+          </div>
+          <div class="cp-userprofile-body mt-3">
+            <h2>Badges</h2>
+            <div class="d-flex align-items-center">
+              <p class="m-0">Total Badges: </p>
+              <h4 class="cp-userprofile-badges-total ms-2 m-0">0</h4>
+            </div>
+            <div class="cp-userprofile-badges-list cp-userprofile-list">
+
+            </div>
+            <h2>Medallions</h2>
+            <div class="d-flex align-items-center">
+              <p class="m-0">Total Medallions: </p>
+              <h4 class="cp-userprofile-medals-total ms-2 m-0">0</h4>
+            </div>
+            <div class="cp-userprofile-medals-list cp-userprofile-list">
+
+            </div>
+            <h2>Patterns</h2>
+            <div class="d-flex align-items-center">
+              <p class="m-0">Total Patterns: </p>
+              <h4 class="cp-userprofile-patterns-total ms-2 m-0">0</h4>
+            </div>
+            <div class="cp-userprofile-patterns-list cp-userprofile-list">
+
+            </div>
+            <!-- <h2>Previews</h2>
+            <h4>Sub Alert Board</h4>
+            <img src="" alt=""> -->
+          </div>
+          <!-- <div style="border-radius: 2rem; background-color: #32a883;"
+            class="cp-userprofile-header container-fluid mt-3 d-flex align-items-center">
             <img style="padding: 1rem; height: 7rem; border-radius: 5rem;"
               src="https://static-cdn.jtvnw.net/jtv_user_pictures/1f8dac9c-cc21-4f39-9ab1-5905660debdc-profile_image-300x300.png"
               alt="">
@@ -294,7 +333,7 @@
             <h2>Previews</h2>
             <h4>Sub Alert Board</h4>
             <img src="" alt="">
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -323,9 +362,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
   <script src="/papaparse.min.js"></script>
   <script>
-    //fetch viewer profiles
     //collectibles sheet: https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=627454447
     //profiles     sheet: https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=0
+
+    let allCollectibles = [];
+    //fetch all collectibles
+    fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=627454447").then(response => response.text()).then((data) => {
+      const csv = Papa.parse(data);
+      csv.data.shift() // remove csv header
+      const totalCollectibles = Object.keys(csv.data).length;
+      for (i = 0; i < totalCollectibles; i++) {
+        const collectible = {
+          id: csv.data[i][0],
+          image: csv.data[i][1],
+          creationDate: csv.data[i][2],
+          description: csv.data[i][3],
+          title: csv.data[i][4],
+        }
+
+        allCollectibles.push(collectible)
+      }
+      console.log('all collectibles from spreadsheet:', allCollectibles)
+    })
+
+    //fetch viewer profiles
+    let users = [];
     fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=0")
       .then(response => response.text())
       .then((data) => {
@@ -335,25 +396,26 @@
         console.log(csv)
 
         //create user objects, store in array
-        let users = [];
         for (i = 0; i < csv.data.length; i++) {
           userObj = {
             userid: csv.data[i][0],
             name: csv.data[i][1],
             displayName: csv.data[i][2],
             accentColor: csv.data[i][3],
-            pfp: csv.data[i][4]
+            pfp: csv.data[i][4],
+            collectibles: csv.data[i][5]
           };
+          if (userObj.collectibles !== "") userObj.collectibles = JSON.parse(userObj.collectibles)
           users.push(userObj)
         }
         console.log(users)
 
-        //html templates
+        //generate all user buttons for navigation
         let cpUserButtonHTML = '';
 
         users.forEach(user => {
           console.log(user)
-          cpUserButtonHTML += `<button data-display-name='${user.name}'
+          cpUserButtonHTML += `<button data-user-id='${user.userid}'
                   style="background: linear-gradient(to left, rgba(255, 255, 255, 0.399) 50% , #${user.accentColor});"
                   class="cp-user-button d-flex justify-content-between align-items-center">
                   <img class="cp-user-button-img"
@@ -365,26 +427,158 @@
         document.querySelector('.cp-sidebar-body').innerHTML = cpUserButtonHTML
       })
 
-    //item clicked
-    const collectableLists = document.querySelectorAll('.cp-userprofile-list')
+    // user clicked, fill out profile
+    document.querySelector('.cp-sidebar-body').addEventListener('click', e => {
+      const userId = e.target.dataset.userId
+      if (!userId) return;
+      console.log(userId)
+      //find user in users obj, make "user" object
+      const user = users.filter(e => e['userid'] == userId)[0]
+      console.log(user)
 
-    collectableLists.forEach(list => {
-      list.addEventListener('click', (e) => {
-        if (!e.target.dataset.cpType) return;
-        console.log(e)
-        const dataset = e.target.dataset;
-        console.log(dataset)
+      let userProfileHTML = '';
+      let userProfileBadgesHTML = ''
+      let userProfileMedallionsHTML = ''
+      let userProfilePatternsHTML = ''
 
-        const type = dataset.cpType;
-        const title = dataset.cpTitle;
-        const desc = dataset.cpDesc;
+      user.badgeCount = 0;
+      user.medallionCount = 0;
+      user.patternCount = 0;
 
-        document.querySelector(".collectible-display-title").textContent = title;
-        document.querySelector(".collectible-display-desc").textContent = desc;
+      //create list of collectibles user has
+      if (user.collectibles !== "") {
+        user.collectibles.forEach(collectible => {
+          console.log(collectible)
+          switch (collectible.type) {
+            case 'badge':
+              console.log('this is a badge!')
+              user.badgeCount++
+              //grab badge info
+              const badgeInfo = allCollectibles.filter(e => e['id'] == collectible.image)[0]
+              console.log(badgeInfo)
+              userProfileBadgesHTML += `<button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
+                data-bs-title="${badgeInfo.title}" data-cp-title="${badgeInfo.title}" data-cp-image="${badgeInfo.image}" data-cp-desc="${badgeInfo.description}" data-cp-type="${collectible.type}"
+                class="cp-userprofile-badge-item" style="background-image:url(${badgeInfo.image}); background-repeat: no-repeat;
+    background-position: center; object-fit: contain; background-size: 100%;"></button>`
+              break;
+            case 'medallion':
+              console.log('this is a medallion!')
+              user.medallionCount++
+              //grab medallion info
+              const medallionInfo = allCollectibles.filter(e => e['id'] == collectible.image)[0]
+              console.log(medallionInfo)
+              userProfileMedallionsHTML += `<button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
+                data-bs-title="${medallionInfo.title}" data-cp-title="${medallionInfo.title}" data-cp-image="${medallionInfo.image}" data-cp-desc="${medallionInfo.description}" data-cp-type="${collectible.type}"
+                class="cp-userprofile-badge-item" style="background-image:url(${medallionInfo.image}); background-repeat: no-repeat;
+    background-position: center; object-fit: contain; background-size: 100%;"></button>`
+              break;
+            case 'pattern':
+              console.log('this is a pattern!')
+              user.patternCount++
+              //grab pattern info
+              const patternInfo = allCollectibles.filter(e => e['id'] == collectible.image)[0]
+              console.log(patternInfo)
+              userProfilePatternsHTML += `<button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
+                data-bs-title="${patternInfo.title}" data-cp-title="${patternInfo.title}" data-cp-image="${patternInfo.image}" data-cp-desc="${patternInfo.description}" data-cp-type="${collectible.type}"
+                class="cp-userprofile-badge-item" style="background-image:url(${patternInfo.image}); background-repeat: no-repeat;
+    background-position: center; object-fit: contain; background-size: 100%;"></button>`
+              break;
+          }
+        });
+      } else {
+        console.log('user has no collectibles!')
+      }
 
-        openPopupCollectible();
-      })
-    });
+      //set profile html
+      // userProfileHTML = `<div style="border-radius: 2rem; background-color: #${user.accentColor};"
+      //       class="cp-userprofile-header container-fluid mt-3 d-flex align-items-center">
+      //       <img style="padding: 1rem; height: 7rem; border-radius: 5rem;"
+      //         src="${user.pfp}"
+      //         alt="">
+      //       <div style="margin: 0;" class="d-flex flex-column">
+      //         <h2>${user.displayName}</h2>
+      //         <p style="margin: 0;">Accent Color: #${user.accentColor}</p>
+      //       </div>
+      //     </div>
+      //     <div class="cp-userprofile-body mt-3">
+      //       <h2>Badges</h2>
+      //       <div class="d-flex align-items-center">
+      //         <p class="m-0">Total Badges: </p>
+      //         <h4 class="cp-userprofile-badges-total ms-2 m-0">0</h4>
+      //       </div>
+      //       <div class="cp-userprofile-badges-list cp-userprofile-list">
+      //         ${userProfileBadgesHTML}
+      //       </div>
+      //       <h2>Medallions</h2>
+      //       <div class="d-flex align-items-center">
+      //         <p class="m-0">Total Medallions: </p>
+      //         <h4 class="cp-userprofile-medals-total ms-2 m-0">0</h4>
+      //       </div>
+      //       <div class="cp-userprofile-medals-list cp-userprofile-list">
+      //         ${userProfileMedallionsHTML}
+      //       </div>
+      //       <h2>Patterns</h2>
+      //       <div class="d-flex align-items-center">
+      //         <p class="m-0">Total Patterns: </p>
+      //         <h4 class="cp-userprofile-patterns-total ms-2 m-0">0</h4>
+      //       </div>
+      //       <div class="cp-userprofile-patterns-list cp-userprofile-list">
+      //         ${userProfilePatternsHTML}
+      //       </div>
+      //       <h2>Previews</h2>
+      //       <h4>Sub Alert Board</h4>
+      //       <img src="" alt="">`;
+      document.querySelector('.cp-userprofile-name').textContent = user.displayName;
+      document.querySelector('.cp-userprofile-accentcolor').textContent = `Accent Color: #${user.accentColor}`;
+      document.querySelector('.cp-userprofile-pfp').src = user.pfp;
+      document.querySelector('.cp-userprofile-header').style.backgroundColor = `#${user.accentColor}`;
+
+      document.querySelector('.cp-userprofile-badges-total').textContent = user.badgeCount;
+      document.querySelector('.cp-userprofile-medals-total').textContent = user.medallionCount;
+      document.querySelector('.cp-userprofile-patterns-total').textContent = user.patternCount;
+
+      document.querySelector('.cp-userprofile-badges-list').innerHTML = userProfileBadgesHTML;
+      document.querySelector('.cp-userprofile-medals-list').innerHTML = userProfileMedallionsHTML;
+      document.querySelector('.cp-userprofile-patterns-list').innerHTML = userProfilePatternsHTML;
+
+      //initialize tilts
+      generatedItemTiltsInit();
+    })
+
+    //collectible clicked
+    const collectableLists = document.querySelector('.cp-userprofile-body').addEventListener('click', (e) => {
+      const type = e.target.dataset.cpType;
+      if (!type) return;
+      const title = e.target.dataset.cpTitle;
+      const desc = e.target.dataset.cpDesc;
+      const image = e.target.dataset.cpImage;
+
+      console.log(e.target.dataset.cpType)
+
+      document.querySelector(".collectible-display-title").textContent = title;
+      document.querySelector(".collectible-display-desc").textContent = desc;
+      document.querySelector(".collectible-display-image").src = image;
+
+      openPopupCollectible();
+    })
+
+    // collectableLists.forEach(list => {
+    //   list.addEventListener('click', (e) => {
+    //     if (!e.target.dataset.cpType) return;
+    //     console.log(e)
+    //     const dataset = e.target.dataset;
+    //     console.log(dataset)
+
+    //     const type = dataset.cpType;
+    //     const title = dataset.cpTitle;
+    //     const desc = dataset.cpDesc;
+
+    //     document.querySelector(".collectible-display-title").textContent = title;
+    //     document.querySelector(".collectible-display-desc").textContent = desc;
+
+    //     openPopupCollectible();
+    //   })
+    // });
 
     //custom modals
     document.querySelector(".content-blur-bg-collectible").addEventListener("click", function () {
@@ -404,6 +598,17 @@
       setTimeout(() => {
         document.querySelector(".content-blur-bg-collectible").style.display = 'none';
       }, 600);
+    }
+
+    function generatedItemTiltsInit() {
+      // const generatedCollectibles = document.querySelectorAll('.cp-userprofile-badge-item')
+      // console.log(generatedCollectibles)
+
+      VanillaTilt.init(document.querySelectorAll('.cp-userprofile-badge-item'), {
+        max: 25,
+        speed: 400,
+        glare: true
+      });
     }
 
     // bootstrap stuff
