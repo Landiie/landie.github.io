@@ -837,6 +837,10 @@ h5 {
   background-image: url(./shop/landitube.gif);
   background-size: contain;
 }
+.item-commandlineplus {
+  background-image: url(./shop/commandlineplus.png);
+  background-size: contain;
+}
 
 .shop-item:nth-last-child(1) {
   margin-bottom: 20rem;
