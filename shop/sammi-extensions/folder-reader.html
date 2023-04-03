@@ -330,7 +330,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Read Type</td>
-                                                    <td><em>Dropdown</em></td>
+                                                    <td>Dropdown</td>
                                                     <td>✔</td>
                                                     <td>Choose whether you want to read Files, or Folders!</td>
                                                 </tr>
@@ -355,6 +355,12 @@
                                                     <td>The password of the Local API Server. No need to put anything
                                                         here if no password is present!</td>
                                                 </tr>
+                                                <tr>
+                                                    <td>Sort</td>
+                                                    <td>Dropdown</td>
+                                                    <td>✔</td>
+                                                    <td>Sorting method to apply on retrieval. Currently supports:<br>Date (Newest)<br>Date (Oldest)<br>Size (Smallest)<br>Size (Largest)</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                         <h3 id="response">Response</h3>
@@ -369,20 +375,18 @@
                                             <tbody>
                                                 <tr>
                                                     <td><code>variablenamehere</code></td>
-                                                    <td><em>string</em></td>
-                                                    <td>A stringified array containing either files or folders with
-                                                        optional filters applied.<br><br>⚠ WARNING! After retrieval,
-                                                        please use <code>Parse Array/Object</code> in order to get a
-                                                        workable array.</td>
+                                                    <td>Array</td>
+                                                    <td>An array containing either files or folders with
+                                                        optional filters applied.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <h3 id="example-usage-">Example Usage 📝</h3>
                                         <h4 id="input-">Input:</h4>
-                                        <p><img src="./folder-reader-docs-1.png"
+                                        <p><img src="https://i.imgur.com/zIRehaa.png"
                                                 alt="An example of Folder Reader: Read usage"></p>
                                         <h4 id="output-">Output:</h4>
-                                        <p><img src="./folder-reader-docs-2.png" alt="Folder Reader: Read output">
+                                        <p><img src="https://i.imgur.com/qdRjC0n.png" alt="Folder Reader: Read output">
                                         </p>
 
                                     </div>
