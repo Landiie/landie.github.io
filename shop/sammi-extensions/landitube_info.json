@@ -10,5 +10,6 @@
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/landitube.gif",
   "moveTransitionDL": "https://obsproject.com/forum/resources/move-transition.913/",
   "sourceCloneDL": "https://obsproject.com/forum/resources/source-clone.1632/",
-  "shaderFilterDL": "https://github.com/exeldro/obs-shaderfilter/releases/tag/v1.22"
+  "shaderFilterDL": "https://github.com/exeldro/obs-shaderfilter/releases/tag/v1.22",
+  "motd":"hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
 }
