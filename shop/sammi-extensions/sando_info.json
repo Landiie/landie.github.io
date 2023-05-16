@@ -1,0 +1,11 @@
+{
+  "name": "Sando",
+  "summary": "A Library to make extension developer's lives easier!",
+  "version": "1.0.0",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "initial release",
+  "versionSummaryBody": ":3",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
+  "price": "FREE",
+  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
+}
