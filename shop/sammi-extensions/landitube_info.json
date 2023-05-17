@@ -8,8 +8,29 @@
   "downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/landitube.gif",
-  "moveTransitionDL": "https://obsproject.com/forum/resources/move-transition.913/",
-  "sourceCloneDL": "https://obsproject.com/forum/resources/source-clone.1632/",
-  "shaderFilterDL": "https://github.com/exeldro/obs-shaderfilter/releases/tag/v1.22",
-  "motd":"hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
+  "obs_plugins": {
+    "names": [
+      "Move Transition",
+      "Source Clone",
+      "Shader Filter (Exeldro Fork)"
+    ],
+    "direct_download_links": [
+      "https://obsproject.com/forum/resources/move-transition.913/version/4904/download?file=94076",
+      "https://obsproject.com/forum/resources/source-clone.1632/version/4881/download?file=93640",
+      "https://github.com/exeldro/obs-shaderfilter/releases/download/v1.22/obs-shaderfilter-1.22.0-windows.zip"
+    ],
+    "download_links": [
+      "https://obsproject.com/forum/resources/move-transition.913/",
+      "https://obsproject.com/forum/resources/source-clone.1632/",
+      "https://github.com/exeldro/obs-shaderfilter/releases"
+    ]
+  },
+  "sammi_extensions": {
+    "names": ["Folder Reader", "Sando"],
+    "download_links": [
+      "https://landie.land/shop/sammi-extensions/folder-reader",
+      "https://landie.land/shop/sammi-extensions/sando"
+    ]
+  },
+  "motd": "hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
 }
