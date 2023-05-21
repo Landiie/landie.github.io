@@ -1,10 +1,10 @@
 {
   "name": "Folder Reader",
   "summary": "Read Files and Folders from a directory with filters using SAMMI",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "authors": ["Landie"],
-  "versionSummaryHeader": "Entire rewrite! More efficient! Supports latest SAMMI features and technologies!",
-  "versionSummaryBody": "<p>Huge overhaul to support the new Command Line introduced in 2023.2.0, abandoning the need for the API server checks</p><ul><li>Removed API Box, not needed anymore</li><li>Removed many internal checks no longer needed</li><li>uses a more efficient algorithm to fetch files, boosting speed by a bit</li></ul>",
+  "versionSummaryHeader": "removed API Server check",
+  "versionSummaryBody": "not needed since 3.0.0 lol",
   "downloadLink": "https://landie.land/shop/sammi-extensions/folder-reader",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/folderreader.png"
