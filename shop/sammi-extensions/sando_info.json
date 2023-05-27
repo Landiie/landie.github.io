@@ -1,10 +1,10 @@
 {
   "name": "Sando",
   "summary": "A Library to make extension developer's lives easier!",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "extract zip and obs plugin checker fixes, and additions",
-  "versionSummaryBody": "Fixes Extract Zip from failing if extracting to the same directory, fixed a typo with obs failing to return 'detected_version', and added an admin checkbox to Extract Zip if extracting to an admin location.",
+  "versionSummaryHeader": "New command: Sando: Compare Bridge Versions",
+  "versionSummaryBody": "Added new command: <code>Sando: Compare Bridge Versions</code> for extension developers to ensure user's bridge versions are up to date if using newly added functions that don't exist in prior bridge versions.",
   "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
