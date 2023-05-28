@@ -1618,16 +1618,191 @@
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
-                                        <!-- <h1 id="version-0200">0.20.0, The Big One!</h1>
-                                        <h3>Reworks</h3>
+                                        <!-- <h1 id="version-0200">0.20.0</h1>
+
+                                        <h3>🔊 NEW MODULES:</h3>
                                         <ul>
-                                            <li>OBS Source Layering v3
+                                            <li><b>✨Transitions</b>, allows certain modules of LandiTube to have
+                                                transitions. Currently only supports transitions between
+                                                emotions. Read more about it in the documentation!</li>
+                                            <li><b>✨Dynamic Transitions</b>, allows certain modules of LandiTube to
+                                                have
+                                                transitions based on module factors. Currently only supports
+                                                dynamic transition "outros" and "intros" between emotions. read
+                                                more about it in the documentation!</li>
+                                            <li><b>✨Dynamic Lighting</b>, set a scene to be referenced to enable
+                                                global
+                                                lighting of certain modules such as models, transitions, layers, and
+                                                custom sources in the <code>[LandiTube] Customize</code> scene
+                                            </li>
+                                            <li><b>✨Dynamic Rim Lighting</b>, set a scene to be referenced to
+                                                enable
+                                                global rim lighting of certain modules such as models, transitions,
+                                                layers, and custom sources in the
+                                                <code>[LandiTube] Customize</code> scene. change the direction of
+                                                rim lighting aswell!
+                                            </li>
+                                            <li><b>✨OBS Source Layering v3</b>, putting this here because nobody
+                                                used
+                                                layering due to lack of tutorials and tedium, so here is a way more
+                                                polished version of obs source layering! comes with a front and back
+                                                layer, set the layer's scene reference in the Bridge, manipulate
+                                                auto-generated layer poses within OBS! check documentation and
+                                                tutorials for more.</li>
+                                            <li><b>Backups</b>, yay! Currently only supports backing up but no
+                                                restoration yet. Dedicated Backups tab exists in bridge where you can
+                                                manually backup if you wish, or, landitube will back up automatically
+                                                after every full day and stores up to a max of 5. Stores all models and
+                                                their graphics, configs, etc</li>
+                                            <li><b>✨Twitch Integration</b>, currently only asks to add the
+                                                "LandiTube" tag to your stream and how to link twitch to SAMMI, more
+                                                will be done with this in the future.</li>
+                                            <li><b>✨Logger</b>, reworked the entire codebase to log out at certain
+                                                points to <code>landitube.log</code>, located in
+                                                <code>(SAMMI INSTALL)\Landies_Extensions\LandiTuber\landitube.log</code>.
+                                                Will be extremely useful for troubleshooting on my side and the end
+                                                user side.
+                                            </li>
+                                            <li><b>✨Automatic OBS Plugin Installer/Checker</b>, detects missing or
+                                                out
+                                                of date
+                                                obs plugins which then are automatically installed for you.
+                                                failsafe of opening download link for you to download and place
+                                                .zip in a special folder to auto install aswell</li>
+                                            <li><b>✨Automatic Bridge version checker</b>, checks bridge version to
+                                                ensure up to
+                                                date version.
+                                            </li>
+                                            <li><b>✨Automatic SAMMI Extension version checker</b>, checks required
+                                                SAMMI
+                                                Extensions to ensure versions are up to
+                                                date.
+                                            </li>
+                                            <li><b>✨.fenc Config Files</b>, used to tweak individual
+                                                poses/emotions/models to interact with LandiTube modules
+                                                independantly instead of globally. Current instances of usage:
                                                 <ul>
-                                                    <li>Generate Layers with a single toggle in the interface!</li>
-                                                    <li>"Source Clone" allows layers to have set transformations based on what pose is active!</li>
-                                                    <li></li>
+                                                    <li>
+                                                        Transitions
+                                                    </li>
+                                                    <li>Dynamic Transitions</li>
                                                 </ul>
                                             </li>
+                                        </ul>
+                                        <h3>NEW:</h3>
+                                        <ul>
+                                            <li>Twitch account checker, asks to link twitch on startup</li>
+                                            <li>"OBS Source Layers" tab</li>
+                                            <li>OBS Source Layers configuration</li>
+                                            <li>moved "Poses" into OBS tab, renamed to "Pose Selector" for OBS
+                                                Source Layer editing</li>
+                                            <li>QOL: Progress bar to indicate where you are in the
+                                                refresh/validation process</li>
+                                            <li>QOL: OBS Progress bar to indicate where you are in the
+                                                refresh/validation process</li>
+                                            <li>anti-tamper to <code>[LandiTube] Layers *</code>, deleting any
+                                                user-made sources and pointing to tutorial</li>
+                                            <li>auto-refresh scenes in layers tab upon scene rename, creation, and
+                                                deletion</li>
+                                            <li>trying to go to the <code>[LandiTube]</code> scene sends to
+                                                <code>[LandiTube] Customize</code> scene to point in right direction for
+                                                custom assets
+                                            </li>
+                                            <li><code>[LandiTube] Transitions</code> scene, this is where all future
+                                                transitions will be generated!</li>
+                                            <li><code>[LandiTube] Render + Layers</code> scene, to accomodate for new
+                                                modules such as transitions and dynamic transitions.</li>
+                                            <li>OBS Scenes version updated sv1.0.0 -> 0.20.0</li>
+                                            <li>Added new required obs plugin "Source Clone" by exeldro</li>
+                                            <li>Added new required obs plugin "obs-shaderfilter fork" by exeldro</li>
+                                            <li>Added new required obs plugin version "Move Transition 2.9.1" by exeldro
+                                            </li>
+                                            <li>Added new LandiTube Globals for internal use: <ul>
+                                                    <li><code>loadedModelsDefaultTrans</code> (array)</li>
+                                                    <li><code>loadedModelsDefaultTransDuration</code> (array)</li>
+                                                    <li><code>loadedLayers</code> (array)</li>
+                                                    <li><code>obsRestarting</code> (bool)</li>
+                                                    <li><code>landiTubeAssetsVersion</code> (string)</li>
+                                                    <li><code>bridgeVersion</code> (string)</li>
+                                                    <li><code>folderReaderVersion</code> (string)</li>
+                                                    <li><code>sandoVersion</code> (string)</li>
+                                                    <li><code>moveTransitionVersion</code> (string)</li>
+                                                    <li><code>sourceCloneVersion</code> (string)</li>
+                                                    <li><code>obsScenesVersion</code> (string)</li>
+                                                    <li><code>obsVersion</code> (string)</li>
+                                                    <li><code>isLoading</code> (bool)</li>
+                                                </ul>
+                                            </li>
+                                            <li>Added corruption checks to OBS auto lua script installer</li>
+                                            <li>Added a placeholder question mark when validating install/refreshing
+                                                models</li>
+                                            <li>License is now embedded into .sef</li>
+                                            <li>Added message asking user to click refresh in the scripts window of OBS
+                                            </li>
+                                            <li>layer scene references are stored in a <code>layers.ini</code> file</li>
+                                            <li>Moved input device to the top of the settings tab/area</li>
+                                            <li>Added a check to "Refresh Models" to wait for validation to complete,
+                                                preventing overlap</li>
+                                            <li>Cleaned up unused functions in bridge</li>
+                                        </ul>
+
+                                        <h3>Reworked:</h3>
+                                        <ul>
+                                            <li>OBS Source Layering has been changed to make layer data automatically
+                                                generate, so user just has to align to their liking, as well as revamp
+                                                pose selector</li>
+                                            <li>OBS Auto lua script installer changed to make use of buffer positions,
+                                                and accomodate for OBS 29.1's new prettified scene collection json.
+                                                Changed detection method for default/portable installs, making it 100%
+                                                reliable in every use case</li>
+                                            <li>Asset generation, now downloads from a dropbox link to prevent deck
+                                                bloat, slowing down SAMMI editing drastically. installCheck now waits
+                                                for assets to be generated via checking <code>assets_version.txt</code>
+                                            </li>
+                                            <li>Command Line integrations, using SAMMI 2023.2.1's new Command Line
+                                                command to make LandiTube more snappy and efficient</li>
+                                            <li>freeze/unfreeze engine reworked to be slightly more reliable to not have
+                                                to click twice, edited to synergize with obs source layering, locks
+                                                layer sources for easy manipulation</li>
+                                            <li>OBS path fetcher now uses Sando command to handle fetching path, much
+                                                better</li>
+                                            <li>Changed renderer to solely rely on Source Toggler lua </li>
+                                            <li>OBS Plugins/Lua install pushed to separate button, triggered via
+                                                extension trigger</li>
+                                            <li>Scene collection json file detection method, no longer based off
+                                                filename but rather the scene collection name stored inside the files
+                                                themselves to determine proper file</li>
+                                            <li>Changed the string for installing lua scripts due to obs 29.1.1 messing
+                                                with it</li>
+                                            <li>No longer reruns entire validation process when closing obs for auto lua
+                                                script installer</li>
+                                            <li>Install validation and "Refresh Models" button triggers a queue chain
+                                                instead of running each funtion at the end of each function, for easy
+                                                rearrangement + stability</li>
+                                            <li>Ensure obs plugins are installed before attempting to install
+                                                scenes/sources</li>
+                                            <li>Scene packer installation now runs twice</li>
+
+                                        </ul>
+                                        <h3>Bug fixes:</h3>
+                                        <ul>
+                                            <li>OBS now auto-reopens properly and doesn't get stuck in system tray</li>
+                                            <li>Fixed unable to find scene collection json path</li>
+                                            <li>Fixed unable to add lua script, causing an install loop</li>
+                                            <li>Fixed OBS missing the "squish down" filter on obs sources and scenes
+                                                installation</li>
+                                            <li>Fixed being unable to use multiple file formats together on one model
+                                            </li>
+                                            <li>Fixed setting a new model or emotion causing an entire validation check
+                                                each time</li>
+                                            <li>Fixed unable to find OBS path</li>
+                                            <li>Fixed install button interrupting validation checks</li>
+                                            <li>Fixed obs path not escaping linebreaks when loading from
+                                                <code>settings.ini</code>, causing a broken obs path
+                                            </li>
+                                            <li>Fixed not waiting for OBS to be fully closed, uses <code>tasklist</code>
+                                                to check obs close status</li>
+
                                         </ul> -->
                                         <h1 id="version-0160">0.16.0</h1>
                                         <ul>
@@ -1777,6 +1952,7 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Versions</strong></h3>
                                                 <ul>
+                                                    <!-- <li><a href="#version-0200">0.20.0</a></li> -->
                                                     <li><a href="#version-0160">0.16.0</a></li>
                                                     <li><a href="#version-0150">0.15.0</a></li>
                                                     <li><a href="#version-0146">0.14.6</a></li>
