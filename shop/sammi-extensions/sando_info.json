@@ -1,10 +1,10 @@
 {
   "name": "Sando",
   "summary": "A Library to make extension developer's lives easier!",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "New command: Sando: Compare Bridge Versions",
-  "versionSummaryBody": "Added new command: <code>Sando: Compare Bridge Versions</code> for extension developers to ensure user's bridge versions are up to date if using newly added functions that don't exist in prior bridge versions.",
+  "versionSummaryHeader": "New command: Sando: Powershell",
+  "versionSummaryBody": "Added new command: <code>Sando: Powershell</code> which is just bonkers man idk what to say about it. i made custom GUIs and a file open dialog to select files for SAMMI its like the best thing i've added to anything in a while",
   "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
