@@ -1,10 +1,10 @@
 {
   "name": "Sando",
   "summary": "A Library to make extension developer's lives easier!",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "New command: Sando: Powershell",
-  "versionSummaryBody": "Added new command: <code>Sando: Powershell</code> which is just bonkers man idk what to say about it. i made custom GUIs and a file open dialog to select files for SAMMI its like the best thing i've added to anything in a while",
+  "versionSummaryHeader": "Powershell is now stable!",
+  "versionSummaryBody": "rewrote the way powershell scripts are ran, making them far more reliable than the previous method of execution.",
   "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
