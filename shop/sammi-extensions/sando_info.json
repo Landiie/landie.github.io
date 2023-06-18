@@ -1,10 +1,10 @@
 {
   "name": "Sando",
   "summary": "A Library to make extension developer's lives easier!",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "authors": ["Landie"],
-  "versionSummaryHeader": "Powershell is now stable!",
-  "versionSummaryBody": "rewrote the way powershell scripts are ran, making them far more reliable than the previous method of execution.",
+  "versionSummaryHeader": "Powershell is now stable-er!",
+  "versionSummaryBody": "fixed starting in system32 (thanks silverlink!), now overlaps for multiple scripts to be ran at once. check obs plugins fixed to look at other drives",
   "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
