@@ -28,6 +28,8 @@ To get a model up and running, You need to have _3 key components down_. [Models
 
 Make sure you've gone into your bridge, and changed the appropriate settings! you'll need to set your mic, maybe tweak the input threshold, etc. [Bridge and You](#bridge-and-you-) has an explanation of the settings section for you!
 
+# LandiTube
+
 ## Models
 To create models, you create a folder in the "models" folder in the LandiTube path. All folders inside that folder will create an Icon in your bridge showing that a model is detected, and exists after a model refresh.
 
@@ -149,6 +151,85 @@ This emotion only has one talking pose and one talking pose with a blink frame, 
 3. drag the images into my model's unique emotion folder!
 4. click "Refresh Models", bam yelling frames.
 
+# Layers
+
+When you create a LandiTube model, you draw poses and frames! But what if you want to give your model a prop, such as...
+
+- A hat that follows your model's head movement?
+- A handheld item (pen, drink, food) that follows your model's hand movement?
+- Clothing that has various moving parts?
+
+Sounds like a pain in the **ASS** to re-draw **All** of your poses just to have one prop, then create a whole separate Emotion to toggle to, right??
+
+**This is where layers step in!**
+
+Layers, introduced in 0.20, are used to dynamically change what is displayed in front of or behind your model based on its active pose, **without** directly changing the model itself!
+
+The way this is accomplished is by generating a source which acts as a freely-transformable reference of an OBS Scene that you can align wherever you want *per pose*. It's not as complex as you think!
+
+Head on over to the "Layers" tab in the bridge so we can try it out!
+
+You should have two layers available to you (for now), Front layer, and Back Layer. In order to use these we first need to create an OBS Scene for the layers to reference, so lets go into OBS and create a new scene.<br>I'll call mine "Hats"!<br>After doing so, lets add an image of a cute hat using an Image Source! I'll align my hat to the center of the scene.
+
+Back in the bridge, lets set our *front* layer to the scene "Hats".
+
+(image of model with layer ontop)
+
+Woah, thats weird lookin.
+
+What happened, is it has merged LandiTube, and the "Hats" scene together, and it doesn't look so great! lets fix it!
+
+In OBS, if we go into the `[LandiTube] Layers (Front)` scene, we'll see a source for every pose and frame we have loaded into LandiTube. 
+
+Each of these sources are referencing our "Hats" scene, and we can freely move these sources as we please! notice that as our model's pose changes, the sources toggle themselves too! 
+
+We can transform each individual source however we want per loaded pose! 
+
+We have a bit of a problem though. We can't see our model, how the heck are we supposed to align these sources properly??
+
+To see your model *and* transform the sources in the layer scene at the same time, right click the `[LandiTube] Customize` scene and click "Windowed Projector (Scene)". This will pop out a window of this scene, which contains your model, plus it's layers without the squishiness so you can align your sources easier!<br>Right click the window and click "Always On Top" so the window will always be visible while editing in OBS.
+
+Cool! we can head back to `[LandiTube] Layers (Front)` and start messing with our sources and see our model at the same time for alignments. But there is another issue!<br>It's really hard to align some poses like ones with blink frames attatched, because they are only a split second long!<br>I also have trouble selecting the source I *actually* want to edit and i keep grabbing all the other ones!
+
+This can all be fixed by using the **Pose Selector!**
+
+In the bridge under the "Layers" tab, towards the bottom there is a "Pose Selector" section!<br>In here, you can click on any pose loaded for your model which will freeze the engine and allow you to take your time aligning your sources, as well as making sure only the corresponding source in the layers scene is able to be transformed.
+
+So much better! So far, everything is going well! We can see our model while moving around sources in our layers scene, we can freeze the engine to take our time aligning our sources on a specific pose, and fix the issue of selecting unrelated sources! Let's start aligning some sources!
+
+You can crop, squish, stretch, rotate, do anything you want to these sources to fit them just how you like, to your model! Go nuts!
+
+You may encounter one final hiccup however... what if two poses don't have any extra movement in a specific area?? Do I have to manually try to align them perfectly?
+
+No!
+
+You can copy and paste transformations between sources in OBS! right click the source you want to copy all of the transformation properties from, and click `Transform > Copy Transform`. from there, right click the source that you want to have the exact same transformation, and click `Transform > Paste Transform`. Perfect! Now they are perfectly aligned, no jitter!
+
+With this knowledge, you should be a pro at aligning all of these sources just the way you want them!
+
+<span style="color: red;">When finished with your layer, click **Resume Engine** in the "Layers" tab of your bridge, otherwise your model will appear frozen when trying to get it to talk!</span>
+
+Okay Landie, I did all of that work and I have a hat that perfectly aligns to my head. What is the benefit of this again??
+
+Keeping the  `[LandiTube] Customize` scene in a window projector, heading over to the "Hats" scene (the scene all of our sources in our layer scene are referencing), change the image!
+
+As you can see, its now incredibly easy to swap out this hat for any image we want and have it already apply all the transformations needed to align to our model! make it a gif, or a png!
+
+But this is an entire **scene** we are working with in OBS. <br>we have **All types of sources available to us**, not just Image sources!<br>Get wild! Use a media source, a display capture, maybe a browser source for friends in a discord call to sit on your head, sky's the limit!
+
+Combining this capability with the limitless functionality of SAMMI will allow you to have your viewers change various aspects of your layers, making your stream the most unique out there! 
+- Twitch channel point redeems to change hats, glasses, held objects
+- Rotate a source around whenever you speak, for maybe tails?
+
+Anything you could imagine!
+
+Please check out the **Tutorials** section of the site to look at a couple of step-by-step guides on how to capitalize on the functionality of layers using SAMMI, and the LandiTube API!!
+
+## Layers
+For every layer that exists (currently there are only two) you can select which scene you want that layer to refrence
+
+![showing difference between customize, and main scene](https://i.imgur.com/tGAxHLX.gif)
+
 # Displaying In OBS
 
 "Okay I put in my files, clicked my model to set it as active, and my emotions with one active, where is my fella??"
@@ -235,14 +316,6 @@ Here are the list of fields you can enter in the `Pull Value` box:
 |`current_state_has_blink`|_boolean_|If your state has the ability to blink or not! Version 0.13.2^
 |`talking`|_boolean_|Current talking state
 |`yelling`|_boolean_|Current yelling state
-
-# Layered OBS Sources
-
-As seen in the [overview](#overview), you can do a lot of awesome stuff with this engine involving using OBS Sources as layers for each pose of your model!
-
-Head on over to the "OBS S
-
-![showing difference between customize, and main scene](https://i.imgur.com/tGAxHLX.gif)
 
 NEW as of 0.10.0:
 
