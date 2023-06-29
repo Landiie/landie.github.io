@@ -1,5 +1,4 @@
-Bridge and You!
-===============
+# Bridge and You!
 
 ![landitube in the bridge with highlighted](./landitube-docs-1.png)
 
@@ -225,11 +224,6 @@ Anything you could imagine!
 
 Please check out the **Tutorials** section of the site to look at a couple of step-by-step guides on how to capitalize on the functionality of layers using SAMMI, and the LandiTube API!!
 
-## Layers
-For every layer that exists (currently there are only two) you can select which scene you want that layer to refrence
-
-![showing difference between customize, and main scene](https://i.imgur.com/tGAxHLX.gif)
-
 # Displaying In OBS
 
 "Okay I put in my files, clicked my model to set it as active, and my emotions with one active, where is my fella??"
@@ -270,15 +264,13 @@ Reset Squish | boolean (checkbox) | ✔ | If ticked, after executing the command
 
 Resumes default engine behavior c: For use after previously pausing the engine! otherwise this command is just a fun paperweight in digital form~
 
-Custom Events using API
-=======================
+# Custom Events using API
 
 Like the engine, but want to add your own integrations using SAMMI? You can absolutely do that with relative ease if you know SAMMI! The PNGTuber engine provides various different environments and data for you to listen to, and read!
 
 First, lets go over the Extension Triggers provided by "LandiTube".
 
-Extension Triggers
-------------------
+## Extension Triggers
 
 Extension triggers are a way for a SAMMI button to be ran based on certain criteria specified by the Engine. This works exactly like if your button is set up to trigger on twitch chat. You can read more about extension triggers and SAMMI [here](https://sammi.solutions/docs/triggers/general#extensiontrigger).
 
@@ -316,22 +308,3 @@ Here are the list of fields you can enter in the `Pull Value` box:
 |`current_state_has_blink`|_boolean_|If your state has the ability to blink or not! Version 0.13.2^
 |`talking`|_boolean_|Current talking state
 |`yelling`|_boolean_|Current yelling state
-
-NEW as of 0.10.0:
-
-Pose Freezing
--------------
-
-Aligning the sources can be pretty hard and frustrating, especially if your blink frames have a lot of movement and you're trying to align something to it. Thats why I added a pose-freezing feature to help with the alignment of your sources!
-
-Pick a pose you want to align the position of a source to, and click it in your bridge to display, and freeze the engine in place! (sometimes you may have to click it twice if you're talking while selecting it)
-
-![showcasing pose engine freeze](https://i.imgur.com/Ve2Qei3.gif)
-
-If you want to toggle to your blink frames, click the "Toggle Blink Frames" button to transform your button into their blink counterparts! If you do not have a blink associated to one of your poses, clicking the blink button will result in a blank output, but you should probably expect that if you know you don't have a blink frame for a pose!
-
-Once you are done using the freeze feature, click "Resume Engine" in order to restore engine functionality.
-
-And thats everything you need to know to begin! For the actual SAMMI part, i recommend checking out the [SAMMI documentation](https://sammi.solutions/docs/core) to begin your ultimate pngtubing journey!
-
-Tutorials will be available on the [tutorials](#tutorials) tab so you can get a better idea of how to use extension triggers if you are new to SAMMI!
