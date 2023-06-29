@@ -168,31 +168,43 @@ The way this is accomplished is by generating a source which acts as a freely-tr
 
 Head on over to the "Layers" tab in the bridge so we can try it out!
 
+![layers tab location](https://i.imgur.com/P3bCJHh.png)
+
 You should have two layers available to you (for now), Front layer, and Back Layer. In order to use these we first need to create an OBS Scene for the layers to reference, so lets go into OBS and create a new scene.<br>I'll call mine "Hats"!<br>After doing so, lets add an image of a cute hat using an Image Source! I'll align my hat to the center of the scene.
 
-Back in the bridge, lets set our *front* layer to the scene "Hats".
+![new obs scene with an image source displaying a tophat](https://i.imgur.com/xDUMdWi.png)
 
-(image of model with layer ontop)
+Back in the bridge, lets set our *front* layer to the scene "Hats". and see what happens!
+
+![gif of adding the hats scene as a front layer and showcasing how messed up it looks](https://i.imgur.com/YpxubUO.gif)
 
 Woah, thats weird lookin.
 
-What happened, is it has merged LandiTube, and the "Hats" scene together, and it doesn't look so great! lets fix it!
+What happened, is it has merged `[LandiTube]`, and the `Hats` scene together, and it doesn't look so great! lets tweak it!
 
-In OBS, if we go into the `[LandiTube] Layers (Front)` scene, we'll see a source for every pose and frame we have loaded into LandiTube. 
+In OBS, if we go into the `[LandiTube] Layers (Front)` scene, we'll see a source for every pose and frame we have loaded into LandiTube. Pretty funky names!
 
-Each of these sources are referencing our "Hats" scene, and we can freely move these sources as we please! notice that as our model's pose changes, the sources toggle themselves too! 
+![all generated sources in layers scene](https://i.imgur.com/nb5nia3.png)
 
-We can transform each individual source however we want per loaded pose! 
+Each of these sources are referencing our `Hats` scene, and we can freely move these sources as we please! each source is attatched to a pose, meaning that when poses change, the sources toggle themselves too depending on what pose you're on! 
+
+We can transform each individual source however we want per loaded pose!
+
+![demonstrating moving sources](https://i.imgur.com/FYZgn6B.gif)
 
 We have a bit of a problem though. We can't see our model, how the heck are we supposed to align these sources properly??
 
 To see your model *and* transform the sources in the layer scene at the same time, right click the `[LandiTube] Customize` scene and click "Windowed Projector (Scene)". This will pop out a window of this scene, which contains your model, plus it's layers without the squishiness so you can align your sources easier!<br>Right click the window and click "Always On Top" so the window will always be visible while editing in OBS.
 
-Cool! we can head back to `[LandiTube] Layers (Front)` and start messing with our sources and see our model at the same time for alignments. But there is another issue!<br>It's really hard to align some poses like ones with blink frames attatched, because they are only a split second long!<br>I also have trouble selecting the source I *actually* want to edit and i keep grabbing all the other ones!
+![viewing model and editing layer](https://i.imgur.com/Kj2qGuk.gif)
+
+Cool! we can head back to `[LandiTube] Layers (Front)` and start messing with our sources and see our model at the same time for alignments. But there is another issue!<br>It's **really hard** to align some poses like ones with blink frames attatched, because they are only a split second long!<br>I also have trouble selecting the source I *actually* want to edit and i keep grabbing all the other ones!
 
 This can all be fixed by using the **Pose Selector!**
 
 In the bridge under the "Layers" tab, towards the bottom there is a "Pose Selector" section!<br>In here, you can click on any pose loaded for your model which will freeze the engine and allow you to take your time aligning your sources, as well as making sure only the corresponding source in the layers scene is able to be transformed.
+
+![showcase pose selector](https://i.imgur.com/ZJATVPO.gif)
 
 So much better! So far, everything is going well! We can see our model while moving around sources in our layers scene, we can freeze the engine to take our time aligning our sources on a specific pose, and fix the issue of selecting unrelated sources! Let's start aligning some sources!
 
@@ -200,21 +212,39 @@ You can crop, squish, stretch, rotate, do anything you want to these sources to 
 
 You may encounter one final hiccup however... what if two poses don't have any extra movement in a specific area?? Do I have to manually try to align them perfectly?
 
-No!
+![jittery layer](https://i.imgur.com/5GlB87v.gif)
+
+**No!**
 
 You can copy and paste transformations between sources in OBS! right click the source you want to copy all of the transformation properties from, and click `Transform > Copy Transform`. from there, right click the source that you want to have the exact same transformation, and click `Transform > Paste Transform`. Perfect! Now they are perfectly aligned, no jitter!
 
-With this knowledge, you should be a pro at aligning all of these sources just the way you want them!
+![showcasing copy transform](https://i.imgur.com/tKv5iSv.gif)
+
+Here are some pro tips to transform sources easier in OBS:
+- Use the ARROW keys to nudge sources by the pixel, and hold SHIFT to move in 5 pixel increments.
+- Hold the CONTROL key while dragging, or rotating to disable source snapping to avoid having your sources snap places you don't want them!
+- Holding the SHIFT key while rotating will snap the source rotation by 15 degree increments!
+- Hold the Left ALT key while dragging a side to easily crop a source (this is highly not recommended when transforming sources in a layers scene)
+- Use filters! each source clone is independant of each other, so you can add a filter like [3D Effect by Exeldro](https://obsproject.com/forum/resources/3d-effect.1692/) to move a source in a 3d space, or add a user-defined shader with the automatically installed obs-shaderfilter fork by Exeldro and use the `corner-pin.shader` file to map corners of a source to different coordinates. Play around! have fun!
+
+With this knowledge, you should be a pro at aligning all of these sources just the way you want them on your model!
+![layer making timelapse](https://i.imgur.com/s5HDg7B.gif)
 
 <span style="color: red;">When finished with your layer, click **Resume Engine** in the "Layers" tab of your bridge, otherwise your model will appear frozen when trying to get it to talk!</span>
 
+![resume engine demo](https://i.imgur.com/iMQYQI5.gif)
+
 Okay Landie, I did all of that work and I have a hat that perfectly aligns to my head. What is the benefit of this again??
 
-Keeping the  `[LandiTube] Customize` scene in a window projector, heading over to the "Hats" scene (the scene all of our sources in our layer scene are referencing), change the image!
+Keeping the `[LandiTube] Customize` scene in a window projector, heading over to the `Hats` scene (the scene all of our sources in our layer scene are referencing), swap the image!
+
+![new image source](https://i.imgur.com/4AovIlL.gif)
 
 As you can see, its now incredibly easy to swap out this hat for any image we want and have it already apply all the transformations needed to align to our model! make it a gif, or a png!
 
 But this is an entire **scene** we are working with in OBS. <br>we have **All types of sources available to us**, not just Image sources!<br>Get wild! Use a media source, a display capture, maybe a browser source for friends in a discord call to sit on your head, sky's the limit!
+
+![media source demo](https://i.imgur.com/Y8OVKeS.gif)
 
 Combining this capability with the limitless functionality of SAMMI will allow you to have your viewers change various aspects of your layers, making your stream the most unique out there! 
 - Twitch channel point redeems to change hats, glasses, held objects
