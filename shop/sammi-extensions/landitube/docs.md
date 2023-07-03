@@ -150,6 +150,61 @@ This emotion only has one talking pose and one talking pose with a blink frame, 
 3. drag the images into my model's unique emotion folder!
 4. click "Refresh Models", bam yelling frames.
 
+## Transitions
+
+New as of 0.20, the Transitions module allow you to set intermediary poses between emotions! These can either be single image files, or .gif files!
+
+![show what transitions look like]
+
+- **Global** transitions are played whenever you swap emotions, and are picked randomly from a set transitions folder!
+- **Dynamic** transitions are played whenever you swap emotions, however, these are influenced by the emotions you are switching **from** and **to**. This allows dynamically generated transitions that flow smoothly between your emotions!
+
+![demonstrate differences]
+
+You can have both at the *same time*!
+
+to begin using transitions, we need to make a `transitions` folder in our unique model's folder. This should be next to your `emotions` folder, like so!
+
+![show transitions folder]
+
+### Global Transitions
+
+Inside your `transitions` folder is where you place any image or gif files you want your model to randomly cycle through when changing from one emotion to the other!
+
+![show global transitions in a folder]
+
+and done! clicking "Refresh Models" in the bridge under the LandiTube tab will load those transitions into OBS and be recognized for usage!<br>(yeah, its that easy!)
+
+![show transitions being used]
+
+You might want some extra customization for your single image files, like how long you want the transition to hold for. thankfully, all you have to do is create a `.fenc` file next to your transition image with the same name, and it will act as a configuration for that specific transition! `.fenc` files can easily be created by first creating a `.txt` text file through the right click menu, then renaming the file extension to `.fenc`.
+
+open the `.fenc` file with your favorite text editor, and lets go over how this is written!
+
+the name of the option you want to edit is first, so in my case im starting with `duration`, then you type `=`, and lastly you type the value. For example, changing the `duration` property to last 400 milliseconds looks like this: `duration=400`
+
+every newline is another option!
+
+here are the list of options you can change for single image transitions:
+
+| Options | Description | type | Example |
+|---------|-------------|------|---------|
+| `duration` | Change how long you want the duration to last on screen for in milliseconds! | Number | duration=350 |
+
+### Dynamic Transitions
+
+Dynamic transitions are way cooler and will for sure wow your audience!! Dynamic transitions allow what are known as `intro` animations, and `outro` animations which play based on the current, and next emotion.
+
+Here is a helpful diagram showcasing the power of this system:
+
+![show diagram]
+
+Here, we can see that we can connect *unique* animations when we enter, and exit an emotion. With this in mind, we create an entirely *unique* transition which gets generated from your **current emotion outro**, and your **new emotion intro**.
+
+![show dynamic transition]
+
+Notice how my character shakes their head before pulling out a notepad and writing on it. 
+
 # Layers
 
 When you create a LandiTube model, you draw poses and frames! But what if you want to give your model a prop, such as...
