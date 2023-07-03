@@ -154,30 +154,61 @@ This emotion only has one talking pose and one talking pose with a blink frame, 
 
 New as of 0.20, the Transitions module allow you to set intermediary poses between emotions! These can either be single image files, or .gif files!
 
-![show what transitions look like]
+if you scroll down in the `LandiTube` tab in the Bridge, you will find a "Transitions" dropdown. If you click the arrow, you can see all of your transitions!
 
-- **Global** transitions are played whenever you swap emotions, and are picked randomly from a set transitions folder!
-- **Dynamic** transitions are played whenever you swap emotions, however, these are influenced by the emotions you are switching **from** and **to**. This allows dynamically generated transitions that flow smoothly between your emotions!
+**Global** transitions are played whenever you swap emotions! These do not take into account what emotion you are on and are general purpose
 
-![demonstrate differences]
+![global trans](https://i.imgur.com/vbmD7EC.gif)
 
-You can have both at the *same time*!
+**Dynamic** transitions are played whenever you swap emotions, however, these are influenced by the emotions you are switching **from** and **to**. You can set a image file or gif for an **intro** animation, and **outro** animation. This allows dynamically generated transitions that flow smoothly between your emotions!
+
+Example concepts:
+
+Outros:<br>
+- Crying emotion with outro of wiping tears
+- Sign emotion, holding a sign with a logo or phase with outro of spinning it and putting it behind your back
+- Thinking emotion with an outro of a "eureka" moment
+
+COMBINED WITH
+
+Intros:<br>
+- Notepad emotion with an intro of pulling out a notepad
+- Hungry emotion with an intro of a pained hunger hunch
+- Celebration emotion with an intro of one big hyped jump
+
+With all these outros and intros, you can generate **9** different dynamic transitions!
+
+Example: Swapping emotions from *Thinking* to *Notepad*. Thinking emotion, with an outro of a "eureka" moment, and intro of pulling out a notepad, then writing things down.
+
+![dyn trans](https://i.imgur.com/y8d4S4W.gif)
+
+You can have both global and dynamic transitions at the *same time*! great for if you dont have intros and outros made for every emotion!
+
+![both trans types](https://i.imgur.com/6226O3s.gif)
+
+### Setup
 
 to begin using transitions, we need to make a `transitions` folder in our unique model's folder. This should be next to your `emotions` folder, like so!
 
-![show transitions folder]
+![transition folder location](https://i.imgur.com/kQfyJ5h.png)
 
 ### Global Transitions
 
 Inside your `transitions` folder is where you place any image or gif files you want your model to randomly cycle through when changing from one emotion to the other!
 
-![show global transitions in a folder]
+You can put **as many transitions as you want, they will be randomly cycled through!**
+
+![show global transitions in a folder](https://i.imgur.com/KPgCFpt.gif)
 
 and done! clicking "Refresh Models" in the bridge under the LandiTube tab will load those transitions into OBS and be recognized for usage!<br>(yeah, its that easy!)
 
-![show transitions being used]
+![showcase global transition defaults](https://i.imgur.com/3pKekgZ.gif)
+
+This looks... okay... needs to be a bit faster.
 
 You might want some extra customization for your single image files, like how long you want the transition to hold for. thankfully, all you have to do is create a `.fenc` file next to your transition image with the same name, and it will act as a configuration for that specific transition! `.fenc` files can easily be created by first creating a `.txt` text file through the right click menu, then renaming the file extension to `.fenc`.
+
+![showcasing where .fenc file is stored for global transitions](https://i.imgur.com/MpaWRiX.png)
 
 open the `.fenc` file with your favorite text editor, and lets go over how this is written!
 
@@ -185,25 +216,93 @@ the name of the option you want to edit is first, so in my case im starting with
 
 every newline is another option!
 
+![showcase options in fenc file](https://i.imgur.com/x0gIepv.png)
+
 here are the list of options you can change for single image transitions:
 
 | Options | Description | type | Example |
 |---------|-------------|------|---------|
 | `duration` | Change how long you want the duration to last on screen for in milliseconds! | Number | duration=350 |
 
+now, hitting refresh gives us...
+
+![tweaked global transition using fenc file](https://i.imgur.com/7NXZMex.gif)
+
+*so* much better!
+
+...but we can make it even better.
+
 ### Dynamic Transitions
 
 Dynamic transitions are way cooler and will for sure wow your audience!! Dynamic transitions allow what are known as `intro` animations, and `outro` animations which play based on the current, and next emotion.
 
-Here is a helpful diagram showcasing the power of this system:
+Here is a helpful diagram showcasing the power of this system (read left to right):
 
-![show diagram]
+![show diagram](https://i.imgur.com/1M1068M.gif)
 
-Here, we can see that we can connect *unique* animations when we enter, and exit an emotion. With this in mind, we create an entirely *unique* transition which gets generated from your **current emotion outro**, and your **new emotion intro**.
+Red: Current Emotion (exiting)<br>
+Blue: New Emotion (entering)<br>
+Yellow: Transition
 
-![show dynamic transition]
+Here, we can see that we can connect *unique* animations when we exit our current emotion, and enter our new emotion. With this in mind, we create an entirely *unique* transition which gets generated from your **current emotion outro**, and your **new emotion intro**.
+
+Taking a look at the global transition in the top half of the diagram, you can see that the transition is not connected or influenced by our emotions in any way.
+
+![show dynamic transition](https://i.imgur.com/l51HWQH.gif)
 
 Notice how my character shakes their head before pulling out a notepad and writing on it. 
+
+the character will shake their head whenever exiting the angry emotion, as its unique to that emotion.
+<br>pulling out the notepad will occur whenever entering the notepad emotion.
+
+Now with that explained... lets add some!
+
+Since dynamic transitions are tied to emotions, we need to make folders in the `transitions` folder that are the *exact* names of our emotions!
+
+I'm going to add an outro animation to my angry emotion, and an intro animation to my notepad prop emotion, so i need to make folders that I can put those into!
+
+![show folders in transitions, representing emotions to be assigned animations](https://i.imgur.com/AHgePuE.png)
+
+Seem familiar? It should! This is *exactly* what you did back when you were adding `emotions`! make sure the names match one-to-one!
+
+Let's enter an emotion's transition folder to edit first. I'll go with the angry emotion!
+
+Alright, how do we set the intro and outro animations to our emotion?
+
+#### Outro Animations
+
+Outro animations are played whenever you are leaving your **current** emotion for a **new** one.
+
+To add an outro animation, drag your image file or gif file (can be named anything!) into the folder, and add `_out` at the end of it, before the file extension.
+
+Example: `shakehead.gif` becomes `shakehead_out.gif`
+
+![example outro add](https://i.imgur.com/pRVlRVE.gif)
+
+Click "Refresh Models", and check your Transitions list! you should see a new outro animation set for your emotion.
+
+Your outro will always play, even if the new emotion you are swapping to doesnt have an intro! its better than having a global transition thats for sure :P
+
+#### Intro Animations
+
+Intro animations are played whenever you are *entering* your **new** emotion from your **current** one.
+
+To add an intro animation, drag your image file or gif file (can be named anything!) into the folder, and add `_in` at the end of it, before the file extension.
+
+Example: `fetchnotepad.gif` becomes `fetchnotepad_in.gif`
+
+![example intro add](https://i.imgur.com/Jwzfo95.gif)
+
+Click "Refresh Models", and check your Transitions list! you should see a new intro animation set for your emotion.
+
+Your intro will always play, even if the current emotion you are swapping away from doesnt have an outro! its better than having a global transition thats for sure :P
+
+#### Config
+
+If you dont use gif files and use png files, you can add a `.fenc` just like you can for global single frame transitions, check there to figure out how to do it for your dynamic transitions! Options are the same.
+
+#### Extra notes
+- Of course, you can have an intro and outro in one emotion. In fact, you can have many intros and outros in an emotion! LandiTube will randomly pick for you.<br>![showing intro and outro in one emotion](https://i.imgur.com/wRQkErz.png)
 
 # Layers
 
@@ -308,6 +407,27 @@ Combining this capability with the limitless functionality of SAMMI will allow y
 Anything you could imagine!
 
 Please check out the **Tutorials** section of the site to look at a couple of step-by-step guides on how to capitalize on the functionality of layers using SAMMI, and the LandiTube API!!
+
+# Dynamic Lighting
+NEW as of 0.20, LandiTube gets dynamic lighting natively built in! A new tab "Dynamic Lighting" has been added to your bridge, allowing you configure how you want it!
+
+![wild dynamic lighting demo]
+
+To begin, you first need to make sure you have a scene that ONLY contains the sources you are capturing in OBS and intend to have dynamic lighting for.
+
+What this means, is that you need a single scene to contain all of your game captures, display captures, capture cards, whatever you're using! This can be seen as a utility scene.
+
+Not only is this needed for dynamic lighting to work, but it is much more tidy for your stream setup, so thank me later!
+
+Create a new scene, and add all of your favorite captures in there! Then, import this scene into all of the scenes where you want your gameplay to show up.
+
+Now you're ready!
+
+In the bridge, click the "Dynamic Lighting" tab and set your light source to your scene full of your game/application captures.
+
+Congrats! you now have a light source. Enable "Backlight" to check it out!
+
+![dynamic lighting demo](https://i.imgur.com/M7PLtU1.gif)
 
 # Displaying In OBS
 
