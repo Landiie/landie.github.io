@@ -409,17 +409,33 @@ Anything you could imagine!
 Please check out the **Tutorials** section of the site to look at a couple of step-by-step guides on how to capitalize on the functionality of layers using SAMMI, and the LandiTube API!!
 
 # Dynamic Lighting
-NEW as of 0.20, LandiTube gets dynamic lighting natively built in! A new tab "Dynamic Lighting" has been added to your bridge, allowing you configure how you want it!
+NEW as of 0.20, LandiTube gets dynamic lighting natively built in!
 
-![wild dynamic lighting demo]
+This component boasts features such as:
+
+- Base lighting around the whole model
+- Auto generated rim lighting around the model, which can be moved in real time
+- Applies to any layers and/or custom sources in `[LandiTube] Customize`
+
+A new tab "Dynamic Lighting" has been added to your bridge, allowing you configure how you want it!
+
+<video width="640" height="480" controls>
+  <source src="https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sammi-extensions/landitube-dynlight-demo.mp4" type="video/mp4">
+</video>
 
 To begin, you first need to make sure you have a scene that ONLY contains the sources you are capturing in OBS and intend to have dynamic lighting for.
 
 What this means, is that you need a single scene to contain all of your game captures, display captures, capture cards, whatever you're using! This can be seen as a utility scene.
 
-Not only is this needed for dynamic lighting to work, but it is much more tidy for your stream setup, so thank me later!
+![scene containing all capture sources](https://i.imgur.com/R88pUcp.png)
 
 Create a new scene, and add all of your favorite captures in there! Then, import this scene into all of the scenes where you want your gameplay to show up.
+
+Not only is this needed for dynamic lighting to work, but it is much more tidy for your stream setup, so thank me later!
+
+![before game scene](https://i.imgur.com/eSicjRs.png)
+
+![after game scene](https://i.imgur.com/FuEwtRV.png)
 
 Now you're ready!
 
@@ -429,17 +445,39 @@ Congrats! you now have a light source. Enable "Backlight" to check it out!
 
 ![dynamic lighting demo](https://i.imgur.com/M7PLtU1.gif)
 
-# Displaying In OBS
+<span style="color: red">Warning! if no captures are active in the scene containing all of them, your model will disappear! Add a color source (preferably black) as the background in your scene behind all of your capture sources to fix this, or, any background you wish to use when no games or displays are being captured!!</span>
 
-"Okay I put in my files, clicked my model to set it as active, and my emotions with one active, where is my fella??"
+![fix blank model dynlight](https://i.imgur.com/oYQ81HY.gif)
 
-To display your model is really easy!
+## Backlight
 
-1.  Navigate to your desired OBS Scene, and click the plus ➕ sign, or right click the "Sources" pane to click add, and select "Scene". This will allow you to "nest" another scene as a source!
-2.  Select the scene that says "\[LandiTube\]". You may see other scenes such as "\[LandiTube\] Customize", and "\[LandiTube\] Model Movement". These are explained further down in the [Custom Events](#custom-events-using-api) section. Don't click these!
-3.  Voila! Hold ALT while dragging the sides to crop, resize however you like, the fella has arrived!!
+Backlight is the most basic form of dynamic lighting. This applies to your entire model, and can be as influencial as you want on your model.
 
-# Commands
+### Options
+
+The `Brightness` slider impacts **how much of the colored light is applied to your model**!
+
+The `Saturation` slider impacts **how colorful the light is on your model**. if colors feel too washed out to your liking, or too overpowering and not accurate to the display, tweak it here!
+
+## Rimlight
+
+Rimlight is an extra, high intensity layer applied ontop of your model which is auto generated in `[LandiTube] Dynamic Rim Lighting Template`.
+
+### Rimlight Appearance
+
+To change how much or less area affects your model, enter that scene, hold the "Control" key to disable snapping, then click and drag the `LandiTube DM Black` source.
+
+The white being shown is what your rimlight will look like on your model. Once you're happy, you can check out the result wherever you have LandiTube shown!
+
+![modifying rim light via drag](https://i.imgur.com/UPSH1Ph.gif)
+
+### Options
+
+The `Opacity` slider impacts **how much of the rimlight is visible on your model**.
+
+The `Feathering` slider impacts **the radius of the rimlight**. If you want it softer and less sharp, add more feathering! if you want it cartoonish and sharp to the model, reduce it!
+
+# SAMMI Commands
 
 ## LandiTube: Change Model
 
