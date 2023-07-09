@@ -677,7 +677,8 @@
                                                 alt="File explorer, showing an emotions folder nested inside a unique model&#39;s folder">
                                         </p>
                                         <p>In total, your file path should look something like
-                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!</p>
+                                            <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!
+                                        </p>
                                         <p>Inside your new &quot;emotions&quot; folder, All folders created will create
                                             an Icon in your bridge showing that an emotion is detected, and exists after
                                             a model refresh. </p>
@@ -685,7 +686,8 @@
                                             in the bridge to check and see if an icon is generated in the bridge for you
                                             under your active model! Once you see your emotion, click on it!
                                             <strong>This will make the emotion active, which is required for
-                                                output.</strong></p>
+                                                output.</strong>
+                                        </p>
                                         <p>Here are some emotions i made in my &quot;emotions&quot; folder inside the
                                             &quot;Landie&quot; model folder.</p>
                                         <p><img src="./landitube-docs-5.png"
@@ -823,7 +825,8 @@
                                             <em>also</em> is intended to be a <strong>blink frame</strong>,
                                             &quot;_yell&quot; <strong>must</strong> be prepended to
                                             &quot;_blink&quot;.<br>Example: &quot;talkin_yell_blink.png&quot; is a yell,
-                                            <em>and</em> blink frame!</p>
+                                            <em>and</em> blink frame!
+                                        </p>
                                         <p>📝 Example: Let&#39;s add yelling frames for all of my talking poses in an
                                             emotion!</p>
                                         <p>This emotion only has one talking pose and one talking pose with a blink
@@ -856,7 +859,8 @@
                                             <strong>from</strong> and <strong>to</strong>. You can set a image file or
                                             gif for an <strong>intro</strong> animation, and <strong>outro</strong>
                                             animation. This allows dynamically generated transitions that flow smoothly
-                                            between your emotions!</p>
+                                            between your emotions!
+                                        </p>
                                         <p>Example concepts:</p>
                                         <p>Outros:<br></p>
                                         <ul>
@@ -884,7 +888,8 @@
                                         <h3 id="setup">Setup</h3>
                                         <p>to begin using transitions, we need to make a <code>transitions</code> folder
                                             in our unique model&#39;s folder. This should be next to your
-                                            <code>emotions</code> folder, like so!</p>
+                                            <code>emotions</code> folder, like so!
+                                        </p>
                                         <p><img src="https://i.imgur.com/kQfyJ5h.png" alt="transition folder location">
                                         </p>
                                         <h3 id="global-transitions">Global Transitions</h3>
@@ -907,7 +912,8 @@
                                             name, and it will act as a configuration for that specific transition!
                                             <code>.fenc</code> files can easily be created by first creating a
                                             <code>.txt</code> text file through the right click menu, then renaming the
-                                            file extension to <code>.fenc</code>.</p>
+                                            file extension to <code>.fenc</code>.
+                                        </p>
                                         <p><img src="https://i.imgur.com/MpaWRiX.png"
                                                 alt="showcasing where .fenc file is stored for global transitions"></p>
                                         <p>open the <code>.fenc</code> file with your favorite text editor, and lets go
@@ -959,7 +965,8 @@
                                             our current emotion, and enter our new emotion. With this in mind, we create
                                             an entirely <em>unique</em> transition which gets generated from your
                                             <strong>current emotion outro</strong>, and your <strong>new emotion
-                                                intro</strong>.</p>
+                                                intro</strong>.
+                                        </p>
                                         <p>Taking a look at the global transition in the top half of the diagram, you
                                             can see that the transition is not connected or influenced by our emotions
                                             in any way.</p>
@@ -988,7 +995,8 @@
                                         <p>Alright, how do we set the intro and outro animations to our emotion?</p>
                                         <h4 id="outro-animations">Outro Animations</h4>
                                         <p>Outro animations are played whenever you are leaving your
-                                            <strong>current</strong> emotion for a <strong>new</strong> one.</p>
+                                            <strong>current</strong> emotion for a <strong>new</strong> one.
+                                        </p>
                                         <p>To add an outro animation, drag your image file or gif file (can be named
                                             anything!) into the folder, and add <code>_out</code> at the end of it,
                                             before the file extension.</p>
@@ -1002,12 +1010,14 @@
                                             sure :P</p>
                                         <h4 id="intro-animations">Intro Animations</h4>
                                         <p>Intro animations are played whenever you are <em>entering</em> your
-                                            <strong>new</strong> emotion from your <strong>current</strong> one.</p>
+                                            <strong>new</strong> emotion from your <strong>current</strong> one.
+                                        </p>
                                         <p>To add an intro animation, drag your image file or gif file (can be named
                                             anything!) into the folder, and add <code>_in</code> at the end of it,
                                             before the file extension.</p>
                                         <p>Example: <code>fetchnotepad.gif</code> becomes
-                                            <code>fetchnotepad_in.gif</code></p>
+                                            <code>fetchnotepad_in.gif</code>
+                                        </p>
                                         <p><img src="https://i.imgur.com/Jwzfo95.gif" alt="example intro add"></p>
                                         <p>Click &quot;Refresh Models&quot;, and check your Transitions list! you should
                                             see a new intro animation set for your emotion.</p>
@@ -1036,11 +1046,13 @@
                                         </ul>
                                         <p>Sounds like a pain in the <strong>ASS</strong> to re-draw
                                             <strong>All</strong> of your poses just to have one prop, then create a
-                                            whole separate Emotion to toggle to, right??</p>
+                                            whole separate Emotion to toggle to, right??
+                                        </p>
                                         <p><strong>This is where layers step in!</strong></p>
                                         <p>Layers, introduced in 0.20, are used to dynamically change what is displayed
                                             in front of or behind your model based on its active pose,
-                                            <strong>without</strong> directly changing the model itself!</p>
+                                            <strong>without</strong> directly changing the model itself!
+                                        </p>
                                         <p>The way this is accomplished is by generating a source which acts as a
                                             freely-transformable reference of an OBS Scene that you can align wherever
                                             you want <em>per pose</em>. It&#39;s not as complex as you think!</p>
@@ -1063,7 +1075,8 @@
                                         <p>Woah, thats weird lookin.</p>
                                         <p>What happened, is it has merged <code>[LandiTube]</code>, and the
                                             <code>Hats</code> scene together, and it doesn&#39;t look so great! lets
-                                            tweak it!</p>
+                                            tweak it!
+                                        </p>
                                         <p>In OBS, if we go into the <code>[LandiTube] Layers (Front)</code> scene,
                                             we&#39;ll see a source for every pose and frame we have loaded into
                                             LandiTube. Pretty funky names!</p>
@@ -1092,7 +1105,8 @@
                                             But there is another issue!<br>It&#39;s <strong>really hard</strong> to
                                             align some poses like ones with blink frames attatched, because they are
                                             only a split second long!<br>I also have trouble selecting the source I
-                                            <em>actually</em> want to edit and i keep grabbing all the other ones!</p>
+                                            <em>actually</em> want to edit and i keep grabbing all the other ones!
+                                        </p>
                                         <p>This can all be fixed by using the <strong>Pose Selector!</strong></p>
                                         <p>In the bridge under the &quot;Layers&quot; tab, towards the bottom there is a
                                             &quot;Pose Selector&quot; section!<br>In here, you can click on any pose
@@ -1116,7 +1130,8 @@
                                             click <code>Transform &gt; Copy Transform</code>. from there, right click
                                             the source that you want to have the exact same transformation, and click
                                             <code>Transform &gt; Paste Transform</code>. Perfect! Now they are perfectly
-                                            aligned, no jitter!</p>
+                                            aligned, no jitter!
+                                        </p>
                                         <p><img src="https://i.imgur.com/tKv5iSv.gif" alt="showcasing copy transform">
                                         </p>
                                         <p>Here are some pro tips to transform sources easier in OBS:</p>
@@ -1162,7 +1177,8 @@
                                             <br>we have <strong>All types of sources available to us</strong>, not just
                                             Image sources!<br>Get wild! Use a media source, a display capture, maybe a
                                             browser source for friends in a discord call to sit on your head, sky&#39;s
-                                            the limit!</p>
+                                            the limit!
+                                        </p>
                                         <p><img src="https://i.imgur.com/Y8OVKeS.gif" alt="media source demo"></p>
                                         <p>Combining this capability with the limitless functionality of SAMMI will
                                             allow you to have your viewers change various aspects of your layers, making
@@ -1183,7 +1199,8 @@
                                             <li>Auto generated rim lighting around the model, which can be moved in real
                                                 time</li>
                                             <li>Applies to any layers and/or custom sources in
-                                                <code>[LandiTube] Customize</code></li>
+                                                <code>[LandiTube] Customize</code>
+                                            </li>
                                         </ul>
                                         <p>A new tab &quot;Dynamic Lighting&quot; has been added to your bridge,
                                             allowing you configure how you want it!</p>
@@ -1237,7 +1254,8 @@
                                         <h3 id="rimlight-appearance">Rimlight Appearance</h3>
                                         <p>To change how much or less area affects your model, enter that scene, hold
                                             the &quot;Control&quot; key to disable snapping, then click and drag the
-                                            <code>LandiTube DM Black</code> source.</p>
+                                            <code>LandiTube DM Black</code> source.
+                                        </p>
                                         <p>The white being shown is what your rimlight will look like on your model.
                                             Once you&#39;re happy, you can check out the result wherever you have
                                             LandiTube shown!</p>
@@ -1413,7 +1431,8 @@
                                                     <td>the current image path compiled together using
                                                         <code>global.main_directory</code>, <code>current_model</code>,
                                                         <code>current_state</code>, and
-                                                        <code>current_emotion_state_extension</code></td>
+                                                        <code>current_emotion_state_extension</code>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>current_emotion_poses_idle</code></td>
@@ -1979,7 +1998,8 @@
                             <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
-                                        <!-- <h1 id="version-0200">0.20.0</h1>
+                                        <h1 id="version-0200">0.20.0</h1>
+                                        <p style="color: red;">NOTE: This is an insurmountably VAST update that essentially makes this an entirely different extension. The patch notes were mades based off of memory, as I wasn't making it during the patch process and only after it was complete.</p>
 
                                         <h3>🔊 NEW MODULES:</h3>
                                         <ul>
@@ -2002,6 +2022,10 @@
                                                 layers, and custom sources in the
                                                 <code>[LandiTube] Customize</code> scene. change the direction of
                                                 rim lighting aswell!
+                                            </li>
+                                            <li><b>✨Model Importing (veadomini)</b>, Import a model from veadotube mini
+                                                (not associated with LandiTube) and get started with LandiTube sooner if
+                                                this isn't your first time with a 2D Vtuber!
                                             </li>
                                             <li><b>✨OBS Source Layering v3</b>, putting this here because nobody
                                                 used
@@ -2044,10 +2068,14 @@
                                                 independantly instead of globally. Current instances of usage:
                                                 <ul>
                                                     <li>
-                                                        Transitions
+                                                        Global Transitions
                                                     </li>
                                                     <li>Dynamic Transitions</li>
                                                 </ul>
+                                            </li>
+                                            <li><b>✨Custom WPF/WinForms Windows</b>, finally LandiTube looks more like your other
+                                                programs when prompted with windows! Enjoy pretty, informative, and
+                                                efficient popups whenever the time arises!
                                             </li>
                                         </ul>
                                         <h3>NEW:</h3>
@@ -2059,6 +2087,7 @@
                                                 Source Layer editing</li>
                                             <li>QOL: Progress bar to indicate where you are in the
                                                 refresh/validation process</li>
+                                            <li>Version check in Bridge thanks to SAMMI Bridge's version 7.20 changes that have built-in version checking</li>
                                             <li>QOL: OBS Progress bar to indicate where you are in the
                                                 refresh/validation process</li>
                                             <li>anti-tamper to <code>[LandiTube] Layers *</code>, deleting any
@@ -2069,6 +2098,7 @@
                                                 <code>[LandiTube] Customize</code> scene to point in right direction for
                                                 custom assets
                                             </li>
+                                            <li>Added more movement scenes for future integrations (shhH!)</li>
                                             <li><code>[LandiTube] Transitions</code> scene, this is where all future
                                                 transitions will be generated!</li>
                                             <li><code>[LandiTube] Render + Layers</code> scene, to accomodate for new
@@ -2077,6 +2107,7 @@
                                             <li>Added new required obs plugin "Source Clone" by exeldro</li>
                                             <li>Added new required obs plugin "obs-shaderfilter fork" by exeldro</li>
                                             <li>Added new required obs plugin version "Move Transition 2.9.1" by exeldro
+                                            <li>Added new required obs plugin version "blur" by prgmitchell
                                             </li>
                                             <li>Added new LandiTube Globals for internal use: <ul>
                                                     <li><code>loadedModelsDefaultTrans</code> (array)</li>
@@ -2098,8 +2129,6 @@
                                             <li>Added a placeholder question mark when validating install/refreshing
                                                 models</li>
                                             <li>License is now embedded into .sef</li>
-                                            <li>Added message asking user to click refresh in the scripts window of OBS
-                                            </li>
                                             <li>layer scene references are stored in a <code>layers.ini</code> file</li>
                                             <li>Moved input device to the top of the settings tab/area</li>
                                             <li>Added a check to "Refresh Models" to wait for validation to complete,
@@ -2109,6 +2138,10 @@
 
                                         <h3>Reworked:</h3>
                                         <ul>
+                                            <li>Buttons have recieved icons</li>
+                                            <li>Buttons have revised colors for better clarity</li>
+                                            <li>Some sliders swapped to "oninput" instead of "onchange" for easier
+                                                tweaking</li>
                                             <li>OBS Source Layering has been changed to make layer data automatically
                                                 generate, so user just has to align to their liking, as well as revamp
                                                 pose selector</li>
@@ -2130,6 +2163,7 @@
                                             <li>Changed renderer to solely rely on Source Toggler lua </li>
                                             <li>OBS Plugins/Lua install pushed to separate button, triggered via
                                                 extension trigger</li>
+                                            <li>Changed the way actions are read with the <code>DevLandiTuber settings</code> internal extension trigger, opting for an array split</li>
                                             <li>Scene collection json file detection method, no longer based off
                                                 filename but rather the scene collection name stored inside the files
                                                 themselves to determine proper file</li>
@@ -2163,8 +2197,15 @@
                                             </li>
                                             <li>Fixed not waiting for OBS to be fully closed, uses <code>tasklist</code>
                                                 to check obs close status</li>
+                                            <li>Fixed a niche cache involving deleting an active emotion</li>
+                                            <li>Fixed an infinite refresh loop</li>
+                                            <li>Fixed landie not getting their proper amount of sleep</li>
+                                            <li>Fixed issue with bridge being disconnected mid install</li>
+                                            <li>Fixed model loading without any visuals at random times</li>
+                                            <li>Fixed flickers present with layers</li>
+                                            <li>Fixed layer references sometimes being forgotten (thanks layers.ini!)</li>
 
-                                        </ul> -->
+                                        </ul>
                                         <h1 id="version-0160">0.16.0</h1>
                                         <ul>
                                             <li>NEW: Added .mp4 support</li>
