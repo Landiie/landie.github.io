@@ -1,9 +1,9 @@
 {
   "name": "LandiTube",
-  "summary": "Advanced PNGTuber engine powered by SAMMI!",
-  "version": "0.16.0",
+  "summary": "Advanced 2D VTuber framework powered by SAMMI!",
+  "version": "0.20.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "Video file support for .mp4, .ts, .mov, .flv, .mkv, .avi, .gif, and most importantly: .webm !!",
+  "versionSummaryHeader": "Lights, Layers.... Transitions! 150+ hours of work, for you!",
   "versionSummaryBody": "Read the full patch notes <a href=\"https://landie.land/shop/sammi-extensions/landitube.html#patchnotes\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"display: none\">here!</a>",
   "downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
   "price": "FREE",
