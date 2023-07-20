@@ -1,10 +1,10 @@
 {
   "name": "Sando",
   "summary": "A Library to make extension developer's lives easier!",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "Powershell is now stable-er!",
-  "versionSummaryBody": "fixed starting in system32 (thanks silverlink!), now overlaps for multiple scripts to be ran at once. check obs plugins fixed to look at other drives",
+  "versionSummaryHeader": "admin fixes, new commands, really important",
+  "versionSummaryBody": "extract zip with admin rights didn't work right, or at least, SHOULDN'T have. some people are fine, but others aren't so this patch fixes that, which is used by my extensions heavily. as for the new commands, there is Sando: OBS Find Scene and Set Deck Buttons Variables. really only helpful for me",
   "downloadLink": "https://landie.land/shop/sammi-extensions/sando",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/sando.png"
