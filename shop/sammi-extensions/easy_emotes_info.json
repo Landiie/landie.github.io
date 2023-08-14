@@ -1,10 +1,10 @@
 {
   "name": "Easy Emotes",
   "summary": "Easily display TTV, FFZ, BTTV, and 7TV Emotes in an Image Source! Animated supported!",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "authors": ["Landie"],
-  "versionSummaryHeader": "Initial Release",
-  "versionSummaryBody": "bwah",
+  "versionSummaryHeader": "performance increase, 7tv emote compatibility fixed, + new verbose mode!",
+  "versionSummaryBody": "reworked some background functions so file downloader is no longer needed! 7tv emotes work again, and a new verbose mode is introduced, allowing you to return additional information on each emote if you wish!",
   "downloadLink": "https://landie.land/shop/sammi-extensions/easy-emotes",
   "price": "FREE",
   "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/easyemotes.png"

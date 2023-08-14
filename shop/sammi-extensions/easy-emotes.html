@@ -16,9 +16,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@landie__">
     <meta name="twitter:creator" content="@landie__">
-    <meta class="site-twittercard-title" name="twitter:title"
-        content="Easy Emotes ~ SAMMI Extension ~ Landie's shop!">
-    <meta class="site-twittercard-description" name="twitter:description" content="Easily display TTV, FFZ, BTTV, and 7TV Emotes in an Image Source! Animated supported!">
+    <meta class="site-twittercard-title" name="twitter:title" content="Easy Emotes ~ SAMMI Extension ~ Landie's shop!">
+    <meta class="site-twittercard-description" name="twitter:description"
+        content="Easily display TTV, FFZ, BTTV, and 7TV Emotes in an Image Source! Animated supported!">
     <meta class="site-twittercard-image" name="twitter:image" content="https://landie.land/shop/easyemotes.png">
     <title class="site-title">Easy Emotes ~ Landie</title>
 
@@ -230,8 +230,7 @@
                                         <p><img src="./easyemotes-3.png"
                                                 alt="An example of &quot;Download Files&quot; usage"></p>
                                         <h3 id="output-">Output:</h3>
-                                        <p><img src="./easyemotes-4.png"
-                                                alt="&quot;Download Files&quot; output"></p>
+                                        <p><img src="./easyemotes-4.png" alt="&quot;Download Files&quot; output"></p>
                                         <h3 id="display-in-obs-">Display in OBS!</h3>
                                         <p><img src="./easyemotes-5.png"
                                                 alt="using Source Change Settings to display an emote from the returned array in an image source">
@@ -386,7 +385,18 @@
                                                     <td><em>string</em></td>
                                                     <td>❌</td>
                                                     <td>Required if searching for Twitch emotes. Retrieved from
-                                                        <code>Trigger Pull Data</code> on a Twitch Chat trigger!</td>
+                                                        <code>Trigger Pull Data</code> on a Twitch Chat trigger!
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Verbose?</td>
+                                                    <td><em>Checkbox (boolean)</em></td>
+                                                    <td>❌</td>
+                                                    <td>Changes the format of the output to return objects of each
+                                                        emote, containing additional information such as the service
+                                                        it's from, scope of emote, it's url, type, and name! You should
+                                                        know how to loop through arrays and use objects if using this!
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -442,7 +452,8 @@
                                             <div class="productpage-section-contents-sidebar-body">
                                                 <h3 id="-commands-"><strong>Commands</strong></h3>
                                                 <ul>
-                                                    <li><a href="#easy-emotes-fetch-emotes-in-string">Easy Emotes: Fetch Emotes In String</a></li>
+                                                    <li><a href="#easy-emotes-fetch-emotes-in-string">Easy Emotes: Fetch
+                                                            Emotes In String</a></li>
                                                 </ul>
 
                                             </div>
