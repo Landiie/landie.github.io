@@ -1,0 +1,11 @@
+{
+  "name": "Gamepad Triggers",
+  "summary": "Control SAMMI with your Gamepad using Extension Triggers!",
+  "version": "1.0.1",
+  "authors": ["Landie"],
+  "versionSummaryHeader": "Updated for SAMMI, New Update Link",
+  "versionSummaryBody": "new .sef format, and, wow! update is linked to my own personal site!",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/gamepad-triggers",
+  "price": "$4",
+  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/gamepadtriggers.png"
+}
