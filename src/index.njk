@@ -66,7 +66,7 @@
         </div>
         <div class="col-md-3 d-flex justify-content-center align-items-center">
           <div class="row d-flex justify-content-center align-items-center">
-            <img src="landie_hi.png" style="width: 15rem; height: auto; max-width: 100%;"
+            <img src="/assets/images/landie_hi.png" style="width: 15rem; height: auto; max-width: 100%;"
                 alt="landie waving at you! art by YokuGrapeCrepe">
             <!-- <p style="font-size: 0.9rem;">Art by <a href="https://twitter.com/YokuGrapeCrepe" data-bs-toggle="tooltip"
                   data-bs-title="Test tooltip">YokuGrapeCrepe</a>
@@ -96,51 +96,36 @@
             </svg>
           </button>
         </a>
-        <a class="link-clear" href="https://twitch.tv/landie" target="_blank" rel="noopener noreferrer">
-          <button class="main-link quick-link m-2"
-              style="background: linear-gradient(to top, rgb(132, 17, 219), rgb(210, 61, 255));">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-twitch"
+        {% from "./_components/social-link.njk" import socialLink %}
+
+        {{ socialLink('https://twitch.tv/landie', '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-twitch"
                 viewBox="0 0 16 16">
               <path
                   d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
               <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
-            </svg>
-          </button>
-        </a>
-        <a class="link-clear" href="https://github.com/landiie" target="_blank" rel="noopener noreferrer">
-          <button class="main-link quick-link m-2"
-              style="background: linear-gradient(to top, rgb(0, 0, 0), rgb(70, 70, 70));">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-github"
+            </svg>', '132, 17, 219', '210, 61, 255')}}
+        {{ socialLink('https://github.com/landiie', '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-github"
                 viewBox="0 0 16 16">
               <path
                   d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-            </svg>
-          </button>
-        </a>
-        <a class="link-clear" href="https://discord.gg/ZTbMw7TVKa" target="_blank" rel="noopener noreferrer">
-          <button class="main-link quick-link m-2"
-              style="background: linear-gradient(to top, rgb(111, 27, 228), rgb(162, 119, 241));">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-discord"
+            </svg>', '0,0,0', '70,70,70')}}
+        {{ socialLink('https://discord.gg/ZTbMw7TVKa', '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-discord"
                 viewBox="0 0 16 16">
               <path
                   d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
-            </svg>
-          </button>
-        </a>
-        <a class="link-clear" href="https://ko-fi.com/landie" target="_blank" rel="noopener noreferrer">
-          <button class="main-link quick-link m-2"
-              style="background: linear-gradient(to top, rgb(252, 60, 57), rgb(92, 232, 250));">
-            <!--made this with a png to svg, then svg to optimized svg, to plain svg using inkscape!-->
-            <svg fill="white" version="1.0" width="55" height="35" viewBox="0 0 255 159"
+            </svg>', '111, 27, 228', '162, 119, 241')}}
+        {{ socialLink('https://ko-fi.com/landie', '<svg fill="white" version="1.0" width="55" height="35" viewBox="0 0 255 159"
                 preserveAspectRatio="xMidYMid" id="svg16" xmlns="http://www.w3.org/2000/svg">
               <g transform="matrix(0.1,0,0,-0.1,0,208)" fill="white" stroke="none" id="g14">
                 <path
                     d="M 37,2062 C 1,2023 0,1997 0,1366 0,679 0,681 63,599 c 19,-25 58,-57 97,-78 l 65,-36 h 680 680 l 55,26 c 119,56 172,134 193,282 10,73 14,86 28,82 28,-9 200,14 269,36 108,34 180,78 261,159 124,123 177,265 166,440 -17,264 -175,464 -430,545 l -78,25 h -998 c -938,0 -999,-1 -1014,-18 z m 2051,-311 c 100,-51 154,-141 154,-255 0,-139 -46,-227 -147,-283 -56,-30 -67,-33 -152,-33 h -93 v 295 295 h 100 c 79,0 109,-4 138,-19 z m -778,-79 c 96,-48 147,-141 137,-252 -8,-82 -37,-138 -120,-231 -87,-97 -380,-372 -402,-377 -8,-2 -87,64 -177,146 -281,257 -327,315 -351,444 -21,116 26,217 127,271 33,18 58,22 131,22 100,0 153,-18 226,-76 l 39,-31 48,35 c 126,92 226,106 342,49 z"
                     id="path12"/>
               </g>
-            </svg>
-          </button>
-        </a>
+            </svg>', '252, 60, 57', '92, 232, 250')}}
+        {{ socialLink('https://patreon.com/landie', '<svg style="color: white" width="50" height="50 "xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+              <path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" fill="white"></path>
+            </svg>', '252, 149, 38', '252, 207, 3')}}
       </div>
       <section>
         <!-- <div class="row d-flex justify-content-center align-items-center">
@@ -179,7 +164,7 @@
             </div>
             <h2 class="d-flex justify-content-center">Shop</h2>
           </button>
-          <button data-tilt data-tilt-scale="1.2" onclick="location.href='/custom-profile/custom-profile.html'"
+          <button data-tilt data-tilt-scale="1.2" onclick="location.href='/custom-profile'"
               class="d-none panel-link bg-dark justify-content-center align-items-center">
             <div class="col d-flex justify-content-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white" class="bi bi-twitch  my-3"

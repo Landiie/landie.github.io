@@ -1,0 +1,8 @@
+{% macro socialLink(link, icon, colorBottom, colorTop) %}
+    <a class="link-clear" href="{{link}}" target="_blank" rel="noopener noreferrer">
+        <button class="main-link quick-link m-2"
+              style="background: linear-gradient(to top, rgb({{colorBottom}}), rgb({{colorTop}}));">
+            {{icon | safe}}
+        </button>
+    </a>
+{% endmacro %}
