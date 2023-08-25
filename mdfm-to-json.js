@@ -1,6 +1,10 @@
 const fs = require("fs");
 const crypto = require("crypto");
 const path = require("path");
+
+const directoryPath = "/src/shop/sammi-extensions"; // input .md files
+const outputDirectory = "/src/shop/sammi-extensions"; // output .json files
+
 const getHash = content => {
   const hash = crypto.createHash("md5");
   const data = hash.update(content, "utf-8");
@@ -9,49 +13,62 @@ const getHash = content => {
   return gen_hash;
 };
 
-const directoryPath = "markdown_files"; // Adjust the directory name
-const outputDirectory = "json_files"; // Adjust the output directory name
+const trimExt = file => {
+  let fileNoExt = file.replace(".md", "");
+  fileNoExt = fileNoExt.replace("-", "_");
 
-if (!fs.existsSync(outputDirectory)) {
-  fs.mkdirSync(outputDirectory);
+  return fileNoExt;
+};
+
+const getJsonData = mdContent => {
+  const posEnd = mdContent.indexOf(`\n---`);
+  const jsonData = mdContent.substring(9, posEnd);
+
+  return jsonData;
+};
+
+const createDocsDir = productName => {
+  let dirName = productName.replace(".md", "");
+  if (!fs.existsSync(path.join(directoryPath, dirName), "utf-8")) {
+    fs.mkdirSync(path.join(directoryPath, dirName), "utf-8");
+    console.log(`directory made: ${path.join(directoryPath, dirName)}`)
+  }
+}
+
+
+if (!fs.existsSync(path.join(directoryPath, dirName), "utf-8")) {
+  fs.mkdirSync(path.join(directoryPath, dirName), "utf-8");
 }
 
 fs.readdirSync(directoryPath).forEach(file => {
   if (file.endsWith(".md")) {
-    let fileNoExt = file.replace(".md", "");
-    fileNoExt = fileNoExt.replace("-", "_");
-
-    const mdContent = fs.readFileSync(path.join(directoryPath, file), "utf-8");
     let needsWrite = true;
 
-    const posEnd = mdContent.indexOf(`\n---`);
-    // console.log(mdContent.substring(9, posEnd))
-    const jsonData = mdContent.substring(9, posEnd);
-    if (jsonData) {
-      const jsonFileName = `${fileNoExt}_info.json`;
-      const jsonExists = fs.existsSync(
-        path.join(outputDirectory, jsonFileName)
+    const mdContent = fs.readFileSync(path.join(directoryPath, file), "utf-8");
+    const fileNoExt = trimExt(file);
+    const jsonFileName = `${fileNoExt}_info.json`;
+    const jsonData = getJsonData(mdContent);
+    
+    const jsonExists = fs.existsSync(path.join(outputDirectory, jsonFileName));
+    console.log(jsonExists);
+
+    if (jsonExists) {
+      const jsonContent = fs.readFileSync(
+        path.join(outputDirectory, jsonFileName),
+        "utf-8"
       );
-      console.log(jsonExists);
+      const jsonExistingHash = getHash(jsonContent);
+      const jsonNewHash = getHash(jsonData);
+      console.log(jsonExistingHash);
+      console.log(jsonNewHash);
 
-      if (jsonExists) {
-        const jsonContent = fs.readFileSync(
-          path.join(outputDirectory, jsonFileName),
-          "utf-8"
-        );
-        const jsonExistingHash = getHash(jsonContent);
-        const jsonNewHash = getHash(jsonData);
-        console.log(jsonExistingHash);
-        console.log(jsonNewHash);
-
-        if (jsonNewHash == jsonExistingHash) needsWrite = false;
-      }
-      if (needsWrite) {
-        console.log(`${jsonFileName} needs writing!`);
-        fs.writeFileSync(path.join(outputDirectory, jsonFileName), jsonData);
-      } else {
-        console.log(`No write for ${jsonFileName}`);
-      }
+      if (jsonNewHash == jsonExistingHash) needsWrite = false;
+    }
+    if (needsWrite) {
+      console.log(`${jsonFileName} needs writing!`);
+      fs.writeFileSync(path.join(outputDirectory, jsonFileName), jsonData);
+    } else {
+      console.log(`No write for ${jsonFileName}`);
     }
   }
 });
