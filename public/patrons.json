@@ -1,4 +1,26 @@
 {
-    "riceCakes":["Xeokn", "GarnetDawn", "Banezarian", "Chibiibot", "Zord", "Jamejarrs", "Jedi Chrome", "CaveSalamander", "Kowboat", "KneesEdits", "KiMCHiMAEK", "WhenWolvesCryOut", "Gweenium", "flyann", "LewkForce"],
-    "ricePiles":["N3ku", "Pikalize", "Kurorak"]
+  "riceCakes": [
+    "Xeokn",
+    "GarnetDawn",
+    "Banezarian",
+    "Chibiibot",
+    "Zord",
+    "Jamejarrs",
+    "Jedi Chrome",
+    "CaveSalamander",
+    "Kowboat",
+    "KneesEdits",
+    "KiMCHiMAEK",
+    "WhenWolvesCryOut",
+    "Gweenium",
+    "flyann",
+    "LewkForce",
+    "Caigan",
+    "BeaverTrap",
+    "DazeDraco",
+    "Shen",
+    "Determined",
+    "Wombo Combo"
+  ],
+  "ricePiles": ["N3ku", "Pikalize", "Kurorak", "melly", "helfmyselp"]
 }

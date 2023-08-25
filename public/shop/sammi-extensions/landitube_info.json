@@ -1,13 +1,19 @@
 {
-  "name": "LandiTube",
-  "summary": "Advanced 2D VTuber framework powered by SAMMI!",
-  "version": "0.20.0",
+  "layout": "product.njk",
+  "tags": ["product", "sammiExtension"],
+  "title": "LandiTube",
+  "permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
+  "description": "Advanced 2D VTuber framework powered by SAMMI!",
+  "image": "/assets/sammi-extensions/landitube/cover.png",
+  "imageAlt": "Product icon for LandiTube",
   "authors": ["Landie"],
+  "shopLabels": ["Free", "Utility", "OBS Widget", "Voice", "Beta"],
+  "price": "FREE",
+  "version": "0.20.0",
   "versionSummaryHeader": "Lights, Layers.... Transitions! 150+ hours of work, for you!",
   "versionSummaryBody": "Read the full patch notes <a href=\"https://landie.land/shop/sammi-extensions/landitube.html#patchnotes\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"display: none\">here!</a>",
   "downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
-  "price": "FREE",
-  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/landitube.png",
+  "sammiImage": "https://landie.land/assets/sammi-extensions/landitube/cover%20bridge.png",
   "versions": {
     "0200": {
       "valid_versions": {
@@ -45,4 +51,4 @@
     ]
   },
   "motd": "hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
-}
+}
