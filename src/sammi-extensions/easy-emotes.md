@@ -1,6 +1,7 @@
 ---json
 {
   "layout": "product.njk",
+  "date": "2022-12-22",
   "title": "Easy Emotes",
   "description": "Easily display TTV, FFZ, BTTV, and 7TV Emotes in an Image Source! Animated supported!",
   "version": "2.0.1",
@@ -10,7 +11,7 @@
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/easy-emotes/",
   "image": "/assets/sammi-extensions/easy-emotes/cover.png",
-  "imageAlt": "Product icon for {{ title }}",
+  "imageAlt": "Product icon for Easy Emotes",
   "authors": ["Landie"],
   "shopLabels": ["Free", "Utility"],
   "downloadLink": "https://landie.land/shop/sammi-extensions/easy-emotes",

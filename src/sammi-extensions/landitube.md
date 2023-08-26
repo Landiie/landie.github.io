@@ -1,6 +1,7 @@
 ---json
 {
   "layout": "product.njk",
+  "date": "2023-01-08",
   "tags": ["product", "sammiExtension"],
   "title": "LandiTube",
   "permalink": "/shop/sammi-extensions/{{ title | slugify }}/",

@@ -1,11 +1,18 @@
 {
-  "name": "File Downloader",
-  "summary": "Download Files through SAMMI!",
+  "layout": "product.njk",
+  "date": "2022-12-28",
+  "title": "File Downloader",
+  "description": "Download Files through SAMMI!",
   "version": "2.0.4",
-  "authors": ["Landie"],
   "versionSummaryHeader": "bug fix: API port reading",
   "versionSummaryBody": "Fixes a bug where the API port is never fetched, causing absurdly long status report times",
-  "downloadLink": "https://landie.land/shop/sammi-extensions/file-downloader",
+  "tags": ["product", "sammiExtension"],
   "price": "FREE",
-  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/filedownloader.png"
-}
+  "permalink": "/shop/sammi-extensions/file-downloader/",
+  "image": "/assets/sammi-extensions/file-downloader/cover.png",
+  "imageAlt": "Product icon for File Downloader",
+  "authors": ["Landie"],
+  "shopLabels": ["Free", "Utility"],
+  "downloadLink": "https://landie.land/shop/sammi-extensions/file-downloader",
+  "sammiImage": "https://landie.land/assets/sammi-extensions/file-downloader/cover_bridge.png"
+}

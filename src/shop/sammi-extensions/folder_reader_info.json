@@ -1,11 +1,18 @@
 {
-  "name": "Folder Reader",
-  "summary": "Read Files and Folders from a directory with filters using SAMMI",
+  "layout": "product.njk",
+  "date": "2022-08-10",
+  "title": "Folder Reader",
+  "description": "Read Files and Folders from a directory with filters using SAMMI",
   "version": "3.0.1",
-  "authors": ["Landie"],
   "versionSummaryHeader": "removed API Server check",
   "versionSummaryBody": "not needed since 3.0.0 lol",
-  "downloadLink": "https://landie.land/shop/sammi-extensions/folder-reader",
+  "tags": ["product", "sammiExtension"],
   "price": "FREE",
-  "image": "https://raw.githubusercontent.com/Landiie/landiie.github.io/main/shop/folderreader.png"
-}
+  "permalink": "/shop/sammi-extensions/folder-reader/",
+  "image": "/assets/sammi-extensions/folder-reader/cover.png",
+  "imageAlt": "Product icon for Folder Reader",
+  "authors": ["Landie"],
+  "shopLabels": ["Free", "Utility"],
+  "downloadLink": "https://landie.land/shop/sammi-extensions/folder-reader",
+  "sammiImage": "https://landie.land/assets/sammi-extensions/folder-reader/cover_bridge.png"
+}
