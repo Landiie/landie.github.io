@@ -57,12 +57,12 @@
     {% include "shop-header.njk" %}
     <!--Shop Header End-->
     <div class="row site-shop-main">
-      <nav class="col-xl-2 col-lg-12 site-shop-sidebar">
+      {# <nav class="col-xl-2 col-lg-12 site-shop-sidebar">
         <!--Shop Sidebar-->
         {% include "shop-sidebar.njk" %}
         <!--Shop Sidebar End-->
-      </nav>
-      <div class="col-xl-10 col-lg-12 {{ extraShopPageClasses }}">
+      </nav> #}
+      <div class="col-xl-12 col-lg-12 {{ extraShopPageClasses }}">
         {{ content | safe }}
       </div>
     </div>
@@ -93,7 +93,7 @@
 </div>
 {% block scripts %}
 <!-- Additional scripts specific to this page -->
-<script src="/shop-live-indicator.js"></script>
+<script src="/shop/shop-live-indicator.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
@@ -102,7 +102,7 @@
     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-<script src="/shop.js"></script>
+<script src="/shop/shop.js"></script>
 <script>
   var tooltipTriggerList = []
     .slice
