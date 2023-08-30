@@ -1,0 +1,728 @@
+<!DOCTYPE html><!----><html lang="en"><head>
+        <!-- Google tag (gtag.js) -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VF0S4LZ1NH"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-VF0S4LZ1NH');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:site_name" content="landie.land" data-rh="true">
+        <meta property="og:title" content="LandiTube Docs" data-rh="true">
+        <meta property="og:description" content="" data-rh="true">
+        <meta property="og:type" content="index" data-rh="true">
+        
+        <meta property="og:image:alt" content="" data-rh="true">
+        <meta property="og:image:width" content="128" data-rh="true">
+        <meta property="og:image:height" content="128" data-rh="true">
+        <meta property="og:image" content="" data-rh="true">
+        <meta property="twitter:card" content="summary" data-rh="true">
+        <meta class="site-twittercard-image" name="twitter:image" content="">
+        <title>LandiTube Docs ~ Landie</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles-page.css">
+        
+    </head>
+    <body class="body-blue page">
+        <!--bg effects and decals-->
+<div class="custom-background">
+    <div class="floaties">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<p class="position-fixed" style="bottom: -10px; right: 10px;">I'm sorry, im new to making websites so some
+        things
+        may look off!</p>
+<!--offcanvas-->
+<div class="offcanvas offcanvas-start m-sm-0 m-md-4" style="backdrop-filter: blur(0.5rem); border-radius: 1rem; background-color: rgba(255, 255, 255, 0.629); border: solid rgba(255, 255, 255, 0.384) 5px;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="#bridge-and-you-">
+            <h3 id="bridge-and-you">
+                <strong>Bridge and You!</strong>
+            </h3>
+        </a>
+        <a href="#path-structure">
+            <h3 id="path-structure">
+                <strong>Path Structure</strong>
+            </h3>
+        </a>
+        <ul>
+            <li>
+                <a href="#models">Models</a>
+            </li>
+            <li>
+                <a href="#emotions">Emotions</a>
+            </li>
+            <li>
+                <a href="#poses">Poses</a>
+            </li>
+            <ul>
+                <li>
+                    <a href="#idling">Idling</a>
+                </li>
+                <li>
+                    <a href="#talking">Talking</a>
+                </li>
+                <li>
+                    <a href="#blinking">Blinking</a>
+                </li>
+                <li>
+                    <a href="#yelling">Yelling</a>
+                </li>
+            </ul>
+            <li>
+                <a href="#transitions">Transitions</a>
+            </li>
+            <ul>
+                <li>
+                    <a href="#global-transitions">Global</a>
+                </li>
+                <li>
+                    <a href="#dynamic-transitions">Dynamic</a>
+                </li>
+            </ul>
+            <li>
+                <a href="#layers">Layers</a>
+            </li>
+            <li>
+                <a href="#dynamic-lighting">Dynamic Lighting</a>
+            </li>
+            <ul>
+                <li>
+                    <a href="#backlight">Backlight</a>
+                </li>
+                <li>
+                    <a href="#rimlight">Rimlight</a>
+                </li>
+            </ul>
+    </ul>
+    <a href="#sammi-commands">
+        <h3 id="sammi-commands">
+            <strong>SAMMI Commands</strong>
+        </h3>
+    </a>
+    <ul>
+        <li>
+            <a href="#landitube-change-model">LandiTube: Change Model</a>
+        </li>
+        <li>
+            <a href="#landitube-change-emotion">LandiTube: Change
+                        Emotion</a>
+        </li>
+        <li>
+            <a href="#landitube-pause-engine">LandiTube: Pause Engine</a>
+        </li>
+        <li>
+            <a href="#landitube-resume-engine">LandiTube: Resume Engine</a>
+        </li>
+    </ul>
+    <a href="#custom-events-using-api">
+        <h3 id="custom-events-using-api">
+            <strong>Custom Events using API</strong>
+        </h3>
+    </a>
+    <ul>
+        <li>
+            <a href="#extension-triggers">Extension Triggers</a>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div class="inner-outline"></div>
+<div class="center-wrapper d-flex justify-content-center align-items-center">
+
+<div class="container-page">
+    <!--sidebar canvas button, not in use atm-->
+    <div class="sidebar-button position-fixed">
+        <button type="button" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="sidebar-button" class="button d-flex justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-xl-2 col-lg-12 sidebar-nav">
+            <div style="top: 2rem; width: 100%;" class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
+                <div class="productpage-section-contents-sidebar-body toc">
+                    <!-- toc start -->
+
+                    <!-- toc end -->
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-10 col-lg-12 productpage-section-contents-body docs" style="z-index: 5;">
+            <!--docs start-->
+
+            <h1 id="bridge-and-you">Bridge and You!</h1>
+<p><img src="../landitube-docs-1.png" alt="landitube in the bridge with highlighted"></p>
+<p>This is what your bridge will look like! lets run by section.</p>
+<ol>
+<li>"LandiTube" bridge tab. This is how you access the web interface for "LandiTube" after installing.</li>
+<li>Defining information about the extension, such as Title, Authors, and their socials. You can see if i'm live or not by the little red circle next to the twitch icon!</li>
+<li>Update banner, should only appear if there is a new update. Clicking the "More Info" button should reveal a modal with a little bit more information about what you'll be installing. Some have important warnings, so be sure to read!</li>
+<li>"Refresh Models" is a <em>very important</em> button to get familiar with. This refreshes the models, and their associated emotions. You should be clicking this everytime a model, emotion, or pose is added or removed. Changing an already existing pose should not require a refresh, but it's a good habit to have regardless!</li>
+<li>"Open Models Folder" is a quick and easy way to get to the folder where the models are stored. A file explorer window will pop up c:</li>
+<li>This is the models list, all valid models will show up here. You are required to have at least one model loaded, <strong>and</strong> selected (depicted by the red box). Models have entirely different sets of emotions!</li>
+<li>"Open Emotions Folder" provides a quick way to get to the current model's emotions folder. A file explorer window will pop up c:</li>
+<li>This is the emotions list, which changes depending on which model is loaded. The emotions list will only load if there is a selected, active model. You are required to have at least one emotion loaded, <strong>and</strong> selected (depicted by the red box) for any output.</li>
+<li>"Voice Threshold" is the slider for detecting the sensitivity of your talking. This is a very sensitive slider, and I do not recommend going above 5!</li>
+<li>This allows you to set an input device to listen to for the engine to read. Great for if you're looking to use LandiTube as a TTS mascot, as you can set this to be a virtual audio cable! Make sure to pick the input that is right for you.</li>
+<li>Support footer, which has my donation info, and a direct link to my shop where I have even more extensions (that can interface with this one to create some incredible pngtuber combos!). I would really appreciate it if I could at least get a dollar every now and then 💚</li>
+</ol>
+<h1 id="path-structure">Path Structure</h1>
+<p>Throughout this section, "LandiTube Path" refers to<br>
+<code>(YOUR SAMMI INSTALLATION PATH HERE)\Landies_Extensions\LandiTube</code></p>
+<p>"LandiTube" is built with ease in mind, as a result, all you have to do is make files and folders to create your models and emotions. There are some important notes to keep in mind while creating your directories.</p>
+<p>To get a model up and running, You need to have <em>3 key components down</em>. <a href="#models">Models</a>, <a href="#emotions">Emotions</a>, and <a href="#poses">Poses</a>!</p>
+<p>Make sure you've gone into your bridge, and changed the appropriate settings! you'll need to set your mic, maybe tweak the input threshold, etc. <a href="#bridge-and-you-">Bridge and You</a> has an explanation of the settings section for you!</p>
+<h1 id="landitube">LandiTube</h1>
+<h2 id="models">Models</h2>
+<p>To create models, you create a folder in the "models" folder in the LandiTube path. All folders inside that folder will create an Icon in your bridge showing that a model is detected, and exists after a model refresh.</p>
+<p>After adding a models folder, click the "Refresh Models" button in the bridge to check and see if an icon is generated in the bridge for you! Once you see your model, click on it! <strong>This will make the model active, which is required for output.</strong></p>
+<p>Here is a visual example of my models folder, where I have two models loaded, and one click on marking it <em>active</em>.</p>
+<p><img src="../landitube-docs-2.png" alt="Visual of file explorer in the models directory, with two folders labeled &quot;Landie&quot; and &quot;Apple&quot;"></p>
+<p><img src="../landitube-docs-3.png" alt="Showcasing the result inside the models list located in the bridge"></p>
+<h2 id="emotions">Emotions</h2>
+<p>To create emotions for your model, you first need to specify an "emotions" folder in your unique model's folder. This is what it should look like:</p>
+<p><img src="../landitube-docs-4.png" alt="File explorer, showing an emotions folder nested inside a unique model's folder"></p>
+<p>In total, your file path should look something like <code>(LandiTube Path)\models\(unique model folder)\emotions</code>!</p>
+<p>Inside your new "emotions" folder, All folders created will create an Icon in your bridge showing that an emotion is detected, and exists after a model refresh.</p>
+<p>After adding an emotion folder, click the "Refresh Models" button in the bridge to check and see if an icon is generated in the bridge for you under your active model! Once you see your emotion, click on it! <strong>This will make the emotion active, which is required for output.</strong></p>
+<p>Here are some emotions i made in my "emotions" folder inside the "Landie" model folder.</p>
+<p><img src="../landitube-docs-5.png" alt="File explorer, showing multiple uniquely named folders inside the &quot;emotions&quot; folder"></p>
+<p><img src="../landitube-docs-6.png" alt="showcasing the rendered result inside the bridge"></p>
+<h2 id="poses">Poses</h2>
+<p>Now that your model is set up with proper emotions, lets get to the good stuff!</p>
+<p>In traditional PNGTubing engines, you had 4 poses per emotion: idle, idle with blink, talking and talking with blink (sometimes you dont even have the blink).</p>
+<p>in "LandiTube", you're allowed to have <em>as many idle, and talking poses as your heart desires</em>. Blinking will be discussed further down.</p>
+<p>What does that mean? Well, everytime you would go into any of the states mentioned above, it would pick randomly between all of the provided idle, and talking images. <em>You can have multiple talking poses for a single expression to really show natural movement, combined with multiple idle poses!</em></p>
+<p>All poses are places inside one of your unique model's unique emotion folders!</p>
+<p><strong>NOTE: You are not required to include multiple poses of each state, or add blink frames for them. the option is just available to you!</strong></p>
+<p>lets go over how to set up each state LandiTube provides out of the box!</p>
+<h3 id="idling">Idling</h3>
+<p>To create an idle pose for your tuber's emotion, drag in an image file with the keyword "idle" in it's filename!</p>
+<p>For every image containing the keyword "idle" in it's file name inside your emotion folder, those images will be turned into a list of random poses for "LandiTube" to swap to whenever idling is supposed to occur.</p>
+<p>Example: Lets make <em>three</em> idle poses for an emotion!</p>
+<ol>
+<li>Have three idle image files ready! animated or not, its okay! make sure each idle image file contains the word "idle" in there at least once! my files are named <code>"idle.png"</code>, <code>"idle2.png"</code>, and <code>"idle3.png"</code> respectively. <img src="../landitube-docs-7.png" alt="showing idle poses in folder"></li>
+<li>Hit "Refresh Models" in your bridge! This should recalculate all the poses you have.</li>
+<li>Now, whenever you finish talking, It will pick any out of the idle poses provided! <img src="../landitube-docs-8.gif" alt="showing tuber now with three idle poses"></li>
+</ol>
+<p>Hmm. That doesn't look great. Lets look into adding some talking poses!</p>
+<h3 id="talking">Talking</h3>
+<p>Talking is the easiest to do!</p>
+<p>To create a talking pose for your emotion, drag in an image file named whatever you want! be sure not to include the keywords "idle".</p>
+<p>For every randomly named image inside your emotion folder, those images will be turned into a list of random poses for "LandiTube" to swap to whenever talking is detected.</p>
+<p>Example: Lets make two talking poses for my PNGTuber to pick from!</p>
+<ol>
+<li>Have two talking image files ready! animated or not, its okay! Ive named my talking poses <code>"one paw talkin.png"</code>, and <code>"two paws talkin.png"</code>. <img src="../landitube-docs-9.png" alt="showing talking poses in folder"></li>
+<li>Hit "Refresh Models" in your bridge! This should recalculate all the poses you have.</li>
+<li>Now, whenever you talk, It will pick either one, or the other! <img src="../landitube-docs-10.gif" alt="showing tuber now with two talking poses"></li>
+</ol>
+<p>Looks much better! but there is quite a dead stare.. lets add blinking!</p>
+<h3 id="blinking">Blinking</h3>
+<p>Talking, and idle poses do not need to have blinking frames, but they are nice! One nice feature is that blinking is not "all or nothing", you can set blink frames for whatever poses you want!<br>
+Maybe one idle pose is meant to be a dead stare while the other idle poses have blinks?<br>
+Maybe a character is angry and they don't blink while talking?</p>
+<p>To attach blinking frames to your poses, all you have to do is drag in your blinking image with the exact file name of the pose you want to give blinking to, but with "_blink" appended just before the file extension (.png, .gif)</p>
+<p>So "idle.png" becomes "idle_blink.png", "one paw talkin.png" becomes "one paw talkin_blink.png", etc.</p>
+<p>Example: Lets add blinking frames to all of our inserted idle, and talking poses!</p>
+<ol>
+<li>Have your blinking image files ready! animated or not, its okay! every image is the same as the other images inside the emotion's folder, but with "_blink" added. Image below! <img src="../landitube-docs-11.png" alt="showing talking poses in folder"></li>
+<li>Refresh is not needed for blinks! at least i think so. if you see an issue, just hit "Refresh Models"!</li>
+<li>Now, every pose has blinks! <img src="../landitube-docs-12.gif" alt="showing tuber now with blinking frames for every pose previously added"></li>
+</ol>
+<h3 id="yelling">Yelling</h3>
+<p>Yelling frames are a feature added in 0.14.6 and above, allowing you to specify an <em>extra</em> talking frame that triggers when your voice reaches a higher threshold. You can set this threshold in the settings tab!</p>
+<p>The threshold should always be <em>above</em> the talk threshold! Just like the talk threshold, the yelling threshold is sensitive, so keep the number low!</p>
+<p>Yell frames are attatched to any talking pose, sort of like how blink frames work!</p>
+<p>To attach yelling frames to your poses, all you have to do is drag in your yelling image with the exact file name of the pose you want to give yelling to, but with "_yell" appended just before the file extension (.png, .gif)</p>
+<p>So "talking fella.png" becomes "talking fella_yell.png", "mumble.png" becomes "mumble_yell.png", etc.</p>
+<p>Important note, if you have a yell frame attatched to a pose that <em>also</em> is intended to be a <strong>blink frame</strong>, "<em>yell" <strong>must</strong> be prepended to "_blink".<br>
+Example: "talkin_yell_blink.png" is a yell, _and</em> blink frame!</p>
+<p>📝 Example: Let's add yelling frames for all of my talking poses in an emotion!</p>
+<p>This emotion only has one talking pose and one talking pose with a blink frame, so I'm providing two yelling frames for each one.</p>
+<ol>
+<li>Gather all of your yelling frames! png, gif, mp4, webm, you name it! You don't need to have a yell frame for every single talking pose, just apply them to the poses you want!</li>
+<li>ensure the files are named accordingly. For me, I have one talking pose "talk.png", as well as one with a blink frame attatched, "talk_blink.png". I want both of these to have a yell frame!<br>
+"talk.png" becomes "talk_yell.png"<br>
+and<br>
+"talk_blink.png" becomes "talk_yell_blink.png"</li>
+<li>drag the images into my model's unique emotion folder!</li>
+<li>click "Refresh Models", bam yelling frames.</li>
+</ol>
+<h2 id="transitions">Transitions</h2>
+<p>New as of 0.20, the Transitions module allow you to set intermediary poses between emotions! These can either be single image files, or .gif files!</p>
+<p>if you scroll down in the <code>LandiTube</code> tab in the Bridge, you will find a "Transitions" dropdown. If you click the arrow, you can see all of your transitions!</p>
+<p><strong>Global</strong> transitions are played whenever you swap emotions! These do not take into account what emotion you are on and are general purpose</p>
+<p><img src="https://i.imgur.com/vbmD7EC.gif" alt="global trans"></p>
+<p><strong>Dynamic</strong> transitions are played whenever you swap emotions, however, these are influenced by the emotions you are switching <strong>from</strong> and <strong>to</strong>. You can set a image file or gif for an <strong>intro</strong> animation, and <strong>outro</strong> animation. This allows dynamically generated transitions that flow smoothly between your emotions!</p>
+<p>Example concepts:</p>
+<p>Outros:</p>
+<ul>
+<li>Crying emotion with outro of wiping tears</li>
+<li>Sign emotion, holding a sign with a logo or phase with outro of spinning it and putting it behind your back</li>
+<li>Thinking emotion with an outro of a "eureka" moment</li>
+</ul>
+<p>COMBINED WITH</p>
+<p>Intros:</p>
+<ul>
+<li>Notepad emotion with an intro of pulling out a notepad</li>
+<li>Hungry emotion with an intro of a pained hunger hunch</li>
+<li>Celebration emotion with an intro of one big hyped jump</li>
+</ul>
+<p>With all these outros and intros, you can generate <strong>9</strong> different dynamic transitions!</p>
+<p>Example: Swapping emotions from <em>Thinking</em> to <em>Notepad</em>. Thinking emotion, with an outro of a "eureka" moment, and intro of pulling out a notepad, then writing things down.</p>
+<p><img src="https://i.imgur.com/y8d4S4W.gif" alt="dyn trans"></p>
+<p>You can have both global and dynamic transitions at the <em>same time</em>! great for if you dont have intros and outros made for every emotion!</p>
+<p><img src="https://i.imgur.com/6226O3s.gif" alt="both trans types"></p>
+<h3 id="setup">Setup</h3>
+<p>to begin using transitions, we need to make a <code>transitions</code> folder in our unique model's folder. This should be next to your <code>emotions</code> folder, like so!</p>
+<p><img src="https://i.imgur.com/kQfyJ5h.png" alt="transition folder location"></p>
+<h3 id="global-transitions">Global Transitions</h3>
+<p>Inside your <code>transitions</code> folder is where you place any image or gif files you want your model to randomly cycle through when changing from one emotion to the other!</p>
+<p>You can put <strong>as many transitions as you want, they will be randomly cycled through!</strong></p>
+<p><img src="https://i.imgur.com/KPgCFpt.gif" alt="show global transitions in a folder"></p>
+<p>and done! clicking "Refresh Models" in the bridge under the LandiTube tab will load those transitions into OBS and be recognized for usage!<br>
+(yeah, its that easy!)</p>
+<p><img src="https://i.imgur.com/3pKekgZ.gif" alt="showcase global transition defaults"></p>
+<p>This looks... okay... needs to be a bit faster.</p>
+<p>You might want some extra customization for your single image files, like how long you want the transition to hold for. thankfully, all you have to do is create a <code>.fenc</code> file next to your transition image with the same name, and it will act as a configuration for that specific transition! <code>.fenc</code> files can easily be created by first creating a <code>.txt</code> text file through the right click menu, then renaming the file extension to <code>.fenc</code>.</p>
+<p><img src="https://i.imgur.com/MpaWRiX.png" alt="showcasing where .fenc file is stored for global transitions"></p>
+<p>open the <code>.fenc</code> file with your favorite text editor, and lets go over how this is written!</p>
+<p>the name of the option you want to edit is first, so in my case im starting with <code>duration</code>, then you type <code>=</code>, and lastly you type the value. For example, changing the <code>duration</code> property to last 400 milliseconds looks like this: <code>duration=400</code></p>
+<p>every newline is another option!</p>
+<p><img src="https://i.imgur.com/x0gIepv.png" alt="showcase options in fenc file"></p>
+<p>here are the list of options you can change for single image transitions:</p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+<th>type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>duration</code></td>
+<td>Change how long you want the duration to last on screen for in milliseconds!</td>
+<td>Number</td>
+<td>duration=350</td>
+</tr>
+</tbody>
+</table>
+<p>now, hitting refresh gives us...</p>
+<p><img src="https://i.imgur.com/7NXZMex.gif" alt="tweaked global transition using fenc file"></p>
+<p><em>so</em> much better!</p>
+<p>...but we can make it even better.</p>
+<h3 id="dynamic-transitions">Dynamic Transitions</h3>
+<p>Dynamic transitions are way cooler and will for sure wow your audience!! Dynamic transitions allow what are known as <code>intro</code> animations, and <code>outro</code> animations which play based on the current, and next emotion.</p>
+<p>Here is a helpful diagram showcasing the power of this system (read left to right):</p>
+<p><img src="https://i.imgur.com/1M1068M.gif" alt="show diagram"></p>
+<p>Red: Current Emotion (exiting)<br>
+Blue: New Emotion (entering)<br>
+Yellow: Transition</p>
+<p>Here, we can see that we can connect <em>unique</em> animations when we exit our current emotion, and enter our new emotion. With this in mind, we create an entirely <em>unique</em> transition which gets generated from your <strong>current emotion outro</strong>, and your <strong>new emotion intro</strong>.</p>
+<p>Taking a look at the global transition in the top half of the diagram, you can see that the transition is not connected or influenced by our emotions in any way.</p>
+<p><img src="https://i.imgur.com/l51HWQH.gif" alt="show dynamic transition"></p>
+<p>Notice how my character shakes their head before pulling out a notepad and writing on it.</p>
+<p>the character will shake their head whenever exiting the angry emotion, as its unique to that emotion.<br>
+pulling out the notepad will occur whenever entering the notepad emotion.</p>
+<p>Now with that explained... lets add some!</p>
+<p>Since dynamic transitions are tied to emotions, we need to make folders in the <code>transitions</code> folder that are the <em>exact</em> names of our emotions!</p>
+<p>I'm going to add an outro animation to my angry emotion, and an intro animation to my notepad prop emotion, so i need to make folders that I can put those into!</p>
+<p><img src="https://i.imgur.com/AHgePuE.png" alt="show folders in transitions, representing emotions to be assigned animations"></p>
+<p>Seem familiar? It should! This is <em>exactly</em> what you did back when you were adding <code>emotions</code>! make sure the names match one-to-one!</p>
+<p>Let's enter an emotion's transition folder to edit first. I'll go with the angry emotion!</p>
+<p>Alright, how do we set the intro and outro animations to our emotion?</p>
+<h4 id="outro-animations">Outro Animations</h4>
+<p>Outro animations are played whenever you are leaving your <strong>current</strong> emotion for a <strong>new</strong> one.</p>
+<p>To add an outro animation, drag your image file or gif file (can be named anything!) into the folder, and add <code>_out</code> at the end of it, before the file extension.</p>
+<p>Example: <code>shakehead.gif</code> becomes <code>shakehead_out.gif</code></p>
+<p><img src="https://i.imgur.com/pRVlRVE.gif" alt="example outro add"></p>
+<p>Click "Refresh Models", and check your Transitions list! you should see a new outro animation set for your emotion.</p>
+<p>Your outro will always play, even if the new emotion you are swapping to doesnt have an intro! its better than having a global transition thats for sure :P</p>
+<h4 id="intro-animations">Intro Animations</h4>
+<p>Intro animations are played whenever you are <em>entering</em> your <strong>new</strong> emotion from your <strong>current</strong> one.</p>
+<p>To add an intro animation, drag your image file or gif file (can be named anything!) into the folder, and add <code>_in</code> at the end of it, before the file extension.</p>
+<p>Example: <code>fetchnotepad.gif</code> becomes <code>fetchnotepad_in.gif</code></p>
+<p><img src="https://i.imgur.com/Jwzfo95.gif" alt="example intro add"></p>
+<p>Click "Refresh Models", and check your Transitions list! you should see a new intro animation set for your emotion.</p>
+<p>Your intro will always play, even if the current emotion you are swapping away from doesnt have an outro! its better than having a global transition thats for sure :P</p>
+<h4 id="config">Config</h4>
+<p>If you dont use gif files and use png files, you can add a <code>.fenc</code> just like you can for global single frame transitions, check there to figure out how to do it for your dynamic transitions! Options are the same.</p>
+<h4 id="extra-notes">Extra notes</h4>
+<ul>
+<li>Of course, you can have an intro and outro in one emotion. In fact, you can have many intros and outros in an emotion! LandiTube will randomly pick for you.<br>
+<img src="https://i.imgur.com/wRQkErz.png" alt="showing intro and outro in one emotion"></li>
+</ul>
+<h1 id="layers">Layers</h1>
+<p>When you create a LandiTube model, you draw poses and frames! But what if you want to give your model a prop, such as...</p>
+<ul>
+<li>A hat that follows your model's head movement?</li>
+<li>A handheld item (pen, drink, food) that follows your model's hand movement?</li>
+<li>Clothing that has various moving parts?</li>
+</ul>
+<p>Sounds like a pain in the <strong>ASS</strong> to re-draw <strong>All</strong> of your poses just to have one prop, then create a whole separate Emotion to toggle to, right??</p>
+<p><strong>This is where layers step in!</strong></p>
+<p>Layers, introduced in 0.20, are used to dynamically change what is displayed in front of or behind your model based on its active pose, <strong>without</strong> directly changing the model itself!</p>
+<p>The way this is accomplished is by generating a source which acts as a freely-transformable reference of an OBS Scene that you can align wherever you want <em>per pose</em>. It's not as complex as you think!</p>
+<p>Head on over to the "Layers" tab in the bridge so we can try it out!</p>
+<p><img src="https://i.imgur.com/P3bCJHh.png" alt="layers tab location"></p>
+<p>You should have two layers available to you (for now), Front layer, and Back Layer. In order to use these we first need to create an OBS Scene for the layers to reference, so lets go into OBS and create a new scene.<br>
+I'll call mine "Hats"!<br>
+After doing so, lets add an image of a cute hat using an Image Source! I'll align my hat to the center of the scene.</p>
+<p><img src="https://i.imgur.com/xDUMdWi.png" alt="new obs scene with an image source displaying a tophat"></p>
+<p>Back in the bridge, lets set our <em>front</em> layer to the scene "Hats". and see what happens!</p>
+<p><img src="https://i.imgur.com/YpxubUO.gif" alt="gif of adding the hats scene as a front layer and showcasing how messed up it looks"></p>
+<p>Woah, thats weird lookin.</p>
+<p>What happened, is it has merged <code>[LandiTube]</code>, and the <code>Hats</code> scene together, and it doesn't look so great! lets tweak it!</p>
+<p>In OBS, if we go into the <code>[LandiTube] Layers (Front)</code> scene, we'll see a source for every pose and frame we have loaded into LandiTube. Pretty funky names!</p>
+<p><img src="https://i.imgur.com/nb5nia3.png" alt="all generated sources in layers scene"></p>
+<p>Each of these sources are referencing our <code>Hats</code> scene, and we can freely move these sources as we please! each source is attatched to a pose, meaning that when poses change, the sources toggle themselves too depending on what pose you're on!</p>
+<p>We can transform each individual source however we want per loaded pose!</p>
+<p><img src="https://i.imgur.com/FYZgn6B.gif" alt="demonstrating moving sources"></p>
+<p>We have a bit of a problem though. We can't see our model, how the heck are we supposed to align these sources properly??</p>
+<p>To see your model <em>and</em> transform the sources in the layer scene at the same time, right click the <code>[LandiTube] Customize</code> scene and click "Windowed Projector (Scene)". This will pop out a window of this scene, which contains your model, plus it's layers without the squishiness so you can align your sources easier!<br>
+Right click the window and click "Always On Top" so the window will always be visible while editing in OBS.</p>
+<p><img src="https://i.imgur.com/Kj2qGuk.gif" alt="viewing model and editing layer"></p>
+<p>Cool! we can head back to <code>[LandiTube] Layers (Front)</code> and start messing with our sources and see our model at the same time for alignments. But there is another issue!<br>
+It's <strong>really hard</strong> to align some poses like ones with blink frames attatched, because they are only a split second long!<br>
+I also have trouble selecting the source I <em>actually</em> want to edit and i keep grabbing all the other ones!</p>
+<p>This can all be fixed by using the <strong>Pose Selector!</strong></p>
+<p>In the bridge under the "Layers" tab, towards the bottom there is a "Pose Selector" section!<br>
+In here, you can click on any pose loaded for your model which will freeze the engine and allow you to take your time aligning your sources, as well as making sure only the corresponding source in the layers scene is able to be transformed.</p>
+<p><img src="https://i.imgur.com/ZJATVPO.gif" alt="showcase pose selector"></p>
+<p>So much better! So far, everything is going well! We can see our model while moving around sources in our layers scene, we can freeze the engine to take our time aligning our sources on a specific pose, and fix the issue of selecting unrelated sources! Let's start aligning some sources!</p>
+<p>You can crop, squish, stretch, rotate, do anything you want to these sources to fit them just how you like, to your model! Go nuts!</p>
+<p>You may encounter one final hiccup however... what if two poses don't have any extra movement in a specific area?? Do I have to manually try to align them perfectly?</p>
+<p><img src="https://i.imgur.com/5GlB87v.gif" alt="jittery layer"></p>
+<p><strong>No!</strong></p>
+<p>You can copy and paste transformations between sources in OBS! right click the source you want to copy all of the transformation properties from, and click <code>Transform &gt; Copy Transform</code>. from there, right click the source that you want to have the exact same transformation, and click <code>Transform &gt; Paste Transform</code>. Perfect! Now they are perfectly aligned, no jitter!</p>
+<p><img src="https://i.imgur.com/tKv5iSv.gif" alt="showcasing copy transform"></p>
+<p>Here are some pro tips to transform sources easier in OBS:</p>
+<ul>
+<li>Use the ARROW keys to nudge sources by the pixel, and hold SHIFT to move in 5 pixel increments.</li>
+<li>Hold the CONTROL key while dragging, or rotating to disable source snapping to avoid having your sources snap places you don't want them!</li>
+<li>Holding the SHIFT key while rotating will snap the source rotation by 15 degree increments!</li>
+<li>Hold the Left ALT key while dragging a side to easily crop a source (this is highly not recommended when transforming sources in a layers scene)</li>
+<li>Use filters! each source clone is independant of each other, so you can add a filter like <a href="https://obsproject.com/forum/resources/3d-effect.1692/">3D Effect by Exeldro</a> to move a source in a 3d space, or add a user-defined shader with the automatically installed obs-shaderfilter fork by Exeldro and use the <code>corner-pin.shader</code> file to map corners of a source to different coordinates. Play around! have fun!</li>
+</ul>
+<p>With this knowledge, you should be a pro at aligning all of these sources just the way you want them on your model! <img src="https://i.imgur.com/s5HDg7B.gif" alt="layer making timelapse"></p>
+<p>When finished with your layer, click <strong>Resume Engine</strong> in the "Layers" tab of your bridge, otherwise your model will appear frozen when trying to get it to talk!</p>
+<p><img src="https://i.imgur.com/iMQYQI5.gif" alt="resume engine demo"></p>
+<p>Okay Landie, I did all of that work and I have a hat that perfectly aligns to my head. What is the benefit of this again??</p>
+<p>Keeping the <code>[LandiTube] Customize</code> scene in a window projector, heading over to the <code>Hats</code> scene (the scene all of our sources in our layer scene are referencing), swap the image!</p>
+<p><img src="https://i.imgur.com/4AovIlL.gif" alt="new image source"></p>
+<p>As you can see, its now incredibly easy to swap out this hat for any image we want and have it already apply all the transformations needed to align to our model! make it a gif, or a png!</p>
+<p>But this is an entire <strong>scene</strong> we are working with in OBS.<br>
+we have <strong>All types of sources available to us</strong>, not just Image sources!<br>
+Get wild! Use a media source, a display capture, maybe a browser source for friends in a discord call to sit on your head, sky's the limit!</p>
+<p><img src="https://i.imgur.com/Y8OVKeS.gif" alt="media source demo"></p>
+<p>Combining this capability with the limitless functionality of SAMMI will allow you to have your viewers change various aspects of your layers, making your stream the most unique out there!</p>
+<ul>
+<li>Twitch channel point redeems to change hats, glasses, held objects</li>
+<li>Rotate a source around whenever you speak, for maybe tails?</li>
+</ul>
+<p>Anything you could imagine!</p>
+<p>Please check out the <strong>Tutorials</strong> section of the site to look at a couple of step-by-step guides on how to capitalize on the functionality of layers using SAMMI, and the LandiTube API!!</p>
+<h1 id="dynamic-lighting">Dynamic Lighting</h1>
+<p>NEW as of 0.20, LandiTube gets dynamic lighting natively built in!</p>
+<p>This component boasts features such as:</p>
+<ul>
+<li>Base lighting around the whole model</li>
+<li>Auto generated rim lighting around the model, which can be moved in real time</li>
+<li>Applies to any layers and/or custom sources in <code>[LandiTube] Customize</code></li>
+</ul>
+<p>A new tab "Dynamic Lighting" has been added to your bridge, allowing you configure how you want it!</p>
+<p>To begin, you first need to make sure you have a scene that ONLY contains the sources you are capturing in OBS and intend to have dynamic lighting for.</p>
+<p>What this means, is that you need a single scene to contain all of your game captures, display captures, capture cards, whatever you're using! This can be seen as a utility scene.</p>
+<p><img src="https://i.imgur.com/R88pUcp.png" alt="scene containing all capture sources"></p>
+<p>Create a new scene, and add all of your favorite captures in there! Then, import this scene into all of the scenes where you want your gameplay to show up.</p>
+<p>Not only is this needed for dynamic lighting to work, but it is much more tidy for your stream setup, so thank me later!</p>
+<p><img src="https://i.imgur.com/eSicjRs.png" alt="before game scene"></p>
+<p><img src="https://i.imgur.com/FuEwtRV.png" alt="after game scene"></p>
+<p>Now you're ready!</p>
+<p>In the bridge, click the "Dynamic Lighting" tab and set your light source to your scene full of your game/application captures.</p>
+<p>Congrats! you now have a light source. Enable "Backlight" to check it out!</p>
+<p><img src="https://i.imgur.com/M7PLtU1.gif" alt="dynamic lighting demo"></p>
+<p>Warning! if no captures are active in the scene containing all of them, your model will disappear! Add a color source (preferably black) as the background in your scene behind all of your capture sources to fix this, or, any background you wish to use when no games or displays are being captured!!</p>
+<p><img src="https://i.imgur.com/oYQ81HY.gif" alt="fix blank model dynlight"></p>
+<h2 id="backlight">Backlight</h2>
+<p>Backlight is the most basic form of dynamic lighting. This applies to your entire model, and can be as influencial as you want on your model.</p>
+<h3 id="options">Options</h3>
+<p>The <code>Brightness</code> slider impacts <strong>how much of the colored light is applied to your model</strong>!</p>
+<p>The <code>Saturation</code> slider impacts <strong>how colorful the light is on your model</strong>. if colors feel too washed out to your liking, or too overpowering and not accurate to the display, tweak it here!</p>
+<h2 id="rimlight">Rimlight</h2>
+<p>Rimlight is an extra, high intensity layer applied ontop of your model which is auto generated in <code>[LandiTube] Dynamic Rim Lighting Template</code>.</p>
+<h3 id="rimlight-appearance">Rimlight Appearance</h3>
+<p>To change how much or less area affects your model, enter that scene, hold the "Control" key to disable snapping, then click and drag the <code>LandiTube DM Black</code> source.</p>
+<p>The white being shown is what your rimlight will look like on your model. Once you're happy, you can check out the result wherever you have LandiTube shown!</p>
+<p><img src="https://i.imgur.com/UPSH1Ph.gif" alt="modifying rim light via drag"></p>
+<h3 id="options">Options</h3>
+<p>The <code>Opacity</code> slider impacts <strong>how much of the rimlight is visible on your model</strong>.</p>
+<p>The <code>Feathering</code> slider impacts <strong>the radius of the rimlight</strong>. If you want it softer and less sharp, add more feathering! if you want it cartoonish and sharp to the model, reduce it!</p>
+<h1 id="sammi-commands">SAMMI Commands</h1>
+<h2 id="landitube-change-model">LandiTube: Change Model</h2>
+<p>Changes the current model to another valid model!</p>
+<table>
+<thead>
+<tr>
+<th>Box Name</th>
+<th>Type</th>
+<th>required?</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<p>Model Name | Dropdown | ✔ | The name of the model you wish to swap to. (casing matters!)|</p>
+<h2 id="landitube-change-emotion">LandiTube: Change Emotion</h2>
+<p>Changes the current model's emotion to another valid emotion!</p>
+<table>
+<thead>
+<tr>
+<th>Box Name</th>
+<th>Type</th>
+<th>required?</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<p>Model Name | Dropdown | ✔ | The name of the emotion you wish to swap to. (casing matters!)|</p>
+<h2 id="landitube-pause-engine">LandiTube: Pause Engine</h2>
+<p>Pauses all actions of the engine, leaving your character stuck in stasis. poor lad!</p>
+<table>
+<thead>
+<tr>
+<th>Box Name</th>
+<th>Type</th>
+<th>required?</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<p>Reset Squish | boolean (checkbox) | ✔ | If ticked, after executing the command, the engine will stop and the proportions wil|</p>
+<h2 id="landitube-resume-engine">LandiTube: Resume Engine</h2>
+<p>Resumes default engine behavior c: For use after previously pausing the engine! otherwise this command is just a fun paperweight in digital form~</p>
+<h1 id="custom-events-using-api">Custom Events using API</h1>
+<p>Like the engine, but want to add your own integrations using SAMMI? You can absolutely do that with relative ease if you know SAMMI! The PNGTuber engine provides various different environments and data for you to listen to, and read!</p>
+<p>First, lets go over the Extension Triggers provided by "LandiTube".</p>
+<h2 id="extension-triggers">Extension Triggers</h2>
+<p>Extension triggers are a way for a SAMMI button to be ran based on certain criteria specified by the Engine. This works exactly like if your button is set up to trigger on twitch chat. You can read more about extension triggers and SAMMI <a href="https://sammi.solutions/docs/triggers/general#extensiontrigger">here</a>.</p>
+<p>Currently, there exist these Extension Triggers:</p>
+<table>
+<thead>
+<tr>
+<th>Extension Trigger</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LandiTube talking true</code></td>
+<td>triggers a button when the character starts talking</td>
+</tr>
+<tr>
+<td><code>LandiTube talking false</code></td>
+<td>triggers a button when the character is finished talking</td>
+</tr>
+<tr>
+<td><code>LandiTube blinking true</code></td>
+<td>triggers a button when the character blinks</td>
+</tr>
+<tr>
+<td><code>LandiTube blinking false</code></td>
+<td>triggers a button when the character is done blinking</td>
+</tr>
+<tr>
+<td><code>LandiTube yelling true</code></td>
+<td>triggers a button when the character yells</td>
+</tr>
+<tr>
+<td><code>LandiTube yelling false</code></td>
+<td>triggers a button when the character is done yelling</td>
+</tr>
+<tr>
+<td><code>LandiTube model changed</code></td>
+<td>triggers a button when the model is changed from the current active model</td>
+</tr>
+<tr>
+<td><code>LandiTube model</code> (modelname)</td>
+<td>triggers a button when the model is changed and matches a specific model</td>
+</tr>
+<tr>
+<td><code>LandiTube emotion changed</code></td>
+<td>triggers a button when the emotion is changed from the current active emotion</td>
+</tr>
+<tr>
+<td><code>LandiTube emotion</code> (emotionname)</td>
+<td>triggers a button when the emotion is changed and matches a specific emotion</td>
+</tr>
+</tbody>
+</table>
+<p>Each extension trigger returns the same hefty amount of juicy data when that extension trigger was sent for you to read and tinker with.</p>
+<p>You can pull these values using the command "<code>Trigger Pull Data</code>" on a button that was triggered with one of these Extension Triggers mentioned above.</p>
+<p>Here are the list of fields you can enter in the <code>Pull Value</code> box:</p>
+<table>
+<thead>
+<tr>
+<th>Pull Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blink</code></td>
+<td><em>boolean</em></td>
+<td>Current blinking state</td>
+</tr>
+<tr>
+<td><code>current_emotion</code></td>
+<td><em>string</em></td>
+<td>The current set expression of the active model</td>
+</tr>
+<tr>
+<td><code>current_emotion_path</code></td>
+<td><em>string</em></td>
+<td>the current image path compiled together using <code>global.main_directory</code>, <code>current_model</code>, <code>current_state</code>, and <code>current_emotion_state_extension</code></td>
+</tr>
+<tr>
+<td><code>current_emotion_poses_idle</code></td>
+<td>Array</td>
+<td>An Array of the current model's idle poses (not including blinks)</td>
+</tr>
+<tr>
+<td><code>current_emotion_poses_talking</code></td>
+<td>Array</td>
+<td>An Array of the current model's talking poses (not including blinks)</td>
+</tr>
+<tr>
+<td><code>current_emotion_state_extension</code></td>
+<td><em>string</em></td>
+<td>The current state's file extension to be used in conjunction with <code>current_state</code> to create a full file</td>
+</tr>
+<tr>
+<td><code>current_model</code></td>
+<td><em>string</em></td>
+<td>The current active model</td>
+</tr>
+<tr>
+<td><code>current_state</code></td>
+<td><em>string</em></td>
+<td>The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses</td>
+</tr>
+<tr>
+<td><code>current_state_has_blink</code></td>
+<td><em>boolean</em></td>
+<td>If your state has the ability to blink or not! Version 0.13.2^</td>
+</tr>
+<tr>
+<td><code>talking</code></td>
+<td><em>boolean</em></td>
+<td>Current talking state</td>
+</tr>
+<tr>
+<td><code>yelling</code></td>
+<td><em>boolean</em></td>
+<td>Current yelling state</td>
+</tr>
+</tbody>
+</table>
+
+
+            <!--docs end-->
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+<script>
+tocbot.init({
+// Where to render the table of contents.
+tocSelector: '.toc',
+// Where to grab the headings to build the table of contents.
+contentSelector: '.docs',
+// Which headings to grab inside of the contentSelector element.
+headingSelector: 'h1, h2, h3',
+// For headings inside relative or absolute positioned containers within content.
+hasInnerContainers: true
+});
+
+var tooltipTriggerList = []
+.slice
+.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+var myOffcanvas = document.getElementById('offcanvasExample');
+var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+document
+    .getElementById("sidebar-button")
+    .addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        bsOffcanvas.toggle();
+    });
+});
+</script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+        <script src="/shop/shop.js"></script>
+        <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+        <script>
+            var tooltipTriggerList = []
+                .slice
+                .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+        
+        
+    
+</body></html>
