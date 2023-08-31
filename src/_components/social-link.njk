@@ -1,8 +1,9 @@
-{% macro socialLink(link, icon, colorBottom, colorTop) %}
-    <a class="link-clear" href="{{link}}" target="_blank" rel="noopener noreferrer">
+{% macro socialLink(title, link, icon, colorBottom, colorTop) %}
+    <a class="link-clear social-link" href="{{link}}" target="_blank" rel="noopener noreferrer">
         <button class="main-link quick-link m-2"
               style="background: linear-gradient(to top, rgb({{colorBottom}}), rgb({{colorTop}}));">
             {{icon | safe}}
+    <div class="quick-link-tooltip" style="position: absolute; left: 0; right: 0; top: -25px; margin-left: auto; margin-right: auto; width: 5rem; background-color: white; background: linear-gradient(to top, rgb({{colorTop}}), rgb({{colorBottom}}));"><p style="margin: 0;">{{title|safe}}</p></div>
         </button>
     </a>
 {% endmacro %}

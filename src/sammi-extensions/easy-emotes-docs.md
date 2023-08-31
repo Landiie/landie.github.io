@@ -1,28 +1,27 @@
 ---
 layout: product-docs.njk
-title: LandiTube Docs
+title: Easy Emotes ~ Documentation
 permalink: /shop/sammi-extensions/easy-emotes/documentation/
 ---
-Commands
-========
 
-Easy Emotes: Fetch Emotes In String
------------------------------------
+# Commands
+
+## Easy Emotes: Fetch Emotes In String
 
 ### Parameters
 
-| Box Name | Type | required? | Description |
-| --- | --- | --- | --- |
-| Save Array Variable | _Array_ | ✔   | Variable name to save the returned array of image pathes to. |
-| String to Search | _string_ | ✔   | The text you wish to search for any emotes. This searches for emotes in cache, which is all FFZ, BTTV, 7TV, and any twitch emotes already in cache. |
-| Emote List for TTV Search | _string_ | ❌   | Required if searching for Twitch emotes. Retrieved from `Trigger Pull Data` on a Twitch Chat trigger! |
-| Verbose? | _Checkbox (boolean)_ | ❌   | Changes the format of the output to return objects of each emote, containing additional information such as the service it's from, scope of emote, it's url, type, and name! You should know how to loop through arrays and use objects if using this! |
+| Box Name                  | Type                 | required? | Description                                                                                                                                                                                                                                            |
+| ------------------------- | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Save Array Variable       | _Array_              | ✔         | Variable name to save the returned array of image pathes to.                                                                                                                                                                                           |
+| String to Search          | _string_             | ✔         | The text you wish to search for any emotes. This searches for emotes in cache, which is all FFZ, BTTV, 7TV, and any twitch emotes already in cache.                                                                                                    |
+| Emote List for TTV Search | _string_             | ❌        | Required if searching for Twitch emotes. Retrieved from `Trigger Pull Data` on a Twitch Chat trigger!                                                                                                                                                  |
+| Verbose?                  | _Checkbox (boolean)_ | ❌        | Changes the format of the output to return objects of each emote, containing additional information such as the service it's from, scope of emote, it's url, type, and name! You should know how to loop through arrays and use objects if using this! |
 
 ### Responses
 
-| Value | Type | Description |
-| --- | --- | --- |
-| `somevariablename[]` | _Array_ | Array containing a local file path each emote in order. |
+| Value                   | Type     | Description                                                               |
+| ----------------------- | -------- | ------------------------------------------------------------------------- |
+| `somevariablename[]`    | _Array_  | Array containing a local file path each emote in order.                   |
 | `somevariablename[0-?]` | _string_ | string representing an emote's file location. for use in an image source! |
 
 ### Example 📝
@@ -35,7 +34,7 @@ Easy Emotes: Fetch Emotes In String
               "c:/sammi/Landies_Extensions/Easy Emotes/Emote Cache/196892.png"
            ]
         }
-        
+
 
 ![Example LB](./easyemotes-docs-1.gif)
 

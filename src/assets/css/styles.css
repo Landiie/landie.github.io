@@ -56,6 +56,32 @@ iframe {
   box-shadow: 5px 5px 10px black;
 }
 
+.nav-item-docs {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.nav-item-docs > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item-docs > a:hover {
+  color: white;
+}
+
+.nav-item-docs > a:visited {
+  color: white;
+}
+
+.quick-link:hover .quick-link-tooltip {
+  display: block;
+}
+
+.quick-link-tooltip {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -314,7 +340,7 @@ button {
 }
 
 .quick-link {
-  transition: 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: 100ms cubic-bezier(0, 0.95, 0.44, 1.14);
 }
 
 .quick-link:hover {

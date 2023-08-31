@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="shop-section-contents p-3">
-  {% for extension in collections.sammiExtension %}
+  {%- for extension in collections.sammiExtension.reverse() -%}
     <!--{{extension.data.title}}-->
     <button type="button" onclick="location.href='{{ extension.url }}'" data-tilt
               data-tilt-max="10" data-tilt-scale="1.05" class="shop-item" style="background-image: url({{ extension.data.image }}); background-size: contain;"
@@ -40,6 +40,6 @@
         </div>
       </div>
     </button>
-  {% endfor %}
+  {%- endfor -%}
 </div>
 <script src="/assets/js/shop.js"></script>

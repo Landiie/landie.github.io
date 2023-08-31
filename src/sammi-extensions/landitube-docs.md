@@ -1,6 +1,6 @@
 ---
 layout: product-docs.njk
-title: LandiTube Docs
+title: LandiTube ~ Documentation
 permalink: /shop/sammi-extensions/landitube/documentation/
 ---
 
