@@ -10,7 +10,7 @@
   "tags": ["product", "sammiExtension"],
   "price": "$4",
   "permalink": "/shop/sammi-extensions/gamepad-triggers/",
-  "image": "/assets/sammi-extensions/gamepad-triggers/cover.png",
+  "image": "/assets/images/sammi-extensions/gamepad-triggers/cover.png",
   "imageAlt": "Product icon for Gamepad Triggers",
   "authors": ["Landie"],
   "shopLabels": ["$4", "Utility"],

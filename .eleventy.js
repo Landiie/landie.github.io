@@ -4,12 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(anchors_plugin);
 
   eleventyConfig.addPassthroughCopy("./src/pfp.png");
-  eleventyConfig.addPassthroughCopy("./src/styles.css");
-  eleventyConfig.addPassthroughCopy("./src/styles-page.css");
   eleventyConfig.addPassthroughCopy("./src/papaparse.min.js");
-  eleventyConfig.addPassthroughCopy("./src/shop/shop.js");
-  eleventyConfig.addPassthroughCopy("./src/shop/shop-live-indicator.js");
-  eleventyConfig.addPassthroughCopy("./src/shop/product.js");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");

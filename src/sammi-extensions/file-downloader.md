@@ -10,7 +10,7 @@
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/file-downloader/",
-  "image": "/assets/sammi-extensions/file-downloader/cover.png",
+  "image": "/assets/images/sammi-extensions/file-downloader/cover.png",
   "imageAlt": "Product icon for File Downloader",
   "authors": ["Landie"],
   "shopLabels": ["Free", "Utility"],
