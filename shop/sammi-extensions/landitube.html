@@ -54,12 +54,19 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">WARNING!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="padding: 5rem;">
-                    <div>
-                        LandiTube currently does NOT work on the latest version of OBS:
-                        OBS v29.1.0.
-
-                        Please downgrade to 29.0.2 or lower (not before obs 28) to continue using LandiTube for now!!
+                <div class="modal-body" style="padding: 1rem;">
+                    <div class="container">
+                        <div class="row d-flex flex-column align-items-center text-center">
+                            <h1>⚠ IMPORTANT! ⚠</h1>
+                            Recently, a plugin LandiTube relies on has had it's download taken down!<br>
+                            I'm working on a fix as a new alternative is now available, however, <span style="color: red;">You will get an error when installing.</span><br>
+                            <h4>This is okay! I can help work around it for you until the patch comes out!</h4><br>
+                            Please view any of my contact methods, and I will send you some small instructions to get past the error.<br>
+                            <h1>Once installed, LandiTube works perfectly ok!</h1>
+                            <br>
+                            <br>
+                            Please join my <a href="https://discord.gg/ZTbMw7TVKa">Discord</a> for support, updates on LandiTube, and more!<br>I'm almost always available!
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1387,15 +1394,15 @@
 
         //* show modal
 
-        // window.onload = () => {
-        //     // document.querySelector('#exampleModal').modal('show')
-        //     const myModal = new bootstrap.Modal('#exampleModal', {
-        //         keyboard: false,
-        //         show: true
-        //     })
-        //     myModal.show();
+        window.onload = () => {
+            // document.querySelector('#exampleModal').modal('show')
+            const myModal = new bootstrap.Modal('#exampleModal', {
+                keyboard: false,
+                show: true
+            })
+            myModal.show();
 
-        // }
+        }
 
 
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
