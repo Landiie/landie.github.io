@@ -190,7 +190,7 @@ What are you waiting for? Check out the [Setup](#setup) page for prerequisites, 
 
 <!--setup start-->
 
-lol2
+**This is the setup tab**
 
 <!--setup end-->
 
@@ -198,7 +198,7 @@ lol2
 
 <!--tutorials start-->
 
-lol3
+This is the tutorial tab
 
 <!--tutorials end-->
 
@@ -206,6 +206,5 @@ lol3
 
 <!--patchnotes start-->
 
-lol4
-
+my awesome patch notes
 <!--patchnotes end-->
