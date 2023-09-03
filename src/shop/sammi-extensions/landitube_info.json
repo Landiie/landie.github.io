@@ -1,0 +1,55 @@
+
+  "layout": "product.njk",
+  "date": "2023-01-08",
+  "tags": ["product", "sammiExtension"],
+  "title": "LandiTube",
+  "permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
+  "description": "Advanced 2D VTuber framework powered by SAMMI!",
+  "image": "/assets/images/sammi-extensions/landitube/cover.png",
+  "imageAlt": "Product icon for LandiTube",
+  "authors": ["Landie"],
+  "shopLabels": ["Free", "Utility", "OBS Widget", "Voice", "Beta"],
+  "price": "FREE",
+  "version": "0.20.0",
+  "versionSummaryHeader": "Lights, Layers.... Transitions! 150+ hours of work, for you!",
+  "versionSummaryBody": "Read the full patch notes <a href=\"https://landie.land/shop/sammi-extensions/landitube.html#patchnotes\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"display: none\">here!</a>",
+  "downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
+  "sammiImage": "https://landie.land/assets/sammi-extensions/landitube/cover%20bridge.png",
+  "versions": {
+    "0200": {
+      "valid_versions": {
+        "bridge": ["7.14", "7.20"],
+        "obs": ["29.1.2", "29.1.3"],
+        "sammi": ["2023.2.1", "2023.2.1.1", "2023.2.2"]
+      }
+    }
+  },
+  "obs_plugins": {
+    "names": [
+      "Move Transition",
+      "Source Clone",
+      "Shader Filter (Exeldro Fork)",
+      "Blur Filter (prgmitchell Fork)"
+    ],
+    "direct_download_links": [
+      "https://obsproject.com/forum/resources/move-transition.913/version/4904/download?file=94076",
+      "https://obsproject.com/forum/resources/source-clone.1632/version/4881/download?file=93640",
+      "https://github.com/exeldro/obs-shaderfilter/releases/download/v1.22/obs-shaderfilter-1.22.0-windows.zip",
+      "https://github.com/prgmitchell/blur-filter/releases/download/1.1.0/blur-filter-1.1.0-win.zip"
+    ],
+    "download_links": [
+      "https://obsproject.com/forum/resources/move-transition.913/",
+      "https://obsproject.com/forum/resources/source-clone.1632/",
+      "https://github.com/exeldro/obs-shaderfilter/releases",
+      "https://github.com/prgmitchell/blur-filter/releases"
+    ]
+  },
+  "sammi_extensions": {
+    "names": ["Folder Reader", "Sando"],
+    "download_links": [
+      "https://landie.land/shop/sammi-extensions/folder-reader",
+      "https://landie.land/shop/sammi-extensions/sando"
+    ]
+  },
+  "motd": "hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
+}
