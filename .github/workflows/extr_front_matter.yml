@@ -16,10 +16,7 @@ jobs:
       - name: Set up node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-
-      - name: Install dependencies
-        run: npm install
+          node-version: "18"
 
       - name: Extract JSON and Create JSON Files
         run: node mdfm-to-json.js
