@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Test",
   "description": "test product",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "versionSummaryHeader": "admin fixes, new commands, really important",
   "versionSummaryBody": "extract zip with admin rights didn't work right, or at least, SHOULDN'T have. some people are fine, but others aren't so this patch fixes that, which is used by my extensions heavily. as for the new commands, there is Sando: OBS Find Scene and Set Deck Buttons Variables. really only helpful for me",
   "tags": ["product", "sammiExtension"],
