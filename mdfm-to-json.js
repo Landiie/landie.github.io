@@ -5,6 +5,16 @@ const path = require("path")
 const directoryPath = "src/sammi-extensions/" // input .md files
 const outputDirectory = "src/shop/sammi-extensions" // output .json files
 
+// Function to create a directory if it doesn't exist
+const createDirectoryIfNotExists = (directory) => {
+  if (!fs.existsSync(directory)) {
+    fs.mkdirSync(directory, { recursive: true })
+  }
+}
+
+// Ensure the output directory exists
+createDirectoryIfNotExists(outputDirectory)
+
 const getHash = (content) => {
   const hash = crypto.createHash("md5")
   const data = hash.update(content, "utf-8")
