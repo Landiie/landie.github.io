@@ -1,0 +1,32 @@
+name: Extract JSON from Markdown Front Matter
+
+on:
+  push:
+    paths:
+      - "src/sammi-extensions/**.md"
+
+jobs:
+  extract_json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Extract JSON and Create JSON Files
+        run: node .\mdfm-to-json.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@example.com"
+          git config --local user.name "GitHub Actions"
+          git commit -a -m "Extracted JSON from markdown files"
+          git push
