@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Extract JSON and Create JSON Files
-        run: node .\mdfm-to-json.js
+        run: node mdfm-to-json.js
 
       - name: Commit and push changes
         run: |
