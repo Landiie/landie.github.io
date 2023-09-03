@@ -24,9 +24,13 @@ jobs:
       - name: Extract JSON and Create JSON Files
         run: node mdfm-to-json.js
 
-      - name: Commit and push changes
+      - name: Configure Git
         run: |
-          git config --local user.email "actions@example.com"
-          git config --local user.name "GitHub Actions"
-          git commit -a -m "Extracted JSON from markdown files"
-          git push
+          git config --global user.email "actions@example.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Add and Commit Files
+        run: |
+          git add src/shop/sammi-extensions/*
+          git commit -m "Add generated JSON files"
+          git push origin eleventy-ify-2
