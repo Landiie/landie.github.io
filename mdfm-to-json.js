@@ -32,7 +32,7 @@ const trimExt = (file) => {
 
 const getJsonData = (mdContent) => {
   const posEnd = mdContent.indexOf(`\n---`)
-  const jsonData = mdContent.substring(9, posEnd)
+  const jsonData = mdContent.substring(7, posEnd)
 
   return jsonData
 }
