@@ -5,7 +5,7 @@
   "title": "LandiTube",
   "permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
   "description": "Advanced 2D VTuber framework powered by SAMMI!",
-  "image": "/assets/sammi-extensions/landitube/cover.png",
+  "image": "/assets/images/sammi-extensions/landitube/cover.png",
   "imageAlt": "Product icon for LandiTube",
   "authors": ["Landie"],
   "shopLabels": ["Free", "Utility", "OBS Widget", "Voice", "Beta"],

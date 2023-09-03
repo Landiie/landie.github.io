@@ -6,7 +6,7 @@ permalink: /shop/sammi-extensions/landitube/documentation/
 
 # Bridge and You!
 
-![landitube in the bridge with highlighted](../landitube-docs-1.png)
+![landitube in the bridge with highlighted](/assets/images/sammi-extensions/landitube/docs-1.png)
 
 This is what your bridge will look like! lets run by section.
 
@@ -43,15 +43,15 @@ After adding a models folder, click the "Refresh Models" button in the bridge to
 
 Here is a visual example of my models folder, where I have two models loaded, and one click on marking it _active_.
 
-![Visual of file explorer in the models directory, with two folders labeled "Landie" and "Apple"](../landitube-docs-2.png)
+![Visual of file explorer in the models directory, with two folders labeled "Landie" and "Apple"](/assets/images/sammi-extensions/landitube/docs-2.png)
 
-![Showcasing the result inside the models list located in the bridge](../landitube-docs-3.png)
+![Showcasing the result inside the models list located in the bridge](/assets/images/sammi-extensions/landitube/docs-3.png)
 
 ## Emotions
 
 To create emotions for your model, you first need to specify an "emotions" folder in your unique model's folder. This is what it should look like:
 
-![File explorer, showing an emotions folder nested inside a unique model's folder](../landitube-docs-4.png)
+![File explorer, showing an emotions folder nested inside a unique model's folder](/assets/images/sammi-extensions/landitube/docs-4.png)
 
 In total, your file path should look something like `(LandiTube Path)\models\(unique model folder)\emotions`!
 
@@ -61,9 +61,9 @@ After adding an emotion folder, click the "Refresh Models" button in the bridge 
 
 Here are some emotions i made in my "emotions" folder inside the "Landie" model folder.
 
-![File explorer, showing multiple uniquely named folders inside the "emotions" folder](../landitube-docs-5.png)
+![File explorer, showing multiple uniquely named folders inside the "emotions" folder](/assets/images/sammi-extensions/landitube/docs-5.png)
 
-![showcasing the rendered result inside the bridge](../landitube-docs-6.png)
+![showcasing the rendered result inside the bridge](/assets/images/sammi-extensions/landitube/docs-6.png)
 
 ## Poses
 
@@ -89,9 +89,9 @@ For every image containing the keyword "idle" in it's file name inside your emot
 
 Example: Lets make _three_ idle poses for an emotion!
 
-1.  Have three idle image files ready! animated or not, its okay! make sure each idle image file contains the word "idle" in there at least once! my files are named `"idle.png"`, `"idle2.png"`, and `"idle3.png"` respectively. ![showing idle poses in folder](../landitube-docs-7.png)
+1.  Have three idle image files ready! animated or not, its okay! make sure each idle image file contains the word "idle" in there at least once! my files are named `"idle.png"`, `"idle2.png"`, and `"idle3.png"` respectively. ![showing idle poses in folder](/assets/images/sammi-extensions/landitube/docs-7.png)
 2.  Hit "Refresh Models" in your bridge! This should recalculate all the poses you have.
-3.  Now, whenever you finish talking, It will pick any out of the idle poses provided! ![showing tuber now with three idle poses](../landitube-docs-8.gif)
+3.  Now, whenever you finish talking, It will pick any out of the idle poses provided! ![showing tuber now with three idle poses](/assets/images/sammi-extensions/landitube/docs-8.gif)
 
 Hmm. That doesn't look great. Lets look into adding some talking poses!
 
@@ -105,9 +105,9 @@ For every randomly named image inside your emotion folder, those images will be 
 
 Example: Lets make two talking poses for my PNGTuber to pick from!
 
-1.  Have two talking image files ready! animated or not, its okay! Ive named my talking poses `"one paw talkin.png"`, and `"two paws talkin.png"`. ![showing talking poses in folder](../landitube-docs-9.png)
+1.  Have two talking image files ready! animated or not, its okay! Ive named my talking poses `"one paw talkin.png"`, and `"two paws talkin.png"`. ![showing talking poses in folder](/assets/images/sammi-extensions/landitube/docs-9.png)
 2.  Hit "Refresh Models" in your bridge! This should recalculate all the poses you have.
-3.  Now, whenever you talk, It will pick either one, or the other! ![showing tuber now with two talking poses](../landitube-docs-10.gif)
+3.  Now, whenever you talk, It will pick either one, or the other! ![showing tuber now with two talking poses](/assets/images/sammi-extensions/landitube/docs-10.gif)
 
 Looks much better! but there is quite a dead stare.. lets add blinking!
 
@@ -123,9 +123,9 @@ So "idle.png" becomes "idle_blink.png", "one paw talkin.png" becomes "one paw ta
 
 Example: Lets add blinking frames to all of our inserted idle, and talking poses!
 
-1.  Have your blinking image files ready! animated or not, its okay! every image is the same as the other images inside the emotion's folder, but with "\_blink" added. Image below! ![showing talking poses in folder](../landitube-docs-11.png)
+1.  Have your blinking image files ready! animated or not, its okay! every image is the same as the other images inside the emotion's folder, but with "\_blink" added. Image below! ![showing talking poses in folder](/assets/images/sammi-extensions/landitube/docs-11.png)
 2.  Refresh is not needed for blinks! at least i think so. if you see an issue, just hit "Refresh Models"!
-3.  Now, every pose has blinks! ![showing tuber now with blinking frames for every pose previously added](../landitube-docs-12.gif)
+3.  Now, every pose has blinks! ![showing tuber now with blinking frames for every pose previously added](/assets/images/sammi-extensions/landitube/docs-12.gif)
 
 ### Yelling
 
@@ -138,8 +138,9 @@ Yell frames are attatched to any talking pose, sort of like how blink frames wor
 To attach yelling frames to your poses, all you have to do is drag in your yelling image with the exact file name of the pose you want to give yelling to, but with "\_yell" appended just before the file extension (.png, .gif)
 
 So "talking fella.png" becomes "talking fella_yell.png", "mumble.png" becomes "mumble_yell.png", etc.
-
-Important note, if you have a yell frame attatched to a pose that _also_ is intended to be a **blink frame**, "_yell" **must** be prepended to "\_blink".  
+{% alert "warning" %}
+Important note, if you have a yell frame attatched to a pose that _also_ is intended to be a blink frame, "_yell" must be prepended to "_blink".
+{% endalert %}  
 Example: "talkin_yell_blink.png" is a yell, \_and_ blink frame!
 
 📝 Example: Let's add yelling frames for all of my talking poses in an emotion!
@@ -498,27 +499,27 @@ The `Feathering` slider impacts **the radius of the rimlight**. If you want it s
 
 Changes the current model to another valid model!
 
+{primary}
 | Box Name | Type | required? | Description |
 | -------- | ---- | --------- | ----------- |
-
 Model Name | Dropdown | ✔ | The name of the model you wish to swap to. (casing matters!)|
 
 ## LandiTube: Change Emotion
 
 Changes the current model's emotion to another valid emotion!
 
+{primary}
 | Box Name | Type | required? | Description |
 | -------- | ---- | --------- | ----------- |
-
 Model Name | Dropdown | ✔ | The name of the emotion you wish to swap to. (casing matters!)|
 
 ## LandiTube: Pause Engine
 
 Pauses all actions of the engine, leaving your character stuck in stasis. poor lad!
 
+{primary}
 | Box Name | Type | required? | Description |
 | -------- | ---- | --------- | ----------- |
-
 Reset Squish | boolean (checkbox) | ✔ | If ticked, after executing the command, the engine will stop and the proportions wil|
 
 ## LandiTube: Resume Engine
@@ -537,6 +538,7 @@ Extension triggers are a way for a SAMMI button to be ran based on certain crite
 
 Currently, there exist these Extension Triggers:
 
+{primary}
 | Extension Trigger                 | Description                                                                   |
 | --------------------------------- | ----------------------------------------------------------------------------- |
 | `LandiTube talking true`          | triggers a button when the character starts talking                           |
@@ -556,16 +558,17 @@ You can pull these values using the command "`Trigger Pull Data`" on a button th
 
 Here are the list of fields you can enter in the `Pull Value` box:
 
+{primary}
 | Pull Value                        | Type      | Description                                                                                                                                      |
 | --------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `blink`                           | _boolean_ | Current blinking state                                                                                                                           |
-| `current_emotion`                 | _string_  | The current set expression of the active model                                                                                                   |
-| `current_emotion_path`            | _string_  | the current image path compiled together using `global.main_directory`, `current_model`, `current_state`, and `current_emotion_state_extension`  |
+| `blink`                           | *boolean* | Current blinking state                                                                                                                           |
+| `current_emotion`                 | *string*  | The current set expression of the active model                                                                                                   |
+| `current_emotion_path`            | *string*  | the current image path compiled together using `global.main_directory`, `current_model`, `current_state`, and `current_emotion_state_extension`  |
 | `current_emotion_poses_idle`      | Array     | An Array of the current model's idle poses (not including blinks)                                                                                |
 | `current_emotion_poses_talking`   | Array     | An Array of the current model's talking poses (not including blinks)                                                                             |
-| `current_emotion_state_extension` | _string_  | The current state's file extension to be used in conjunction with `current_state` to create a full file                                          |
-| `current_model`                   | _string_  | The current active model                                                                                                                         |
-| `current_state`                   | _string_  | The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses |
-| `current_state_has_blink`         | _boolean_ | If your state has the ability to blink or not! Version 0.13.2^                                                                                   |
-| `talking`                         | _boolean_ | Current talking state                                                                                                                            |
-| `yelling`                         | _boolean_ | Current yelling state                                                                                                                            |
+| `current_emotion_state_extension` | *string*  | The current state's file extension to be used in conjunction with `current_state` to create a full file                                          |
+| `current_model`                   | *string*  | The current active model                                                                                                                         |
+| `current_state`                   | *string*  | The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses |
+| `current_state_has_blink`         | *boolean* | If your state has the ability to blink or not! Version 0.13.2^                                                                                   |
+| `talking`                         | *boolean* | Current talking state                                                                                                                            |
+| `yelling`                         | *boolean* | Current yelling state                                                                                                                            |

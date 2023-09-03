@@ -28,7 +28,7 @@ The current methods are _long and tedious_, and the best way to display them is 
 
 Which is absolutely **_abysmal_** for your stream's performance (Its a chrome browser tab for every source!)
 
-![demonstration of the abysmal way to add an emote into OBS](./easyemotes-1.gif)
+![demonstration of the abysmal way to add an emote into OBS](/assets/images/sammi-extensions/easy-emotes/1.gif)
 
 **THE HELL⁉**
 
@@ -41,7 +41,7 @@ All you have to do is:
 2.  Get back an array of local image pathes of the emotes in less than a second.
 3.  use Source Change Settings to set an image from the array.
 
-![using Source Change Settings to display an emote from the returned array in an image source](./easyemotes-2.gif)
+![using Source Change Settings to display an emote from the returned array in an image source](/assets/images/sammi-extensions/easy-emotes/2.gif)
 
 #### _Full quality, efficient, performance friendly emote! It's That Easy_ !
 
@@ -66,21 +66,27 @@ Take chat emote, put into OBS. 3 steps.
 
 ### Input:
 
-![An example of "Download Files" usage](./easyemotes-3.png)
+![An example of "Download Files" usage](/assets/images/sammi-extensions/easy-emotes/3.png)
 
 ### Output:
 
-!["Download Files" output](./easyemotes-4.png)
+!["Download Files" output](/assets/images/sammi-extensions/easy-emotes/4.png)
 
 ### Display in OBS!
 
-![using Source Change Settings to display an emote from the returned array in an image source](./easyemotes-5.png)
+![using Source Change Settings to display an emote from the returned array in an image source](/assets/images/sammi-extensions/easy-emotes/5.png)
 
 How do i get started?
 ---------------------
 
 Visit the [Setup Page](#setup) for an in-depth, easy to follow quick start guide!
 <!--overview end-->
+<!-- more -->
+<!--overview right start-->
+
+![images](/assets/images/sammi-extensions/easy-emotes/demo.gif)
+
+<!--overview right end-->
 <!-- more -->
 <!--setup start-->
 Getting Started
@@ -105,7 +111,7 @@ Wait until all of the yellow messages are gone, then you are ready to use the ex
 Bridge Buddies!
 ---------------
 
-![bridge p1](./easyemotes-6.png) ![bridge p2](./easyemotes-7.png)
+![bridge p1](/assets/images/sammi-extensions/easy-emotes/6.png) ![bridge p2](/assets/images/sammi-extensions/easy-emotes/7.png)
 
 This is what your bridge will look like! lets run by section.
 

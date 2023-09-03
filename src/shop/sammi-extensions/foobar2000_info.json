@@ -9,7 +9,7 @@
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/foobar2000/",
-  "image": "/assets/sammi-extensions/foobar2000/cover.png",
+  "image": "/assets/images/sammi-extensions/foobar2000/cover.png",
   "imageAlt": "Product icon for foobar2000",
   "authors": ["Landie"],
   "shopLabels": ["Free", "Utility", "Audio"],

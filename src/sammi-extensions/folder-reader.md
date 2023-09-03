@@ -18,14 +18,7 @@
   "sammiImage": "https://landie.land/assets/sammi-extensions/folder-reader/cover_bridge.png"
 }
 ---
-<!--imported macros-->
-{% import "../_components/alert.njk" as alert %}
-
 <!--overview start-->
-
-{% alert "warning", "red" %}
-This is a button-breaking update!
-{% endalert %}
 
 # ❓ What is this?
 
@@ -66,9 +59,11 @@ Made with Love, [Landie](https://landie.land)
 Visit the [Setup tab](#setup) for an in-depth, easy to follow quick start guide!
 
 <!--overview end-->
-
 <!-- more -->
-
+<!--overview right start-->
+right side
+<!--overview right end-->
+<!-- more -->
 <!--setup start-->
 
 # Getting Started
@@ -160,9 +155,9 @@ Huge overhaul to support the new Command Line introduced in 2023.2.0, abandoning
 
 Update requires SAMMI's local API to be turned on before usage!
 
-{{ alert.warning('This is a button-breaking update! If you have any \"Folder Reader: Read\" commands in any buttons, Remove any commands afterwards that parse a stringified array. This command now returns a full array, so no more parsing stringified arrays.  
-If you have a Local API Password set, you\'ll need to put that password in every command. A password isn\'t needed for the Local API, unless if you think someone on your home network will do something malicious.') }}
-
+{% alert "danger" %}
+This is a button-breaking update! Versions below this one will have to makes some adjustments!
+{% endalert %}
 
 - New Box: Local API Password
 - Incredibly reduced fetch time using SAMMI's Local API and cURL
