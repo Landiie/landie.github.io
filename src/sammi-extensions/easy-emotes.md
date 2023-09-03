@@ -124,11 +124,13 @@ Install the .sef as you would normally, and allow the deck to be replaced. Easy 
 <!--setup end-->
 <!-- more -->
 <!--tutorials start-->
-
+Nothing here yet!
 <!--tutorials end-->
 <!-- more -->
-<!--patchnotes start-->
-
-lol4
-
-<!--patchnotes end-->
+<!--troubleshooting start-->
+No troubleshooting yet
+<!--troubleshooting end-->
+<!-- more -->
+<!--patchntoes start-->
+No patch notes yet
+<!--patchntoes end-->

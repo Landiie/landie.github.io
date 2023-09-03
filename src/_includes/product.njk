@@ -125,7 +125,7 @@
     </div>
     <div class="tab-pane" id="patchnotes" role="tabpanel" aria-labelledby="patchnotes-tab">
       <div class="row">
-        <div class="col-xl-9 col-lg-12 productpage-section-contents-body">
+        <div class="col-xl-9 col-lg-12 productpage-section-contents-body patch-notes-content">
           <!--Patch notes start-->
           {{ content | splitContent(4) | safe }}
           <!--Patch notes end-->
@@ -133,7 +133,7 @@
         <div class="col-xl-3 col-lg-12">
           <div
                                             class="sticky-xl-top productpage-section-contents-body productpage-section-contents-sidebar">
-            <div class="productpage-section-contents-sidebar-body">
+            <div class="productpage-section-contents-sidebar-body toc">
               <!--toc, to be auto genned-->
             </div>
 
@@ -150,3 +150,35 @@
 <script type="text/javascript" src="https://static.itch.io/api.js"></script>
 <script src="/assets/js/product.js" product-name="{{title | slugify}}"></script>
 <script src="/assets/js/product-tabs.js" product-name="{{title | slugify}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+<script>
+tocbot.init({
+// Where to render the table of contents.
+tocSelector: '.toc',
+// Where to grab the headings to build the table of contents.
+contentSelector: '.patch-notes-content',
+// Which headings to grab inside of the contentSelector element.
+headingSelector: 'h1',
+// For headings inside relative or absolute positioned containers within content.
+hasInnerContainers: true
+});
+{# 
+var tooltipTriggerList = []
+.slice
+.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+var myOffcanvas = document.getElementById('offcanvasExample');
+var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+document
+    .getElementById("sidebar-button")
+    .addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        bsOffcanvas.toggle();
+    });
+}); #}
+</script>
