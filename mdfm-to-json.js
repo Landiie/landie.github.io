@@ -3,7 +3,7 @@ const crypto = require("crypto")
 const path = require("path")
 
 const directoryPath = "src/sammi-extensions/" // input .md files
-const outputDirectory = "src/shop/sammi-extensions" // output .json files
+const outputDirectory = "src/shop/sammi-extensions/" // output .json files
 
 // Function to create a directory if it doesn't exist
 const createDirectoryIfNotExists = (directory) => {
