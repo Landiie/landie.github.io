@@ -18,6 +18,7 @@
   "sammiImage": "https://landie.land/assets/sammi-extensions/folder-reader/cover_bridge.png"
 }
 ---
+
 <!--overview start-->
 
 # ❓ What is this?
@@ -61,7 +62,9 @@ Visit the [Setup tab](#setup) for an in-depth, easy to follow quick start guide!
 <!--overview end-->
 <!-- more -->
 <!--overview right start-->
+
 right side
+
 <!--overview right end-->
 <!-- more -->
 <!--setup start-->
@@ -75,13 +78,13 @@ right side
 
 ## General Extension Command Usage
 
-![local variable persist visual](./command-usage-1.png)
+![local variable persist visual](/assets/images/sammi-extensions/command-usage-1.png)
 
 When you use these commands, any command that stores data in a variable must be a **persistent** button. You can check and change your button's persistence by checking that button's settings. This is a limitation of SAMMI, so this must be done for your variable saving commands to work.
 
 A slightly **purple colored** command implies that the command is **not instant**. This means that you have to provide a delay, or, what is recommended, a `Wait Until Variable Exists` command block right after, which halts everything until that command returns the data that is required for the rest of the button to work. **Since buttons are persistent, you must have a `Delete Variable` command in the top of your button to ensure that it is properly waiting for new data to exist**.
 
-![purple command proper usage](./command-usage-2.png)
+![purple command proper usage](/assets/images/sammi-extensions/command-usage-2.png)
 
 1.  `Delete Variable`: ensures that the `Wait Until Variable Exists` command waits for a brand new variable to exist
 2.  `Purple Extension Command`: indicates that the command doesn't return the information instantly. must be paired with delay.
