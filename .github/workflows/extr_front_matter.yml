@@ -21,13 +21,18 @@ jobs:
       - name: Extract JSON and Create JSON Files
         run: node mdfm-to-json.js
 
-      - name: Configure Git
-        run: |
-          git config --global user.email "actions@example.com"
-          git config --global user.name "GitHub Actions"
+      - name: Create Products JSON
+        run: node products-to-json.js
 
-      - name: Add and Commit Files
+      - name: Commit files (if needed)
         run: |
-          git add src/shop/sammi-extensions/*
-          git commit -m "Add generated JSON files"
-          git push origin eleventy-ify-2
+          if [[ `git status --porcelain` ]]; then            
+            git config --global user.email "actions@example.com"
+            git config --global user.name "GitHub Actions"
+            git add .
+            git commit -m "Add generated files from GH Actions"
+            git push      
+          else
+            echo "No changes needed. move along."
+          fi
+        shell: bash
