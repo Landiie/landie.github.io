@@ -75,7 +75,50 @@ Made with Love, [Landie](https://landie.land)
 <!-- more -->
 <!--setup start-->
 
-Setup content here!
+Getting Started
+===============
+
+### Prerequisites
+
+**This requires SAMMI version "2022.3.0 CE" or higher to work!** Download SAMMI [here](https://sammi.solutions/docs/download)
+
+**The bridge must be connected at ALL times**
+
+**Bridge MUST be docked in OBS**
+
+### Installation
+
+1.  Download the .SEF file
+2.  Install the .SEF file via the left hand side menu of the SAMMI core, and clicking the bridge button, then clicking "Install an Extension".
+
+Done!
+
+### Bridge And You™
+
+The Bridge is an integral part of this extension, and in order to use it properly, you need to familiarize yourself with the bridge's interface. **This works best with chrome, you should already have your bridge docked in OBS, which uses chromium. Firefox, and other browsers have issues.**
+
+![gamepad triggers bridge](./gamepad-triggers-docs-1.png)
+
+Above it tells you the name of the extension, author, my socials, and version. If an update is available, a big yellow banner will appear telling you to update. Please make sure to click that when you see it.
+
+Below that is a massive table of analog sticks, and buttons that are associated to your controller on connection. It also displays the name of your controller. These are dynamically generated [Extension Triggers](./gamepad-triggers.html#documentation) for use in the SAMMI Core.
+
+The very bottom has links to support me, which i highly recommend so i can keep making awesome extensions for you lovely people 💚
+
+there is also a special thanks accordion drop down for beta testers and supporters! (and soon patrons...?)
+
+Updating
+--------
+
+I value updates a lot, so i can ensure everyone has the top quality product! When the bridge connects, there is an automatic update check. If there is a new update available, an alert message will be displayed in your receiver to check your bridge for an update button which checks, and provides a link to the releases section of this extension.
+
+If you have a lot of alert messages pop up on bridge connect, you might miss it. I recommend clicking the "Check for updates" button in this extension's tab in the bridge every so often, or if you encounter an issue out of the blue.
+
+### ⚠ Updating Procedure
+
+To update this extension, please follow the steps below!
+
+1.  Install the extension as normal. Allow the bridge to continue with installation, confirming overwrite. done!
 
 <!--setup end-->
 <!-- more -->
