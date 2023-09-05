@@ -1,6 +1,6 @@
 [functions]
 directory = "api"
-included_files = ["src/shop/sammi-extensions/**.json"]
+included_files = [".src/shop/sammi-extensions/**.json"]
 [[redirects]]
 from = "/api/*"
 to = "/.netlify/functions/:splat"
