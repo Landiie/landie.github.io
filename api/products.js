@@ -9,9 +9,9 @@ exports.handler = async function (event, context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: {
+      body: JSON.stringify({
         message: error,
-      },
+      }),
     };
   }
   console.log(productData);
@@ -21,10 +21,10 @@ exports.handler = async function (event, context) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: {
+    body: JSON.stringify({
       category: category,
       product: product,
       product_data: productData,
-    },
+    }),
   };
 };
