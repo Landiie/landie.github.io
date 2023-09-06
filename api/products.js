@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {
-  let statusCode = 200;
+  let productData
   const { category, product } = event.queryStringParameters;
   try {
-    const productData = require(`../src/shop/${category}/${product}_info.json`);
+    productData = require(`../src/shop/${category}/${product}_info.json`);
   } catch (error) {
     return {
       statusCode: 400,
