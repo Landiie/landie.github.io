@@ -391,7 +391,7 @@ button {
 .site-shop {
   overflow: hidden;
   transition: 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
   position: relative;
   height: 90vh;
   width: 90vw;
@@ -1208,6 +1208,7 @@ p {
 
   .site-shop {
     overflow-x: hidden !important;
+    backdrop-filter: blur(0);
     width: 100vw;
     height: 100vh;
   }
@@ -1250,5 +1251,11 @@ p {
 @media only screen and (max-width: 992px) {
   .navbar-site {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .shop-filter {
+    display: none;
   }
 }

@@ -1,13 +1,14 @@
 <div class="mt-4 shop-header d-flex flex-wrap align-items-center justify-content-start" style="gap: 1rem;">
     <div class="d-flex align-items-center justify-content-center">
         <img style="width: 4rem;" class="me-3" src="/assets/images/logo.png" alt="">
-        <button onclick="location.href='/shop'">
-        <h1 class="shop-header-title">Landie's Shop</h1>
+        <button onclick="location.href='/{{pageType | slugify}}'">
+            <h1 class="shop-header-title">Landie's {{pageType | safe}}</h1>
         </button>
     </div>
     <div class="header-links">
         <a href="/">Home</a>
-        {# <a href="/">Blog</a> #}
+        <a href="/shop">Shop</a>
+        <a href="/blog">Blog</a>
     </div>
     <a href="https://twitch.tv/Landie" target="_blank" rel="noopener noreferrer" style="display: none"
           class="live-indicator">
