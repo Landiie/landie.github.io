@@ -18,7 +18,7 @@ exports.handler = async function (event, context) {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      patrons: patronData,
+      patreon: patronData
     }),
   };
 };
