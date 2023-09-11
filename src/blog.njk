@@ -3,73 +3,44 @@ layout: fullheight.njk
 pageType: Blog
 Title: Blog
 ---
-<div class="blog-posts-recent d-flex flex-wrap flex-row">
-    <h2>Recent Posts</h2>
-    <div class="blog-post-card">
-
-        <div class="row" style="background-color: red; height: 100%;">
-            <div class="col">
-                <div class="d-flex flex-wrap align-items-center" style="gap: 1rem;">
-                    <h3>My First Blog</h3>
-                    <p style="margin: 0; margin-top: 10px;">Sept. 9th 2023</p>
+<div style="margin: 2rem;">
+    <h1>Recent Posts</h1>
+    <div class="blog-posts-list">
+        {%- for post in collections.blog -%}
+            <article class="blog-post-card">
+                <h3 class="blog-post-card-header">{{ post.data.title}}</h3>
+                <span class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    <p style="margin: 0;" class="ms-2 no-outline">{{ post.date | humanDate }}</p>
+                </span>
+                <span class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"/>
+                    </svg>
+                    <p style="margin: 0;" class="ms-2 no-outline">{{ post.content | readTime }}</p>
+                </span>
+                <div class="blog-post-card-desc no-outline">
+                    <p>{{ post.content | excerpt }}</p>
                 </div>
-                this is a test asdsapdjaspdjaspdjsapdoj sadoj aspdojsajpdsjopd as jodjo podajpdjo asppoasjo ds jodpoadjo apsj odpsajdasopjd aps jdpj
+                <button onclick="location.href='{{ post.url }}'" class="btn btn-primary blog-post-card-readmore">Read More</button>
+                <div class="blog-post-card-image d-flex justify-content-center align-items center" style="background-image: url({{ post.data.image }});"></div>
+            </article>
+        {%- endfor -%}
+        {# <article class="blog-post-card">
+            <h3 class="blog-post-card-header">This is a very long blog post name</h3>
+            <span class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <p style="margin: 0;" class="ms-2">Fri 5th September 2023</p>
+            </span>
+            <div class="blog-post-card-desc no-outline">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, vel! Cum, quo excepturi amet perferendis omnis molestiae fuga dolorem inventore dolore consequuntur ea earum, eum voluptatem explicabo perspiciatis aliquam quaerat!</p>
             </div>
-            <div class="col">
-                a
-            </div>
-        </div>
+            <button class="btn btn-primary blog-post-card-readmore">Read More</button>
+            <div class="blog-post-card-image d-flex justify-content-center align-items center" style="background-image: url(https://cdn.discordapp.com/attachments/1093729726054543440/1122149535888711740/pikmin_landie.png);"></div>
+        </article> #}
     </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-    <div class="blog-post-card">
-            best test ever
-        </div>
-
 </div>

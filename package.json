@@ -20,8 +20,7 @@
   "homepage": "https://github.com/Landiie/landiie.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "eleventy": "^1.0.6",
-    "markdown-it": "^13.0.1"
+    "eleventy": "^1.0.6"
   },
   "dependencies": {
     "@orchidjs/eleventy-plugin-ids": "^0.1.1",

@@ -56,18 +56,49 @@ iframe {
   box-shadow: 5px 5px 10px black;
 }
 
-.blog-posts-recent {
-  margin-top: 1rem;
-  margin-right: 10rem;
-  margin-left: 10rem;
-  gap: 1rem;
+.blog-posts-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .blog-post-card {
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 0.5rem;
+  padding: 1.5rem;
   width: 100%;
-  height: 10rem;
+  border-radius: 1rem;
+  transition: 200ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.blog-post-card:hover {
+  transform: scale(1.04);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.619);
+}
+
+.blog-post-card-image {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 15rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  transition: 200ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.blog-post-card-image:hover {
+  background-size: 110%;
+}
+
+.blog-post-card-desc > p {
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-card-header {
+  margin-bottom: 0.1rem;
 }
 
 .nav-item-docs {
@@ -714,8 +745,8 @@ button {
   overflow-y: scroll;
   max-height: 75vh;
 }
-
-.productpage-section-contents-body > h1,
+ 
+h1,
 h2,
 h3,
 h4,
@@ -1157,6 +1188,16 @@ p {
   color: rgb(0, 0, 0);
 }
 
+.no-outline p {
+  text-shadow: none !important;
+  color: rgb(0, 0, 0);
+}
+
+.no-outline {
+  text-shadow: none !important;
+  color: rgb(0, 0, 0);
+}
+
 .main-header-title {
   font-size: 4rem;
 }
@@ -1217,8 +1258,17 @@ p {
     display: none;
   }
 }
+@media only screen and (max-width: 1400px) {
+  .blog-posts-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media only screen and (max-width: 768px) {
+  .blog-posts-list {
+    grid-template-columns: 1fr;
+  }
+
   .shop-header-nav {
     display: flex;
     flex-direction: row;
