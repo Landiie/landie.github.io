@@ -21,27 +21,27 @@
   {%- for extension in collections.sammiExtension.reverse() -%}
     <!--{{extension.data.title}}-->
     {% if extension.data.hidden != true %}
-    <button type="button" onclick="location.href='{{ extension.url }}'" data-tilt
+      <button type="button" onclick="location.href='{{ extension.url }}'" data-tilt
               data-tilt-max="10" data-tilt-scale="1.05" class="shop-item" style="background-image: url({{ extension.data.image }}); background-size: contain;"
               data-shop-item-name="{{extension.data.title}}">
-      <ul class="label-list">
-        {% for label in extension.data.shopLabels %}
-          {% set hyphenatedLabel = label | replace(" ", "-") | lower %}
-          <li class="label-{{ hyphenatedLabel }}">{{ label }}</li>
-        {% endfor %}
-      </ul>
-      <div class="shop-item-overlay">
-        <div class="shop-item-bounds container">
-          <div class="row shop-item-header">
-            <h1>{{extension.data.title}}</h1>
-          </div>
-          <div class="shop-item-body">
-            <p>{{extension.data.description}}</p>
+        <ul class="label-list">
+          {% for label in extension.data.shopLabels %}
+            {% set hyphenatedLabel = label | replace(" ", "-") | lower %}
+            <li class="label-{{ hyphenatedLabel }}">{{ label }}</li>
+          {% endfor %}
+        </ul>
+        <div class="shop-item-overlay">
+          <div class="shop-item-bounds container">
+            <div class="row shop-item-header">
+              <h1>{{extension.data.title}}</h1>
+            </div>
+            <div class="shop-item-body">
+              <p>{{extension.data.description}}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </button>
-    {%endif%}
-  {%- endfor -%}
-</div>
-<script src="/assets/js/shop.js"></script>
+      </button>
+      {%endif%}
+    {%- endfor -%}
+  </div>
+  <script src="/assets/js/shop.js"></script>

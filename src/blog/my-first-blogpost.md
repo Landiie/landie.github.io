@@ -2,8 +2,22 @@
 title: My First Blogpost!
 date: 2023-09-11
 tags: ["blog"]
-pageType: Blog
-layout: fullheight.njk
+layout: blogpost.njk
 image: https://cdn.discordapp.com/attachments/1093729726054543440/1093730364847050882/Landie__femb_BG.png
 ---
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod reiciendis excepturi animi ex fugit atque? Voluptate deserunt repellendus quasi perspiciatis sequi, debitis nihil tempore, repellat voluptates quae tempora, laborum corrupti mollitia ullam. Molestiae velit ducimus inventore aliquam minima tenetur excepturi facilis reprehenderit nisi ratione iste voluptatum dolore hic illum voluptatibus incidunt reiciendis suscipit corporis aliquid provident, repudiandae sed? Laborum eligendi assumenda ipsa? Ipsa dolor quae, doloribus consequatur assumenda, quibusdam obcaecati dolorum mollitia soluta possimus enim facilis eligendi a quos modi dolore incidunt tempore. Consequatur, deleniti dolores ducimus autem alias ut delectus veniam quidem ea earum voluptate quis unde. Libero minus beatae rem dolorem. Doloribus sequi repudiandae eaque iste molestiae nemo alias obcaecati exercitationem beatae aut impedit omnis dolores culpa eius voluptatem illo tenetur officiis error perspiciatis perferendis optio quidem, corporis a! Necessitatibus, soluta? Consequatur ad ex laboriosam. Eum non unde eligendi hic maiores accusantium omnis ab, quia eveniet, perspiciatis incidunt enim eaque ratione, sunt animi est! Fugit architecto provident nemo quisquam, quia rerum odit inventore, voluptatibus, maiores at quas delectus amet libero quae minima ducimus aspernatur possimus eum repellendus laboriosam incidunt. Deserunt perspiciatis dolor qui voluptate facere ad dolore distinctio soluta sed possimus magnam dolorum, molestias obcaecati? Molestias nostrum, sint commodi at iste sunt aliquid reiciendis illum vitae. Inventore nesciunt dicta, ea quo et, numquam cupiditate iste iusto necessitatibus non magni similique voluptates voluptatem omnis soluta quae. Provident dolore totam corporis at, alias sit quas a numquam, minima asperiores corrupti ad voluptatum officia fugit quisquam animi laborum quo ab veniam sequi vitae. Voluptates provident cum a obcaecati cumque, ad impedit placeat! Ab fugit vero esse modi odit error omnis cum molestias dicta tempore, eaque id nostrum quo officiis sit quasi provident sequi deserunt quos voluptatem illum ea quis. Eos culpa incidunt inventore sint blanditiis placeat non, obcaecati repellat excepturi doloremque assumenda perspiciatis, id labore, ipsum iste soluta quibusdam? Ratione distinctio perferendis, quod asperiores fugit veritatis voluptatem a exercitationem. Repellat, provident! Mollitia dolore numquam labore harum voluptatum? Hic possimus a impedit optio nostrum exercitationem dolor cum odit nemo repudiandae quasi tempora harum pariatur vel obcaecati distinctio rerum, officia sapiente quis corporis. Expedita eos, in nemo et, optio harum nostrum tempore, minus sit iusto accusamus voluptatem illo animi eaque? Porro quisquam cumque accusamus maiores cum eveniet voluptas voluptates nobis eligendi deserunt nam facilis est, architecto amet, tenetur expedita, incidunt adipisci. Dicta, saepe odio ratione ducimus aliquid temporibus ipsum accusantium repudiandae, expedita ex nostrum cumque tenetur non eos. Soluta iusto perspiciatis voluptates sapiente quibusdam vero, facilis voluptatum accusantium non eius quia magni dignissimos porro dolores officiis natus dolorum molestias. Enim rem quis accusantium amet magnam odio tempora veritatis earum, sed voluptas consectetur iure voluptate nemo labore eaque itaque hic dicta. Nemo ipsa numquam eos deserunt rerum quas, aliquam facilis sint voluptatem mollitia eveniet deleniti rem molestiae hic reprehenderit! Autem, a at libero assumenda amet aliquid velit cum voluptate consequatur. Facere amet laborum totam impedit voluptas ratione ea, architecto quod maiores fugiat corporis voluptates, dicta minima assumenda earum blanditiis vero! Doloremque libero amet nemo!
+
+# WOW!
+
+My first blogpost, would you look at that! I want to try many things and make sure they work well, but i dont want to spend forever on making a silly test blog post
+
+{% alert "warning" %}
+woah
+{%endalert%}
+
+{% alert "info" %}
+woah!
+{%endalert%}
+
+{% alert "success" %}
+woah!
+{%endalert%}

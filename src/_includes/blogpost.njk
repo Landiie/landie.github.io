@@ -1,0 +1,86 @@
+---
+layout: base.njk
+pageType: Blog
+---
+<!--bg effects and decals-->
+<div class="custom-background">
+    <div class="floaties">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<p class="position-fixed" style="bottom: -10px; right: 10px;">I'm sorry, im new to making websites so some
+        things
+        may look off!</p>
+<main style="height: 98vh; width: 98vw; z-index: 5;">
+    <!--Shop Header-->
+    {% include "shop-header.njk" %}
+    <!--Shop Header End-->
+    <div class="blog-post-wrapper no-outline">
+        <div class="blog-post-header">
+            <h1>{{title}}</h1>
+            <span class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <p style="margin: 0;" class="ms-2 no-outline">{{ date | humanDate }}</p>
+            </span>
+            <span class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"/>
+                </svg>
+                <p style="margin: 0;" class="ms-2 no-outline">{{ content | readTime }}</p>
+            </span>
+        </div>
+        <div class="blog-post-content">
+            {{content | safe}}
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.18.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.docs',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+        orderedList: false
+    });
+
+    var tooltipTriggerList = []
+        .slice
+        .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var myOffcanvas = document.getElementById('offcanvasExample');
+        var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+        document
+            .getElementById("sidebar-button")
+            .addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                bsOffcanvas.toggle();
+            });
+    });
+</script>
