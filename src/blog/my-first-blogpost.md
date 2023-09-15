@@ -4,6 +4,7 @@ date: 2023-09-15
 tags: ["blog"]
 layout: blogpost.njk
 image: https://cdn.discordapp.com/attachments/1093729726054543440/1093730364847050882/Landie__femb_BG.png
+description: My first blogpost talking about why I made a blog, what it means for me, and the future of my work!
 ---
 
 # Hey!
