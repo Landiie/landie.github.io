@@ -67,6 +67,21 @@ iframe {
   padding-right: 20vw;
 }
 
+.blog-post-header,
+.blog-post-content {
+  background-color: rgba(255, 255, 255, 0.797);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.blog-post-content p {
+  font-size: 1.125rem;
+}
+
+.blog-post-content p img {
+  object-fit: fill;
+}
+
 .blog-post-header {
   margin-bottom: 1rem;
 }
@@ -1280,11 +1295,20 @@ p {
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
   }
+  .blog-post-wrapper {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .blog-posts-list {
     grid-template-columns: 1fr;
+  }
+
+  .blog-post-wrapper {
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 
   .shop-header-nav {
