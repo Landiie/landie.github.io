@@ -10,7 +10,7 @@
   "versionSummaryBody": "you shouldnt be seeing this :3",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
-  "permalink": "/shop/sammi-extensions/test-product/",
+  "permalink": "/shop/sammi-extensions/test-products/",
   "image": "/assets/images/sammi-extensions/foobar2000/cover.png",
   "imageAlt": "Product icon for Bridgecaster",
   "authors": ["Landie"],

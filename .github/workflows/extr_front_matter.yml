@@ -24,6 +24,9 @@ jobs:
       - name: Create Products JSON
         run: node products-to-json.js
 
+      - name: Pull changes from remote
+        run: git pull origin eleventy-ify-2 --rebase
+
       - name: Commit files (if needed)
         run: |
           if [[ `git status --porcelain` ]]; then            
