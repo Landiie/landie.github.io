@@ -24,9 +24,6 @@ jobs:
       - name: Create Products JSON
         run: node products-to-json.js
 
-      - name: Pull changes from remote
-        run: git pull origin eleventy-ify-2 --rebase
-
       - name: Commit files (if needed)
         run: |
           if [[ `git status --porcelain` ]]; then            
@@ -34,6 +31,7 @@ jobs:
             git config --global user.name "GitHub Actions"
             git add .
             git commit -m "Add generated files from GH Actions"
+            git pull origin eleventy-ify-2 --rebase
             git push      
           else
             echo "No changes needed. move along."
