@@ -50,6 +50,11 @@ pageType: Blog
                 <img style="object-fit: contain;" height="400" src="{{image}}" alt="">
             </div>
             {{content | safe}}
+            <div class="commentbox"></div>
+            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+            <script>
+                commentBox('5747510446391296-proj')
+            </script>
         </div>
     </div>
 </main>
