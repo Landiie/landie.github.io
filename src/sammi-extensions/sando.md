@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.1.0",
-  "versionSummaryHeader": "admin fixes, new commands, really important",
-  "versionSummaryBody": "extract zip with admin rights didn't work right, or at least, SHOULDN'T have. some people are fine, but others aren't so this patch fixes that, which is used by my extensions heavily. as for the new commands, there is Sando: OBS Find Scene and Set Deck Buttons Variables. really only helpful for me",
+  "version": "2.2.0",
+  "versionSummaryHeader": "File Tailer, Scene Packer, and some misc stuff!",
+  "versionSummaryBody": "lots of cool things i dont have time to explain, so cool!!!!",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,13 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.0
+- Additions:
+  - New: File Tailer! Hook up any log file to SAMMI via the new command `Sando: File Tailer`! set an extension trigger to output log updates to! Can be awesome for adding game integrations for your stream!
+  - New: Scene Packer! Package up a scene and all of it's nested scenes (source clone too!) into a single .spkg file, which can then be extracted as long as the recieving user has Sando installed aswell. Super useful for extension developers making OBS Widgets!! will continue to be updated
+  - New: Node Install checker. Sando will now be using various node scripts to carry out tasks like File Tailer and Scene Packer, so there is a validation process on startup now! sando commands will wait for startup to finish before continuing.
+
+There is more but i forgot to update this as i was working on it since this isn't really "public" public. hasnt has a proper announcement yet.
 
 # 2.0.1
 
