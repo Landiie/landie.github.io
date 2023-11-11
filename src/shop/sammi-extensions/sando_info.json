@@ -3,7 +3,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "versionSummaryHeader": "fixes for the node installer",
   "versionSummaryBody": "adds a logger, fixes some inconsistencies, and the infinite hanging issue a lot of people were experiencing! super recommended to update, as this is an update patch.",
   "tags": ["product", "sammiExtension"],
