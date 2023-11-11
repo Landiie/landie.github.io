@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "versionSummaryHeader": "fixes for the node installer",
   "versionSummaryBody": "adds a logger, fixes some inconsistencies, and the infinite hanging issue a lot of people were experiencing! super recommended to update, as this is an update patch.",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,13 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.2
+- Additions:
+  - added some extra logging to the scene packer for created inputs. you can view the scene packer log in your main sammi directory, under the name `packer.log`. In the future, this will be moved into `Landies_Extensions\sando\sando.log`!
+- Bug Fixes:
+  - Fixed an issue when unpacking scenes to update existing scenes. Referenced sources would cease to be created if the original source was not created in the same session. Scene packer now analyzes the current scenes and sources installed to make an extra check for those cases.
+  - Fixed an issue with the built-in auto update checker being stuck on 2.2.0
+
 # 2.2.1
 - Additions:
   - adds global variables for easy access to the "Landies Extensions" folder, keys labelled `landies_extensions` and `landies_extensions_slash` respectively
@@ -113,29 +120,24 @@ None yet
 There is more but i forgot to update this as i was working on it since this isn't really "public" public. hasnt has a proper announcement yet.
 
 # 2.0.1
-
 - Bug Fixes:
   - Powershell scripts now starts in SAMMI directory (thanks silverlink!)
   - Tweaked to allow overlap, letting multiple scripts run at once
-    - fixed a drive issue when sammi or obs is stored in a different drive when using Check OBS Plugins
+  - fixed a drive issue when sammi or obs is stored in a different drive when using Check OBS Plugins
 
 # 2.0.0
-
 - Reworked:
   - Powershell scripts are now executed using an entirely different process, making them miles more stable than previous methods.
 
 # 1.3.0
-
 - New:
   - Added new command: `Sando: Powershell`! Run powershell scripts in a familiar command-line like box. Make custom GUIs, open file dialogs, and so much more! examples included.
 
 # 1.2.0
-
 - New:
   - Added new command: `Sando: Compare Bridge Versions` for extension developers to ensure user's bridge versions are up to date if using newly added functions that don't exist in prior bridge versions.
 
 # 1.1.0
-
 - Bug Fixes:
   - Fixed `Sando: Extract Zip` from failing due to extraction into same directory
   - Fixed `Sando: Compare OBS Plugins` from failing to return "detected_version" in result object
@@ -143,7 +145,6 @@ There is more but i forgot to update this as i was working on it since this isn'
   - Added a "Admin" Checkbox to `Sando: Extract Zip` for admin extractions
 
 # 1.0.0
-
 - Initial release 🎉
 
 <!--patchnotes end-->

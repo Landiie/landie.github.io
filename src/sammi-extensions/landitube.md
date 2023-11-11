@@ -481,7 +481,6 @@ There is a way to fix this, but its a bit more manual! follow these steps:
 NOTE: This is an insurmountably VAST update that essentially makes this an entirely different extension. The patch notes were mades based off of memory, as I wasn't making it during the patch process and only after it was complete.
 
 ### 🔊 NEW MODULES:
-
 - **✨Transitions**, allows certain modules of LandiTube to have transitions. Currently only supports transitions between emotions. Read more about it in the documentation!
 - **✨Dynamic Transitions**, allows certain modules of LandiTube to have transitions based on module factors. Currently only supports dynamic transition "outros" and "intros" between emotions. read more about it in the documentation!
 - **✨Dynamic Lighting**, set a scene to be referenced to enable global lighting of certain modules such as models, transitions, layers, and custom sources in the `[LandiTube] Customize` scene
@@ -500,7 +499,6 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - **✨Custom WPF/WinForms Windows**, finally LandiTube looks more like your other programs when prompted with windows! Enjoy pretty, informative, and efficient popups whenever the time arises!
 
 ### NEW:
-
 - Twitch account checker, asks to link twitch on startup
 - "OBS Source Layers" tab
 - OBS Source Layers configuration
@@ -542,7 +540,6 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - Cleaned up unused functions in bridge
 
 ### Reworked:
-
 - Buttons have recieved icons
 - Buttons have revised colors for better clarity
 - Some sliders swapped to "oninput" instead of "onchange" for easier tweaking
@@ -563,7 +560,6 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - Scene packer installation now runs twice
 
 ### Bug fixes:
-
 - OBS now auto-reopens properly and doesn't get stuck in system tray
 - Fixed unable to find scene collection json path
 - Fixed unable to add lua script, causing an install loop
