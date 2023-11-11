@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.0",
-  "versionSummaryHeader": "File Tailer, Scene Packer, and some misc stuff!",
-  "versionSummaryBody": "lots of cool things i dont have time to explain, so cool!!!!",
+  "version": "2.2.1",
+  "versionSummaryHeader": "fixes for the node installer",
+  "versionSummaryBody": "adds a logger, fixes some inconsistencies, and the infinite hanging issue a lot of people were experiencing! super recommended to update, as this is an update patch.",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,19 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.1
+- Additions:
+  - adds global variables for easy access to the "Landies Extensions" folder, keys labelled `landies_extensions` and `landies_extensions_slash` respectively
+  - Added a restart flag when installing applications through Sando to refresh shell process
+- Changes:
+  - more comprehensive checks on "Check OBS Plugins"
+  - check status of validation on every sando command ran, instead of endlessly waiting
+  - Added logging to validation
+  - npm install now only runs when installing/updating via the sef file, not on every load
+- Bug Fixes:
+  - fixed an issue where Sando would not detect when node was finished installing,
+  - fixed a potential hanging issue when sando hasn't been verified
+
 # 2.2.0
 - Additions:
   - New: File Tailer! Hook up any log file to SAMMI via the new command `Sando: File Tailer`! set an extension trigger to output log updates to! Can be awesome for adding game integrations for your stream!
