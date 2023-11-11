@@ -28,7 +28,7 @@
 			"valid_versions": {
 				"bridge": ["7.20"],
 				"obs": ["29.1.3"],
-				"sammi": ["2023.2.2"]
+				"sammi": ["2023.3.0"]
 			},
 			"obs_plugins": {
 				"names": [
@@ -38,10 +38,10 @@
 					"Composite Blur"
 				],
 				"direct_download_links": [
-					"https://obsproject.com/forum/resources/move-transition.913/version/4904/download?file=94076",
+					"https://obsproject.com/forum/resources/move.913/version/5177/download?file=98342",
 					"https://obsproject.com/forum/resources/source-clone.1632/version/4881/download?file=93640",
-					"https://github.com/exeldro/obs-shaderfilter/releases/download/v1.22/obs-shaderfilter-1.22.0-windows.zip",
-					"https://obsproject.com/forum/resources/composite-blur.1780/version/5119/download?file=97578"
+					"https://github.com/exeldro/obs-shaderfilter/releases/download/2.1.2/obs-shaderfilter-2.1.2-windows.zip",
+					"https://obsproject.com/forum/resources/composite-blur.1780/version/5198/download?file=98565"
 				],
 				"download_links": [
 					"https://obsproject.com/forum/resources/move-transition.913/",
@@ -51,9 +51,10 @@
 				]
 			},
 			"sammi_extensions": {
-				"names": ["Sando"],
+				"names": ["Sando", "Folder Reader"],
 				"download_links": [
-					"https://landie.land/shop/sammi-extensions/sando"
+					"https://landie.land/shop/sammi-extensions/sando",
+					"https://landie.land/shop/sammi-extensions/folder-reader"
 				]
 			}
 		}
@@ -68,7 +69,7 @@
 		"direct_download_links": [
 			"https://obsproject.com/forum/resources/move-transition.913/version/4904/download?file=94076",
 			"https://obsproject.com/forum/resources/source-clone.1632/version/4881/download?file=93640",
-			"https://github.com/exeldro/obs-shaderfilter/releases/download/v1.22/obs-shaderfilter-1.22.0-windows.zip",
+			"https://github.com/exeldro/obs-shaderfilter/releases/download/2.1.2/obs-shaderfilter-2.1.2-windows.zip",
 			"https://web.archive.org/web/20230428201107mp_/https://github.com/prgmitchell/blur-filter/releases/download/1.1.0/blur-filter-1.1.0-win.zip"
 		],
 		"download_links": [
