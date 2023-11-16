@@ -12,7 +12,7 @@ This extension works differently than a lot of other extensions out there, becau
 
 When you connect your bridge, and connected + press a button on your gamepad, a table of entries is generated for each button and analog stick present on your device. Try clicking some buttons, you'll see their names and values light up!
 
-To use your gamepad within Lioranboard 2, Create a button with an extension trigger that looks like this: ![gamepad trigger in lb](/assets/images/sammi-extensions/gamepad-triggers/docs-3.png)
+To use your gamepad within SAMMI, Create a button with an extension trigger that looks like this: ![gamepad trigger in lb](/assets/images/sammi-extensions/gamepad-triggers/docs-3.png)
 
 `GAMEPAD` \- Suffix to all "Gamepad Triggers" extension triggers.  
 `{inputname}` \- The input's generated name shown in the bridge  
@@ -29,13 +29,13 @@ For the "Controller" category, these are full extension trigger commands and not
 
 The `GAMEPAD CONNECTED` extension trigger fires when you connect your gamepad for the first time.
 
-Example usage: `GAMEPAD CONNECTED` fires the LB button when I connect my Smashbox gamepad.
+Example usage: `GAMEPAD CONNECTED` fires the SAMMI button when I connect my Smashbox gamepad.
 
 ![example connected](/assets/images/sammi-extensions/gamepad-triggers/docs-4.png)
 
 #### DISCONNECTED
 
-The `GAMEPAD DISCONNECTED` extension trigger fires when you disconnect your gamepad. Example usage: `GAMEPAD DISCONNECTED` fires the LB button when I connect my Smashbox gamepad gets disconnected because I suck at melee.
+The `GAMEPAD DISCONNECTED` extension trigger fires when you disconnect your gamepad. Example usage: `GAMEPAD DISCONNECTED` fires the SAMMI button when I connect my Smashbox gamepad gets disconnected because I suck at melee.
 
 ![example disconnected](/assets/images/sammi-extensions/gamepad-triggers/docs-5.png)
 
@@ -45,23 +45,23 @@ For the "Buttons" Category actions, you have **PRESS**, and **RELEASE**.
 
 #### PRESS
 
-the "PRESS" action fires whenever the button's value goes above zero. this counts as a press, so if "PRESS" is appended after your extension trigger's button name, the LB button will fire on button press.
+the "PRESS" action fires whenever the button's value goes above zero. this counts as a press, so if "PRESS" is appended after your extension trigger's button name, the SAMMI button will fire on button press.
 
-Example extension trigger: `GAMEPAD DPAD_UP PRESS` fires the LB button when the d-pad up button is pressed.
+Example extension trigger: `GAMEPAD DPAD_UP PRESS` fires the SAMMI button when the d-pad up button is pressed.
 
 ![example press](/assets/images/sammi-extensions/gamepad-triggers/docs-6.png)
 
 #### RELEASE
 
-The "RELEASE" action fires whenever the button's value sets back to zero. This counts as a release of the button, so if "RELEASE" is appended after your extension trigger's button name, the LB button will fire on button release.
+The "RELEASE" action fires whenever the button's value sets back to zero. This counts as a release of the button, so if "RELEASE" is appended after your extension trigger's button name, the SAMMI button will fire on button release.
 
-Example extension trigger: `GAMEPAD FACE_3 RELEASE` fires the LB button when the face_3 (x button for me) button is released.
+Example extension trigger: `GAMEPAD FACE_3 RELEASE` fires the SAMMI button when the face_3 (x button for me) button is released.
 
 ![example release](/assets/images/sammi-extensions/gamepad-triggers/docs-7.png)
 
 ### Button Trigger Pull Data
 
-the "PRESS" and "RELEASE" extension trigger actions, when applied, send over an object of data every time its fired. to access this data, put a `Trigger Pull Data` command in your LB button. This will retrieve the object. If you leave the `Pull Value` section empty, all of this data will be returned in an object to the Lioranboard Receiver. otherwise, you only get the one value you specify.
+the "PRESS" and "RELEASE" extension trigger actions, when applied, send over an object of data every time its fired. to access this data, put a `Trigger Pull Data` command in your SAMMI button. This will retrieve the object. If you leave the `Pull Value` section empty, all of this data will be returned in an object to SAMMI. otherwise, you only get the one value you specify.
 
 {primary}
 | Object Key | Type | Description |
@@ -79,9 +79,9 @@ For the "Analog Sticks" Category actions, you have **START**, **CHANGE**, and **
 
 #### START
 
-the "START" action fires whenever the analog stick's value goes above zero. If "START" is appended after your extension trigger's analog stick name, the LB button will fire when the stick moves from zero.
+the "START" action fires whenever the analog stick's value goes above zero. If "START" is appended after your extension trigger's analog stick name, the SAMMI button will fire when the stick moves from zero.
 
-Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK START` fires the LB button when the left analog stick starts moving from its dormant position.
+Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK START` fires the SAMMI button when the left analog stick starts moving from its dormant position.
 
 ![example press](/assets/images/sammi-extensions/gamepad-triggers/docs-8.png)
 
@@ -89,21 +89,21 @@ Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK START` fires the LB button
 
 the "CHANGE" action fires whenever the analog stick's value changes. The way this works is tricky but the bread and butter to getting live updates on where your analog stick's position is. This action will not fire if the stick is being held in the same position the next frame, so it won't continue to spam the button if nothing is changing. it only detects **change**.
 
-Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK CHANGE` fires the LB button when the left analog stick changes from any value that isn't the same as it's current value.
+Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK CHANGE` fires the SAMMI button when the left analog stick changes from any value that isn't the same as it's current value.
 
 ![example press](/assets/images/sammi-extensions/gamepad-triggers/docs-9.png)
 
 #### END
 
-the "END" action fires whenever the analog stick's value returns to zero. If "END" is appended after your extension trigger's analog stick name, the LB button will fire when the stick moves to be zero (dormant).
+the "END" action fires whenever the analog stick's value returns to zero. If "END" is appended after your extension trigger's analog stick name, the SAMMI button will fire when the stick moves to be zero (dormant).
 
-Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK END` fires the LB button when the left analog stick returns to it's dormant position, not being used.
+Example extension trigger: `GAMEPAD LEFT_ANALOG_STICK END` fires the SAMMI button when the left analog stick returns to it's dormant position, not being used.
 
 ![example press](/assets/images/sammi-extensions/gamepad-triggers/docs-10.png)
 
 ### Analog Stick Trigger Pull Data
 
-the "START", "END", and "CHANGE" extension trigger actions, when applied to your extension trigger, send over an object of data every time its fired. to access this data, put a `Trigger Pull Data` command in your LB button. This will retrieve the object. If you leave the `Pull Value` section empty, all of this data will be returned in an object to the Lioranboard Receiver. otherwise, you only get the one value you specify.
+the "START", "END", and "CHANGE" extension trigger actions, when applied to your extension trigger, send over an object of data every time its fired. to access this data, put a `Trigger Pull Data` command in your SAMMI button. This will retrieve the object. If you leave the `Pull Value` section empty, all of this data will be returned in an object to SAMMI. otherwise, you only get the one value you specify.
 
 {primary}
 | Object Key | Type | Description |
