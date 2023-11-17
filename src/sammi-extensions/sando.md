@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.2",
-  "versionSummaryHeader": "fixes for the node installer",
-  "versionSummaryBody": "adds a logger, fixes some inconsistencies, and the infinite hanging issue a lot of people were experiencing! super recommended to update, as this is an update patch.",
+  "version": "2.2.2.1",
+  "versionSummaryHeader": "initialization fix",
+  "versionSummaryBody": "Fixed the issue with some newer commands crashing due to a failure of reinitializing button variables on install",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.2.1
+- Bug Fixes:
+  - Fixed variable re-initialization when upgrading from prior versions of Sando.
+
 # 2.2.2
 - Additions:
   - added some extra logging to the scene packer for created inputs. you can view the scene packer log in your main sammi directory, under the name `packer.log`. In the future, this will be moved into `Landies_Extensions\sando\sando.log`!
