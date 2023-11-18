@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.2.1",
+  "version": "2.2.2.2",
   "versionSummaryHeader": "initialization fix",
   "versionSummaryBody": "Fixed the issue with some newer commands crashing due to a failure of reinitializing button variables on install",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.2.2
+- Changes:
+  - Removed queueing for `Sando: Log` for speed reasons. hopefully will not cause logs to be sent out of sync but tests look good.
+
 # 2.2.2.1
 - Bug Fixes:
   - Fixed variable re-initialization when upgrading from prior versions of Sando.
