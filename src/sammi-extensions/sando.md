@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.3",
-  "versionSummaryHeader": "initialization fix",
-  "versionSummaryBody": "Fixed the issue with some newer commands crashing due to a failure of reinitializing button variables on install",
+  "version": "2.2.4",
+  "versionSummaryHeader": "File tailer updates",
+  "versionSummaryBody": "Adds a new white/blacklist option to the file tailer among other things!",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,12 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.2.4
+- New Additions
+  - `Sando: File Watch/Tail` now features a white/black list option (optional)
+- Changes
+  - Removed the default `data.txt` present in the sando assets zip, as it's leftover.
+
 # 2.2.3
 - Bug Fixes:
   - Fixed a case where node would falsely be flagged as installed if done on a system not set to 'English'
