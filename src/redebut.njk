@@ -3,7 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Redebut ~ Landie</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/assets/site.webmanifest">
+        <link rel="shortcut icon" href="/favicon.ico">
     </head>
     <body>
         <!DOCTYPE html>
@@ -33,6 +39,9 @@
                         background-color: black;
                         overflow: hidden;
                     }
+                    p {
+                        font-size: 2rem;
+                    }
                     .wrapper {
                         position: absolute;
                         width: 100%;
@@ -51,12 +60,16 @@
                 <div class="wrapper">
                     <img src="/assets/images/logo.png" alt="">
                     <div id="countdown"></div>
+                    <p id="countdownDate"></p>
                     <a href="https://twitch.tv/landie">Twitch</a>
                 </div>
                 <script src="countdown.js"></script>
                 <script>
                     // Set the date you want to count down to
                     const countDownDate = 1705514400 * 1000;
+                    
+                    const nowDate = new Date(countDownDate)
+                    document.getElementById("countdownDate").innerHTML = `${nowDate.toLocaleDateString()} ${nowDate.toLocaleTimeString()}`
 
                     timer();
                     const x = setInterval(function () {
