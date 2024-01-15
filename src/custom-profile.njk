@@ -158,7 +158,7 @@ fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXb
 
 //fetch viewer profiles
 let users = [];
-fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXbLQnO6sStVo/gviz/tq?tqx=out:csv&gid=0")
+fetch("https://dl.dropboxusercontent.com/scl/fi/mgt6ngpu88tu0auxqdb6i/custom_profiles.csv?rlkey=qxl1s6pw5sgrtpps4ffb617s8&dl=1")
   .then(response => response.text())
   .then((data) => {
     const csv = Papa.parse(data)
@@ -176,8 +176,7 @@ fetch("https://docs.google.com/spreadsheets/d/1gmEebk9somVxPkUlCUCJGSJzmMxiWWQXb
         accentColor: csv.data[i][4],
         collectibles: csv.data[i][5]
       };
-      if (userObj.collectibles !== "") 
-        userObj.collectibles = JSON.parse(userObj.collectibles)
+      {# if (userObj.collectibles !== "") userObj.collectibles = JSON.parse(userObj.collectibles) #}
       users.push(userObj)
     }
     console.log(users)

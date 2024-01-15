@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Countdown Timer</title>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+            </head>
+            <body>
+                <style>
+                    a {
+                        color: white;
+                        font-size: 2rem;
+                    }
+                    * {
+                        font-family: "Nunito", sans-serif;
+                        font-weight: 800;
+                    }
+                    div {
+                        color: white;
+                    }
+                    body {
+                        background-color: black;
+                        overflow: hidden;
+                    }
+                    .wrapper {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 1rem;
+                    }
+                    #countdown {
+                        font-size: 4rem;
+                    }
+                </style>
+                <div class="wrapper">
+                    <img src="/assets/images/logo.png" alt="">
+                    <div id="countdown"></div>
+                    <a href="https://twitch.tv/landie">Twitch</a>
+                </div>
+                <script src="countdown.js"></script>
+                <script>
+                    // Set the date you want to count down to
+                    const countDownDate = 1705514400 * 1000;
+
+                    timer();
+                    const x = setInterval(function () {
+                        timer();
+                    }, 500);
+                    function timer() {
+                        const now = new Date().getTime();
+
+                        const distance = countDownDate - now;
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        let countdownDisplay = ""
+
+                        if (days > 0) 
+                            countdownDisplay += `${days} Days, `
+                        if (hours > 0) 
+                            countdownDisplay += `${hours} Hours, `
+                        if (minutes > 0) 
+                            countdownDisplay += `${minutes} Minutes, `
+                        if (seconds > 0) 
+                            countdownDisplay += `${seconds} Seconds. `
+
+                        document
+                            .getElementById("countdown")
+                            .innerHTML = countdownDisplay;
+
+                        // If the countdown is over, display a message
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document
+                                .getElementById("countdown")
+                                .innerHTML = "LIVE!";
+                        }
+                    }
+                </script>
+            </body>
+        </html>
+
+    </body>
+</html>
