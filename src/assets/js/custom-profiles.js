@@ -132,7 +132,7 @@ document.querySelector(".cp-sidebar-body").addEventListener("click", e => {
           user.badgeCount++;
 
           userProfileBadgesHTML += `<button data-tilt data-tilt-scale="1.5" data-tilt-max="10" data-bs-toggle="tooltip"
-                data-bs-title="${collectibleInfo.title}" data-cp-title="${collectibleInfo.title}" data-cp-image="${collectibleInfo.image}" data-cp-desc='${collectibleInfo.description}' data-cp-type="${collectibleInfo.type}"
+                data-bs-title="${collectibleInfo.title}" data-cp-title="${escapeQuotesHTML(collectibleInfo.title)}" data-cp-image="${collectibleInfo.image}" data-cp-desc="${escapeQuotesHTML(collectibleInfo.description)}" data-cp-type="${collectibleInfo.type}"
                 class="cp-userprofile-badge-item" style="background-image:url(${collectibleInfo.image}); background-repeat: no-repeat;
     background-position: center; object-fit: contain; background-size: 100%;"></button>`;
           break;
@@ -201,21 +201,36 @@ document.querySelector(".cp-sidebar-body").addEventListener("click", e => {
            <h2>Previews</h2>
            <h4>Sub Alert Board</h4>
            <img src="" alt="">`;
-  document.querySelector(".cp-userprofile-name").textContent = user.displayName;
+  
   if (user.nickname !== "") {
     document.querySelector(".cp-userprofile-name").textContent = user.nickname;
-    document.querySelector(".cp-userprofile-twitchname").textContent =
-      `a.k.a. ${user.displayName}`;
+    document.querySelector(
+      ".cp-userprofile-twitchname"
+    ).textContent = `a.k.a. ${user.displayName}`;
   } else {
-    document.querySelector(".cp-userprofile-name").textContent = user.displayName;
+    document.querySelector(".cp-userprofile-name").textContent =
+      user.displayName;
+      document.querySelector(
+        ".cp-userprofile-twitchname"
+      ).textContent = "";
   }
-  document.querySelector(
-    ".cp-userprofile-accentcolor"
-  ).textContent = `Accent Color: #${user.accentColor}`;
+  if (user.accentColor !== "") {
+    document.querySelector(
+      ".cp-userprofile-accentcolor"
+    ).textContent = `Accent Color: #${user.accentColor}`;
+    document.querySelector(
+      ".cp-userprofile-header"
+    ).style.backgroundColor = `#${user.accentColor}`;
+  } else {
+    
+    document.querySelector(
+      ".cp-userprofile-accentcolor"
+    ).textContent = "";
+    document.querySelector(
+      ".cp-userprofile-header"
+    ).style.backgroundColor = "#ffffff29";
+  }
   document.querySelector(".cp-userprofile-pfp").src = user.pfp;
-  document.querySelector(
-    ".cp-userprofile-header"
-  ).style.backgroundColor = `#${user.accentColor}`;
 
   document.querySelector(".cp-userprofile-badges-total").textContent =
     user.badgeCount;
@@ -248,8 +263,8 @@ const collectableLists = document
 
     console.log(e.target.dataset.cpType);
 
-    document.querySelector(".collectible-display-title").textContent = title;
-    document.querySelector(".collectible-display-desc").textContent = desc;
+    document.querySelector(".collectible-display-title").innerHTML = title;
+    document.querySelector(".collectible-display-desc").innerHTML = desc;
     document.querySelector(".collectible-display-image").src = image;
 
     openPopupCollectible();
