@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.addPassthroughCopy("./src/pfp.png");
+  eleventyConfig.addPassthroughCopy("./src/ref.png");
   eleventyConfig.addPassthroughCopy("./src/papaparse.min.js");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
