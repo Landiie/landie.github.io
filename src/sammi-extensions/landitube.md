@@ -558,7 +558,6 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - Install validation and "Refresh Models" button triggers a queue chain instead of running each funtion at the end of each function, for easy rearrangement + stability
 - Ensure obs plugins are installed before attempting to install scenes/sources
 - Scene packer installation now runs twice
-
 ### Bug fixes:
 - OBS now auto-reopens properly and doesn't get stuck in system tray
 - Fixed unable to find scene collection json path
@@ -578,7 +577,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - Fixed flickers present with layers
 - Fixed layer references sometimes being forgotten (thanks layers.ini!)
 
-  # 0.16.0
+# 0.16.0
 
 - NEW: Added .mp4 support
 - NEW: Added .ts support
@@ -588,7 +587,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - NEW: Added .avi support
 - NEW: Added .webm (VP8) support, allowing efficient, high quality, alpha supported (semi-transparent, transparent) video to be used as poses! basically the better .gif!
 
-  # 0.15.0
+# 0.15.0
 
 - REWORK: Changed the auto lua-script installer for a new one that is far more stable
 - REWORK: Changed the way an input source is changed via bridge
@@ -600,7 +599,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - BUG FIX: fixed lua installer infinite loop
 - BUG FIX: fixed OBS installer infinite loop
 
-  # 0.14.6
+# 0.14.6
 
 - REWORK: Filter settings saved differently, updates no longer overwrite custom settings
 - REWORK: OBS Source Layers have been **Entirely Reworked**, natively built into LandiTube, no need to touch SAMMI! tutorial in the coming days!
@@ -622,7 +621,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - QOL: Model icons size significantly decreased
 - QOL: Model icons formatted differently to not stretch across screen
 
-  # 0.13.2
+# 0.13.2
 
 - BUG FIX: Fixed the command `LandiTube: Pause Engine` not properly working after backend rewrite
 - BUG FIX: Fixed the helper "Poses" list in bridge not properly working after backend rewrite
@@ -631,7 +630,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - BUG FIX: Model no longer squishes during blink while talking
 - NEW: LandiTube Data addition `current_state_has_blink`! with every extension trigger, get a boolean (true/false) if your character can blink!
 
-  # 0.13.1
+# 0.13.1
 
 - QUALITY OF LIFE: Refresh time _significantly_ reduced
 - QUALITY OF LIFE: Model swapping is now instant!
@@ -642,7 +641,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - BUG FIX: Fixed crash for certain common special characters being in the name of Models, Emotions, and Poses
 - NEW: **Rewrote entire backend**. my head hurts.
 
-  # 0.11.0
+# 0.11.0
 
 - NEW: Fixed clipping of buttons on small bridge sizes
 - NEW: Added Dropdown: Voice Meter Type
@@ -658,7 +657,7 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - BUG FIX: Update banner takes you to patch notes screen with download button now and not the same place...
 - BUG FIX: Now the deck is ACTUALLY fixed my bad :3
 
-  # 0.10.0
+# 0.10.0
 
 - NEW: Poses section dividers: separated between idle, and talking poses
 - NEW: Poses section button: "Resume Engine", resumes the rendering engine from a frozen state for use after clicking a pose button to restore function
@@ -671,15 +670,15 @@ NOTE: This is an insurmountably VAST update that essentially makes this an entir
 - BUG FIX: Fixed crash on SAMMI deck load, your deck is alive again!
 - TYPO FIX: Changed command names from "LandiTuber" to "LandiTube"
 
-  # 0.9.11
+# 0.9.11
 
 - BUG FIX: ok i didn't actually fix it last update so get bamboozled its fixed now
 
-  # 0.9.10
+# 0.9.10
 
 - BUG FIX: Update link was brokie oops my bad
 
-  # 0.9.9
+# 0.9.9
 
 - Initial Beta Release 🎉
 

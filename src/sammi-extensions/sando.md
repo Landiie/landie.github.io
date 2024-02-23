@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.2.4",
+  "version": "2.4.3",
   "versionSummaryHeader": "File tailer updates",
   "versionSummaryBody": "Adds a new white/blacklist option to the file tailer among other things!",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,34 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.4.3
+- Changes:
+  - Moved the obsws validation to the validation of sando, so credentials can be used in other obsws applications
+  - Changed the scripts relying on node to use the new variable `Sando.node` (points to the node.exe, more reliable than trusting an environment variable went through)
+- Bug Fixes:
+  - Fixed the folder reader port to run asynchronously and not drop commands
+
+# 2.4.2
+- Bug Fixes:
+    - fixed an issue where node would not be detected on startup despite having it installed (thanks Kash the Dingo!)
+
+# 2.4.1
+- New Additions
+    -   Ported Folder Reader to Sando with the new command: `Sando: Read Folder`
+
+# 2.3.0
+- New Additions
+  - `Sando: Array Search` is a command that allows you to provide an array of data (currently only strings) and allows you to match it against a query which gives you back the closest set of matches. The first value of the returned array is the closest match. The only mode available at this current moment is simple mode, but advanced mode which supports objects, will be released at a later date.
+  - new script `unpack.js`
+  - new script `obswebsocket_connection_test.js`, for testing websocket connection via nodejs
+- Changes
+  - the pack script changed from the name `script.js` to `pack.js`
+  - The background image has been significantly reduced in size to prevent SAMMI hitching while saving decks (might be removed entirely in the future)
+- Reworks
+  - `Sando: SP Unpack` has had an overhaul to be done entirely in nodejs while connected to the websocket. This adds the side effect of needing to provide an OBS Websocket Password if one is present on connection. This is automatically handled by the command. Nothing execution wise changes, just enjoy drastically faster unpack times!
+  - `Sando: Powershell` has had an execution rewrite. Originally, Sando would transform the user's script text into a text file, read the text file, encode via powershell to base64, then use powershell's -EncodedCommand flag to run the script. This convoluted process allowed a bypass of powershell's execution policy, at the cost of efficiency and firewall popups from bad antivirus applications that assume any and all powershell operations are bad. This rewrite still writes the script to a file, but its a .ps1 file with a clever command line process to bypass the execution policy easier and more friendly. It's efficient, and I hope firewalls will act up less now.
+  - Sando's validation process now checks for up to date node version instead of checking whether it's only installed or not (Thanks Caigan!)
+
 # 2.2.4
 - New Additions
   - `Sando: File Watch/Tail` now features a white/black list option (optional)
