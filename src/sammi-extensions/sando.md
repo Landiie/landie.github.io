@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "versionSummaryHeader": "File tailer updates",
   "versionSummaryBody": "Adds a new white/blacklist option to the file tailer among other things!",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.4.4
+- Bug Fixes:
+  - Fixed a global not being set when installing (it only set when starting up SAMMI)
+
 # 2.4.3
 - Changes:
   - Moved the obsws validation to the validation of sando, so credentials can be used in other obsws applications
