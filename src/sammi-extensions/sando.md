@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.4.5",
+  "version": "2.5.0",
   "versionSummaryHeader": "File tailer updates",
   "versionSummaryBody": "Adds a new white/blacklist option to the file tailer among other things!",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,20 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.0
+- New Features:
+  - Sando now boasts a websocket relay server that clients can connect to to both send and recieve data from/to the SAMMI bridge. The default port for the server is `6626`. It is highly recommended to include an identifier at the end of the address when connecting, so you can easily identify where a source is coming from. ex: `ws://localhost:6626/vnyan`, with the `/vnyan` part being the identifier. An example of what this would be used for is to connect a browser source/dock directly to SAMMI and receive events in real time for something like a chatbox. This could also be used for services that don't host their own websocket server but can connect to a server on their own.
+  - Whenever a service that Sando relies on such as the SAMMI Bridge or OBS Websocket disconnects, the validation will be set back to zero and re-run when those services are reconnected.
+  - Added logging to scene packer's unpackage
+  - Added extra logging to Sando's validation, specifically the obs websocket validation
+- Changes:
+  - Changed the package that file tailer uses to something that allows the files it's listening to, to be deleted. Prior to this update, if the file that was being listened to was reduced in capacity in any way, it would cease to listen. This is a problem when listening to something like game logs in which they are cleared on game restart.
+- Bug Fixes:
+  - Fixed an issue where scene packer would not wait for Sando validation
+  - Fixed an issue where connecting multiple file tails would not close the previous script, causing double events
+  - Fixed an issue where disconnecting from services other than the bridge, such as resetting sammi or the obs websocket would cause the validation to hang
+  - Fixed an issue where sando would re-validate itself while already validated, causing a redundancy.
+
 # 2.4.5
 - Bug Fixes:
   - Fixed an issue with scene packer's unpack not creating scenes with no scene items (I AM LOOSING IT. 4 PATCHES IN ONE DAY.)
