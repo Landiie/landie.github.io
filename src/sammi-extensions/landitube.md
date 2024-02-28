@@ -20,16 +20,16 @@
 		"0200": {
 			"valid_versions": {
 				"bridge": ["7.14", "7.20"],
-				"obs": ["29.1.2", "29.1.3"],
-				"sammi": ["2023.2.1", "2023.2.1.1", "2023.2.2"]
+				"obs": ["29.1.2", "29.1.3", "30.0.2"],
+				"sammi": ["2023.2.1", "2023.2.1.1", "2023.2.2", "2023.3.1", "2024.1.0"]
 			}
 		},
 		"0210": {
       "assets_link":"https://www.dropbox.com/scl/fi/srnrzw74fn0utx6ne2cel/landitube_0210_assets.zip?rlkey=4e7m1l4duld6r53q1k5r37dil&dl=1",
 			"valid_versions": {
 				"bridge": ["7.20"],
-				"obs": ["29.1.3"],
-				"sammi": ["2023.3.0"]
+				"obs": ["29.1.3", "30.0.2"],
+				"sammi": ["2023.3.0", "2023.3.1", "2024.1.0"]
 			},
 			"obs_plugins": {
 				"names": [
