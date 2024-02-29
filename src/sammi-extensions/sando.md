@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.5.0",
-  "versionSummaryHeader": "File tailer updates",
-  "versionSummaryBody": "Adds a new white/blacklist option to the file tailer among other things!",
+  "version": "2.5.1",
+  "versionSummaryHeader": "bug fix patch",
+  "versionSummaryBody": "fixes some bugs introduced in 2.5.0",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,14 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.1
+- New Features:
+  - added a dev mode for looking at the output of background node processes. will be used for more in the future.
+- Bug Fixes:
+  - Fixed an issue where Sando would wait for validation on things that don't need it
+  - Added more logging to the Sando validation process (zip extraction)
+  - Fixed sando assets extraction looking in the wrong directory (Thanks Oldrego!)
+
 # 2.5.0
 - New Features:
   - Sando now boasts a websocket relay server that clients can connect to to both send and recieve data from/to the SAMMI bridge. The default port for the server is `6626`. It is highly recommended to include an identifier at the end of the address when connecting, so you can easily identify where a source is coming from. ex: `ws://localhost:6626/vnyan`, with the `/vnyan` part being the identifier. An example of what this would be used for is to connect a browser source/dock directly to SAMMI and receive events in real time for something like a chatbox. This could also be used for services that don't host their own websocket server but can connect to a server on their own.
