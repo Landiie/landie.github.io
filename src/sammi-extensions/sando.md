@@ -91,6 +91,11 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.2
+- Bug Fixes:
+  - Fixes an authentication error with scene packer's unpack process due to not loading the saved password (good job me)
+  - Fixed some broken links
+
 # 2.5.1
 - New Features:
   - added a dev mode for looking at the output of background node processes. will be used for more in the future.
