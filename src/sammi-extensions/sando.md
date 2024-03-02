@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "versionSummaryHeader": "bug fix patch",
-  "versionSummaryBody": "fixes authentication error for obsws and broken links",
+  "versionSummaryBody": "fixes scene packer unpack inconsistencies",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,11 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.3
+- Bug Fixes
+  - Fixed an issue where Scene Packer's unpack would not be accurate, so I added a bunch of validation checks. Slightly slower but barely noticable.
+  - Attempted a fix for npm install not running when it should (on install)
+
 # 2.5.2
 - Bug Fixes:
   - Fixes an authentication error with scene packer's unpack process due to not loading the saved password (good job me)
