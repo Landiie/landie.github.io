@@ -212,6 +212,10 @@ body {
   background: linear-gradient(to top right, rgb(3, 8, 101), rgb(157, 237, 230));
 }
 
+.body-ltube-0210 {
+  background: linear-gradient(to top right, rgb(101, 3, 96), rgb(237, 157, 178));
+}
+
 body.page {
   overflow: visible;
   display: block;
