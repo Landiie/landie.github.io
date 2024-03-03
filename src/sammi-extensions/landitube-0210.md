@@ -1,6 +1,7 @@
 ---json
 {
 	"layout": "product.njk",
+    "hidden": "true",
     "bodyOverride":"body-ltube-0210",
 	"date": "2023-01-08",
 	"tags": ["product", "sammiExtension"],
