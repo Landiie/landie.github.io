@@ -3,7 +3,7 @@ title: My First Blogpost!
 date: 2023-09-15
 tags: ["blog"]
 layout: blogpost.njk
-image: https://cdn.discordapp.com/attachments/1093729726054543440/1093730364847050882/Landie__femb_BG.png
+image: https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_f4572a25cd8b4dd8a4157a40b06fea71/static/light/4.0
 description: My first blogpost talking about why I made a blog, what it means for me, and the future of my work!
 ---
 
@@ -16,13 +16,13 @@ I hope to use this to provide extended content and context to my released YouTub
 This blog post will roll out with the new backend revamp of my website, allowing, well, a blog like this to exist! I use a [Static Website Generator](https://www.cloudflare.com/learning/performance/static-site-generator/) called [Eleventy](https://www.11ty.dev/) to handle the process of bundling special text-like files into dedicated webpages, defined by a bunch of rules and layouts to carry out the task! No more typing raw HTML code to edit products on my site, or blog posts! These files then get put into a directory which the generator reads, then transforms into its own webpage. 
 
 {% img "showing a markdown file in a folder", "", "400" %}
-https://i.imgur.com/hRLsQMO.png
+/assets/images/blog/my-first-blogpost/md-file.png
 {% endimg %}
 
 This blog post for example, uses a text file format called [Markdown](https://www.markdownguide.org/getting-started/#what-is-markdown) (the same as discord text!). I can generate pages so easily this way, and edit them just the same!
 
 {%img "showing example of Markdown text from this page"%}
-https://i.imgur.com/4Txdcqp.png
+/assets/images/blog/my-first-blogpost/markdown.png
 {%endimg%}
 
 Whenever I save, I get a live update of my changes in real-time, It's super, super cool!
@@ -42,7 +42,7 @@ This alert is made with a template!
 {%endalert%}
 
 {%img "example of an HTML snippet", "Using eleventy shortcodes to input HTML snippets"%}
-https://i.imgur.com/7pzQ0rF.png
+/assets/images/blog/my-first-blogpost/html-snippet.png
 {%endimg%}
 
 Ok! That's all I wanted to say. Expect future blog posts about YouTube videos, SAMMI Extensions, SAMMI in general, OBS, Streamer tools, and so much more! I'll try to keep things in categories so you can follow **exactly what you want from me!**
