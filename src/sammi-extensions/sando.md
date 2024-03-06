@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.5.3",
+  "version": "2.5.5",
   "versionSummaryHeader": "bug fix patch",
-  "versionSummaryBody": "fixes scene packer unpack inconsistencies",
+  "versionSummaryBody": "fixes scene packer unpack inconsistencies (again??)",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,20 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.5
+- Bug Fixes:
+  - I somehow reverted the authentication fix on the unpacker. this should be fixed now!
+
+# 2.5.4
+- Bug Fixes
+  - Fixed an issue where Scene Packer would not apply updated visibility changes if overlaying on existing install
+  - Fixed an issue where the relay server would only send an alert and no data to SAMMI. You can listen to the relay server by the extension trigger `SandoRelay {IDHERE}`, with `{IDHERE}` being the identifier added to the end of the websocket url when connecting. for example: if you connected using the link `https://127.0.0.1:6626/mycoolclient`, the trigger with the data would be `SandoRelay mycoolclient`.
+- New Additions
+  - Added a check for npm install failure in the validation checks when installing from .sef
+  - More logging for events such as npm install and if installing from sef or not
+- Changes
+  - Changed when the install complete message pops up to prevent false guise
+
 # 2.5.3
 - Bug Fixes
   - Fixed an issue where Scene Packer's unpack would not be accurate, so I added a bunch of validation checks. Slightly slower but barely noticable.
