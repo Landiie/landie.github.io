@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.5.5",
+  "version": "2.5.6",
   "versionSummaryHeader": "bug fix patch",
-  "versionSummaryBody": "fixes scene packer unpack inconsistencies (again??)",
+  "versionSummaryBody": "updated method of getting ext info",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.5.6
+- Bug Fixes:
+  - use the updated extensions version method in global vars to get version for compare
+
 # 2.5.5
 - Bug Fixes:
   - I somehow reverted the authentication fix on the unpacker. this should be fixed now!

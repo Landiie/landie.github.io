@@ -114,16 +114,16 @@ I'm here to change that.
 
 Plenty!!
 
-- TRANSITIONS between emotions, both global, and **DYNAMIC** 🚗
-- Use **ANY OBS SOURCE** as a anchored **LAYER** ontop of your model's body parts **(More on this further down)**. 🤯 <-- thats u
+- <span style="color: red">**TRANSITIONS**</span> between emotions, both <span style="color: red">**GLOBAL**</span>, and <span style="color: red">**DYNAMIC**</span> 🚗
+- Transitions can be a single image, or a whole animation! 🎥
+- Use **ANY OBS SOURCES** as anchored <span style="color: red">**LAYERS**</span> ontop of your model's body parts **(More on this further down)**. 🤯 <-- thats u
 - Infinite Models ♾️
 - Infinite Emotions ♾️
-- Infinite *Randomized* Talking Poses ♾️
+- Infinite <span style="color: red">*Randomized*</span> Talking Poses ♾️
 - Infinite *Randomized* Idle Poses ♾️
-- Infinite *Randomized* **Yelling** Poses ♾️
+- Infinite *Randomized* <span style="color: red">**YELLING**</span> Poses ♾️
 - Infinite *Randomized* Global and Dynamic Transitions ♾️
-- Transitions can be a single image, or a whole animation! 🎥
-- ATTITUDES which allow your model to move around based on current model, emotion, or specific pose!
+- <span style="color: red">**ATTITUDES**</span> which gives movement!
 - CUSTOMIZABLE ATTITUDES to tweak the movement and create custom loadable presets so your model moves just right 👌
 - Squishiness 200% 💚
 - Special filters set so _only_ your voice comes through! No more keyboard-activated tubers... 🎤
@@ -481,6 +481,60 @@ There is a way to fix this, but its a bit more manual! follow these steps:
 <!--troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 0.21.0
+### 🔊 NEW MODULES:
+  - ✨**Attitudes**: Finally, attitudes comes to LandiTube! set different attitudes on specific models, emotions, or even down to a specific pose! At launch, there are a total of FOUR rad and cool attitudes for you to pick from! Sounds like kind of a small line-up, right? Well, attitudes features an awesome solution to your concerns; presets! Each attitude has editable parameters such as speed, arching angles, rotations, delays, and more!! You can then save your changes as separate presets to be assigned when assigning attitudes! yippee!! Please check the docs, and video tutorial on attitudes and attitude presets to learn more.
+### NEW:
+  - Added default options for all config settings
+  - Added position configuration for rim lighting in the bridge, no need to edit in OBS anymore
+  - Added a node script to load all model data at once, which is used by the reload rework
+  - Added static versions of the "[LandiTube] Customize" scene to allow static props to be rendered with your models.
+  - Added new dynamic rim lighting option "Blur Amount". Lets you change the amount of blur the rim light should have
+  - Added new dynamic rim lighting option "Quality". Lets you change the amount of blur the rim light should have
+  - All tabs except for the "LandiTube" tab in the LandiTube bridge are disabled until a full install check is ran to prevent people from changing content before it's ready.
+  - A "lock" mode developed originally for Attitudes, to prevent rendering in certain circumstances
+  - More checks to give alerts when a folder structure is wrong
+  - Added a "Copy Log" button to the settings for easily sharing for troubleshooting purposes
+### Changes:
+  - moved "check install directory" step to the validation check instead of only checking on installation
+  - swapped audio device load to use async command line, speeding up validation
+  - clicking the "Open Models Folder" button is now async
+  - clicking the "Open Emotions Folder" button is now async
+  - clicking the "Open Emotion's Poses Folder" button is now async
+  - changed no emotion from "0" to "undefined"
+### Reworks:
+  - Changed the mic to use a better noise supression algorithm to prevent model jitter
+  - Loading layers is now done in nodejs, providing a slight performance + reliability boost while becoming more future port-friendly
+  - OBS Scene installation is now more robust and reliable, with a x2.4 speed increase. Scene unpacking is now handled by Sando
+  - Model refreshing has **DRASTICALLY** been improved, dropping refresh times down by **x50!!** (rough estimate, a model load that originally took 30 seconds loaded in 600ms instead)
+  - Snappier bridge refreshing thanks to model refresh rework
+  - Swapped out blur plugin for the new "composite blur", due to download being taken down... this allows new features however!
+  - Versions are now modular in the online database, checks for the right version before reading.
+  - Lighting engine has had its implementation completely reworked to comply with a resolution fix
+  - Logger has had an entire rework with what info it logs, to remain more relevant to what i need to see as a developer
+### Bug fixes:
+  - Fixed an issue that may occur on first time installation, causing LandiTube to be prematurely loaded. re-validates after installation.
+  - Fixed an issue that caused an alert message to play whenever you loaded landitube saying "User hates fennecs :c /j" (a very important bug. don't wanna falsly accuse everyone!!)
+  - Fixed a crash loop that can occur when deleting/renaming models
+  - Attempted a fix for LandiTube not displaying PowerShell custom windows due to custom characters in filepath
+  - Fixed a crash that can occur when loading audio devices with SAMMI installed to an external drive
+  - Fixed an issue with models loosing quality when rendered with vanilla OBS nested scenes (Use Source Clone!)
+  - Fixed a potential crash when swapping to a model/emotion with zero poses
+  - Fixed an issue related to poses requiring a state change to display the model properly. "?" should behave better.
+  - Fixed an issue related to layers flooding the audio mixer. Audio will now be disabled by default.
+  - Fixed an issue with some sources not being rendered properly in layers
+  - Fixed an issue with media sources not playing in layers
+  - Fixed the visibility toggle on the layers not working in the config
+  - Fixed an issue related to layers not getting deleted when models were deleted
+  - Fixed an issue related to layers not being applied their assigned scene when any new poses were generated
+  - Fixed an issue that occured when updating which would cause settings to get overwritten with default ones. (experimental)
+  - Fixed an issue where it wouldn't wait for Sando to validate properly, causing random crashes.
+### Removals:
+  - Removed loads of unused functions to keep SAMMI optimized
+  - Removed forced asset install on installation
+  - Removed all built-in OBS nested scenes in favor of Exeldro's "Source Clone" plugin for the resolution fix.
+  - Removed an obs-shaderfilter filter that controlled the rim lighting settings. Composite Blur by [FiniteSingularity](https://www.twitch.tv/finitesingularity)
+  - Temporarily removed the backup tab in the bridge, as it's causing issues for load times.
 
 # 0.20.0
 
