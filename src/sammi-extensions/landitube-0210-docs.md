@@ -328,6 +328,10 @@ There currently are a total of 5 attitudes to choose from:
 - Shake
 - Prance
 
+Let's start simple. Let's apply an attitude to an emotion!
+
+To apply an attitude to an emotion, simply open your emotions folder, and pick the name of the emotion you want to give the attitude to. The emotion I'll be 
+
 # Layers
 
 When you create a LandiTube model, you draw poses and frames! But what if you want to give your model a prop, such as...
