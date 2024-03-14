@@ -3,8 +3,10 @@ layout: product-docs.njk
 title: LandiTube ~ Documentation
 permalink: /shop/sammi-extensions/landitube-preview/documentation/
 ---
+
 # More of a visual learner?
-Check out the tutorials tab instead! However, there might be some missing info that isn't available yet in video form.
+
+Look closely! if a section has a video tutorial, it will have a link to that video next to the header!
 
 # Bridge and You!
 
@@ -35,9 +37,8 @@ To get a model up and running, You need to have _3 key components down_. [Models
 
 Make sure you've gone into your bridge, and changed the appropriate settings! you'll need to set your mic, maybe tweak the input threshold, etc. [Bridge and You](#bridge-and-you-) has an explanation of the settings section for you!
 
-# LandiTube
-
-## Models
+# Models 📺
+[📺 Setting up a model | 0:00](https://youtu.be/OFEGDlggthM?si=-gSFi9LyR4ooRPhE)
 
 To create models, you create a folder in the "models" folder in the LandiTube path. All folders inside that folder will create an Icon in your bridge showing that a model is detected, and exists after a model refresh.
 
@@ -49,7 +50,8 @@ Here is a visual example of my models folder, where I have two models loaded, an
 
 ![Showcasing the result inside the models list located in the bridge](/assets/images/sammi-extensions/landitube/docs-3.png)
 
-## Emotions
+# Emotions 📺
+[📺 Setting up a model | 0:57](https://youtu.be/OFEGDlggthM?si=67t0u-OJED_2SMrc&t=57)
 
 To create emotions for your model, you first need to specify an "emotions" folder in your unique model's folder. This is what it should look like:
 
@@ -67,15 +69,16 @@ Here are some emotions i made in my "emotions" folder inside the "Landie" model 
 
 ![showcasing the rendered result inside the bridge](/assets/images/sammi-extensions/landitube/docs-6.png)
 
-## Poses
+# Poses 📺
+[📺 Setting up a model | 1:33](https://youtu.be/OFEGDlggthM?si=OiwEkyrM7v8xHne8&t=93)
 
 Now that your model is set up with proper emotions, lets get to the good stuff!
 
 In traditional PNGTubing engines, you had 4 poses per emotion: idle, idle with blink, talking and talking with blink (sometimes you dont even have the blink).
 
-in "LandiTube", you're allowed to have _as many idle, and talking poses as your heart desires_. Blinking will be discussed further down.
+in "LandiTube", you're allowed to have _as many idle, talking, and other various poses LandiTube supports as your heart desires_. Blinking will be discussed further down.
 
-What does that mean? Well, everytime you would go into any of the states mentioned above, it would pick randomly between all of the provided idle, and talking images. _You can have multiple talking poses for a single expression to really show natural movement, combined with multiple idle poses!_
+What does that mean? Well, everytime you would go into any of the states mentioned above, it would pick randomly between all of the provided poses. _Example: You can have multiple talking poses for a single expression to really show natural movement, combined with multiple idle poses!_
 
 All poses are places inside one of your unique model's unique emotion folders!
 
@@ -83,7 +86,8 @@ All poses are places inside one of your unique model's unique emotion folders!
 
 lets go over how to set up each state LandiTube provides out of the box!
 
-### Idling
+## Idling 📺
+[📺 Setting up a model | 1:33](https://youtu.be/OFEGDlggthM?si=OiwEkyrM7v8xHne8&t=93)
 
 To create an idle pose for your tuber's emotion, drag in an image file with the keyword "idle" in it's filename!
 
@@ -97,7 +101,8 @@ Example: Lets make _three_ idle poses for an emotion!
 
 Hmm. That doesn't look great. Lets look into adding some talking poses!
 
-### Talking
+## Talking
+[📺 Setting up a model | 2:32](https://youtu.be/OFEGDlggthM?si=2BMzwM3lpu_X-BlS&t=152)
 
 Talking is the easiest to do!
 
@@ -113,7 +118,8 @@ Example: Lets make two talking poses for my PNGTuber to pick from!
 
 Looks much better! but there is quite a dead stare.. lets add blinking!
 
-### Blinking
+## Blinking
+[📺 Setting up a model | 2:32](https://youtu.be/OFEGDlggthM?si=2BMzwM3lpu_X-BlS&t=152)
 
 Talking, and idle poses do not need to have blinking frames, but they are nice! One nice feature is that blinking is not "all or nothing", you can set blink frames for whatever poses you want!  
 Maybe one idle pose is meant to be a dead stare while the other idle poses have blinks?  
@@ -129,7 +135,7 @@ Example: Lets add blinking frames to all of our inserted idle, and talking poses
 2.  Refresh is not needed for blinks! at least i think so. if you see an issue, just hit "Refresh Models"!
 3.  Now, every pose has blinks! ![showing tuber now with blinking frames for every pose previously added](/assets/images/sammi-extensions/landitube/docs-12.gif)
 
-### Yelling
+## Yelling
 
 Yelling frames are a feature added in 0.14.6 and above, allowing you to specify an _extra_ talking frame that triggers when your voice reaches a higher threshold. You can set this threshold in the settings tab!
 
@@ -139,9 +145,9 @@ Yell frames are attatched to any talking pose, sort of like how blink frames wor
 
 To attach yelling frames to your poses, all you have to do is drag in your yelling image with the exact file name of the pose you want to give yelling to, but with "\_yell" appended just before the file extension (.png, .gif)
 
-So "talking fella.png" becomes "talking fella_yell.png", "mumble.png" becomes "mumble_yell.png", etc.
+So "talking fella.png" becomes "talking fella*yell.png", "mumble.png" becomes "mumble_yell.png", etc.
 {% alert "warning" %}
-Important note, if you have a yell frame attatched to a pose that _also_ is intended to be a blink frame, "_yell" must be prepended to "_blink".
+Important note, if you have a yell frame attatched to a pose that \_also* is intended to be a blink frame, "_yell" must be prepended to "\_blink".
 {% endalert %}  
 Example: "talkin_yell_blink.png" is a yell, \_and_ blink frame!
 
@@ -157,7 +163,7 @@ This emotion only has one talking pose and one talking pose with a blink frame, 
 3.  drag the images into my model's unique emotion folder!
 4.  click "Refresh Models", bam yelling frames.
 
-## Transitions
+# Transitions
 
 New as of 0.20, the Transitions module allow you to set intermediary poses between emotions! These can either be single image files, or .gif files!
 
@@ -195,13 +201,13 @@ You can have both global and dynamic transitions at the _same time_! great for i
 
 ![both trans types](https://i.imgur.com/6226O3s.gif)
 
-### Setup
+## Setup
 
 to begin using transitions, we need to make a `transitions` folder in our unique model's folder. This should be next to your `emotions` folder, like so!
 
 ![transition folder location](https://i.imgur.com/kQfyJ5h.png)
 
-### Global Transitions
+## Global Transitions
 
 Inside your `transitions` folder is where you place any image or gif files you want your model to randomly cycle through when changing from one emotion to the other!
 
@@ -242,7 +248,7 @@ _so_ much better!
 
 ...but we can make it even better.
 
-### Dynamic Transitions
+## Dynamic Transitions
 
 Dynamic transitions are way cooler and will for sure wow your audience!! Dynamic transitions allow what are known as `intro` animations, and `outro` animations which play based on the current, and next emotion.
 
@@ -279,7 +285,7 @@ Let's enter an emotion's transition folder to edit first. I'll go with the angry
 
 Alright, how do we set the intro and outro animations to our emotion?
 
-#### Outro Animations
+### Outro Animations
 
 Outro animations are played whenever you are leaving your **current** emotion for a **new** one.
 
@@ -293,7 +299,7 @@ Click "Refresh Models", and check your Transitions list! you should see a new ou
 
 Your outro will always play, even if the new emotion you are swapping to doesnt have an intro! its better than having a global transition thats for sure :P
 
-#### Intro Animations
+### Intro Animations
 
 Intro animations are played whenever you are _entering_ your **new** emotion from your **current** one.
 
@@ -307,18 +313,18 @@ Click "Refresh Models", and check your Transitions list! you should see a new in
 
 Your intro will always play, even if the current emotion you are swapping away from doesnt have an outro! its better than having a global transition thats for sure :P
 
-#### Config
+## Config
 
 If you dont use gif files and use png files, you can add a `.fenc` just like you can for global single frame transitions, check there to figure out how to do it for your dynamic transitions! Options are the same.
 
-#### Extra notes
+## Extra notes
 
 - Of course, you can have an intro and outro in one emotion. In fact, you can have many intros and outros in an emotion! LandiTube will randomly pick for you.  
    ![showing intro and outro in one emotion](https://i.imgur.com/wRQkErz.png)
 
 # Attitudes
 
-New as of 0.21, Attitudes are movements you can add to your tuber based on what model, emotion or even specific pose you are on! Attitudes can also be customized to form your own *presets*. More on that later.
+New as of 0.21, Attitudes are movements you can add to your tuber based on what model, emotion or even specific pose you are on! Attitudes can also be customized to form your own _presets_. More on that later.
 
 There currently are a total of 5 attitudes to choose from:
 
@@ -330,7 +336,7 @@ There currently are a total of 5 attitudes to choose from:
 
 Let's start simple. Let's apply an attitude to an emotion!
 
-To apply an attitude to an emotion, simply open your emotions folder, and pick the name of the emotion you want to give the attitude to. The emotion I'll be 
+To apply an attitude to an emotion, simply open your emotions folder, and pick the name of the emotion you want to give the attitude to. The emotion I'll be
 
 # Layers
 
@@ -511,9 +517,21 @@ The `Opacity` slider impacts **how much of the rimlight is visible on your model
 
 The `Feathering` slider impacts **the radius of the rimlight**. If you want it softer and less sharp, add more feathering! if you want it cartoonish and sharp to the model, reduce it!
 
-# SAMMI Commands
+# SAMMI Integration
 
-## LandiTube: Change Model
+LandiTube is made using the amazing stream assistant program, SAMMI! SAMMI allows you to easily make your dream stream projects come true without needing to learn how to code. I know I sure made my dream project... LandiTube!
+
+Because of LandiTube being made directly in SAMMI, you have a lot available for you to mess around with to make custom interactions that LandiTube doesn't officially support!
+
+You can learn more about how to use SAMMI from my simple [Tutorial Series](https://www.youtube.com/playlist?list=PLOL0Bh7s5Lnbz2aiKiWkww5UyiV3ZH8o6), or our official documentation, [Here!](https://sammi.solutions/docs)
+
+You can also jump right into [LandiTube-specific SAMMI tutorials](https://landie.land/shop/sammi-extensions/landitube#tutorials) so you can better get an understanding of SAMMI's workflow, and how easy it is to use it to really make your LandiTuber stand out more than it already does!
+
+## Commands
+
+Commands are the building blocks of SAMMI, the main logic you implement! Here are some LandiTube specific commands available to you:
+
+### LandiTube: Change Model
 
 Changes the current model to another valid model!
 
@@ -522,7 +540,7 @@ Changes the current model to another valid model!
 | -------- | ---- | --------- | ----------- |
 Model Name | Dropdown | ✔ | The name of the model you wish to swap to. (casing matters!)|
 
-## LandiTube: Change Emotion
+### LandiTube: Change Emotion
 
 Changes the current model's emotion to another valid emotion!
 
@@ -531,7 +549,7 @@ Changes the current model's emotion to another valid emotion!
 | -------- | ---- | --------- | ----------- |
 Model Name | Dropdown | ✔ | The name of the emotion you wish to swap to. (casing matters!)|
 
-## LandiTube: Pause Engine
+### LandiTube: Pause Engine
 
 Pauses all actions of the engine, leaving your character stuck in stasis. poor lad!
 
@@ -540,35 +558,33 @@ Pauses all actions of the engine, leaving your character stuck in stasis. poor l
 | -------- | ---- | --------- | ----------- |
 Reset Squish | boolean (checkbox) | ✔ | If ticked, after executing the command, the engine will stop and the proportions wil|
 
-## LandiTube: Resume Engine
+### LandiTube: Resume Engine
 
 Resumes default engine behavior c: For use after previously pausing the engine! otherwise this command is just a fun paperweight in digital form~
 
-# Custom Events using API
-
-Like the engine, but want to add your own integrations using SAMMI? You can absolutely do that with relative ease if you know SAMMI! The PNGTuber engine provides various different environments and data for you to listen to, and read!
-
-First, lets go over the Extension Triggers provided by "LandiTube".
-
 ## Extension Triggers
 
-Extension triggers are a way for a SAMMI button to be ran based on certain criteria specified by the Engine. This works exactly like if your button is set up to trigger on twitch chat. You can read more about extension triggers and SAMMI [here](https://sammi.solutions/docs/triggers/general#extensiontrigger).
+Extension triggers are a way for a SAMMI button, a executable container to run your commands, to be ran based on certain criteria specified by the Engine. This works exactly like if your button is set up to trigger on twitch chat. You can read more about extension triggers and SAMMI [here](https://sammi.solutions/docs/triggers/general#extensiontrigger).
 
 Currently, there exist these Extension Triggers:
 
 {primary}
-| Extension Trigger                 | Description                                                                   |
+| Extension Trigger | Description |
 | --------------------------------- | ----------------------------------------------------------------------------- |
-| `LandiTube talking true`          | triggers a button when the character starts talking                           |
-| `LandiTube talking false`         | triggers a button when the character is finished talking                      |
-| `LandiTube blinking true`         | triggers a button when the character blinks                                   |
-| `LandiTube blinking false`        | triggers a button when the character is done blinking                         |
-| `LandiTube yelling true`          | triggers a button when the character yells                                    |
-| `LandiTube yelling false`         | triggers a button when the character is done yelling                          |
-| `LandiTube model changed`         | triggers a button when the model is changed from the current active model     |
-| `LandiTube model` (modelname)     | triggers a button when the model is changed and matches a specific model      |
-| `LandiTube emotion changed`       | triggers a button when the emotion is changed from the current active emotion |
-| `LandiTube emotion` (emotionname) | triggers a button when the emotion is changed and matches a specific emotion  |
+| `LandiTube talking true` | triggers a button when the character starts talking |
+| `LandiTube talking false` | triggers a button when the character is finished talking |
+| `LandiTube blinking true` | triggers a button when the character blinks |
+| `LandiTube blinking false` | triggers a button when the character is done blinking |
+| `LandiTube yelling true` | triggers a button when the character yells |
+| `LandiTube yelling false` | triggers a button when the character is done yelling |
+| `LandiTube model changed` | triggers a button when the model is changed from the current active model |
+| `LandiTube model` (modelname) | triggers a button when the model is changed and matches a specific model |
+| `LandiTube emotion changed` | triggers a button when the emotion is changed from the current active emotion |
+| `LandiTube emotion` (emotionname) | triggers a button when the emotion is changed and matches a specific emotion |
+| `LandiTube attitude changed` | triggers a button when the attitude is changed. Version 0.21.0^ |
+| `LandiTube attitude` (attitude name) | triggers a button when the attitude is changed. Version 0.21.0^ |
+| `LandiTube attitude_preset changed` | triggers a button when the attitude preset is changed. Version 0.21.0^ |
+| `LandiTube attitude_preset` (attitude preset name) | triggers a button when the attitude preset is changed. Version 0.21.0^ |
 
 Each extension trigger returns the same hefty amount of juicy data when that extension trigger was sent for you to read and tinker with.
 
@@ -577,16 +593,27 @@ You can pull these values using the command "`Trigger Pull Data`" on a button th
 Here are the list of fields you can enter in the `Pull Value` box:
 
 {primary}
-| Pull Value                        | Type      | Description                                                                                                                                      |
+| Pull Value | Type | Description |
 | --------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `blink`                           | *boolean* | Current blinking state                                                                                                                           |
-| `current_emotion`                 | *string*  | The current set expression of the active model                                                                                                   |
-| `current_emotion_path`            | *string*  | the current image path compiled together using `global.main_directory`, `current_model`, `current_state`, and `current_emotion_state_extension`  |
-| `current_emotion_poses_idle`      | Array     | An Array of the current model's idle poses (not including blinks)                                                                                |
-| `current_emotion_poses_talking`   | Array     | An Array of the current model's talking poses (not including blinks)                                                                             |
-| `current_emotion_state_extension` | *string*  | The current state's file extension to be used in conjunction with `current_state` to create a full file                                          |
-| `current_model`                   | *string*  | The current active model                                                                                                                         |
-| `current_state`                   | *string*  | The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses |
-| `current_state_has_blink`         | *boolean* | If your state has the ability to blink or not! Version 0.13.2^                                                                                   |
-| `talking`                         | *boolean* | Current talking state                                                                                                                            |
-| `yelling`                         | *boolean* | Current yelling state                                                                                                                            |
+| `blink` | _boolean_ | Current blinking state |
+| `current_emotion` | _string_ | The current set expression of the active model |
+| `current_emotion_path` | _string_ | the current image path compiled together using `global.main_directory`, `current_model`, `current_state`, and `current_emotion_state_extension` |
+| `current_emotion_poses_idle` | Array | An Array of the current model's idle poses (not including blinks) |
+| `current_emotion_poses_talking` | Array | An Array of the current model's talking poses (not including blinks) |
+| `current_emotion_state_extension` | _string_ | The current state's file extension to be used in conjunction with `current_state` to create a full file |
+| `current_model` | _string_ | The current active model |
+| `current_state` | _string_ | The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses |
+| `current_state_has_blink` | _boolean_ | If your state has the ability to blink or not! Version 0.13.2^ |
+| `current_attitude` | _string_ | The current attitude applied to a state. Version 0.21.0^|
+| `current_attitude_preset` | _string_ | The current attitude preset applied to a state. Version 0.21.0^|
+| `talking` | _boolean_ | Current talking state |
+| `yelling` | _boolean_ | Current yelling state |
+
+## Global "LandiTube" Object
+
+Need to fetch the current emotion of a model but not based off when an event fires? for example, if you need to store the current emotion to go back to after you run a channel point reward that changes the emotion to something else temporarily?
+
+Enter, the global LandiTube object!
+
+All this is, is a 100% always accessible set of data that is the same as the provided data in Extension Triggers, so, look there for a list
+of all the things you can pull from there! In the future, there will be more unique things to this object that can't be returned in Extension Triggers.
