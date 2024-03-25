@@ -326,7 +326,9 @@ If you dont use gif files and use png files, you can add a `.fenc` just like you
 
 New as of 0.21, Attitudes are movements you can add to your tuber based on what model, emotion or even specific pose you are on! Attitudes can also be customized to form your own _presets_. More on that later.
 
-There currently are a total of 5 attitudes to choose from:
+## Types
+
+There are the current attitudes to choose from:
 
 - Jam
 - Sway
@@ -334,9 +336,66 @@ There currently are a total of 5 attitudes to choose from:
 - Shake
 - Prance
 
-Let's start simple. Let's apply an attitude to an emotion!
+## Application
 
-To apply an attitude to an emotion, simply open your emotions folder, and pick the name of the emotion you want to give the attitude to. The emotion I'll be
+Let's start simple. Let's apply an attitude to an entire model!
+
+To apply an attitude to a model, simply open your models folder, and pick the name of the model you want to give the attitude to. Let's use my **Landie** model and give them the **Sway** attitude. This should give them a nice natural swaying motion. Create a [.fenc Configuration File](#fenc-files) if you haven't already, and add in the line `attitude=sway`. Now, once you save and refresh your models in the LandiTube bridge, look at that! Landie now has a sway that occurs across all of their emotions, and the poses that follow!
+
+That's great and all, but what if I want my angry emotion to shake when it's active? Not a problem at all! We can do the exact same procedure, we just have to navigate to where our emotion is stored inside our model.
+
+Here is angry! In your [.fenc Configuration File](#fenc-files), and add in the line `attitude=shake`, and now whenever this emotion is active after refreshing, it will swap to them seething with rage, showing their true volitile nature.
+
+But wait, didn't we just set an attitude on the model? The sway one? what happens to that?
+
+Well... nothing! It's still there! if we swap to any other emotion, we get our sway back! How is that determined?
+
+Attitudes operate on a **hiearchy**. All this means is that <u>the more specific the attitude, the higher priority it gets</u>.
+Here is a chart to better illustrate what this looks like!
+
+We can see from this chart, that **Poses** have the highest priority. Knowing this, no matter if we have an attitude on the emotion it's a part of, or the entire model, if an attitude exists for a pose it will always pick that one first. Let's add one!
+
+I want it so when I yell with my notepad emotion, Landie does a little prance. Only yelling, not regular talking! That should be easy! going inside the notepad emotion, there we can find our yell pose. You know the drill by now! In your [.fenc Configuration File](#fenc-files) for the pose, and add in the line `attitude=prance`!
+
+now when i YEEEEELLLLL! i do a little jig! and when I am on any other pose such as idle, talking, blinking, and other poses, it actually goes back to the **sway** attitude we set all the way back in step 1, because that is applied to the model itself! So cool!
+
+## Attitude Editing
+
+Do you wish that the shake attitude could be MORE violent? maybe the sway should move around less? do you wish that I didn't suck at designing attitudes to perfectly fit your tuber's style? I hope not that last part...
+
+...but I CAN give you the tools to do it yourself!!
+
+Say hello to the *Attitude Maker*, a way of customizing attitudes! In the SAMMI Bridge with all of the LandiTube options, you should see a tab that is called "Attitude Maker". This is where you will manage anything custom with your attitudes! There is a Simple, and Advanced mode (which is not out at the time of writing).
+
+### Simple Mode
+
+In simple mode is where you can customize existing Attitudes and save them as **Attitude Presets** via editing some provided parameters for use in your [.fenc Configuration File](#fenc-files)s! To create a preset, while in simple mode of the attitude maker, click on the drop down to select an attitude! I'll be editing the "Shake" attitude so I can make it more violent than the default preset.
+
+Once selected, you might notice everything is greyed out. Don't worry, this is normal! You cannot edit default presets, and have to instead build off of them, so click "New Preset"! Once you do, you'll be asked to verify, then name the preset.
+
+<span style="color: red;">Presets should only be named with a single word and no symbols. *This may change in the future.*</span>
+
+I'm going to call my preset "fast"!
+
+After confirming your new preset, you will need to re-select your attitude, but now you should be able to pick a new preset for the attitude, being the one you just made.
+
+The parameters should no longer be grey, and you can try messing with them to get a desired effect! A description of each parameter can be seen by hovering over the question mark next to them.
+
+I'm going for a really fast, exaggerated shake. I think this looks ok!
+
+Your changes should be visible on your tuber! Once you get it how you want it, click the green floppy disk icon to save! <span style="color: red;">This is required in order for your preset to not glitch out at random.</span>
+
+Let's apply this new preset we made! Presets can be applied in any place you can apply attitudes to, it's just an extra line to specify which preset to use! Can't remember how to apply an attitude? re-read the attitude section!
+
+I'll add the shake attitude to my angry emotion's "Yell" pose with `attitude=shake`. This by default as we know, adds the shake attitude, but when you don't specify a preset, it uses the default one. Adding a new line to our fenc file, `attitude_preset=fast`, will use our "fast" preset we made earlier we made on the shake attitude. Make sure that when applying a preset, it's also the correct matching attitude that you made the preset on!
+
+Our fenc file now has two lines, `attitude=shake` to specify the attitude, and `attitude_preset=fast` to specify the preset to use!
+
+now when i YELL on my angry emotion, I shake more!! since I have the default shake attitude applied to the entire angry emotion, whenever I'm not yelling it does the regular shake. Yay!
+
+### Advanced Mode
+
+(Not out yet)
 
 # Layers
 
@@ -485,10 +544,6 @@ Congrats! you now have a light source. Enable "Backlight" to check it out!
 
 ![dynamic lighting demo](https://i.imgur.com/M7PLtU1.gif)
 
-Warning! if no captures are active in the scene containing all of them, your model will disappear! Add a color source (preferably black) as the background in your scene behind all of your capture sources to fix this, or, any background you wish to use when no games or displays are being captured!!
-
-![fix blank model dynlight](https://i.imgur.com/oYQ81HY.gif)
-
 ## Backlight
 
 Backlight is the most basic form of dynamic lighting. This applies to your entire model, and can be as influencial as you want on your model.
@@ -501,21 +556,37 @@ The `Saturation` slider impacts **how colorful the light is on your model**. if 
 
 ## Rimlight
 
-Rimlight is an extra, high intensity layer applied ontop of your model which is auto generated in `[LandiTube] Dynamic Rim Lighting Template`.
-
-### Rimlight Appearance
-
-To change how much or less area affects your model, enter that scene, hold the "Control" key to disable snapping, then click and drag the `LandiTube DM Black` source.
-
-The white being shown is what your rimlight will look like on your model. Once you're happy, you can check out the result wherever you have LandiTube shown!
-
-![modifying rim light via drag](https://i.imgur.com/UPSH1Ph.gif)
+Rimlight is an extra, high intensity lighting layer applied ontop of your model which is auto generated.
 
 ### Options
+
+The `X` and `Y` Position sliders allow you to nudge the projection of the rimlight to change the direction it approaches from!
 
 The `Opacity` slider impacts **how much of the rimlight is visible on your model**.
 
 The `Feathering` slider impacts **the radius of the rimlight**. If you want it softer and less sharp, add more feathering! if you want it cartoonish and sharp to the model, reduce it!
+
+# .fenc Files
+In LandiTube exists a special configuration file type that can be created and applied to different components of LandiTube. This filetype, is known as a .fenc file! .fenc files are meant to attatch to models, emotions, transitions, and even specific poses, in order to add additional rules and behaviors to the way they function.
+
+If there is a setting I wanted to apply to my model for example, I would go to my models folder, and right next to my model folder, I'd add a .fenc file of the same name. so adding a .fenc file to my "Landie" model would look like `Landie.fenc` (casing matters!)
+
+{% alert "warning" %}
+Please make sure you have "file name extensions" enabled in your File Explorer, otherwise you might not be changing the filetype of a newly created text file. This can be changed by opening File Explorer, looking for the "View" banner at the top of the window, then enabling the checkbox "file name extensions". 
+{% endalert %}  
+
+![landie fenc file](https://i.imgur.com/iOMTZxk.png)
+
+To edit a .fenc file, open it and if it prompts you to choose an application, choose "Notepad". If you do not see the notepad option, click "More Apps" and scroll down until you see it.
+
+fenc files operate on "key value pairs", with the `=` sign being the separator. What this means is, the name of the option goes first, then an `=` sign, then the value of said option.
+
+Options are separated by a newline, so a typical fenc file could look something like this:
+
+![typical contents of fenc file](https://i.imgur.com/45Ouct2.png)
+
+This example shows that we are applying an attitude to this model, and that attitude is "shake". we are also applying the "slow" preset that is custom made by the user.
+
 
 # SAMMI Integration
 
