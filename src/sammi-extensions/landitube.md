@@ -1,6 +1,7 @@
 ---json
 {
 	"layout": "product.njk",
+    "bodyOverride":"body-ltube-0210",
 	"date": "2023-01-08",
 	"tags": ["product", "sammiExtension"],
 	"title": "LandiTube",
@@ -11,8 +12,8 @@
 	"authors": ["Landie"],
 	"shopLabels": ["Free", "Utility", "OBS Widget", "Voice", "Beta"],
 	"price": "FREE",
-	"version": "0.20.0",
-	"versionSummaryHeader": "Lights, Layers.... Transitions! 150+ hours of work, for you!",
+	"version": "0.21.0",
+	"versionSummaryHeader": "Get ready to move your body with the new module: Attitudes!",
 	"versionSummaryBody": "Read the full patch notes <a href=\"https://landie.land/shop/sammi-extensions/landitube.html#patchnotes\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"display: none\">here!</a>",
 	"downloadLink": "https://landie.land/shop/sammi-extensions/landitube",
 	"sammiImage": "https://landie.land/assets/sammi-extensions/landitube/cover%20bridge.png",
@@ -28,8 +29,8 @@
       "assets_link":"https://www.dropbox.com/scl/fi/srnrzw74fn0utx6ne2cel/landitube_0210_assets.zip?rlkey=4e7m1l4duld6r53q1k5r37dil&dl=1",
 			"valid_versions": {
 				"bridge": ["7.20"],
-				"obs": ["29.1.3", "30.0.2"],
-				"sammi": ["2023.3.0", "2023.3.1", "2024.1.0"]
+				"obs": ["29.1.3", "30.0.2", "30.1.0", "30.1.1"],
+				"sammi": ["2023.3.0", "2023.3.1", "2024.1.0", "2024.1.1"]
 			},
 			"obs_plugins": {
 				"names": [
@@ -52,10 +53,9 @@
 				]
 			},
 			"sammi_extensions": {
-				"names": ["Sando", "Folder Reader"],
+				"names": ["Sando"],
 				"download_links": [
-					"https://landie.land/shop/sammi-extensions/sando",
-					"https://landie.land/shop/sammi-extensions/folder-reader"
+					"https://landie.land/shop/sammi-extensions/sando"
 				]
 			}
 		}
@@ -87,23 +87,25 @@
 			"https://landie.land/shop/sammi-extensions/sando"
 		]
 	},
-	"motd": "hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
+	"motd": "0.21.0 hooray"
 }
 ---
 
 <!--overview start!!-->
 
-**Please keep in mind this is a beta release, and is not expected to work correctly under certain circumstances. You can really help out by reporting these bugs via <br>[Discord Server](https://discord.gg/ZTbMw7TVKa)<br>Direct Discord DM: Landie#0038<br>Email at landieinquiries@gmail.com**
+**Please keep in mind this is a beta release, and is not expected to work correctly under certain circumstances. You can really help out by reporting these bugs via <br>[Discord Server](https://discord.gg/ZTbMw7TVKa)<br>Direct Discord DM: landie_<br>Email at landieinquiries@gmail.com**
 
 # Help! I'm new to SAMMI, and I want to use this! What do I do?
 
-Please check out this [quick video](https://www.youtube.com/watch?v=Jkz264Ax6qc) I made to help newcomers get SAMMI set up with the bare minimum they need to use this extension!
+No worries! the [setup video in the tutorials section](#tutorials) shows you how to set up SAMMI to the bare-minimum to use this extension! You need NO PRIOR SAMMI knowledge!
 
 # What is this?
 
+<h3 style="color: red">Scroll down to the examples if you want to see it in action right away!</h3>
+
 ![introducing landitube](https://i.imgur.com/IsovjaP.gif)
 
-"LandiTube" Is an advanced, easy to use PNGTuber engine built from the ground up using SAMMI over the course of a half year of constant development. PNGTuber software seems sparse, while other Vtubing related softwares seem to be targetting the 3D audience.
+"LandiTube" Is an advanced, easy to use and install but hard to master PNGTuber engine built from the ground up using SAMMI over the course of a half year of constant development. PNGTuber software seems sparse, while other Vtubing related softwares seem to be targetting the 3D audience.
 <br>
 <br>
 I'm here to change that.
@@ -112,65 +114,53 @@ I'm here to change that.
 
 Plenty!!
 
-- Infinite Models ♾️
-- Infinite Random Talking Poses ♾️
-- Infinite Random Idle Poses ♾️
-- (WIP ⚠ ) Infinite Random Yelling Poses ♾️
+- <span style="color: red">**TRANSITIONS**</span> between emotions, both <span style="color: red">**GLOBAL**</span>, and <span style="color: red">**DYNAMIC**</span> 🚗
+- Transitions can be a single image, or a whole animation! 🎥
+- Use **ANY OBS SOURCES** as anchored <span style="color: red">**LAYERS**</span> ontop of your model's body parts **(More on this further down)**. 🤯 <-- thats u
+- <span style="color: red">**Infinite**</span> Models ♾️
+- Infinite Emotions ♾️
+- Infinite <span style="color: red">*Randomized*</span> Talking Poses ♾️
+- Infinite *Randomized* Idle Poses ♾️
+- Infinite *Randomized* <span style="color: red">**YELLING**</span> Poses ♾️
+- Infinite *Randomized* Global and Dynamic Transitions ♾️
+- <span style="color: red">**ATTITUDES**</span> which gives movement! These can be <span style="color: red">**CUSTOMIZED**</span> to tweak the movement and create <span style="color: red">**custom attitude presets**</span> so your model moves just right 👌
+- Rendered *directly* in OBS using it's source system, so your PNGs will look crisp and have no artifacts! 📸
 - Squishiness 200% 💚
+- **extremely light weight**, somehow. (It's SAMMI being awesome, that's why) 🎓
 - Special filters set so _only_ your voice comes through! No more keyboard-activated tubers... 🎤
-- Hotkeys, or no hotkeys! You can set up a command to change an emotion directly! 🔧
-- Built using OBS Image Sources, so your PNGs will look crisp and have no artifacts! 📸
+- Hotkeys, or no hotkeys! You can set up custom <span style="color: red">**SAMMI triggers/commands**</span> to change an emotion, model, settings, listen to events, directly! 🔧
 - Not a separate window. No silly green screenies 🔪
 - Easy to use, dynamic folder structure designed to be responsive, and intuitive 💡
 - Drag n' Drop files, hit refresh, and everything just works! 💡
-- Use any OBS Image Source supported Image Format you want! .PNG, .GIF, .APNG, and more.
-- Use ANY OBS Source as a component in your PNGTuber **(More on this further down)**. 🤯 <-- thats u
-- Dynamic web interface for development and config purposes, indepth yet easy to understand and navigate. 💡
-- Blinking for every type of pose (that's expected :3) 🙄
-- (WIP ⚠) Set custom blinking intervals per emotion
-- (WIP ⚠) Custom transitions between emotions
+- Use any OBS Image/Video Source supported Format you want! .PNG, .GIF, and more. 📠
+- Dynamic web interface for development and config purposes, indepth yet easy to understand. 💡
+- Blinking for every type of pose (that's expected) 🙄
 - Actively being updated to add new features out of passion and respect for those who love this engine just as much as I do 🔧💚
 - Its Free. No commitments, nothin!! This was commissioned a long time ago by the wonderful and generous [Jessyabeb](https://twitter.com/jessyabeb)! Without her, I would've never had the motivation or courage to set out and code something this massive to share with the world. 💚
 
-And now for the **Big 2 Features.** First up...
+<!--HILARIOUS bug with this, if this h2 tag is called "tutorials", it breaks, because this tag is given the id "tutorials" by eleventy, but the bootstrap tab turns on anything with that id, so it hijacks it. fix this landie!-->
+## Videos!
+More of a visual learner? Well you're in luck! every major module of LandiTube, from random poses, to transitions, to layering, to attitudes, *everything* has [video tutorials accompanied with it](#tutorials)!
+
+The most detailed however is the documentation page if you're looking for a specific thing, or prefer reading!
 
 ## Full SAMMI Integration and Public API
 
-A vast amount of engine data is available to you in the form of "Pull Data" from "Extension Triggers", such as:
+A vast amount of engine data is available to you in the form of data sent with SAMMI triggers, and always available information in the `LandiTube` object. 
 
-| Pull Value                        | Type      | Description                                                                                                                                      |
-| --------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `blink`                           | _boolean_ | Current blinking state                                                                                                                           |
-| `current_emotion`                 | _string_  | The current set expression of the active model                                                                                                   |
-| `current_emotion_path`            | _string_  | the current image path compiled together using `global.main_directory`, `current_model`, `current_state`, and `current_emotion_state_extension`  |
-| `current_emotion_poses_idle`      | Array     | An Array of the current model's idle poses (not including blinks)                                                                                |
-| `current_emotion_poses_talking`   | Array     | An Array of the current model's talking poses (not including blinks)                                                                             |
-| `current_emotion_state_extension` | _string_  | The current state's file extension to be used in conjunction with `current_state` to create a full file                                          |
-| `current_model`                   | _string_  | The current active model                                                                                                                         |
-| `current_state`                   | _string_  | The current active state of the model. This the result of various impacting factors such as yelling, blinking, talking, and randomly drawn poses |
-| `talking`                         | _boolean_ | Current talking state                                                                                                                            |
-| `yelling`                         | _boolean_ | Current yelling state                                                                                                                            |
+SAMMI is an incredibly easy, *powerful* stream assistant that allows you to **build anything your heart desires with zero programming knowledge!** Hell, LandiTube is <span style="color: red">***made* in SAMMI.**</span>
 
-All of data is sent to you in the form of these extension triggers:
+Read values such as `current_attitude` to determine if maybe you want an OBS filter to turn on, play a sound effect, or so much more! Perhaps trigger on blink and play a funny blink sound? The world is your oyster when you play with the LandiTube API in SAMMI. Here is a simple example of playing a sound effect on blink, all made in a single gif file for your viewing pleasure:
 
-| Extension Trigger                 | Description                                                                   |
-| --------------------------------- | ----------------------------------------------------------------------------- |
-| `LandiTube talking true`          | triggers a button when the character starts talking                           |
-| `LandiTube talking false`         | triggers a button when the character is finished talking                      |
-| `LandiTube blinking true`         | triggers a button when the character blinks                                   |
-| `LandiTube blinking false`        | triggers a button when the character is done blinking                         |
-| `LandiTube yelling true`          | triggers a button when the character yells                                    |
-| `LandiTube yelling false`         | triggers a button when the character is done yelling                          |
-| `LandiTube model changed`         | triggers a button when the model is changed from the current active model     |
-| `LandiTube model` (modelname)     | triggers a button when the model is changed and matches a specific model      |
-| `LandiTube emotion changed`       | triggers a button when the emotion is changed from the current active emotion |
-| `LandiTube emotion` (emotionname) | triggers a button when the emotion is changed and matches a specific emotion  |
+![demo of making blink trigger button](https://i.imgur.com/xc3ifDB.gif)
 
-**\_**Woah woah woah Landie slow down!! I don't know how to use this!**\_**
+For a list of all of the triggers, commands, and variables LandiTube exposes to SAMMI, please check the documentation [here](documentation/#sammi-commands)!
 
-That's alright! No SAMMI knowledge is required to get up and running with this engine. however, if you want to capitalize on this amount of freedom and take your PNGTuber to the next level; SAMMI is an incredible, easy, and fun software to use to build your dream stream projects (no coding knowledge needed at all! thats how i started!). You can get started by reading the documentation [Here!](https://sammi.solutions/docs) if you want to learn more about whats coming up next...
+<span style="color: red; font-size: 1.3rem; font-weight: bold;">Woah woah woah Landie slow down!! I don't know how to use SAMMI!</span>
 
-What are you supposed to do with this info? Well, thats where the second _huge_ feature comes in...
+That's alright! *No* SAMMI knowledge is required to get up and running with this engine, and interact with it's incredible features mentioned at the top of the page. However, if you want to capitalize on this amount of freedom and take your PNGTuber to the next level; SAMMI is an incredible, easy, and fun software to use to build your dream stream projects (no coding knowledge needed at all! thats how i started!). You can get started by reading the documentation [Here!](https://sammi.solutions/docs) if you want to learn more about whats coming up next...
+
+What are you supposed to do with this info? Well, let's talk about one of the more impressive features...
 
 ## Full OBS Source Layering System
 
@@ -188,9 +178,22 @@ This data can be used to create your own rendering engine, ontop of the default 
 
 "Landie thats a big word..", All it means is that you get to decide how certain OBS Sources behave, and interact with the PNGTuber Engine!
 
-### Examples:
+# LandiTuber Examples:
+Here is a list of examples of what I've done using LandiTube, SAMMI, and some extensions. Keep in mind that everything you see is all done with *zero coding knowledge* within LandiTube and SAMMI.
+- Combining a custom face obs layer with a spectralizer for the mouth, and a video as the background, complete with transitions and random poses
 
-Here are some examples i quickly whipped up:
+![](https://i.imgur.com/rj0zBPZ.gif)
+
+- Equip items on my character that I collect in-game
+
+<video controls src="https://video.twimg.com/ext_tw_video/1684005876997455873/pu/vid/1280x720/qbUExSw8cTt-3C0h.mp4?tag=12"></video>
+
+- Take chat input, and turn it into a dynamically changing fisher hat, using the layering system
+![](https://i.imgur.com/SctEpG3.gif)
+
+- Play a custom animation when a death is detected in a game
+
+![](https://i.imgur.com/fKeqWgM.gif)
 
 - Rotate an animated image source of my character's tails everytime my talking state changes!
 
@@ -210,14 +213,7 @@ Here are some examples i quickly whipped up:
 
 Those are just some examples of what is possible with LandiTube! All of this is possible, and so, so, so much more! The possibilities (and I truly mean it, not some overhyped thing) are endless!
 
-Oh yeah, and two new SAMMI commands:
-
-- LandiTube: Change Model
-- LandiTube: Change Emotion
-
-but i'm sure you suspected as much :3c
-
-What are you waiting for? Check out the [Setup](#setup) page for prerequisites, and download!
+## What are you waiting for? Check out the [Setup](#setup) page for prerequisites, and download!
 
 <!--overview end-->
 
@@ -261,7 +257,7 @@ What are you waiting for? Check out the [Setup](#setup) page for prerequisites, 
 
 Here is a video demonstrating the entire installation process, including prerequisites, and SAMMI install. This is an updated video for 0.20!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/T-QZliGeyzY"
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x7huTcPp1ZE"
    title="YouTube video player" frameborder="0"
    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
@@ -304,7 +300,7 @@ Install the .sef as you would normally, and allow the deck to be replaced. Easy 
                                                 style="padding: 0.5rem; gap: 1rem; background-color: rgba(128, 0, 128, 0.532);">
                                                     <h3>Setup + Installation</h3>
                                                     <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/T-QZliGeyzY"
+                                                    src="https://www.youtube.com/embed/x7huTcPp1ZE"
                                                     title="YouTube video player" frameborder="0"
                                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowfullscreen></iframe>
@@ -354,8 +350,16 @@ Install the .sef as you would normally, and allow the deck to be replaced. Easy 
                                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowfullscreen></iframe>
                                                 </div>
+                                                <div class="d-flex flex-column justify-content-center align-items-center"
+                                                style="padding: 0.5rem; gap: 1rem; background-color: rgba(128, 0, 128, 0.532);">
+                                                    <h3>Attitudes</h3>
+                                                    <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/WIGh3cQ--QM"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowfullscreen></iframe>
+                                                </div>
                                             </div>
-
 <!--tutorials end-->
 
 <!-- more -->
@@ -475,6 +479,60 @@ There is a way to fix this, but its a bit more manual! follow these steps:
 <!--troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 0.21.0
+### 🔊 NEW MODULES:
+  - ✨**Attitudes**: Finally, attitudes comes to LandiTube! set different attitudes on specific models, emotions, or even down to a specific pose! At launch, there are a total of FOUR rad and cool attitudes for you to pick from! Sounds like kind of a small line-up, right? Well, attitudes features an awesome solution to your concerns; presets! Each attitude has editable parameters such as speed, arching angles, rotations, delays, and more!! You can then save your changes as separate presets to be assigned when assigning attitudes! yippee!! Please check the docs, and video tutorial on attitudes and attitude presets to learn more.
+### NEW:
+  - Added default options for all config settings
+  - Added position configuration for rim lighting in the bridge, no need to edit in OBS anymore
+  - Added a node script to load all model data at once, which is used by the reload rework
+  - Added static versions of the "[LandiTube] Customize" scene to allow static props to be rendered with your models.
+  - Added new dynamic rim lighting option "Blur Amount". Lets you change the amount of blur the rim light should have
+  - Added new dynamic rim lighting option "Quality". Lets you change the amount of blur the rim light should have
+  - All tabs except for the "LandiTube" tab in the LandiTube bridge are disabled until a full install check is ran to prevent people from changing content before it's ready.
+  - A "lock" mode developed originally for Attitudes, to prevent rendering in certain circumstances
+  - More checks to give alerts when a folder structure is wrong
+  - Added a "Copy Log" button to the settings for easily sharing for troubleshooting purposes
+### Changes:
+  - moved "check install directory" step to the validation check instead of only checking on installation
+  - swapped audio device load to use async command line, speeding up validation
+  - clicking the "Open Models Folder" button is now async
+  - clicking the "Open Emotions Folder" button is now async
+  - clicking the "Open Emotion's Poses Folder" button is now async
+  - changed no emotion from "0" to "undefined"
+### Reworks:
+  - Changed the mic to use a better noise supression algorithm to prevent model jitter
+  - Loading layers is now done in nodejs, providing a slight performance + reliability boost while becoming more future port-friendly
+  - OBS Scene installation is now more robust and reliable, with a x2.4 speed increase. Scene unpacking is now handled by Sando
+  - Model refreshing has **DRASTICALLY** been improved, dropping refresh times down by **x50!!** (rough estimate, a model load that originally took 30 seconds loaded in 600ms instead)
+  - Snappier bridge refreshing thanks to model refresh rework
+  - Swapped out blur plugin for the new "composite blur", due to download being taken down... this allows new features however!
+  - Versions are now modular in the online database, checks for the right version before reading.
+  - Lighting engine has had its implementation completely reworked to comply with a resolution fix
+  - Logger has had an entire rework with what info it logs, to remain more relevant to what i need to see as a developer
+### Bug fixes:
+  - Fixed an issue that may occur on first time installation, causing LandiTube to be prematurely loaded. re-validates after installation.
+  - Fixed an issue that caused an alert message to play whenever you loaded landitube saying "User hates fennecs :c /j" (a very important bug. don't wanna falsly accuse everyone!!)
+  - Fixed a crash loop that can occur when deleting/renaming models
+  - Attempted a fix for LandiTube not displaying PowerShell custom windows due to custom characters in filepath
+  - Fixed a crash that can occur when loading audio devices with SAMMI installed to an external drive
+  - Fixed an issue with models loosing quality when rendered with vanilla OBS nested scenes (Use Source Clone!)
+  - Fixed a potential crash when swapping to a model/emotion with zero poses
+  - Fixed an issue related to poses requiring a state change to display the model properly. "?" should behave better.
+  - Fixed an issue related to layers flooding the audio mixer. Audio will now be disabled by default.
+  - Fixed an issue with some sources not being rendered properly in layers
+  - Fixed an issue with media sources not playing in layers
+  - Fixed the visibility toggle on the layers not working in the config
+  - Fixed an issue related to layers not getting deleted when models were deleted
+  - Fixed an issue related to layers not being applied their assigned scene when any new poses were generated
+  - Fixed an issue that occured when updating which would cause settings to get overwritten with default ones. (experimental)
+  - Fixed an issue where it wouldn't wait for Sando to validate properly, causing random crashes.
+### Removals:
+  - Removed loads of unused functions to keep SAMMI optimized
+  - Removed forced asset install on installation
+  - Removed all built-in OBS nested scenes in favor of Exeldro's "Source Clone" plugin for the resolution fix.
+  - Removed an obs-shaderfilter filter that controlled the rim lighting settings. Composite Blur by [FiniteSingularity](https://www.twitch.tv/finitesingularity)
+  - Temporarily removed the backup tab in the bridge, as it's causing issues for load times.
 
 # 0.20.0
 
