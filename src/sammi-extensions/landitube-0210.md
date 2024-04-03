@@ -30,8 +30,8 @@
       "assets_link":"https://www.dropbox.com/scl/fi/srnrzw74fn0utx6ne2cel/landitube_0210_assets.zip?rlkey=4e7m1l4duld6r53q1k5r37dil&dl=1",
 			"valid_versions": {
 				"bridge": ["7.20"],
-				"obs": ["29.1.3", "30.0.2"],
-				"sammi": ["2023.3.0", "2023.3.1", "2024.1.0"]
+				"obs": ["29.1.3", "30.0.2", "30.1.0", "30.1.1"],
+				"sammi": ["2023.3.0", "2023.3.1", "2024.1.0", "2024.1.1"]
 			},
 			"obs_plugins": {
 				"names": [
@@ -54,10 +54,9 @@
 				]
 			},
 			"sammi_extensions": {
-				"names": ["Sando", "Folder Reader"],
+				"names": ["Sando"],
 				"download_links": [
-					"https://landie.land/shop/sammi-extensions/sando",
-					"https://landie.land/shop/sammi-extensions/folder-reader"
+					"https://landie.land/shop/sammi-extensions/sando"
 				]
 			}
 		}
@@ -89,7 +88,7 @@
 			"https://landie.land/shop/sammi-extensions/sando"
 		]
 	},
-	"motd": "hope 0.20.0 treats everyone well! don't fret to reach out if you encounter issues!"
+	"motd": "0.21.0 hooray"
 }
 ---
 
@@ -99,9 +98,10 @@
 
 # Help! I'm new to SAMMI, and I want to use this! What do I do?
 
-Please check out this [quick video](https://www.youtube.com/watch?v=Jkz264Ax6qc) I made to help newcomers get SAMMI set up with the bare minimum they need to use this extension!
+No worries! the [setup video in the tutorials section](#tutorials) shows you how to set up SAMMI to the bare-minimum to use this extension! You need NO PRIOR SAMMI knowledge!
 
 # What is this?
+
 <h3 style="color: red">Scroll down to the examples if you want to see it in action right away!</h3>
 
 ![introducing landitube](https://i.imgur.com/IsovjaP.gif)
@@ -139,7 +139,8 @@ Plenty!!
 - Actively being updated to add new features out of passion and respect for those who love this engine just as much as I do 🔧💚
 - Its Free. No commitments, nothin!! This was commissioned a long time ago by the wonderful and generous [Jessyabeb](https://twitter.com/jessyabeb)! Without her, I would've never had the motivation or courage to set out and code something this massive to share with the world. 💚
 
-## Tutorials!
+<!--HILARIOUS bug with this, if this h2 tag is called "tutorials", it breaks, because this tag is given the id "tutorials" by eleventy, but the bootstrap tab turns on anything with that id, so it hijacks it. fix this landie!-->
+## Videos!
 More of a visual learner? Well you're in luck! every major module of LandiTube, from random poses, to transitions, to layering, to attitudes, *everything* has [video tutorials accompanied with it](#tutorials)!
 
 The most detailed however is the documentation page if you're looking for a specific thing, or prefer reading!
@@ -257,7 +258,7 @@ Those are just some examples of what is possible with LandiTube! All of this is 
 
 Here is a video demonstrating the entire installation process, including prerequisites, and SAMMI install. This is an updated video for 0.20!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/T-QZliGeyzY"
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x7huTcPp1ZE"
    title="YouTube video player" frameborder="0"
    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
@@ -300,7 +301,7 @@ Install the .sef as you would normally, and allow the deck to be replaced. Easy 
                                                 style="padding: 0.5rem; gap: 1rem; background-color: rgba(128, 0, 128, 0.532);">
                                                     <h3>Setup + Installation</h3>
                                                     <iframe width="560" height="315"
-                                                    src="https://www.youtube.com/embed/T-QZliGeyzY"
+                                                    src="https://www.youtube.com/embed/x7huTcPp1ZE"
                                                     title="YouTube video player" frameborder="0"
                                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowfullscreen></iframe>
@@ -350,8 +351,16 @@ Install the .sef as you would normally, and allow the deck to be replaced. Easy 
                                                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowfullscreen></iframe>
                                                 </div>
+                                                <div class="d-flex flex-column justify-content-center align-items-center"
+                                                style="padding: 0.5rem; gap: 1rem; background-color: rgba(128, 0, 128, 0.532);">
+                                                    <h3>Attitudes</h3>
+                                                    <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/WIGh3cQ--QM"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowfullscreen></iframe>
+                                                </div>
                                             </div>
-
 <!--tutorials end-->
 
 <!-- more -->

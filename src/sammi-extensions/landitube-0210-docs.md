@@ -37,8 +37,7 @@ To get a model up and running, You need to have _3 key components down_. [Models
 
 Make sure you've gone into your bridge, and changed the appropriate settings! you'll need to set your mic, maybe tweak the input threshold, etc. [Bridge and You](#bridge-and-you-) has an explanation of the settings section for you!
 
-# Models 📺
-[📺 Setting up a model | 0:00](https://youtu.be/OFEGDlggthM?si=-gSFi9LyR4ooRPhE)
+# Models
 
 To create models, you create a folder in the "models" folder in the LandiTube path. All folders inside that folder will create an Icon in your bridge showing that a model is detected, and exists after a model refresh.
 
@@ -50,8 +49,7 @@ Here is a visual example of my models folder, where I have two models loaded, an
 
 ![Showcasing the result inside the models list located in the bridge](/assets/images/sammi-extensions/landitube/docs-3.png)
 
-# Emotions 📺
-[📺 Setting up a model | 0:57](https://youtu.be/OFEGDlggthM?si=67t0u-OJED_2SMrc&t=57)
+# Emotions
 
 To create emotions for your model, you first need to specify an "emotions" folder in your unique model's folder. This is what it should look like:
 
@@ -69,8 +67,7 @@ Here are some emotions i made in my "emotions" folder inside the "Landie" model 
 
 ![showcasing the rendered result inside the bridge](/assets/images/sammi-extensions/landitube/docs-6.png)
 
-# Poses 📺
-[📺 Setting up a model | 1:33](https://youtu.be/OFEGDlggthM?si=OiwEkyrM7v8xHne8&t=93)
+# Poses
 
 Now that your model is set up with proper emotions, lets get to the good stuff!
 
@@ -86,8 +83,7 @@ All poses are places inside one of your unique model's unique emotion folders!
 
 lets go over how to set up each state LandiTube provides out of the box!
 
-## Idling 📺
-[📺 Setting up a model | 1:33](https://youtu.be/OFEGDlggthM?si=OiwEkyrM7v8xHne8&t=93)
+## Idling
 
 To create an idle pose for your tuber's emotion, drag in an image file with the keyword "idle" in it's filename!
 
