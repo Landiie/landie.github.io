@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.6.0
+- New Features:
+  - Added "Unpack Extension Assets" command. adding the new key to copied deck data `extension_assets` allows you to provide base64 of a zip file that gets extracted on execution to the main SAMMI directory. This exists so extension developers can pack in assets with their extensions without impacting performance by including the assets elsewhere in the .sef file such as the deck data, which would make SAMMI lag on every time it saves.
+
 # 2.5.6
 - Bug Fixes:
   - use the updated extensions version method in global vars to get version for compare
