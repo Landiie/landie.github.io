@@ -1,8 +1,11 @@
+const path = require('path');
+const fs = require('fs');
+
 exports.handler = async function (event, context) {
   let productData
   const { category, product } = event.queryStringParameters;
   try {
-    productData = require(`../src/shop/${category}/${product}_info.json`);
+    productData = fs.readFileSync(path.join(__dirname, '..', 'src', 'shop', category, `${product}_info.json`), 'utf-8');
   } catch (error) {
     return {
       statusCode: 400,
@@ -24,7 +27,7 @@ exports.handler = async function (event, context) {
     body: JSON.stringify({
       category: category,
       product: product,
-      product_data: productData,
+      product_data: JSON.parse(productData),
     }),
   };
 };
