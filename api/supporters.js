@@ -1,10 +1,13 @@
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 
 exports.handler = async function (event, context) {
-  let patronData
+  let patronData;
   try {
-    patronData = fs.readFileSync(path.join(__dirname, '..', 'src', 'patrons.json'), 'utf-8');
+    patronData = fs.readFileSync(
+      path.join(__dirname, "..", "src", "patrons.json"),
+      "utf-8"
+    );
   } catch (error) {
     return {
       statusCode: 400,
@@ -21,6 +24,7 @@ exports.handler = async function (event, context) {
     statusCode: 200,
     headers: {
       "Content-Type": "application/json",
+      "access-control-allow-origin": "*",
     },
     body: patronData,
   };
