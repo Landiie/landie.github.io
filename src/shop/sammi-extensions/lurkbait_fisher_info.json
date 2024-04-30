@@ -1,0 +1,37 @@
+{
+	"layout": "product.njk",
+  "bodyOverride":"body-blue",
+  "hidden":true,
+	"date": "2024-04-19",
+	"tags": ["product", "sammiExtension"],
+	"title": "LurkBait Fisher",
+	"permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
+	"description": "An add-on to LurkBait Twitch Fishing to show the chatter fishing!",
+	"image": "/assets/images/sammi-extensions/lurkbait-fisher/cover.png",
+	"imageAlt": "Product icon for LurkBait Fisher",
+	"authors": ["Landie"],
+	"shopLabels": ["OBS Widget"],
+	"price": "$5",
+	"version": "1.0.0",
+	"versionSummaryHeader": "release",
+	"versionSummaryBody": "release",
+	"downloadLink": "https://landie.land/shop/sammi-extensions/lurkbait-fisher",
+	"sammiImage": "https://landie.land/assets/sammi-extensions/lurkbait-fisher/cover%20bridge.png",
+	"versions": {
+		"100": {
+			"valid_versions": {},
+			"obs_plugins": {
+				"names": [],
+				"direct_download_links": [],
+				"download_links": []
+			},
+			"sammi_extensions": {
+				"names": ["Sando"],
+				"download_links": [
+					"https://landie.land/shop/sammi-extensions/sando"
+				]
+			}
+		}
+	},
+	"motd": "let the fishes be free"
+}
