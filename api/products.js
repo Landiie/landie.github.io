@@ -23,6 +23,7 @@ exports.handler = async function (event, context) {
     statusCode: 200,
     headers: {
       "Content-Type": "application/json",
+      "access-control-allow-origin": "*",
     },
     body: JSON.stringify({
       category: category,
