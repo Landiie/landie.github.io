@@ -4,6 +4,6 @@ const fs = require("fs");
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
-    body: fs.readdirSync(__dirname),
+    body: JSON.stringify(fs.readdirSync(__dirname)),
   };
 };
