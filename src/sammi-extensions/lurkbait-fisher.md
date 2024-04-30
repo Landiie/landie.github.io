@@ -12,7 +12,7 @@
 	"imageAlt": "Product icon for LurkBait Fisher",
 	"authors": ["Landie"],
 	"shopLabels": ["OBS Widget"],
-	"price": "$5",
+	"price": "$3",
 	"version": "1.0.0",
 	"versionSummaryHeader": "release",
 	"versionSummaryBody": "release",
@@ -41,6 +41,14 @@
 <!--overview start!!-->
 
 # What is it ⁉
+
+This is a unique OBS Widget that is meant to be used with the game [LurkBait Twitch Fishing](https://store.steampowered.com/app/2767520/LurkBait_Twitch_Fishing/) available on steam!
+
+This widget displays the person fishing in the game, and plays an animation of them casting, getting a snag, reeling in, and displaying their catch! In the future, I plan to add a feature that records a short gif of the catch screen then posts it to a specified discord channel.
+
+Please ensure that you head over to the [Setup](#setup) tab so you know how to install and use it on your streams!
+
+This is one of my more polished extensions so it costs a small fee, but you should expect top notch quality from me since I rarely ever charge on anything I make! Thank you for considering to support me!
 
 <!--overview end-->
 
