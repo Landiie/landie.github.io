@@ -1,7 +1,7 @@
 {
 	"layout": "product.njk",
   "bodyOverride":"body-blue",
-  "hidden":true,
+  "hidden":false,
 	"date": "2024-04-19",
 	"tags": ["product", "sammiExtension"],
 	"title": "LurkBait Fisher",
@@ -11,7 +11,7 @@
 	"imageAlt": "Product icon for LurkBait Fisher",
 	"authors": ["Landie"],
 	"shopLabels": ["OBS Widget"],
-	"price": "$3",
+	"price": "FREE",
 	"version": "1.0.0",
 	"versionSummaryHeader": "release",
 	"versionSummaryBody": "release",
