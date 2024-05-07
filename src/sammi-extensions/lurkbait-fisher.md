@@ -2,7 +2,7 @@
 {
 	"layout": "product.njk",
   "bodyOverride":"body-blue",
-  "hidden":true,
+  "hidden":false,
 	"date": "2024-04-19",
 	"tags": ["product", "sammiExtension"],
 	"title": "LurkBait Fisher",
@@ -12,7 +12,7 @@
 	"imageAlt": "Product icon for LurkBait Fisher",
 	"authors": ["Landie"],
 	"shopLabels": ["OBS Widget"],
-	"price": "$3",
+	"price": "FREE",
 	"version": "1.0.0",
 	"versionSummaryHeader": "release",
 	"versionSummaryBody": "release",
@@ -48,14 +48,16 @@ This widget displays the person fishing in the game, and plays an animation of t
 
 Please ensure that you head over to the [Setup](#setup) tab so you know how to install and use it on your streams!
 
-This is one of my more polished extensions so it costs a small fee, but you should expect top notch quality from me since I rarely ever charge on anything I make! Thank you for considering to support me!
+This is one of my more polished extensions ~~so it costs a small fee~~ (changed my mind, have it for free!), but you should expect top notch quality from me since I rarely ever charge on anything I make! Thank you for considering to support me!
 
 <!--overview end-->
 
 <!-- more -->
 <!--overview right column -->
 
-wawa
+<video autoplay muted loop playsinline>
+  <source src="/assets/images/sammi-extensions/lurkbait-fisher/demo.mp4" type="video/mp4">
+</video>
 
 <!--overview right column end-->
 <!-- more -->
@@ -65,9 +67,9 @@ wawa
 
 ## Install Video
 
-Here is a video demonstrating the entire installation process, including prerequisites, and SAMMI install.
+Here is a video demonstrating the entire installation process!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/x7huTcPp1ZE"
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YTwBezx8z4Y"
    title="YouTube video player" frameborder="0"
    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen></iframe>
@@ -84,21 +86,33 @@ These are **Required** for this extension to work, Prior to installation.
 
 ### OBS
 
-- [OBS Studio](https://github.com/obsproject/obs-studio/releases/download/29.1.3/OBS-Studio-29.1.3-Full-Installer-x64.exe)
+- [OBS Studio](https://obsproject.com/download)
+- ["Move" OBS Plugin](https://obsproject.com/forum/resources/move.913/)
+- ["obs-shaderfilter" OBS Plugin](https://obsproject.com/forum/resources/obs-shaderfilter.1736/)
 
 ## Installation
 
 1.  _Make sure you have the prerequisites installed first_
 2.  Download "LurkBait Fisher" .sef file from the download button above
-3.  Connect OBS (refer to install video if unsure)
-4.  Connect the SAMMI Bridge (refer to install video if unsure)
+3.  Connect OBS
+4.  Connect the SAMMI Bridge
 5.  Install the .sef file via the left hand side menu of the "SAMMI Core" via clicking the bridge button, then clicking "Install an Extension".
 6.  Follow the installation steps provided on-screen!
-7.  Afterwards, you should be all set for installation!
+7.  Afterwards, you should be all set!
+
+## Usage
+1. Go to whichever scene you'd like to use the fisher widget in, inside OBS
+2. Add a new "Scene" source (otherwise known as nesting an obs scene)
+3. Pick "[LurkBaitFisher]"
+4. Position how you want it, send a test cast in LurkBait Fisher, and you should be all good!
+
+{% alert "warning" %}
+It is highly recommended to create your own scene that contains both LurkBait Twitch Fishing game capture, AND the widget together positioned how you want, then nest *that* scene instead so it isn't a nightmare to move the two around!
+{% endalert %}  
    
 ## Updating
 
-Install the .sef as you would normally, and allow the deck to be replaced. Easy as pie! (why is pie easy? who tf came up with that term is baking ever actually easy??? im going to pop a vein)
+Install the .sef as you would normally, and allow the deck to be replaced. Easy!
 
 <!--setup end-->
 
