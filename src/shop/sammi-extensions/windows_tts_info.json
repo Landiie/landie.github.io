@@ -1,22 +1,22 @@
 {
 	"layout": "product.njk",
-  "bodyOverride":"body-blue",
-  "hidden":false,
-	"date": "2024-05-06",
+  "bodyOverride":"",
+  "hidden":true,
+	"date": "2024-04-19",
 	"tags": ["product", "sammiExtension"],
-	"title": "LurkBait Fisher",
+	"title": "Windows TTS",
 	"permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
-	"description": "An add-on to LurkBait Twitch Fishing to show the chatter fishing!",
-	"image": "/assets/images/sammi-extensions/lurkbait-fisher/cover.png",
-	"imageAlt": "Product icon for LurkBait Fisher",
+	"description": "Play text-to-speech audio using Windows Speech APIs (4 & 5)!",
+	"image": "/assets/images/sammi-extensions/windows-tts/cover.png",
+	"imageAlt": "Product icon for Windows TTS",
 	"authors": ["Landie"],
-	"shopLabels": ["OBS Widget", "Free"],
+	"shopLabels": ["Free", "Utility", "Audio"],
 	"price": "FREE",
 	"version": "1.0.0",
 	"versionSummaryHeader": "release",
 	"versionSummaryBody": "release",
-	"downloadLink": "https://landie.land/shop/sammi-extensions/lurkbait-fisher",
-	"sammiImage": "https://landie.land/assets/sammi-extensions/lurkbait-fisher/cover%20bridge.png",
+	"downloadLink": "https://landie.land/shop/sammi-extensions/windows-tts",
+	"sammiImage": "https://landie.land/assets/sammi-extensions/windows-tts/cover_bridge.png",
 	"versions": {
 		"100": {
 			"valid_versions": {},
@@ -33,5 +33,5 @@
 			}
 		}
 	},
-	"motd": "let the fishes be free"
+	"motd": "i speak from ur bindows"
 }
