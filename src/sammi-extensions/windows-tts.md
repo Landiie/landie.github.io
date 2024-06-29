@@ -1,23 +1,23 @@
 ---json
 {
 	"layout": "product.njk",
-  "bodyOverride":"body-blue",
-  "hidden":false,
-	"date": "2024-05-06",
+  "bodyOverride":"",
+  "hidden":true,
+	"date": "2024-04-19",
 	"tags": ["product", "sammiExtension"],
-	"title": "LurkBait Fisher",
+	"title": "Windows TTS",
 	"permalink": "/shop/sammi-extensions/{{ title | slugify }}/",
-	"description": "An add-on to LurkBait Twitch Fishing to show the chatter fishing!",
-	"image": "/assets/images/sammi-extensions/lurkbait-fisher/cover.png",
-	"imageAlt": "Product icon for LurkBait Fisher",
+	"description": "Play text-to-speech audio using Windows Speech APIs (4 & 5)!",
+	"image": "/assets/images/sammi-extensions/windows-tts/cover.png",
+	"imageAlt": "Product icon for Windows TTS",
 	"authors": ["Landie"],
-	"shopLabels": ["OBS Widget", "Free"],
+	"shopLabels": ["Free", "Utility", "Audio"],
 	"price": "FREE",
 	"version": "1.0.0",
 	"versionSummaryHeader": "release",
 	"versionSummaryBody": "release",
-	"downloadLink": "https://landie.land/shop/sammi-extensions/lurkbait-fisher",
-	"sammiImage": "https://landie.land/assets/sammi-extensions/lurkbait-fisher/cover%20bridge.png",
+	"downloadLink": "https://landie.land/shop/sammi-extensions/windows-tts",
+	"sammiImage": "https://landie.land/assets/sammi-extensions/windows-tts/cover_bridge.png",
 	"versions": {
 		"100": {
 			"valid_versions": {},
@@ -34,7 +34,7 @@
 			}
 		}
 	},
-	"motd": "let the fishes be free"
+	"motd": "i speak from ur bindows"
 }
 ---
 
@@ -42,14 +42,22 @@
 
 # What is it ⁉
 
-This is a unique OBS Widget that is meant to be used with the game [LurkBait Twitch Fishing](https://store.steampowered.com/app/2767520/LurkBait_Twitch_Fishing/) available on steam!
+This gives SAMMI Text-to-speech capabilities utilizing the Windows speech APIs 4 and 5!
 
-This widget displays the person fishing in the game, and plays an animation of them casting, getting a snag, reeling in, and displaying their catch! In the future, I plan to add a feature that records a short gif of the catch screen then posts it to a specified discord channel.
+Thats big words for "you can use system built-in text-to-speech in SAMMI".
 
-Please ensure that you head over to the [Setup](#setup) tab so you know how to install and use it on your streams!
+The amount of voices you have entirely depends on what language packs you have installed in Windows for either SAPI 4 or 5. This extension comes bundled in with at least *29 SAPI4 voices* some of which you may recognize because Windows SAPI is often used in YouTube videos for it's comedic effect!
 
-This is one of my more polished extensions ~~so it costs a small fee~~ (changed my mind, have it for free!), but you should expect top notch quality from me since I rarely ever charge on anything I make! Thank you for considering to support me!
 
+It is recommended to do some research on what kind of voices are available using these systems, but in the [setup](#setup) page will be some resources where you can find some more packages to download.
+
+Audio is played through it's own application, `balcon.exe`, meaning that in OBS, you can capture this audio's output directly to manage it *independant* from all other audio sources if you're _not_ using Desktop audio capture (the best way to manage audio)
+
+If you _are_ using Desktop audio capture (shame on you!), fear not, as the extension allows you to change the audio device in which the audio comes out from! Pick an unused audio device, then add a new audio output capture in OBS and you're off to the races! Control the audio how you want!
+
+Make sure to head over to [setup](#setup) to get started!
+
+To learn how to use this extension in your SAMMI projects after setting it up, check the documentation tab!
 <!--overview end-->
 
 <!-- more -->
