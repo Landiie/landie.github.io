@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.5.6",
-  "versionSummaryHeader": "bug fix patch",
-  "versionSummaryBody": "updated method of getting ext info",
+  "version": "2.7.0",
+  "versionSummaryHeader": "was supposed to be a big patch but lost most of it",
+  "versionSummaryBody": "still very important though",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,30 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.7.0
+This update has been in the works for a long time, so I can't remember everything i've done!
+EDIT: lol i lost almost all of it so here is what you're getting for now
+
+- New Features:
+  - New Command: `Twitch Get User Info (Cached)`. This is the same as the `Twitch: Get User Info` built in command, however, this caches the response so if you search for the same person in the same SAMMI session, it does not make an extra API call to Twitch. This is very useful to make sure you aren't spamming Twitch's API for repetitive, same tasks and gives a better performance result aswell since it's already in memory! More might be added in the future, so consider this a test run.
+  - New Global Data: Extended OBS Info. This provides a connection object `obs_connections` in the `Sando` button that mirrors the obs objects you see in `global`. The difference with the two is the Sando object contains extra goodies like `config_path`, `extended_ws_info`, `global_data`, `is_portable`, `latest_log_path`, `exe_path`, and `root_path`. These are all meant to help with some of the more painful things to fetch on your own, and focus more on advanced functionality. Want to see what scripts a user has installed? You got it! Want to see what plugins the user has installed? Sike, use my other command `Compare OBS Plugin Versions`!!!
+- Changes:
+  - Changed the way validation checks a websocket connection to OBS
+  - Changed the way validation provides a websocket password for connection test
+  - Changed frequency of websocket tests (every validation)
+  - Rewrote the sef extractor to be exclusively in SAMMI and not nodejs to allow Sando to use it for itself
+  - `Read Folder` now uses instance IDs
+  - Validation now unpacks from zip in sef (not deck data) using dev only `Extract .sef assets (No Node)`.
+- Bug Fixes:
+  - Fixed an issue with the websocket relay server not being properly set to "running" in local file
+  - Fixed an issue with the websocket relay server not restarting when it should
+  - Fixed an issue with the Scene Unpacker and OBS versions 30.2 and above not properly unpacking text sources due to Text GDI+ v2 getting deprecated in favor of v3. The websocket actively prevents the creation of deprecated sources, hence the crashing.
+  - Fixed an issue with the server file poller not properly using async
+  - Fixed an issue with `Extract .sef assets` not properly allowing overlapped buttons
+  - Fixed an issue with logging commands not working properly under certain circumstances
+- Misc:
+  - Removed unused code in `Extract .sef assets`, improving performance
+
 # 2.6.0
 - New Features:
   - Added "Unpack Extension Assets" command. adding the new key to copied deck data `extension_assets` allows you to provide base64 of a zip file that gets extracted on execution to the main SAMMI directory. This exists so extension developers can pack in assets with their extensions without impacting performance by including the assets elsewhere in the .sef file such as the deck data, which would make SAMMI lag on every time it saves.
