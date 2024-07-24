@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "versionSummaryHeader": "was supposed to be a big patch but lost most of it",
   "versionSummaryBody": "still very important though",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,13 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.7.1
+- Bug Fixes:
+  - Fixed an issue where `Extract .sef assets` was not persistent, leaving `Extract .zip` in limbo.
+  - Fixed an issue where node modules would need a little more time to be recognized before running another script (obs websocket extended info)
+
+Work in progress: fixing my big ass paws to stop clicking things I don't mean to
+
 # 2.7.0
 This update has been in the works for a long time, so I can't remember everything i've done!
 EDIT: lol i lost almost all of it so here is what you're getting for now
