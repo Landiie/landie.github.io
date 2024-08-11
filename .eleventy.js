@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   eleventyConfig.addPassthroughCopy("./src/patrons.json");
   eleventyConfig.addPassthroughCopy("./src/shop/sammi-extensions/*.json");
+  eleventyConfig.addPassthroughCopy("./src/.well-known/*");
 
   //filters
   eleventyConfig.addFilter("splitContent", (content, sectionNumber) => {
