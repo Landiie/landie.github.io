@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "versionSummaryHeader": "Custom chromium based windows! system dialogs! standalone helper app!",
   "versionSummaryBody": "So many cool things to make a rich developer experience! Also fixed a lot of bugs related to installations",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,10 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.8.1
+- Bug Fix:
+  - Give validation more time to recognize yes, you are connected to the bridge. Do your thing.
+
 # 2.8.0
 - New Features:
   - Installation of Sando now has a popup to help with user feedback and reassure to them they are not doing anything wrong
