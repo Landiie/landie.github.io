@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.8.1",
+  "version": "2.8.2",
   "versionSummaryHeader": "Custom chromium based windows! system dialogs! standalone helper app!",
-  "versionSummaryBody": "So many cool things to make a rich developer experience! Also fixed a lot of bugs related to installations",
+  "versionSummaryBody": "So many cool things to make a rich developer experience! Also fixed a lot of bugs related to installations. HOTFIX 2 doesnt take ages to load anymore at the expense of storage space",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,17 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.8.2
+- Bug fixes:
+  - Fixed an issue where the .sef asset unpacker was hardcoded to a testing string
+  - Fixed an issue where the unpacker was pulling the websocket password from the wrong location.
+  - Fixed an issue where sando-helper.exe was taking way too long to open with zero feedback, making opening SAMMI a frustrating experience
+    - A side effect of this fix is exploding the file size, however, this was no different than it was before, as the exe was, under the hood, extracting a zip, contributing to the large downtime between runs, that has the same amount of storage. It's simply always unpacked now for maximum responsiveness.
+  - Fixed a hardcoded path used in `Sando: CW Dropdown`
+  - Fixed a hardcoded path used in Sando Initialization
+
+There is a potential lingering bug related to the server connecting too fast, but we'll get there when we get there.
+
 # 2.8.1
 - Bug Fix:
   - Give validation more time to recognize yes, you are connected to the bridge. Do your thing.
