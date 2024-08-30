@@ -4,7 +4,7 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.8.2",
+  "version": "2.8.3",
   "versionSummaryHeader": "Custom chromium based windows! system dialogs! standalone helper app!",
   "versionSummaryBody": "So many cool things to make a rich developer experience! Also fixed a lot of bugs related to installations. HOTFIX 2 doesnt take ages to load anymore at the expense of storage space",
   "tags": ["product", "sammiExtension"],
@@ -91,6 +91,16 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.8.3
+- Bug fixes:
+  - Fixed an issue where a variable wouldn't get set during validation, making it impossible to continue (still experimenting with this)
+  - Fixed an issue where the popup window for installation sometimes showed NaN in the loading bar
+  - Fixed an issue where the popup window for installation sometimes wouldn't disappear when the bar was full
+  - Fixed an issue where the popup window for installation sometimes wouldn't disappear due to a status bug not letting SAMMI listen to that event from the window
+  - Fixed an issue where sando-helper.zip would not get destroyed upon extraction
+  - Fixed an issue where sando helper was not properly waiting for a connection from SAMMI before setting itself as ready (async issue)
+  - Fixed an issue where the websocket client on the bridge would duplicate when manually disconnecting and reconnecting the bridge
+
 # 2.8.2
 - Bug fixes:
   - Fixed an issue where the .sef asset unpacker was hardcoded to a testing string
