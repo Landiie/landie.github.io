@@ -4,9 +4,9 @@
   "date": "2023-05-15",
   "title": "Sando",
   "description": "A Library to make extension developer's lives easier!",
-  "version": "2.8.3",
-  "versionSummaryHeader": "Custom chromium based windows! system dialogs! standalone helper app!",
-  "versionSummaryBody": "So many cool things to make a rich developer experience! Also fixed a lot of bugs related to installations. HOTFIX 2 doesnt take ages to load anymore at the expense of storage space",
+  "version": "2.9.0",
+  "versionSummaryHeader": "OBS Plugin version checker, downloader, and installer yippee!!",
+  "versionSummaryBody": "makes the experience of making OBS stuff in sammi that much less painful in combination with the scene packer and unpacker!",
   "tags": ["product", "sammiExtension"],
   "price": "FREE",
   "permalink": "/shop/sammi-extensions/sando/",
@@ -91,6 +91,16 @@ None yet
 <!-- troubleshooting end-->
 <!-- more -->
 <!--patchnotes start-->
+# 2.9.0
+- New Features:
+  - Welcome in, `Sando: OBS Plugin Validation`! This has been an ongoing effort for a year to get the perfect automatic plugin version checker, downloader, and installer, and it's finally here! It is a single command that takes in an array of all the plugins you want to "Validate", and simply outputs `true` or `false` depending on what happens throughout the process. Extension developers! No longer should you have trouble ensuring users have the correct plugins, AND at least a specified minimum version (with the option to just download the latest!). The docs will be updated to guide through how to use it, since it can be quite complicated. There are no built in ways to check plugin versions, download obs plugins, or install obs plugins, so I had to create these systems from scratch. Apologies if it gets rough around the edges at some points. To accomodate for these potential pitfalls, there is a fallback "manual" mode that pops up an interactive interface to go to the download pages on the plugins, download the right file and drag it into the window.
+- Bug fixes:
+  - Fixed an issue where a first-time install of OBS past version 30 would cause a crash when grabbbing extra websocket context. This was caused due to a key not existing in `global.ini` of OBS.
+  - Fixed an issue where Sando Helper would take up an absurd amount of CPU in some cases
+  - Fixed an issue where custom helper ports would not work for sando helper
+- QOL
+  - Added the ability to completely wipe old sando_helper files before extracting a new version to cut back on bloat of unused assets
+
 # 2.8.3
 - Bug fixes:
   - Fixed an issue where a variable wouldn't get set during validation, making it impossible to continue (still experimenting with this)
