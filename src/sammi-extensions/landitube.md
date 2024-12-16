@@ -92,6 +92,7 @@
 ---
 
 <!--overview start!!-->
+# OBS 31 currently has issues with installing, and operating LandiTube. Please try version 29.1.3 in the meantime.
 
 **Please keep in mind this is a beta release, and is not expected to work correctly under certain circumstances. You can really help out by reporting these bugs via <br>[Discord Server](https://discord.gg/ZTbMw7TVKa)<br>Direct Discord DM: landie_<br>Email at landieinquiries@gmail.com**
 
